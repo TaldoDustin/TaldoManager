@@ -51,7 +51,7 @@ class Partida:
         diferenca = forca_c1 - forca_c2
 
         # Chance inicial baseada na diferença de força
-        chance_c1 = 0.5 + (diferenca * 0.04)
+        chance_c1 = 0.5 + (diferenca * 0.05)
 
         # Limita entre 15% e 85%
         chance_c1 = max(0.15, min(0.85, chance_c1))

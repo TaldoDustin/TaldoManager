@@ -34,6 +34,11 @@ class Partida:
             self.clube2.pontos += 1
             self.clube1.empates += 1
             self.clube2.empates += 1
+            
+        self.clube1.gols_marcados += self.gols_c1
+        self.clube1.gols_sofridos += self.gols_c2   
+        self.clube2.gols_marcados += self.gols_c2
+        self.clube2.gols_sofridos += self.gols_c1
 
     def gerar_gols(self):
         forca_c1 = self.clube1.calcular_forca()

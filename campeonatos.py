@@ -50,10 +50,20 @@ class Campeonato:
 
     def mostrar_classificacao(self):
         print(f"Classificação do campeonato {self.nome}:")
-        classificacao = sorted(self.clubes, key=lambda c: c.pontos, reverse=True)
+        classificacao = sorted(self.clubes, key=lambda c: (c.pontos, c.saldo_gols(), c.gols_marcados), reverse=True)
         for idx, clube in enumerate(classificacao, start=1):
             jogos = clube.vitorias + clube.empates + clube.derrotas
-            print(f"{idx}. {clube.nome} | P: {clube.pontos} | J: {jogos} | V: {clube.vitorias} | E: {clube.empates} | D: {clube.derrotas}")
+            print(
+                f"{idx}. {clube.nome} | "
+                f"P: {clube.pontos} | "
+                f"J: {jogos} | "
+                f"V: {clube.vitorias} | "
+                f"E: {clube.empates} | "
+                f"D: {clube.derrotas} | "
+                f"GP: {clube.gols_marcados} | "
+                f"GC: {clube.gols_sofridos} | "
+                f"SG: {clube.saldo_gols()}"
+            )
    
     def mostrar_historico(self):
         print(f"Histórico do campeonato {self.nome}:")

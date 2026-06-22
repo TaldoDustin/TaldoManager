@@ -18,10 +18,10 @@ j10 = Jogador("Olivia Anderson", 23, "Meio-Campo", 86)
 j11 = Jogador("James Thomas", 27, "Defesa", 84)
 j12 = Jogador("Isabella Martinez", 24, "Goleiro", 82)
 
-c1 = Clube("FC Taldo", "Brasil", 1000000)
-c2 = Clube("Real Taldo", "Espanha", 2000000)
-c3 = Clube("Taldo United", "Inglaterra", 1500000)
-c4 = Clube("Taldo City", "Itália", 1200000)
+c1 = Clube("FC Taldo", "Brasil", 1000000, 0)
+c2 = Clube("Real Taldo", "Espanha", 2000000, 0)
+c3 = Clube("Taldo United", "Inglaterra", 1500000, 0)
+c4 = Clube("Taldo City", "Itália", 1200000, 0)
 
 clubes = [c1, c2, c3, c4]
 
@@ -46,3 +46,5 @@ print("=== TALDO MANAGER ===")
 
 campeonato = Campeonato("Campeonato Taldo", clubes)
 campeonato.jogar_rodada()
+
+campeonato.mostrar_classificacao()

@@ -1,9 +1,10 @@
 class Clube:
-    def __init__(self, nome, pais, dinheiro):
+    def __init__(self, nome, pais, dinheiro, pontos):
         self.nome = nome
         self.pais = pais
         self.dinheiro = dinheiro
         self.jogadores = []
+        self.pontos = 0
     
     def mostrar(self):
         print(f"\nClube: {self.nome}")

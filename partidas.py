@@ -20,6 +20,14 @@ class Partida:
         
         print(f"{self.clube1.nome} {self.gols_c1} x {self.gols_c2} {self.clube2.nome}")
         print(f"{self.resultado}\n")
+        
+        if self.gols_c1 > self.gols_c2:
+            self.clube1.pontos += 3
+        elif self.gols_c2 > self.gols_c1:
+            self.clube2.pontos += 3
+        else:
+            self.clube1.pontos += 1
+            self.clube2.pontos += 1
     
     def gerar_gols(self):
         forca_c1 = self.clube1.calcular_forca()

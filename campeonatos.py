@@ -15,3 +15,9 @@ class Campeonato:
             if i + 1 < len(self.clubes):
                 partida = Partida(self.clubes[i], self.clubes[i + 1])
                 partida.simular_partida()
+                
+    def mostrar_classificacao(self):
+        print(f"Classificação do campeonato {self.nome}:")
+        classificacao = sorted(self.clubes, key=lambda c: c.pontos, reverse=True)
+        for idx, clube in enumerate(classificacao, start=1):
+            print(f"{idx}. {clube.nome} - {clube.pontos} pontos")

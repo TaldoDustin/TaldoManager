@@ -28,4 +28,4 @@ print("=== TALDO MANAGER ===")
 
 print("\n=== Clubes ===")
 for clube in clubes:
-    clube.mostrar()
+    clube.mostrar_partida()

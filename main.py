@@ -31,5 +31,4 @@ print("=== TALDO MANAGER ===")
 
 print("\n=== Partida ===")
 p1= Partida(c1, c2)
-print(f"{p1.clube1.nome} - {p1.clube1.calcular_forca():.0f} vs {p1.clube2.calcular_forca():.0f} - {p1.clube2.nome}")
 p1.simular_partida()

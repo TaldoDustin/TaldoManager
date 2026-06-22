@@ -6,18 +6,56 @@ class Campeonato:
     def __init__(self, nome, clubes):
         self.nome = nome
         self.clubes = clubes
+        self.rodada = 1
+        self.historico = []
+        self.partidas_jogadas = []
         
     def jogar_rodada(self):
         print(f"Jogando rodada do campeonato {self.nome}...\n")
-        # Simula partidas entre os clubes
+
+        print("=" * 40)
+        print(f"Rodada {self.rodada}")
+        print("=" * 40)
+
         random.shuffle(self.clubes)
+
         for i in range(0, len(self.clubes), 2):
+
             if i + 1 < len(self.clubes):
-                partida = Partida(self.clubes[i], self.clubes[i + 1])
+
+                confronto = frozenset([
+                    self.clubes[i].nome,
+                    self.clubes[i + 1].nome
+                ])
+
+            if confronto not in self.partidas_jogadas:
+
+                partida = Partida(
+                    self.clubes[i],
+                    self.clubes[i + 1]
+                )
+
                 partida.simular_partida()
-                
+
+                self.partidas_jogadas.append(confronto)
+
+                self.historico.append(
+                    f"Rodada {self.rodada}: "
+                    f"{partida.clube1.nome} {partida.gols_c1} x "
+                    f"{partida.gols_c2} {partida.clube2.nome}"
+                )
+
+        self.rodada += 1
+        
+
     def mostrar_classificacao(self):
         print(f"Classificação do campeonato {self.nome}:")
         classificacao = sorted(self.clubes, key=lambda c: c.pontos, reverse=True)
         for idx, clube in enumerate(classificacao, start=1):
-            print(f"{idx}. {clube.nome} - {clube.pontos} pontos")
+            jogos = clube.vitorias + clube.empates + clube.derrotas
+            print(f"{idx}. {clube.nome} | P: {clube.pontos} | J: {jogos} | V: {clube.vitorias} | E: {clube.empates} | D: {clube.derrotas}")
+   
+    def mostrar_historico(self):
+        print(f"Histórico do campeonato {self.nome}:")
+        for evento in self.historico:
+            print(f"- {evento}")        

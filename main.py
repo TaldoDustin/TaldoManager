@@ -8,9 +8,9 @@ from campeonatos import Campeonato
 j1 = Jogador("John Doe", 25, "Atacante", 85)
 j2 = Jogador("Jane Smith", 28, "Meio-Campo", 88)
 j3 = Jogador("Bob Johnson", 30, "Defesa", 82)
-j4 = Jogador("Alice Brown", 22, "Goleiro", 80)
+j4 = Jogador("Alice Brown", 22, "Goleiro", 90)
 j5 = Jogador("Charlie Davis", 27, "Atacante", 90)
-j6 = Jogador("Emily Wilson", 24, "Meio-Campo", 87)
+j6 = Jogador("Emily Wilson", 24, "Meio-Campo", 90)
 j7 = Jogador("David Lee", 29, "Defesa", 83)
 j8 = Jogador("Sophia Taylor", 26, "Goleiro", 81)
 j9 = Jogador("Michael Miller", 31, "Atacante", 89)
@@ -44,7 +44,10 @@ c4.contratar_jogador(j12)
 
 print("=== TALDO MANAGER ===")
 
-campeonato = Campeonato("Campeonato Taldo", clubes)
+campeonato = Campeonato("Taldo", clubes)
+campeonato.jogar_rodada()
+campeonato.jogar_rodada()
 campeonato.jogar_rodada()
 
 campeonato.mostrar_classificacao()
+campeonato.mostrar_historico()

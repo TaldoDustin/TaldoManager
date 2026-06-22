@@ -5,6 +5,10 @@ class Clube:
         self.dinheiro = dinheiro
         self.jogadores = []
         self.pontos = 0
+        
+        self.vitorias = 0
+        self.empates = 0
+        self.derrotas = 0
     
     def mostrar(self):
         print(f"\nClube: {self.nome}")
@@ -26,3 +30,4 @@ class Clube:
             return 0
         total_overall = sum(jogador.overall for jogador in self.jogadores)
         return total_overall / len(self.jogadores)
+    

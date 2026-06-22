@@ -23,12 +23,18 @@ class Partida:
         
         if self.gols_c1 > self.gols_c2:
             self.clube1.pontos += 3
+            self.clube1.vitorias += 1
+            self.clube2.derrotas += 1
         elif self.gols_c2 > self.gols_c1:
             self.clube2.pontos += 3
+            self.clube2.vitorias += 1
+            self.clube1.derrotas += 1
         else:
             self.clube1.pontos += 1
             self.clube2.pontos += 1
-    
+            self.clube1.empates += 1
+            self.clube2.empates += 1
+
     def gerar_gols(self):
         forca_c1 = self.clube1.calcular_forca()
         forca_c2 = self.clube2.calcular_forca()

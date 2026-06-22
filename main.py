@@ -1,3 +1,5 @@
+import random
+
 from jogadores import Jogador
 from clubes import Clube
 from partidas import Partida

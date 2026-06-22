@@ -44,8 +44,5 @@ c4.contratar_jogador(j12)
 
 print("=== TALDO MANAGER ===")
 
-partida = Partida(c1, c2)
-partida.simular_partida()
-
-partida2 = Partida(c3, c4)
-partida2.simular_partida()
+campeonato = Campeonato("Campeonato Taldo", clubes)
+campeonato.jogar_rodada()

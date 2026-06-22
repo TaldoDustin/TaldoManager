@@ -19,7 +19,7 @@ class Partida:
 
         
         print(f"{self.clube1.nome} {self.gols_c1} x {self.gols_c2} {self.clube2.nome}")
-        print(self.resultado)
+        print(f"{self.resultado}\n")
     
     def gerar_gols(self):
         forca_c1 = self.clube1.calcular_forca()

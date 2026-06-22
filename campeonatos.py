@@ -9,41 +9,35 @@ class Campeonato:
         self.rodada = 1
         self.historico = []
         self.partidas_jogadas = []
+        self.calendario = self.gerar_calendario()
         
     def jogar_rodada(self):
-        print(f"Jogando rodada do campeonato {self.nome}...\n")
 
-        print("=" * 40)
+        print(f"\n{'=' * 40}")
         print(f"Rodada {self.rodada}")
-        print("=" * 40)
+        print(f"{'=' * 40}")
 
-        random.shuffle(self.clubes)
+        jogos_por_rodada = len(self.clubes) // 2
 
-        for i in range(0, len(self.clubes), 2):
+        inicio = (self.rodada - 1) * jogos_por_rodada
+        fim = inicio + jogos_por_rodada
 
-            if i + 1 < len(self.clubes):
+        rodada_atual = self.calendario[inicio:fim]
 
-                confronto = frozenset([
-                    self.clubes[i].nome,
-                    self.clubes[i + 1].nome
-                ])
+        if not rodada_atual:
+            print("Campeonato encerrado!")
+            return
 
-            if confronto not in self.partidas_jogadas:
+        for clube1, clube2 in rodada_atual:
 
-                partida = Partida(
-                    self.clubes[i],
-                    self.clubes[i + 1]
-                )
+            partida = Partida(clube1, clube2)
+            partida.simular_partida()
 
-                partida.simular_partida()
-
-                self.partidas_jogadas.append(confronto)
-
-                self.historico.append(
-                    f"Rodada {self.rodada}: "
-                    f"{partida.clube1.nome} {partida.gols_c1} x "
-                    f"{partida.gols_c2} {partida.clube2.nome}"
-                )
+            self.historico.append(
+                f"Rodada {self.rodada}: "
+                f"{clube1.nome} {partida.gols_c1} x "
+                f"{partida.gols_c2} {clube2.nome}"
+            )
 
         self.rodada += 1
         
@@ -69,3 +63,13 @@ class Campeonato:
         print(f"Histórico do campeonato {self.nome}:")
         for evento in self.historico:
             print(f"- {evento}")        
+            
+    def gerar_calendario(self):
+        rodadas = []
+        for i in range(len(self.clubes)):
+            for j in range(i + 1, len(self.clubes)):
+                rodadas.append(
+                    (self.clubes[i], self.clubes[j])
+                )
+
+        return rodadas

@@ -1,5 +1,6 @@
 from jogadores import Jogador
 from clubes import Clube
+from partidas import Partida
 
 j1 = Jogador("John Doe", 25, "Atacante", 85)
 j2 = Jogador("Jane Smith", 28, "Meio-Campo", 88)
@@ -26,6 +27,7 @@ c2.contratar_jogador(j6)
 
 print("=== TALDO MANAGER ===")
 
-print("\n=== Clubes ===")
-for clube in clubes:
-    clube.mostrar_partida()
+print("\n=== Partida ===")
+p1= Partida(c1, c2)
+print(f"{p1.clube1.nome} - {p1.clube1.calcular_forca():.0f} vs {p1.clube2.calcular_forca():.0f} - {p1.clube2.nome}")
+p1.simular_partida()

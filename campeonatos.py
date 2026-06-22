@@ -17,12 +17,11 @@ class Campeonato:
         print(f"Rodada {self.rodada}")
         print(f"{'=' * 40}")
 
-        jogos_por_rodada = len(self.clubes) // 2
+        if self.rodada > len(self.calendario):
+            print("Campeonato encerrado!")
+            return
 
-        inicio = (self.rodada - 1) * jogos_por_rodada
-        fim = inicio + jogos_por_rodada
-
-        rodada_atual = self.calendario[inicio:fim]
+        rodada_atual = self.calendario[self.rodada - 1]
 
         if not rodada_atual:
             print("Campeonato encerrado!")
@@ -65,11 +64,32 @@ class Campeonato:
             print(f"- {evento}")        
             
     def gerar_calendario(self):
+
+        times = self.clubes[:]
+
+        if len(times) % 2 != 0:
+            times.append(None)
+
         rodadas = []
-        for i in range(len(self.clubes)):
-            for j in range(i + 1, len(self.clubes)):
-                rodadas.append(
-                    (self.clubes[i], self.clubes[j])
-                )
+
+        for _ in range(len(times) - 1):
+
+            rodada = []
+
+            for i in range(len(times) // 2):
+
+                time1 = times[i]
+                time2 = times[-i - 1]
+
+                if time1 is not None and time2 is not None:
+                    rodada.append((time1, time2))
+
+            rodadas.append(rodada)
+
+            times = (
+                [times[0]]
+                + [times[-1]]
+                + times[1:-1]
+            )
 
         return rodadas

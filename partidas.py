@@ -47,8 +47,8 @@ class Partida:
         forca_c2 = self.clube2.calcular_forca()
 
     # Dia bom / dia ruim
-        forca_c1 += random.randint(-2, 2)
-        forca_c2 += random.randint(-2, 2)
+        forca_c1 += random.randint(-1, 1)
+        forca_c2 += random.randint(-1, 1)
 
         diferenca = forca_c1 - forca_c2
         diferenca_abs = abs(diferenca)
@@ -96,35 +96,71 @@ class Partida:
         print("--------------------------")
 
     # Define o tamanho dos placares
-        if diferenca_abs <= 2:
-            max_gols = 3
-
-        elif diferenca_abs <= 5:
-            max_gols = 4
-
-        else:
-            max_gols = 5
-
         sorteio = random.random()
 
-    # Vitória clube 1
-        if sorteio < chance_c1:
+        if diferenca_abs <= 2:
 
-            gols_c1 = random.randint(1, max_gols)
-            gols_c2 = random.randint(0, gols_c1 - 1)
+            vitorias = [
+                (1,0),
+                (2,1),
+                (1,0),
+                (2,1),
+                (3,2)
+            ]       
 
-    # Empate
-        elif sorteio < chance_c1 + chance_empate:
+            empates = [
+                (0,0),
+                (1,1),
+                (1,1),
+                (2,2)
+            ]
 
-            gols = random.randint(0, max_gols - 1)
+        elif diferenca_abs <= 6:
 
-            gols_c1 = gols
-            gols_c2 = gols
+            vitorias = [
+                (1,0),
+                (2,0),
+                (2,1),
+                (3,1),
+                (3,0)
+            ]
 
-    # Vitória clube 2
+            empates = [
+                (0,0),
+                (1,1),
+                (2,2)
+            ]
+
         else:
 
-            gols_c2 = random.randint(1, max_gols)
-            gols_c1 = random.randint(0, gols_c2 - 1)
+            vitorias = [
+                (1,0),
+                (2,0),
+                (2,0),
+                (2,1),
+                (3,0),
+                (3,1),
+                (4,0),
+                (4,1)
+            ]
 
+            empates = [
+                (0,0),
+                (1,1)
+            ]
+
+
+        if sorteio < chance_c1:
+
+            gols_c1, gols_c2 = random.choice(vitorias)
+
+        elif sorteio < chance_c1 + chance_empate:
+
+            gols_c1, gols_c2 = random.choice(empates)
+
+        else:
+
+            gols_c2, gols_c1 = random.choice(vitorias)
+
+            
         return gols_c1, gols_c2

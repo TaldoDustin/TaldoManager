@@ -1,5 +1,6 @@
 import random
 
+import jogadores
 from partidas import Partida
 
 class Campeonato:
@@ -72,6 +73,7 @@ class Campeonato:
 
         rodadas = []
 
+        # TURNO
         for _ in range(len(times) - 1):
 
             rodada = []
@@ -90,6 +92,37 @@ class Campeonato:
                 [times[0]]
                 + [times[-1]]
                 + times[1:-1]
-            )
+                )
 
-        return rodadas
+        # RETURNO
+        rodadas_volta = []
+
+        for rodada in rodadas:
+
+            nova_rodada = []
+
+            for time1, time2 in rodada:
+                nova_rodada.append((time2, time1))
+
+            rodadas_volta.append(nova_rodada)
+
+        return rodadas + rodadas_volta
+    
+    def mostrar_artilharia(self):
+
+        jogadores = []
+
+        for clube in self.clubes:
+            jogadores.extend(clube.jogadores)
+
+        artilharia = sorted(
+            jogadores,
+            key=lambda j: j.gols,
+            reverse=True
+        )   
+
+        print("\n=== ARTILHARIA ===")
+
+        for jogador in artilharia:
+            if jogador.gols > 0:
+                print(f"{jogador.nome} - {jogador.gols} gols")

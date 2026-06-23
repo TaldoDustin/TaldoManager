@@ -1,4 +1,6 @@
 import random
+from jogadores import Jogador
+
 class Partida:
     def __init__(self, clube1, clube2):
         self.clube1 = clube1
@@ -9,6 +11,28 @@ class Partida:
         
     def simular_partida(self):
         self.gols_c1, self.gols_c2 = self.gerar_gols()
+
+        lista_pesos_c1 = []
+
+        for jogador in self.clube1.jogadores:
+            peso = jogador.peso_gol()
+            if peso > 0:
+                lista_pesos_c1.extend([jogador] * peso)
+
+        for _ in range(self.gols_c1):
+            artilheiro = random.choice(lista_pesos_c1)
+            artilheiro.gols += 1
+
+        lista_pesos_c2 = []
+
+        for jogador in self.clube2.jogadores:
+            peso = jogador.peso_gol()
+            if peso > 0:
+                lista_pesos_c2.extend([jogador] * peso)
+
+        for _ in range(self.gols_c2):
+            artilheiro = random.choice(lista_pesos_c2)
+            artilheiro.gols += 1
 
         if self.gols_c1 > self.gols_c2:
             self.resultado = f"{self.clube1.nome} venceu!"
@@ -54,7 +78,7 @@ class Partida:
         diferenca_abs = abs(diferenca)
 
     # Chance inicial de vitória
-        chance_c1 = 0.5 + (diferenca * 0.07)
+        chance_c1 = 0.5 + (diferenca * 0.08)
 
     # Limites
         chance_c1 = max(0.15, min(0.85, chance_c1))
@@ -62,16 +86,16 @@ class Partida:
 
     # Empate dinâmico
         if diferenca_abs <= 2:
-            chance_empate = 0.25
-
-        elif diferenca_abs <= 5:
-            chance_empate = 0.20
-
-        elif diferenca_abs <= 8:
             chance_empate = 0.15
 
-        else:
+        elif diferenca_abs <= 5:
+            chance_empate = 0.12
+
+        elif diferenca_abs <= 8:
             chance_empate = 0.08
+
+        else:
+            chance_empate = 0.10
 
     # Redistribui as chances restantes
         total = chance_c1 + chance_c2
@@ -161,6 +185,5 @@ class Partida:
         else:
 
             gols_c2, gols_c1 = random.choice(vitorias)
-
-            
+        
         return gols_c1, gols_c2

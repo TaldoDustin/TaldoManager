@@ -54,7 +54,7 @@ class Partida:
         diferenca_abs = abs(diferenca)
 
     # Chance inicial de vitória
-        chance_c1 = 0.5 + (diferenca * 0.05)
+        chance_c1 = 0.5 + (diferenca * 0.07)
 
     # Limites
         chance_c1 = max(0.15, min(0.85, chance_c1))
@@ -62,16 +62,16 @@ class Partida:
 
     # Empate dinâmico
         if diferenca_abs <= 2:
-            chance_empate = 0.30
-
-        elif diferenca_abs <= 5:
             chance_empate = 0.25
 
-        elif diferenca_abs <= 8:
+        elif diferenca_abs <= 5:
             chance_empate = 0.20
 
+        elif diferenca_abs <= 8:
+            chance_empate = 0.15
+
         else:
-            chance_empate = 0.10
+            chance_empate = 0.08
 
     # Redistribui as chances restantes
         total = chance_c1 + chance_c2

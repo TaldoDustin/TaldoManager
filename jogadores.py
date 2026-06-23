@@ -4,6 +4,7 @@ class Jogador:
         self.idade = idade
         self.posicao = posicao
         self.overall = overall
+        self.gols = 0
         
     def mostrar(self):
         print(

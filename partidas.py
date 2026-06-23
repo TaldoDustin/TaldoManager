@@ -1,4 +1,6 @@
 import random
+from jogadores import Jogador
+
 class Partida:
     def __init__(self, clube1, clube2):
         self.clube1 = clube1
@@ -9,23 +11,26 @@ class Partida:
         
     def simular_partida(self):
         self.gols_c1, self.gols_c2 = self.gerar_gols()
-        
-        if jogador.posicao == "Atacante":
-            peso = 5.0
-        elif jogador.posicao == "Meio-campista":
-            peso = 3.0
-        elif jogador.posicao == "Defensor":
-            peso = 1.0
-        else:
-            peso = 0.2
+
+        lista_pesos_c1 = []
+
+        for jogador in self.clube1.jogadores:
+            peso = jogador.peso_gol()
+            lista_pesos_c1.extend([jogador] * peso)
 
         for _ in range(self.gols_c1):
-            jogador = random.choice(self.clube1.jogadores)
-            jogador.gols += peso
-        
+            artilheiro = random.choice(lista_pesos_c1)
+            artilheiro.gols += 1
+
+        lista_pesos_c2 = []
+
+        for jogador in self.clube2.jogadores:
+            peso = jogador.peso_gol()
+            lista_pesos_c2.extend([jogador] * peso)
+
         for _ in range(self.gols_c2):
-            jogador = random.choice(self.clube2.jogadores)
-            jogador.gols += peso
+            artilheiro = random.choice(lista_pesos_c2)
+            artilheiro.gols += 1
 
         if self.gols_c1 > self.gols_c2:
             self.resultado = f"{self.clube1.nome} venceu!"

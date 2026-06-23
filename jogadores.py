@@ -13,3 +13,16 @@ class Jogador:
             f"Posição: {self.posicao}, "
             f"Overall: {self.overall}"
         )
+        
+    def peso_gol(self):
+
+        if self.posicao == "Atacante":
+            return 5
+
+        elif self.posicao == "Meio-Campo":
+            return 3
+
+        elif self.posicao == "Defesa":
+            return 1
+
+        return 1

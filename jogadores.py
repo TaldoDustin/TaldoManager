@@ -16,16 +16,16 @@ class Jogador:
         
     def peso_gol(self):
 
-        if self.posicao == "Atacante":
-            peso = 12
+        if self.posicao == "Goleiro":   
+            return 0
 
-        elif self.posicao == "Meio-Campo":
-            peso = 5
-
-        elif self.posicao == "Defesa":
-            peso = 2
+        base = {
+            "Atacante": 12,
+            "Meio-Campo": 5,
+            "Defesa": 2,
+            "Goleiro": 0
+        }
         
-        else: 
-            peso = 1
-
-        return peso
+        peso = base.get(self.posicao, 0) * (self.overall // 80)
+        
+        return peso + (self.overall // 5)

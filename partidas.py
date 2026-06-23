@@ -16,7 +16,8 @@ class Partida:
 
         for jogador in self.clube1.jogadores:
             peso = jogador.peso_gol()
-            lista_pesos_c1.extend([jogador] * peso)
+            if peso > 0:
+                lista_pesos_c1.extend([jogador] * peso)
 
         for _ in range(self.gols_c1):
             artilheiro = random.choice(lista_pesos_c1)
@@ -26,7 +27,8 @@ class Partida:
 
         for jogador in self.clube2.jogadores:
             peso = jogador.peso_gol()
-            lista_pesos_c2.extend([jogador] * peso)
+            if peso > 0:
+                lista_pesos_c2.extend([jogador] * peso)
 
         for _ in range(self.gols_c2):
             artilheiro = random.choice(lista_pesos_c2)
@@ -76,7 +78,7 @@ class Partida:
         diferenca_abs = abs(diferenca)
 
     # Chance inicial de vitória
-        chance_c1 = 0.5 + (diferenca * 0.07)
+        chance_c1 = 0.5 + (diferenca * 0.08)
 
     # Limites
         chance_c1 = max(0.15, min(0.85, chance_c1))
@@ -84,16 +86,16 @@ class Partida:
 
     # Empate dinâmico
         if diferenca_abs <= 2:
-            chance_empate = 0.20
+            chance_empate = 0.15
 
         elif diferenca_abs <= 5:
-            chance_empate = 0.18
-
-        elif diferenca_abs <= 8:
             chance_empate = 0.12
 
-        else:
+        elif diferenca_abs <= 8:
             chance_empate = 0.08
+
+        else:
+            chance_empate = 0.05
 
     # Redistribui as chances restantes
         total = chance_c1 + chance_c2

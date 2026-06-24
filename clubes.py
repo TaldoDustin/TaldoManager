@@ -11,6 +11,29 @@ class Clube:
         self.vitorias = 0
         self.empates = 0
         self.derrotas = 0
+        
+        self.forma = []
+        
+    def atualizar_forma(self, resultado):
+
+        self.forma.append(resultado)
+
+        if len(self.forma) > 5:
+            self.forma.pop(0)
+    
+    def bonus_forma(self):
+
+        bonus = 0
+
+        for resultado in self.forma:
+
+            if resultado == "V":
+                bonus += 0.5
+
+            elif resultado == "D":
+                bonus -= 0.5
+
+        return bonus
     
     def mostrar(self):
         print(f"\nClube: {self.nome}")

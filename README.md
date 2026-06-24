@@ -1,113 +1,77 @@
-# ⚽ Isaque Manager
-
-Um Football Manager desenvolvido em Python com foco em aprendizado prático de programação.
-
-O projeto está sendo construído do zero para estudar lógica de programação, orientação a objetos e desenvolvimento de sistemas.
-
----
-
-## 🚀 Funcionalidades
-
-### Jogadores
-- Cadastro de jogadores
-- Nome
-- Idade
-- Posição
-- Overall
-
-### Clubes
-- Cadastro de clubes
-- País
-- Dinheiro
-- Elenco de jogadores
-- Cálculo automático de força do time
-
-### Partidas
-- Simulação de partidas
-- Geração de gols baseada na força dos clubes
-- Resultado automático
-- Empates
-- Placar completo
-
-### Campeonato
-- Cadastro de campeonatos
-- Sorteio automático de rodadas
-- Simulação de jogos do campeonato
-- Classificação por pontos
-
----
-
-## 📚 Tecnologias
-
-- Python 3
-- Programação Orientada a Objetos (POO)
-
----
-
-## 🎯 Objetivo do Projeto
-
-Este projeto não tem como objetivo apenas criar um jogo.
-
-O principal objetivo é aprender:
-
-- Lógica de programação
-- Orientação a objetos
-- Estruturação de projetos
-- Manipulação de dados
-- Simulação de sistemas
-- Git e GitHub
-- Banco de dados
-- Desenvolvimento web com Flask
-
----
-
 ## 🗺️ Roadmap
 
-### Versão Atual
+### Versão Atual (v0.3)
 
 - [x] Criar jogadores
 - [x] Criar clubes
 - [x] Contratação de jogadores
 - [x] Cálculo de força dos clubes
 - [x] Simulação de partidas
-- [x] Geração de gols
-- [x] Resultado das partidas
+- [x] Sistema de gols
+- [x] Artilharia
+- [x] Histórico de partidas
 - [x] Campeonato
+- [x] Calendário turno e returno
 - [x] Sorteio automático de rodadas
 - [x] Classificação por pontos
+- [x] Saldo de gols
+- [x] Critérios de desempate
+- [x] Distribuição de gols por posição
+- [x] Simulação baseada em força dos clubes
 
-### Próximas Funcionalidades
+---
 
-- [ ] Histórico de partidas
-- [ ] Transferências de jogadores
-- [ ] Mercado de transferências
-- [ ] Temporadas
-- [ ] Estatísticas dos jogadores
+### Próxima Sprint (v0.4)
+
+- [ ] Mandante e visitante
+- [ ] Vantagem de mando de campo
+- [ ] Forma recente dos clubes
+- [ ] Estatísticas completas dos jogadores
+  - [ ] Jogos
+  - [ ] Gols
+  - [ ] Assistências
+  - [ ] Média de nota
+- [ ] Melhor jogador da partida
+- [ ] MVP do campeonato
+
+---
+
+### Mercado (v0.5)
+
+- [ ] Valor de mercado dos jogadores
 - [ ] Sistema financeiro dos clubes
-- [ ] Banco de dados SQLite
-- [ ] Salvar e carregar partidas
-- [ ] Interface Web com Flask
-- [ ] Dashboard do campeonato
-- [ ] Sistema de treinadores
+- [ ] Transferências
+- [ ] Mercado de transferências
+- [ ] Renovação de contrato
+- [ ] Idade e evolução de overall
+
+---
+
+### Modo Carreira (v0.6)
+
+- [ ] Temporadas
+- [ ] Envelhecimento dos jogadores
+- [ ] Aposentadoria
+- [ ] Geração de jovens talentos
 - [ ] Categorias de base
+- [ ] Histórico de campeões
 
 ---
 
-## 📁 Estrutura do Projeto
+### Persistência (v0.7)
 
-```text
-TaldoManager/
-│
-├── main.py
-├── jogadores.py
-├── clubes.py
-├── partidas.py
-├── campeonatos.py
-└── README.md
-```
+- [ ] Banco de dados SQLite
+- [ ] Salvar partidas
+- [ ] Carregar save
+- [ ] Sistema de autosave
 
 ---
 
-## 👨‍💻 Autor
+### Web (v1.0)
 
-Desenvolvido por Isaque Souza como projeto de aprendizado e portfólio.
+- [ ] API Flask
+- [ ] Interface Web
+- [ ] Dashboard dos campeonatos
+- [ ] Dashboard financeiro
+- [ ] Estatísticas avançadas
+- [ ] Painel de transferências

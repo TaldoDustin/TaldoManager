@@ -8,6 +8,7 @@ class Partida:
         self.resultado = None
         self.gols_c1 = 0
         self.gols_c2 = 0
+        self.mandante = mandante
         
     def simular_partida(self):
         self.gols_c1, self.gols_c2 = self.gerar_gols()
@@ -49,15 +50,21 @@ class Partida:
             self.clube1.pontos += 3
             self.clube1.vitorias += 1
             self.clube2.derrotas += 1
+            self.clube1.atualizar_forma("V")
+            self.clube2.atualizar_forma("D")
         elif self.gols_c2 > self.gols_c1:
             self.clube2.pontos += 3
             self.clube2.vitorias += 1
             self.clube1.derrotas += 1
+            self.clube2.atualizar_forma("V")
+            self.clube1.atualizar_forma("D")
         else:
             self.clube1.pontos += 1
             self.clube2.pontos += 1
             self.clube1.empates += 1
             self.clube2.empates += 1
+            self.clube1.atualizar_forma("E")
+            self.clube2.atualizar_forma("E")
             
         self.clube1.gols_marcados += self.gols_c1
         self.clube1.gols_sofridos += self.gols_c2   
@@ -69,6 +76,10 @@ class Partida:
     # Força base dos clubes
         forca_c1 = self.clube1.calcular_forca()
         forca_c2 = self.clube2.calcular_forca()
+        
+        
+    # Ajuste de força para o clube mandante
+        forca_c1 += 2  
 
     # Dia bom / dia ruim
         forca_c1 += random.randint(-1, 1)

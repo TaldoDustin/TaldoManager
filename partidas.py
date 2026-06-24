@@ -8,10 +8,17 @@ class Partida:
         self.resultado = None
         self.gols_c1 = 0
         self.gols_c2 = 0
-        self.mandante = mandante
-        
+                
     def simular_partida(self):
         self.gols_c1, self.gols_c2 = self.gerar_gols()
+
+        estatisticas = {}
+
+        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+            estatisticas[jogador] = {
+                "gols": 0,
+                "assistencias": 0
+            }
 
         lista_pesos_c1 = []
 
@@ -23,6 +30,23 @@ class Partida:
         for _ in range(self.gols_c1):
             artilheiro = random.choice(lista_pesos_c1)
             artilheiro.gols += 1
+            estatisticas[artilheiro]["gols"] += 1
+            
+            lista_assistencias_c1 = []
+            
+            for jogador in self.clube1.jogadores:
+
+                if jogador != artilheiro:
+
+                    peso = jogador.peso_assistencia()
+
+                    if peso > 0:
+                        lista_assistencias_c1.extend([jogador] * peso)
+            
+            if lista_assistencias_c1 and random.random() < 0.70:
+                assistente = random.choice(lista_assistencias_c1)
+                assistente.assistencias += 1
+                estatisticas[assistente]["assistencias"] += 1
 
         lista_pesos_c2 = []
 
@@ -34,7 +58,25 @@ class Partida:
         for _ in range(self.gols_c2):
             artilheiro = random.choice(lista_pesos_c2)
             artilheiro.gols += 1
-
+            estatisticas[artilheiro]["gols"] += 1   
+            
+            lista_assistencias_c2 = []
+            
+            for jogador in self.clube2.jogadores:
+                
+                if jogador != artilheiro:
+                    
+                    peso = jogador.peso_assistencia()
+                    
+                    if peso > 0:
+                        lista_assistencias_c2.extend([jogador] * peso)
+                        
+            if lista_assistencias_c2 and random.random() < 0.70:
+                assistente = random.choice(lista_assistencias_c2)
+                assistente.assistencias += 1
+                estatisticas[assistente]["assistencias"] += 1
+                   
+            
         if self.gols_c1 > self.gols_c2:
             self.resultado = f"{self.clube1.nome} venceu!"
         elif self.gols_c2 > self.gols_c1:
@@ -42,7 +84,6 @@ class Partida:
         else:
             self.resultado = "Empate!"
 
-        
         print(f"{self.clube1.nome} {self.gols_c1} x {self.gols_c2} {self.clube2.nome}")
         print(f"{self.resultado}\n")
         
@@ -70,6 +111,57 @@ class Partida:
         self.clube1.gols_sofridos += self.gols_c2   
         self.clube2.gols_marcados += self.gols_c2
         self.clube2.gols_sofridos += self.gols_c1
+        
+        # =====================
+        # NOTAS DOS JOGADORES
+        # =====================
+
+        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+
+            nota = 6.0
+
+            gols = estatisticas[jogador]["gols"]
+            assistencias = estatisticas[jogador]["assistencias"]
+
+            if jogador.posicao == "Atacante":
+                bonus_gol = 0.7
+                bonus_assistencia = 0.4
+
+            elif jogador.posicao == "Meio-Campo":
+                bonus_gol = 0.9
+                bonus_assistencia = 0.6
+
+            elif jogador.posicao == "Defesa":
+                bonus_gol = 1.2
+                bonus_assistencia = 0.7
+
+            else:  # Goleiro
+                bonus_gol = 2.0
+                bonus_assistencia = 1.0
+
+            nota += gols * bonus_gol
+            nota += assistencias * bonus_assistencia
+
+            # bônus por vitória
+
+            if jogador in self.clube1.jogadores:
+
+                if self.gols_c1 > self.gols_c2:
+                    nota += 0.3
+
+                elif self.gols_c1 < self.gols_c2:
+                    nota -= 0.2
+
+            else:
+
+                if self.gols_c2 > self.gols_c1:
+                    nota += 0.3
+
+                elif self.gols_c2 < self.gols_c1:
+                    nota -= 0.2
+
+            jogador.soma_nota += nota
+            jogador.partidas += 1                    
 
     def gerar_gols(self):
 

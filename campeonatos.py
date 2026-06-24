@@ -56,7 +56,8 @@ class Campeonato:
                 f"D: {clube.derrotas} | "
                 f"GP: {clube.gols_marcados} | "
                 f"GC: {clube.gols_sofridos} | "
-                f"SG: {clube.saldo_gols()}"
+                f"SG: {clube.saldo_gols()} | "
+                f"Forma: {' '.join(clube.forma)}" 
             )
    
     def mostrar_historico(self):
@@ -125,4 +126,4 @@ class Campeonato:
 
         for jogador in artilharia:
             if jogador.gols > 0:
-                print(f"{jogador.nome} - {jogador.gols} gols")
+                print(f"{jogador.nome} | G: {jogador.gols} | A: {jogador.assistencias} | N: {jogador.nota_media():.1f} ")

@@ -160,8 +160,35 @@ class Partida:
                 elif self.gols_c2 < self.gols_c1:
                     nota -= 0.2
 
+            # bônus por vitória
+
+            if jogador in self.clube1.jogadores:
+
+                if self.gols_c1 > self.gols_c2:
+                    nota += 0.3
+
+                elif self.gols_c1 < self.gols_c2:
+                    nota -= 0.2
+
+            else:
+
+                if self.gols_c2 > self.gols_c1:
+                    nota += 0.3
+
+                elif self.gols_c2 < self.gols_c1:
+                    nota -= 0.2
+
+            # limita entre 0 e 10
+            nota = max(0, min(10, nota))
+
             jogador.soma_nota += nota
-            jogador.partidas += 1                    
+            jogador.partidas += 1
+
+            if nota > jogador.melhor_nota:
+                jogador.melhor_nota = nota
+
+            if nota < jogador.pior_nota:
+                jogador.pior_nota = nota   
 
     def gerar_gols(self):
 

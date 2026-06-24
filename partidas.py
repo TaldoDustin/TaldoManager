@@ -198,7 +198,7 @@ class Partida:
         
         
     # Ajuste de força para o clube mandante
-        forca_c1 += 2  
+        forca_c1 += 1
 
     # Dia bom / dia ruim
         forca_c1 += random.randint(-1, 1)

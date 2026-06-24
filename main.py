@@ -17,6 +17,12 @@ j9 = Jogador("Michael Miller", 31, "Atacante", 89)
 j10 = Jogador("Olivia Anderson", 23, "Meio-Campo", 86)
 j11 = Jogador("James Thomas", 27, "Defesa", 84)
 j12 = Jogador("Isabella Martinez", 24, "Goleiro", 82)
+j13 = Jogador("Juan Soares", 17, "Atacante", 79)
+j14 = Jogador("Isaque Souza", 18, "Meio-Campo", 95)
+j15 = Jogador("Jhon Alex", 27, "Defesa", 84)
+j16 = Jogador("Rafaela Montes", 24, "Goleiro", 83)
+
+
 
 c1 = Clube("FC Taldo", "Brasil", 1000000, 0)
 c2 = Clube("Real Taldo", "Espanha", 2000000, 0)
@@ -28,18 +34,22 @@ clubes = [c1, c2, c3, c4]
 c1.contratar_jogador(j1)
 c1.contratar_jogador(j2)
 c1.contratar_jogador(j3)
+c1.contratar_jogador(j4)
 
-c2.contratar_jogador(j4)
 c2.contratar_jogador(j5)
 c2.contratar_jogador(j6)
+c2.contratar_jogador(j7)
+c2.contratar_jogador(j8)
 
-c3.contratar_jogador(j7)
-c3.contratar_jogador(j8)
 c3.contratar_jogador(j9)
+c3.contratar_jogador(j10)
+c3.contratar_jogador(j11)
+c3.contratar_jogador(j12)
 
-c4.contratar_jogador(j10)
-c4.contratar_jogador(j11)
-c4.contratar_jogador(j12)
+c4.contratar_jogador(j13)
+c4.contratar_jogador(j14)
+c4.contratar_jogador(j15)
+c4.contratar_jogador(j16)
 
 
 print("=== TALDO MANAGER ===")
@@ -57,5 +67,6 @@ campeonato.mostrar_historico()
 campeonato.mostrar_artilharia()
 
 campeonato.melhores_notas()
-
+campeonato.assistencias()
+j14.mostrar_estatisticas()
 

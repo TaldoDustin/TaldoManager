@@ -128,6 +128,25 @@ class Campeonato:
             if jogador.gols > 0:
                 print(f"{jogador.nome} | G: {jogador.gols} | A: {jogador.assistencias} | N: {jogador.nota_media():.1f} ")
                 
+    def assistencias(self):
+        ranking = []
+
+        for clube in self.clubes:
+            ranking.extend(clube.jogadores)
+
+        ranking.sort(
+            key=lambda j: j.assistencias,
+            reverse=True
+            )
+
+        print("\n=== ASSISTÊNCIAS ===")
+
+        for jogador in ranking:
+            if jogador.assistencias > 0:
+                print(
+                    f"{jogador.nome} | A: {jogador.assistencias}\n"
+                )
+                
     def melhores_notas(self):
 
         jogadores = []

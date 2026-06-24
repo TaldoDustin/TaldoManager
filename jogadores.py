@@ -1,3 +1,5 @@
+
+
 class Jogador:
     def __init__(self, nome, idade, posicao, overall):
         self.nome = nome
@@ -61,5 +63,20 @@ class Jogador:
         
         return round(
             self.soma_nota / self.partidas, 2
+        )
+        
+    def mostrar_estatisticas(self):
+        print("\n=== MVP ===")
+        
+        print(
+            f"Nome: {self.nome} \n"
+            f"Posição: {self.posicao} \n"
+            f"Overall: {self.overall} \n"
+            f"Jogos: {self.partidas} \n"
+            f"Gols: {self.gols} \n"
+            f"Assistências: {self.assistencias} \n"
+            f"Nota Média: {self.nota_media()} \n"
+            f"Melhor Nota: {round(self.melhor_nota, 2)} \n"
+            f"Pior Nota: {round(self.pior_nota, 2)} \n"
         )
         

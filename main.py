@@ -55,3 +55,7 @@ campeonato.jogar_rodada()
 campeonato.mostrar_classificacao()
 campeonato.mostrar_historico()
 campeonato.mostrar_artilharia()
+
+campeonato.melhores_notas()
+
+

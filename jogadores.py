@@ -19,6 +19,15 @@ class Jogador:
             f"Overall: {self.overall}"
         )
         
+    def mostrar_nota(self):
+        print(
+            f"Nome: {self.nome}, "
+            f"Posição: {self.posicao}, "
+            f"Nota Média: {self.soma_nota}, "
+            f"Melhor Nota: {self.melhor_nota}, "
+            f"Pior Nota: {self.pior_nota}"
+        )    
+    
     def peso_gol(self):
 
         if self.posicao == "Goleiro":   

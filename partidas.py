@@ -78,7 +78,7 @@ class Partida:
         diferenca_abs = abs(diferenca)
 
     # Chance inicial de vitória
-        chance_c1 = 0.5 + (diferenca * 0.08)
+        chance_c1 = 0.5 + (diferenca * 0.06)
 
     # Limites
         chance_c1 = max(0.15, min(0.85, chance_c1))
@@ -95,7 +95,7 @@ class Partida:
             chance_empate = 0.08
 
         else:
-            chance_empate = 0.10
+            chance_empate = 0.05
 
     # Redistribui as chances restantes
         total = chance_c1 + chance_c2
@@ -124,59 +124,121 @@ class Partida:
 
         if diferenca_abs <= 2:
 
-            vitorias = [
+            vitorias_favorito = [
+                (1,0),
+                (1,0),
                 (1,0),
                 (2,1),
-                (1,0),
+                (2,1),
                 (2,1),
                 (3,2)
-            ]       
+                ]
+
+            vitorias_azarao = [
+                (1,0),
+                (1,0),
+                (2,1),
+                (2,1)
+                ]
 
             empates = [
                 (0,0),
                 (1,1),
                 (1,1),
+                (1,1),
                 (2,2)
-            ]
+                ]
 
         elif diferenca_abs <= 6:
 
-            vitorias = [
+            vitorias_favorito = [
+                (1,0),
                 (1,0),
                 (2,0),
+                (2,0),
+                (2,1),
                 (2,1),
                 (3,1),
                 (3,0)
-            ]
+                ]   
+
+            vitorias_azarao = [
+                (1,0),
+                (1,0),
+                (2,1),
+                (2,1),
+                (2,0)
+                ]
 
             empates = [
                 (0,0),
                 (1,1),
+                (1,1),
                 (2,2)
-            ]
+                ]
 
         else:
 
-            vitorias = [
+            vitorias_favorito = [
                 (1,0),
+                (2,0),
                 (2,0),
                 (2,0),
                 (2,1),
                 (3,0),
                 (3,1),
+                (3,1),
                 (4,0),
                 (4,1)
-            ]
+                ]
+
+            vitorias_azarao = [
+                (1,0),
+                (1,0),
+                (2,0),
+                (2,1)
+                ]
 
             empates = [
                 (0,0),
                 (1,1)
-            ]
+                ]
 
+        if diferenca_abs >= 10:
+            vitorias_favorito.extend([
+                (2,0),
+                (3,0),
+                (3,1),
+                (4,0),
+                (5,0)
+                ])
+
+        if diferenca_abs >= 10:
+            vitorias_favorito.extend([
+                (2,0),
+                (3,0),
+                (3,1),
+                (4,0),
+                (5,0)
+                ])
+
+            vitorias_azarao = [
+                (1,0),
+                (1,0),
+                (2,0),
+                (2,1)
+                ]
+
+            empates = [
+                (0,0),
+                (1,1)
+                ]
+
+        # Resultado da partida
 
         if sorteio < chance_c1:
 
-            gols_c1, gols_c2 = random.choice(vitorias)
+            gols_c1, gols_c2 = random.choice(vitorias_favorito)
 
         elif sorteio < chance_c1 + chance_empate:
 
@@ -184,6 +246,6 @@ class Partida:
 
         else:
 
-            gols_c2, gols_c1 = random.choice(vitorias)
-        
+            gols_c2, gols_c1 = random.choice(vitorias_azarao)
+
         return gols_c1, gols_c2

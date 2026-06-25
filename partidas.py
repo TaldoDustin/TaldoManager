@@ -112,6 +112,9 @@ class Partida:
         self.clube2.gols_marcados += self.gols_c2
         self.clube2.gols_sofridos += self.gols_c1
         
+        melhor_jogador = None
+        maior_nota = 0
+        
         # =====================
         # NOTAS DOS JOGADORES
         # =====================
@@ -152,14 +155,6 @@ class Partida:
                 elif self.gols_c1 < self.gols_c2:
                     nota -= 0.2
 
-            else:
-
-                if self.gols_c2 > self.gols_c1:
-                    nota += 0.3
-
-                elif self.gols_c2 < self.gols_c1:
-                    nota -= 0.2
-
             # bônus por vitória
 
             if jogador in self.clube1.jogadores:
@@ -170,25 +165,47 @@ class Partida:
                 elif self.gols_c1 < self.gols_c2:
                     nota -= 0.2
 
-            else:
-
-                if self.gols_c2 > self.gols_c1:
-                    nota += 0.3
-
-                elif self.gols_c2 < self.gols_c1:
-                    nota -= 0.2
-
             # limita entre 0 e 10
             nota = max(0, min(10, nota))
 
             jogador.soma_nota += nota
             jogador.partidas += 1
-
+            
             if nota > jogador.melhor_nota:
                 jogador.melhor_nota = nota
 
             if nota < jogador.pior_nota:
-                jogador.pior_nota = nota   
+                jogador.pior_nota = nota
+
+            if melhor_jogador is None:
+                melhor_jogador = jogador
+                maior_nota = nota
+
+            elif (
+                nota > maior_nota or
+                (
+                    nota == maior_nota and
+                    (
+                        estatisticas[jogador]["gols"],
+                        estatisticas[jogador]["assistencias"]
+                    ) >
+                    (
+                        estatisticas[melhor_jogador]["gols"],
+                        estatisticas[melhor_jogador]["assistencias"]
+                    )
+                )
+            ):
+                maior_nota = nota
+                melhor_jogador = jogador
+        
+        melhor_jogador.melhor_em_campo += 1
+
+        print("\n⭐ MELHOR EM CAMPO")
+        print(
+            f"{melhor_jogador.nome} "
+            f"({melhor_jogador.posicao}) "
+            f"- Nota {maior_nota:.1f}\n"
+            )
 
     def gerar_gols(self):
 

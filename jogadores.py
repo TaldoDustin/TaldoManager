@@ -12,6 +12,7 @@ class Jogador:
         self.soma_nota = 0.0
         self.melhor_nota = 0.0
         self.pior_nota = 10.0
+        self.melhor_em_campo = 0
         
     def mostrar(self):
         print(

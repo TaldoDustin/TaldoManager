@@ -156,7 +156,12 @@ class Campeonato:
 
         ranking = sorted(
             jogadores,
-            key=lambda j: j.nota_media(),
+            key=lambda j: (
+                j.melhor_em_campo,
+                j.nota_media(),
+                j.gols,
+                j.assistencias
+            ),
             reverse=True
         )
 
@@ -172,3 +177,33 @@ class Campeonato:
                     f"Melhor: {jogador.melhor_nota:.1f} | "
                     f"Pior: {jogador.pior_nota:.1f}"
                 )
+                
+    def mvp_campeonato(self):
+
+        jogadores = []
+
+        for clube in self.clubes:
+            jogadores.extend(clube.jogadores)
+
+        ranking = sorted(
+            jogadores,
+                key=lambda j: (
+                j.melhor_em_campo,
+                j.nota_media(),
+                j.gols,
+                j.assistencias
+            ),
+            reverse=True
+        )
+
+        vencedor = ranking[0]
+
+        print("\n🏆 MVP DO CAMPEONATO")
+        print("---------------------------")
+        print(f"Jogador: {vencedor.nome}")
+        print(f"Posição: {vencedor.posicao}")
+        print(f"Overall: {vencedor.overall}")
+        print(f"Melhores em campo: {vencedor.melhor_em_campo}")
+        print(f"Nota média: {vencedor.nota_media()}")
+        print(f"Gols: {vencedor.gols}")
+        print(f"Assistências: {vencedor.assistencias}")

@@ -68,5 +68,4 @@ campeonato.mostrar_artilharia()
 
 campeonato.melhores_notas()
 campeonato.assistencias()
-j14.mostrar_estatisticas()
-
+campeonato.mvp_campeonato()

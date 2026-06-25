@@ -273,6 +273,250 @@ class Partida:
 
     def gerar_gols(self):
 
+        forca_c1, forca_c2 = self.calcular_forcas()
+
+        (
+            chance_c1,
+            chance_c2,
+            chance_empate,
+            diferenca_abs
+        ) = self.calcular_probabilidades(
+            forca_c1,
+            forca_c2
+        )
+
+        self.mostrar_analise(
+            forca_c1,
+            forca_c2,
+            chance_c1,
+            chance_c2,
+            chance_empate
+        )
+
+        (
+            vitorias_favorito,
+            vitorias_azarao,
+            empates
+        ) = self.definir_placares(
+            diferenca_abs
+        )
+
+        return self.sortear_resultado(
+            chance_c1,
+            chance_empate,
+            vitorias_favorito,
+            vitorias_azarao,
+            empates
+        )
+        
+    def calcular_forcas(self):
+
+        forca_c1 = self.clube1.calcular_forca()
+        forca_c2 = self.clube2.calcular_forca()
+
+        # vantagem do mandante
+        forca_c1 += 1
+
+        # dia bom / ruim
+        forca_c1 += random.randint(-1, 1)
+        forca_c2 += random.randint(-1, 1)
+
+        return forca_c1, forca_c2
+    
+    def calcular_probabilidades(
+        self,
+        forca_c1,
+        forca_c2
+    ):
+
+        diferenca = forca_c1 - forca_c2
+        diferenca_abs = abs(diferenca)
+
+        chance_c1 = 0.5 + (diferenca * 0.06)
+
+        chance_c1 = max(
+            0.15,
+            min(0.85, chance_c1)
+        )
+
+        chance_c2 = 1 - chance_c1
+
+        if diferenca_abs <= 2:
+            chance_empate = 0.15
+
+        elif diferenca_abs <= 5:
+            chance_empate = 0.12
+
+        elif diferenca_abs <= 8:
+            chance_empate = 0.08
+
+        else:
+            chance_empate = 0.05
+
+        total = chance_c1 + chance_c2
+
+        chance_c1 = (
+            chance_c1 / total
+        ) * (1 - chance_empate)
+
+        chance_c2 = (
+            chance_c2 / total
+        ) * (1 - chance_empate)
+
+        return (
+            chance_c1,
+            chance_c2,
+            chance_empate,
+            diferenca_abs
+        )
+        
+    def mostrar_analise(
+        self,
+        forca_c1,
+        forca_c2,
+        chance_c1,
+        chance_c2,
+        chance_empate
+    ):
+
+        print("\n--- ANÁLISE DA PARTIDA ---")
+
+        print(
+            f"{self.clube1.nome}: "
+            f"força {forca_c1:.1f} | "
+            f"chance {chance_c1:.1%}"
+        )
+
+        print(
+            f"{self.clube2.nome}: "
+            f"força {forca_c2:.1f} | "
+            f"chance {chance_c2:.1%}"
+        )
+
+        print(
+            f"Chance empate: {chance_empate:.1%}"
+        )
+
+        print("--------------------------")
+        
+    def definir_placares(
+        self,
+        diferenca_abs
+    ):
+
+        if diferenca_abs <= 2:
+
+            vitorias_favorito = [
+                (1,0),
+                (1,0),
+                (1,0),
+                (2,1),
+                (2,1),
+                (2,1),
+                (3,2)
+            ]
+
+            vitorias_azarao = [
+                (1,0),
+                (1,0),
+                (2,1),
+                (2,1)
+            ]
+
+            empates = [
+                (0,0),
+                (1,1),
+                (1,1),
+                (1,1),
+                (2,2)
+            ]
+
+        elif diferenca_abs <= 6:
+
+            vitorias_favorito = [
+                (1,0),
+                (1,0),
+                (2,0),
+                (2,0),
+                (2,1),
+                (2,1),
+                (3,1),
+                (3,0)
+            ]
+
+            vitorias_azarao = [
+                (1,0),
+                (1,0),
+                (2,1),
+                (2,1),
+                (2,0)
+            ]
+
+            empates = [
+                (0,0),
+                (1,1),
+                (1,1),
+                (2,2)
+            ]
+
+        else:
+
+            vitorias_favorito = [
+                (1,0),
+                (2,0),
+                (2,0),
+                (2,0),
+                (2,1),
+                (3,0),
+                (3,1),
+                (3,1),
+                (4,0),
+                (4,1)
+            ]
+
+            vitorias_azarao = [
+                (1,0),
+                (1,0),
+                (2,0),
+                (2,1)
+            ]
+
+            empates = [
+                (0,0),
+                (1,1)
+            ]
+
+        if diferenca_abs >= 10:
+
+            vitorias_favorito.extend([
+                (2,0),
+                (3,0),
+                (3,1),
+                (4,0),
+                (5,0)
+            ])
+
+            vitorias_azarao = [
+                (1,0),
+                (1,0),
+                (2,0),
+                (2,1)
+            ]
+
+            empates = [
+                (0,0),
+                (1,1)
+            ]
+
+        return (
+            vitorias_favorito,
+            vitorias_azarao,
+            empates
+        )
+
+
+    def gerar_gols(self):
+
         # Força base dos clubes
         forca_c1 = self.clube1.calcular_forca()
         forca_c2 = self.clube2.calcular_forca()

@@ -52,8 +52,11 @@ class Jogador:
             "Atacante": 5,
             "Meio-Campo": 12,
             "Defesa": 3,
-            "Goleiro": 0
+            "Goleiro": 1
         }
+
+        if self.posicao == "Goleiro":
+            return 1
 
         return base[self.posicao] + (self.overall // 8)
     

@@ -1,17 +1,26 @@
 class Clube:
-    def __init__(self, nome, pais, dinheiro, pontos):
+    def __init__(
+        self,
+        nome,
+        pais,
+        dinheiro,
+        torcedores=0
+    ):
         self.nome = nome
         self.pais = pais
         self.dinheiro = dinheiro
+        self.torcedores = torcedores
+
         self.jogadores = []
+
         self.pontos = 0
         self.gols_marcados = 0
         self.gols_sofridos = 0
-        
+
         self.vitorias = 0
         self.empates = 0
         self.derrotas = 0
-        
+
         self.forma = []
         
     def atualizar_forma(self, resultado):

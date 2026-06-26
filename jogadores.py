@@ -14,6 +14,17 @@ class Jogador:
         self.pior_nota = 10.0
         self.melhor_em_campo = 0
         self.clean_sheets = 0
+        self.hat_tricks = 0
+        self.penaltis = 0
+        self.penaltis_perdidos = 0
+        self.amarelos = 0
+        self.vermelhos = 0
+        
+        # controle por partida
+        self.amarelos_partida = 0
+        self.expulso = False
+        
+        self.expulso = False
         
     def mostrar(self):
         print(
@@ -47,15 +58,14 @@ class Jogador:
     
     def peso_assistencia(self):
 
+        if self.posicao == "Goleiro":
+            return 1
+
         base = {
             "Atacante": 7,
             "Meio-Campo": 13,
-            "Defesa": 2,
-            "Goleiro": 1
+            "Defesa": 2
         }
-
-        if self.posicao == "Goleiro":
-            return 1
 
         return base[self.posicao] + (self.overall // 8)
     
@@ -68,18 +78,23 @@ class Jogador:
         )
         
     def mostrar_estatisticas(self):
-        print("\n=== MVP ===")
-        
+
+        print("\n=== ESTATÍSTICAS ===")
+
         print(
-            f"Nome: {self.nome} \n"
-            f"Posição: {self.posicao} \n"
-            f"Overall: {self.overall} \n"
-            f"Jogos: {self.partidas} \n"
-            f"Gols: {self.gols} \n"
-            f"Assistências: {self.assistencias} \n"
-            f"Nota Média: {self.nota_media()} \n"
-            f"Melhor Nota: {round(self.melhor_nota, 2)} \n"
-            f"Pior Nota: {round(self.pior_nota, 2)} \n"
-            f"Clean Sheets: {self.clean_sheets} \n"
+            f"Nome: {self.nome}\n"
+            f"Posição: {self.posicao}\n"
+            f"Overall: {self.overall}\n"
+            f"Jogos: {self.partidas}\n"
+            f"Gols: {self.gols}\n"
+            f"Assistências: {self.assistencias}\n"
+            f"Melhores em campo: {self.melhor_em_campo}\n"
+            f"Hat-tricks: {self.hat_tricks}\n"
+            f"Pênaltis: {self.penaltis}\n"
+            f"Pênaltis perdidos: {self.penaltis_perdidos}\n"
+            f"Clean Sheets: {self.clean_sheets}\n"
+            f"Nota Média: {self.nota_media()}\n"
+            f"Melhor Nota: {round(self.melhor_nota,2)}\n"
+            f"Pior Nota: {round(self.pior_nota,2)}\n"
         )
         

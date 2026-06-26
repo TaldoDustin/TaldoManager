@@ -6,8 +6,13 @@ class Partida:
         self.resultado = None
         self.gols_c1 = 0
         self.gols_c2 = 0
+        self.eventos = []
     
     def simular_partida(self):
+        
+        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+            jogador.expulso = False
+            jogador.amarelos_partida = 0
 
         self.gols_c1, self.gols_c2 = self.gerar_gols()
 
@@ -24,9 +29,20 @@ class Partida:
             self.gols_c2,
             estatisticas
         )
+        
+        self.simular_penalti(self.clube1, estatisticas)
+        self.simular_penalti(self.clube2, estatisticas)
+        
+        self.distribuir_cartoes(self.clube1)
+        self.distribuir_cartoes(self.clube2)
+        
+        self.verificar_hat_tricks(
+            estatisticas
+        )
 
         self.definir_resultado()
         self.mostrar_resultado()
+        self.mostrar_eventos()
 
         self.atualizar_classificacao()
         self.atualizar_estatisticas_clubes()
@@ -53,11 +69,35 @@ class Partida:
 
         return estatisticas
     
+    def adicionar_evento(
+        self,
+        minuto,
+        tipo,
+        jogador
+    ):
+
+        simbolos = {
+            "gol": "⚽",
+            "assistencia": "🅰️",
+            "penalti": "⚽ (P)",
+            "penalti_perdido": "❌"
+        }
+
+        texto = f"{minuto}' {simbolos[tipo]} {jogador.nome}"
+
+        self.eventos.append({
+            "minuto": minuto,
+            "texto": texto
+        })
+    
     def distribuir_gols(self, clube, quantidade_gols, estatisticas):
 
         lista = []
 
         for jogador in clube.jogadores:
+
+            if jogador.expulso:
+                continue
 
             peso = jogador.peso_gol()
 
@@ -73,6 +113,12 @@ class Partida:
 
             artilheiro.gols += 1
             estatisticas[artilheiro]["gols"] += 1
+            
+            self.adicionar_evento(
+                random.randint(1,90),
+                "gol",
+                artilheiro
+            )
 
             self.distribuir_assistencia(
                 clube,
@@ -86,7 +132,10 @@ class Partida:
 
         for jogador in clube.jogadores:
 
-            if jogador != artilheiro:
+            if (
+                jogador != artilheiro
+                and not jogador.expulso
+            ):
 
                 peso = jogador.peso_assistencia()
 
@@ -99,6 +148,24 @@ class Partida:
 
             assistente.assistencias += 1
             estatisticas[assistente]["assistencias"] += 1
+            
+    
+            
+    def verificar_hat_tricks(
+        self,
+        estatisticas
+    ):
+
+        for jogador in estatisticas:
+
+            if estatisticas[jogador]["gols"] >= 3:
+
+                jogador.hat_tricks += 1
+
+                print(
+                    f"\n🎩 HAT-TRICK DE "
+                    f"{jogador.nome}!"
+                )
 
 #resultado
 
@@ -317,6 +384,18 @@ class Partida:
 
         return melhor_jogador, maior_nota
     
+    def mostrar_eventos(self):
+
+        print("\nEVENTOS")
+
+        eventos = sorted(
+            self.eventos,
+            key=lambda e: e["minuto"]
+        )
+
+        for evento in eventos:
+            print(evento["texto"])
+    
     def mostrar_melhor_em_campo(self, jogador, nota):
 
         print("\n⭐ MELHOR EM CAMPO")
@@ -366,6 +445,124 @@ class Partida:
             empates
         )
         
+    def simular_penalti(self, clube, estatisticas):
+
+        if random.random() > 0.10:
+            return
+
+        cobrador = self.escolher_cobrador(clube)
+
+        minuto = random.randint(1, 90)
+
+        if random.random() < 0.80:
+
+            cobrador.gols += 1
+            cobrador.penaltis += 1
+
+            # ADICIONE ESTA LINHA
+            estatisticas[cobrador]["gols"] += 1
+
+            # Atualiza o placar
+            if clube == self.clube1:
+                self.gols_c1 += 1
+            else:
+                self.gols_c2 += 1
+
+            self.eventos.append({
+                "minuto": minuto,
+                "texto": f"{minuto}' ⚽ (P) {cobrador.nome}"
+            })
+
+        else:
+
+            cobrador.penaltis_perdidos += 1
+
+            self.eventos.append({
+                "minuto": minuto,
+                "texto": f"{minuto}' ❌ Pênalti perdido - {cobrador.nome}"
+            })
+    
+    def escolher_cobrador(self, clube):
+
+        lista = []
+
+        for jogador in clube.jogadores:
+
+            if jogador.expulso:
+                continue
+
+            if jogador.posicao == "Atacante":
+                peso = 10
+
+            elif jogador.posicao == "Meio-Campo":
+                peso = 7
+
+            elif jogador.posicao == "Defesa":
+                peso = 3
+
+            else:  # goleiro
+                peso = 1
+
+            peso += jogador.overall // 10
+
+            lista.extend([jogador] * peso)
+
+        return random.choice(lista)
+        
+    def distribuir_cartoes(self, clube):
+
+        quantidade = random.choices(
+            [0, 1, 2, 3],
+            weights=[40, 40, 15, 5]
+        )[0]
+
+        for _ in range(quantidade):
+
+            jogadores_validos = [
+                j for j in clube.jogadores
+                if not j.expulso
+            ]
+
+            if not jogadores_validos:
+                return
+
+            jogador = random.choice(jogadores_validos)
+
+            minuto = random.randint(1, 90)
+
+            # vermelho direto
+            if random.random() < 0.05:
+
+                jogador.vermelhos += 1
+                jogador.expulso = True
+
+                self.eventos.append({
+                    "minuto": minuto,
+                    "texto": f"{minuto}' 🟥 {jogador.nome}"
+                })
+
+            # amarelo
+            else:
+
+                jogador.amarelos += 1
+                jogador.amarelos_partida += 1
+
+                self.eventos.append({
+                    "minuto": minuto,
+                    "texto": f"{minuto}' 🟨 {jogador.nome}"
+                })
+
+                # segundo amarelo
+                if jogador.amarelos_partida >= 2:
+
+                    jogador.vermelhos += 1
+                    jogador.expulso = True
+
+                    self.eventos.append({
+                        "minuto": minuto,
+                        "texto": f"{minuto}' 🟥 {jogador.nome}"
+                    })
+    
     def calcular_forcas(self):
 
         forca_c1 = self.clube1.calcular_forca()

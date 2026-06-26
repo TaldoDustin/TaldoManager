@@ -8,6 +8,16 @@ class Campeonato:
         self.rodada = 1
         self.historico = []
         self.calendario = self.gerar_calendario()
+        self.recordes = {
+            "maior_goleada": {
+            "valor": 0,
+            "partida": ""
+            },
+            "mais_gols_jogo": {
+            "valor": 0,
+            "partida": ""
+            }
+        }
             
     def jogar_rodada(self):
 
@@ -27,7 +37,9 @@ class Campeonato:
                 clube1,
                 clube2,
                 partida
-            )   
+            )
+            
+            self.atualizar_recordes(partida)
 
         self.rodada += 1
             
@@ -162,7 +174,10 @@ class Campeonato:
 
         for jogador in ranking:
 
-            if jogador.posicao == "Goleiro":
+            if (
+                jogador.posicao == "Goleiro"
+                and jogador.clean_sheets > 0
+            ):
 
                 print(
                     f"{jogador.nome} | "
@@ -195,6 +210,25 @@ class Campeonato:
                     f"Melhor: {jogador.melhor_nota:.1f} | "
                     f"Pior: {jogador.pior_nota:.1f}"
                 )
+                
+    def hat_tricks(self):
+
+        ranking = sorted(
+            self.listar_jogadores(),
+            key=lambda j: j.hat_tricks,
+            reverse=True
+        )
+
+        print("\n=== HAT-TRICKS ===")
+
+        for jogador in ranking:
+
+            if jogador.hat_tricks > 0:
+
+                print(
+                    f"{jogador.nome} | "
+                    f"HT: {jogador.hat_tricks}"
+                )
             
     def mvp_campeonato(self):
 
@@ -203,7 +237,8 @@ class Campeonato:
             key=lambda j: (
                 j.melhor_em_campo,
                 j.nota_media(),
-                j.gols + j.assistencias
+                j.gols + j.assistencias,
+                j.hat_tricks
             ),
             reverse=True
         )
@@ -226,6 +261,51 @@ class Campeonato:
 
         for evento in self.historico:
             print(f"- {evento}")
+            
+    def atualizar_recordes(self, partida):
+
+        diferenca = abs(
+            partida.gols_c1 -
+            partida.gols_c2
+        )
+
+        total = (
+            partida.gols_c1 +
+            partida.gols_c2
+        )
+
+        descricao = (
+            f"{partida.clube1.nome} "
+            f"{partida.gols_c1} x "
+            f"{partida.gols_c2} "
+            f"{partida.clube2.nome}"
+        )
+
+        if diferenca > self.recordes["maior_goleada"]["valor"]:
+
+            self.recordes["maior_goleada"]["valor"] = diferenca
+            self.recordes["maior_goleada"]["partida"] = descricao
+
+        if total > self.recordes["mais_gols_jogo"]["valor"]:
+
+            self.recordes["mais_gols_jogo"]["valor"] = total
+            self.recordes["mais_gols_jogo"]["partida"] = descricao
+            
+    def mostrar_recordes(self):
+
+        print("\n=== RECORDES ===")
+
+        print(
+            "Maior goleada:",
+            self.recordes["maior_goleada"]["partida"],
+            f"({self.recordes['maior_goleada']['valor']})"
+        )
+
+        print(
+            "Mais gols em uma partida:",
+            self.recordes["mais_gols_jogo"]["partida"],
+            f"({self.recordes['mais_gols_jogo']['valor']})"
+        )
     
     def gerar_calendario(self):
 

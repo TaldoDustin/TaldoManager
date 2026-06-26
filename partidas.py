@@ -114,8 +114,10 @@ class Partida:
             artilheiro.gols += 1
             estatisticas[artilheiro]["gols"] += 1
             
+            minuto = random.randint(1,90)
+            
             self.adicionar_evento(
-                random.randint(1,90),
+                minuto,
                 "gol",
                 artilheiro
             )
@@ -538,6 +540,8 @@ class Partida:
 
                 self.eventos.append({
                     "minuto": minuto,
+                    "tipo": "expulsao",
+                    "jogador": jogador,
                     "texto": f"{minuto}' 🟥 {jogador.nome}"
                 })
 
@@ -560,6 +564,8 @@ class Partida:
 
                     self.eventos.append({
                         "minuto": minuto,
+                        "tipo": "expulsao",
+                        "jogador": jogador,
                         "texto": f"{minuto}' 🟥 {jogador.nome}"
                     })
     
@@ -767,7 +773,7 @@ class Partida:
             vitorias_azarao,
             empates
         )
-        
+    
     def sortear_resultado(
         self,
         chance_c1,

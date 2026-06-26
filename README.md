@@ -1,4 +1,4 @@
-# ⚽ Isaque Manager
+# ⚽ Taldo Manager
 
 Um Football Manager desenvolvido em Python com foco em aprendizado prático de programação.
 

@@ -179,7 +179,7 @@ class Partida:
             assistencias = estatisticas[jogador]["assistencias"]
 
             if jogador.posicao == "Atacante":
-                bonus_gol = 0.7
+                bonus_gol = 0.8
                 bonus_assistencia = 0.4
 
             elif jogador.posicao == "Meio-Campo":
@@ -187,11 +187,11 @@ class Partida:
                 bonus_assistencia = 0.6
 
             elif jogador.posicao == "Defesa":
-                bonus_gol = 1.2
+                bonus_gol = 1.0
                 bonus_assistencia = 0.7
 
             else:  # Goleiro
-                bonus_gol = 2.0
+                bonus_gol = 1.5
                 bonus_assistencia = 1.0
 
             nota += gols * bonus_gol
@@ -513,319 +513,34 @@ class Partida:
             vitorias_azarao,
             empates
         )
+        
+    def sortear_resultado(
+        self,
+        chance_c1,
+        chance_empate,
+        vitorias_favorito,
+        vitorias_azarao,
+        empates
+    ):
 
-
-    def gerar_gols(self):
-
-        # Força base dos clubes
-        forca_c1 = self.clube1.calcular_forca()
-        forca_c2 = self.clube2.calcular_forca()
-
-        # Ajuste de força para o clube mandante
-        forca_c1 += 1
-
-        # Dia bom / dia ruim
-        forca_c1 += random.randint(-1, 1)
-        forca_c2 += random.randint(-1, 1)
-
-        diferenca = forca_c1 - forca_c2
-        diferenca_abs = abs(diferenca)
-
-        # Chance inicial de vitória
-        chance_c1 = 0.5 + (diferenca * 0.06)
-
-        # Limites
-        chance_c1 = max(0.15, min(0.85, chance_c1))
-        chance_c2 = 1 - chance_c1
-
-        # Empate dinâmico
-        if diferenca_abs <= 2:
-            chance_empate = 0.15
-
-        elif diferenca_abs <= 5:
-            chance_empate = 0.12
-
-        elif diferenca_abs <= 8:
-            chance_empate = 0.08
-
-        else:
-            chance_empate = 0.05
-
-        # Redistribui as chances restantes
-        total = chance_c1 + chance_c2
-
-        chance_c1 = (chance_c1 / total) * (1 - chance_empate)
-        chance_c2 = (chance_c2 / total) * (1 - chance_empate)
-
-        print("\n--- ANÁLISE DA PARTIDA ---")
-        print(
-            f"{self.clube1.nome}: " f"força {forca_c1:.1f} | " f"chance {chance_c1:.1%}"
-        )
-
-        print(
-            f"{self.clube2.nome}: " f"força {forca_c2:.1f} | " f"chance {chance_c2:.1%}"
-        )
-
-        print(f"Chance empate: {chance_empate:.1%}")
-        print("--------------------------")
-
-        # Define o tamanho dos placares
         sorteio = random.random()
-
-        if diferenca_abs <= 2:
-
-            vitorias_favorito = [(1, 0), (1, 0), (1, 0), (2, 1), (2, 1), (2, 1), (3, 2)]
-
-            vitorias_azarao = [(1, 0), (1, 0), (2, 1), (2, 1)]
-
-            empates = [(0, 0), (1, 1), (1, 1), (1, 1), (2, 2)]
-
-        elif diferenca_abs <= 6:
-
-            vitorias_favorito = [
-                (1, 0),
-                (1, 0),
-                (2, 0),
-                (2, 0),
-                (2, 1),
-                (2, 1),
-                (3, 1),
-                (3, 0),
-            ]
-
-            vitorias_azarao = [(1, 0), (1, 0), (2, 1), (2, 1), (2, 0)]
-
-            empates = [(0, 0), (1, 1), (1, 1), (2, 2)]
-
-        else:
-
-            vitorias_favorito = [
-                (1, 0),
-                (2, 0),
-                (2, 0),
-                (2, 0),
-                (2, 1),
-                (3, 0),
-                (3, 1),
-                (3, 1),
-                (4, 0),
-                (4, 1),
-            ]
-
-            vitorias_azarao = [(1, 0), (1, 0), (2, 0), (2, 1)]
-
-            empates = [(0, 0), (1, 1)]
-
-        if diferenca_abs >= 10:
-            vitorias_favorito.extend([(2, 0), (3, 0), (3, 1), (4, 0), (5, 0)])
-
-            vitorias_azarao = [(1, 0), (1, 0), (2, 0), (2, 1)]
-
-            empates = [(0, 0), (1, 1)]
-
-        # Resultado da partida
 
         if sorteio < chance_c1:
 
-            gols_c1, gols_c2 = random.choice(vitorias_favorito)
+            gols_c1, gols_c2 = random.choice(
+                vitorias_favorito
+            )
 
         elif sorteio < chance_c1 + chance_empate:
 
-            gols_c1, gols_c2 = random.choice(empates)
+            gols_c1, gols_c2 = random.choice(
+                empates
+            )
 
         else:
 
-            gols_c2, gols_c1 = random.choice(vitorias_azarao)
+            gols_c2, gols_c1 = random.choice(
+                vitorias_azarao
+            )
 
         return gols_c1, gols_c2
-    
-    def simular_partida(self):
-        self.gols_c1, self.gols_c2 = self.gerar_gols()
-
-        estatisticas = {}
-
-        for jogador in self.clube1.jogadores + self.clube2.jogadores:
-            estatisticas[jogador] = {"gols": 0, "assistencias": 0}
-
-        lista_pesos_c1 = []
-
-        for jogador in self.clube1.jogadores:
-            peso = jogador.peso_gol()
-            if peso > 0:
-                lista_pesos_c1.extend([jogador] * peso)
-
-        for _ in range(self.gols_c1):
-            artilheiro = random.choice(lista_pesos_c1)
-            artilheiro.gols += 1
-            estatisticas[artilheiro]["gols"] += 1
-
-            lista_assistencias_c1 = []
-
-            for jogador in self.clube1.jogadores:
-
-                if jogador != artilheiro:
-
-                    peso = jogador.peso_assistencia()
-
-                    if peso > 0:
-                        lista_assistencias_c1.extend([jogador] * peso)
-
-            if lista_assistencias_c1 and random.random() < 0.70:
-                assistente = random.choice(lista_assistencias_c1)
-                assistente.assistencias += 1
-                estatisticas[assistente]["assistencias"] += 1
-
-        lista_pesos_c2 = []
-
-        for jogador in self.clube2.jogadores:
-            peso = jogador.peso_gol()
-            if peso > 0:
-                lista_pesos_c2.extend([jogador] * peso)
-
-        for _ in range(self.gols_c2):
-            artilheiro = random.choice(lista_pesos_c2)
-            artilheiro.gols += 1
-            estatisticas[artilheiro]["gols"] += 1
-
-            lista_assistencias_c2 = []
-
-            for jogador in self.clube2.jogadores:
-
-                if jogador != artilheiro:
-
-                    peso = jogador.peso_assistencia()
-
-                    if peso > 0:
-                        lista_assistencias_c2.extend([jogador] * peso)
-
-            if lista_assistencias_c2 and random.random() < 0.70:
-                assistente = random.choice(lista_assistencias_c2)
-                assistente.assistencias += 1
-                estatisticas[assistente]["assistencias"] += 1
-
-        if self.gols_c1 > self.gols_c2:
-            self.resultado = f"{self.clube1.nome} venceu!"
-        elif self.gols_c2 > self.gols_c1:
-            self.resultado = f"{self.clube2.nome} venceu!"
-        else:
-            self.resultado = "Empate!"
-
-        print(f"{self.clube1.nome} {self.gols_c1} x {self.gols_c2} {self.clube2.nome}")
-        print(f"{self.resultado}\n")
-
-        if self.gols_c1 > self.gols_c2:
-            self.clube1.pontos += 3
-            self.clube1.vitorias += 1
-            self.clube2.derrotas += 1
-            self.clube1.atualizar_forma("V")
-            self.clube2.atualizar_forma("D")
-        elif self.gols_c2 > self.gols_c1:
-            self.clube2.pontos += 3
-            self.clube2.vitorias += 1
-            self.clube1.derrotas += 1
-            self.clube2.atualizar_forma("V")
-            self.clube1.atualizar_forma("D")
-        else:
-            self.clube1.pontos += 1
-            self.clube2.pontos += 1
-            self.clube1.empates += 1
-            self.clube2.empates += 1
-            self.clube1.atualizar_forma("E")
-            self.clube2.atualizar_forma("E")
-
-        self.clube1.gols_marcados += self.gols_c1
-        self.clube1.gols_sofridos += self.gols_c2
-        self.clube2.gols_marcados += self.gols_c2
-        self.clube2.gols_sofridos += self.gols_c1
-
-        melhor_jogador = None
-        maior_nota = 0
-
-        # =====================
-        # NOTAS DOS JOGADORES
-        # =====================
-
-        for jogador in self.clube1.jogadores + self.clube2.jogadores:
-
-            nota = 6.0
-
-            gols = estatisticas[jogador]["gols"]
-            assistencias = estatisticas[jogador]["assistencias"]
-
-            if jogador.posicao == "Atacante":
-                bonus_gol = 0.7
-                bonus_assistencia = 0.4
-
-            elif jogador.posicao == "Meio-Campo":
-                bonus_gol = 0.9
-                bonus_assistencia = 0.6
-
-            elif jogador.posicao == "Defesa":
-                bonus_gol = 1.2
-                bonus_assistencia = 0.7
-
-            else:  # Goleiro
-                bonus_gol = 2.0
-                bonus_assistencia = 1.0
-
-            nota += gols * bonus_gol
-            nota += assistencias * bonus_assistencia
-
-            # bônus por vitória
-
-            if jogador in self.clube1.jogadores:
-
-                if self.gols_c1 > self.gols_c2:
-                    nota += 0.3
-
-                elif self.gols_c1 < self.gols_c2:
-                    nota -= 0.2
-
-            # bônus por vitória
-
-            if jogador in self.clube1.jogadores:
-
-                if self.gols_c1 > self.gols_c2:
-                    nota += 0.3
-
-                elif self.gols_c1 < self.gols_c2:
-                    nota -= 0.2
-
-            # limita entre 0 e 10
-            nota = max(0, min(10, nota))
-
-            jogador.soma_nota += nota
-            jogador.partidas += 1
-
-            if nota > jogador.melhor_nota:
-                jogador.melhor_nota = nota
-
-            if nota < jogador.pior_nota:
-                jogador.pior_nota = nota
-
-            if melhor_jogador is None:
-                melhor_jogador = jogador
-                maior_nota = nota
-
-            elif nota > maior_nota or (
-                nota == maior_nota
-                and (
-                    estatisticas[jogador]["gols"],
-                    estatisticas[jogador]["assistencias"],
-                )
-                > (
-                    estatisticas[melhor_jogador]["gols"],
-                    estatisticas[melhor_jogador]["assistencias"],
-                )
-            ):
-                maior_nota = nota
-                melhor_jogador = jogador
-
-        melhor_jogador.melhor_em_campo += 1
-
-        print("\n⭐ MELHOR EM CAMPO")
-        print(
-            f"{melhor_jogador.nome} "
-            f"({melhor_jogador.posicao}) "
-            f"- Nota {maior_nota:.1f}\n"
-        )

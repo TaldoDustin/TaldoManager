@@ -13,6 +13,7 @@ class Jogador:
         self.melhor_nota = 0.0
         self.pior_nota = 10.0
         self.melhor_em_campo = 0
+        self.clean_sheets = 0
         
     def mostrar(self):
         print(
@@ -79,5 +80,6 @@ class Jogador:
             f"Nota Média: {self.nota_media()} \n"
             f"Melhor Nota: {round(self.melhor_nota, 2)} \n"
             f"Pior Nota: {round(self.pior_nota, 2)} \n"
+            f"Clean Sheets: {self.clean_sheets} \n"
         )
         

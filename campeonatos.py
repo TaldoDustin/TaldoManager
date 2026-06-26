@@ -146,6 +146,28 @@ class Campeonato:
                     f"{jogador.nome} | "
                     f"A: {jogador.assistencias}"
                 )
+    
+    def clean_sheets(self):
+
+        ranking = sorted(
+            self.listar_jogadores(),
+            key=lambda j: (
+                j.clean_sheets,
+                j.nota_media()
+            ),
+            reverse=True
+        )
+
+        print("\n=== CLEAN SHEETS ===")
+
+        for jogador in ranking:
+
+            if jogador.posicao == "Goleiro":
+
+                print(
+                    f"{jogador.nome} | "
+                    f"CS: {jogador.clean_sheets}"
+                )
             
     def melhores_notas(self):
 
@@ -181,8 +203,7 @@ class Campeonato:
             key=lambda j: (
                 j.melhor_em_campo,
                 j.nota_media(),
-                j.gols,
-                j.assistencias
+                j.gols + j.assistencias
             ),
             reverse=True
         )

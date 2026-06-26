@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "nome": "John Doe",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
+        "id": 2,
+        "nome": "Jane Smith",
+        "idade": 28,
+        "posicao": "Meio-Campo",
+        "overall": 88
+    },
+    {
+        "id": 3,
+        "nome": "Bob Johnson",
+        "idade": 30,
+        "posicao": "Defesa",
+        "overall": 82
+    },
+    {
+        "id": 4,
+        "nome": "Alice Brown",
+        "idade": 22,
+        "posicao": "Goleiro",
+        "overall": 90
+    },
+    {
+        "id": 5,
+        "nome": "Charlie Davis",
+        "idade": 27,
+        "posicao": "Atacante",
+        "overall": 90
+    },
+    {
+        "id": 6,
+        "nome": "Emily Wilson",
+        "idade": 24,
+        "posicao": "Meio-Campo",
+        "overall": 90
+    },
+    {
+        "id": 7,
+        "nome": "David Lee",
+        "idade": 29,
+        "posicao": "Defesa",
+        "overall": 83
+    },
+    {
+        "id": 8,
+        "nome": "Sophia Taylor",
+        "idade": 26,
+        "posicao": "Goleiro",
+        "overall": 81
+    },
+    {
+        "id": 9,
+        "nome": "Michael Miller",
+        "idade": 31,
+        "posicao": "Atacante",
+        "overall": 89
+    },
+    {
+        "id": 10,
+        "nome": "Olivia Anderson",
+        "idade": 23,
+        "posicao": "Meio-Campo",
+        "overall": 86
+    },
+    {
+        "id": 11,
+        "nome": "James Thomas",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 12,
+        "nome": "Isabella Martinez",
+        "idade": 24,
+        "posicao": "Goleiro",
+        "overall": 82
+    },
+    {
+        "id": 13,
+        "nome": "Juan Soares",
+        "idade": 17,
+        "posicao": "Atacante",
+        "overall": 79
+    },
+    {
+        "id": 14,
+        "nome": "Isaque Souza",
+        "idade": 18,
+        "posicao": "Meio-Campo",
+        "overall": 95
+    },
+    {
+        "id": 15,
+        "nome": "Jhon Alex",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 16,
+        "nome": "Rafaela Montes",
+        "idade": 24,
+        "posicao": "Goleiro",
+        "overall": 83
+    }
+]

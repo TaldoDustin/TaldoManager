@@ -30,6 +30,7 @@ class Partida:
 
         self.atualizar_classificacao()
         self.atualizar_estatisticas_clubes()
+        self.atualizar_clean_sheet()
 
         melhor_jogador, maior_nota = self.calcular_notas(estatisticas)
 
@@ -163,6 +164,24 @@ class Partida:
 
         self.clube2.gols_marcados += self.gols_c2
         self.clube2.gols_sofridos += self.gols_c1   
+        
+    def atualizar_clean_sheet(self):
+
+        for jogador in self.clube1.jogadores:
+
+            if (
+                jogador.posicao == "Goleiro"
+                and self.gols_c2 == 0
+            ):
+                jogador.clean_sheets += 1
+
+        for jogador in self.clube2.jogadores:
+
+            if (
+                jogador.posicao == "Goleiro"
+                and self.gols_c1 == 0
+            ):
+                jogador.clean_sheets += 1
 
 #jogadores
 
@@ -171,6 +190,13 @@ class Partida:
         melhor_jogador = None
         maior_nota = 0
 
+        bonus_posicao = {
+            "Atacante": (0.8, 0.4),
+            "Meio-Campo": (0.9, 0.6),
+            "Defesa": (0.8, 0.7),
+            "Goleiro": (1.5, 1.0)
+        }
+
         for jogador in self.clube1.jogadores + self.clube2.jogadores:
 
             nota = 6.0
@@ -178,46 +204,79 @@ class Partida:
             gols = estatisticas[jogador]["gols"]
             assistencias = estatisticas[jogador]["assistencias"]
 
-            if jogador.posicao == "Atacante":
-                bonus_gol = 0.8
-                bonus_assistencia = 0.4
-
-            elif jogador.posicao == "Meio-Campo":
-                bonus_gol = 0.9
-                bonus_assistencia = 0.6
-
-            elif jogador.posicao == "Defesa":
-                bonus_gol = 1.0
-                bonus_assistencia = 0.7
-
-            else:  # Goleiro
-                bonus_gol = 1.5
-                bonus_assistencia = 1.0
+            bonus_gol, bonus_assistencia = bonus_posicao[jogador.posicao]
 
             nota += gols * bonus_gol
             nota += assistencias * bonus_assistencia
 
-            # Resultado da partida
+            # ==========================
+            # IDENTIFICA O TIME
+            # ==========================
 
-            if jogador in self.clube1.jogadores:
+            time1 = jogador in self.clube1.jogadores
 
-                if self.gols_c1 > self.gols_c2:
-                    nota += 0.3
-
-                elif self.gols_c1 < self.gols_c2:
-                    nota -= 0.2
-
+            if time1:
+                gols_pro = self.gols_c1
+                gols_contra = self.gols_c2
             else:
+                gols_pro = self.gols_c2
+                gols_contra = self.gols_c1
 
-                if self.gols_c2 > self.gols_c1:
-                    nota += 0.3
+            saldo = gols_pro - gols_contra
+            clean_sheet = gols_contra == 0
 
-                elif self.gols_c2 < self.gols_c1:
-                    nota -= 0.2
+            # ==========================
+            # RESULTADO DA PARTIDA
+            # ==========================
 
-            # Limita entre 0 e 10
+            if saldo > 0:
+                nota += 0.3
+
+            elif saldo < 0:
+                nota -= 0.2
+
+            # ==========================
+            # BÔNUS POR POSIÇÃO
+            # ==========================
+
+            if (
+                jogador.posicao == "Atacante"
+                and saldo >= 2
+            ):
+                nota += 0.2
+
+            if (
+                jogador.posicao == "Meio-Campo"
+                and gols > 0
+                and assistencias > 0
+            ):
+                nota += 0.1
+
+            if (
+                jogador.posicao == "Defesa"
+                and clean_sheet
+            ):
+                nota += 0.2
+
+            if (
+                jogador.posicao == "Goleiro"
+                and clean_sheet
+            ):
+                nota += 0.2
+
+            # Futuramente
+            # if jogador.capitao:
+            #     nota += 0.1
+
+            # ==========================
+            # LIMITA A NOTA
+            # ==========================
 
             nota = max(0, min(10, nota))
+
+            # ==========================
+            # SALVA ESTATÍSTICAS
+            # ==========================
 
             jogador.soma_nota += nota
             jogador.partidas += 1
@@ -228,7 +287,9 @@ class Partida:
             if nota < jogador.pior_nota:
                 jogador.pior_nota = nota
 
-            # Melhor da partida
+            # ==========================
+            # MELHOR EM CAMPO
+            # ==========================
 
             if melhor_jogador is None:
 
@@ -237,16 +298,12 @@ class Partida:
 
             elif (
                 nota > maior_nota
-                or
-                (
+                or (
                     nota == maior_nota
-                    and
-                    (
+                    and (
                         estatisticas[jogador]["gols"],
                         estatisticas[jogador]["assistencias"]
-                    )
-                    >
-                    (
+                    ) > (
                         estatisticas[melhor_jogador]["gols"],
                         estatisticas[melhor_jogador]["assistencias"]
                     )

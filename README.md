@@ -2,229 +2,285 @@
 
 Um Football Manager desenvolvido em Python com foco em aprendizado prático de programação.
 
-O projeto está sendo construído do zero para estudar lógica de programação, orientação a objetos e desenvolvimento de sistemas.
+O projeto está sendo construído do zero para estudar lógica de programação, orientação a objetos, arquitetura de software e desenvolvimento de sistemas.
 
 ---
 
-## 🚀 Funcionalidades
+# 🚀 Funcionalidades
 
-### Jogadores
-- Cadastro de jogadores
-- Nome
-- Idade
-- Posição
-- Overall
-- Gols
-- Assistências
-- Média de nota
-- Melhor nota
-- Pior nota
+## Jogadores
 
-### Clubes
-- Cadastro de clubes
-- País
-- Dinheiro
-- Elenco de jogadores
-- Cálculo automático de força do time
-- Forma recente
-- Vantagem de mando de campo
+* ✅ Cadastro de jogadores
+* ✅ Nome
+* ✅ Idade
+* ✅ Posição
+* ✅ Overall
+* ✅ Jogos
+* ✅ Gols
+* ✅ Assistências
+* ✅ Média de nota
+* ✅ Melhor nota
+* ✅ Pior nota
+* ✅ Melhor em campo
 
-### Partidas
-- Simulação de partidas
-- Geração de gols baseada na força dos clubes
-- Distribuição de gols por posição
-- Distribuição de assistências por posição
-- Sistema de notas
-- Resultado automático
-- Empates
-- Placar completo
+---
+
+## Clubes
+
+* ✅ Cadastro de clubes
+* ✅ País
+* ✅ Dinheiro
+* ✅ Elenco de jogadores
+* ✅ Cálculo automático da força
+* ✅ Forma recente
+* ✅ Vantagem de mando de campo
+
+---
+
+## Partidas
+
+* ✅ Simulação baseada na força dos clubes
+* ✅ Geração de gols
+* ✅ Distribuição de gols por posição
+* ✅ Distribuição de assistências por posição
+* ✅ Sistema de notas
+* ✅ Melhor jogador da partida
+* ✅ Clean Sheets
+* ✅ Resultado automático
+* ✅ Empates
+* ✅ Placar completo
+
+---
+
+## Campeonato
+
+* ✅ Cadastro de campeonatos
+* ✅ Calendário turno e returno
+* ✅ Sorteio automático de rodadas
+* ✅ Histórico de partidas
+* ✅ Classificação
+* ✅ Critérios de desempate
+* ✅ Artilharia
+* ✅ Assistências
+* ✅ Ranking de notas
+* ✅ MVP do campeonato
+* ✅ Ranking de Clean Sheets
+
+---
+
+## Estrutura
+
+* ✅ Separação dos dados (Seed)
+* ✅ Arquivos JSON
+* ✅ Carregamento automático dos dados
+* ✅ Código refatorado em métodos menores
+
+---
+
+# 📚 Tecnologias
+
+* Python 3
+* Programação Orientada a Objetos (POO)
+* JSON
+* Git
+* GitHub
+
+---
+
+# 🎯 Objetivo
+
+Este projeto tem como objetivo estudar:
+
+* Lógica de programação
+* Orientação a Objetos
+* Arquitetura de Software
+* Estruturação de projetos
+* Simulação de sistemas
+* Git e GitHub
+* Banco de Dados
+* Flask
+
+---
+
+# 🗺️ Roadmap
+
+## ✅ Versão Atual (v0.4) — Concluída
+
+### Base do jogo
+
+* [x] Cadastro de jogadores
+* [x] Cadastro de clubes
+* [x] Contratação de jogadores
+* [x] Seed em JSON
+* [x] Loader automático
+
+### Simulação
+
+* [x] Cálculo de força dos clubes
+* [x] Mando de campo
+* [x] Forma recente
+* [x] Simulação de partidas
+* [x] Distribuição de gols
+* [x] Distribuição de assistências
+* [x] Sistema de notas
+* [x] Melhor jogador da partida
+* [x] Clean Sheets
 
 ### Campeonato
-- Cadastro de campeonatos
-- Sorteio automático de rodadas
-- Calendário turno e returno
-- Simulação de jogos do campeonato
-- Histórico de partidas
-- Classificação por pontos
-- Critérios de desempate
-- Artilharia
-- Ranking de notas
+
+* [x] Campeonato
+* [x] Calendário turno e returno
+* [x] Histórico
+* [x] Classificação
+* [x] Critérios de desempate
+* [x] Artilharia
+* [x] Assistências
+* [x] Ranking de notas
+* [x] MVP do campeonato
+
+### Código
+
+* [x] Refatoração da classe Partida
+* [x] Refatoração da classe Campeonato
+* [x] Métodos reutilizáveis
+* [x] Organização do projeto
 
 ---
 
-## 📚 Tecnologias
+# 🚧 Próxima Sprint (v0.5)
 
-- Python 3
-- Programação Orientada a Objetos (POO)
+## Eventos da Partida
 
----
+* [ ] Hat-trick
+* [ ] Cartão amarelo
+* [ ] Cartão vermelho
+* [ ] Lesões
+* [ ] Pênaltis
+* [ ] Pênaltis defendidos
+* [ ] Defesas difíceis
+* [ ] Substituições
+* [ ] Acréscimos
+* [ ] Eventos minuto a minuto
 
-## 🎯 Objetivo do Projeto
+## Estatísticas
 
-Este projeto não tem como objetivo apenas criar um jogo.
-
-O principal objetivo é aprender:
-
-- Lógica de programação
-- Orientação a objetos
-- Estruturação de projetos
-- Manipulação de dados
-- Simulação de sistemas
-- Git e GitHub
-- Banco de dados
-- Desenvolvimento web com Flask
-
----
-
-## 🗺️ Roadmap
-
-### Versão Atual (v0.4)
-
-- [x] Criar jogadores
-- [x] Criar clubes
-- [x] Contratação de jogadores
-- [x] Cálculo de força dos clubes
-- [x] Simulação de partidas
-- [x] Sistema de gols
-- [x] Sistema de assistências
-- [x] Sistema de notas
-- [x] Artilharia
-- [x] Ranking de notas
-- [x] Histórico de partidas
-- [x] Campeonato
-- [x] Calendário turno e returno
-- [x] Sorteio automático de rodadas
-- [x] Classificação por pontos
-- [x] Saldo de gols
-- [x] Critérios de desempate
-- [x] Distribuição de gols por posição
-- [x] Distribuição de assistências por posição
-- [x] Simulação baseada em força dos clubes
-- [x] Mandante e visitante
-- [x] Vantagem de mando de campo
-- [x] Forma recente dos clubes
+* [ ] Recordes do campeonato
+* [ ] Histórico individual dos jogadores
+* [ ] Estatísticas por temporada
 
 ---
 
-### Próxima Sprint (v0.5)
+# 💰 Mercado (v0.6)
 
-#### Estatísticas Avançadas
-
-- [x] Jogos
-- [x] Gols
-- [x] Assistências
-- [x] Média de nota
-- [x] Melhor nota
-- [x] Pior nota
-
-#### Próximas Funcionalidades
-
-- [ ] Melhor jogador da partida
-- [ ] MVP do campeonato
-- [ ] Clean Sheets (goleiros)
-- [ ] Hat-tricks
-- [ ] Recordes do campeonato
-- [ ] Histórico individual dos jogadores
+* [ ] Valor de mercado
+* [ ] Salários
+* [ ] Sistema financeiro
+* [ ] Compra de jogadores
+* [ ] Venda de jogadores
+* [ ] Negociações
+* [ ] Renovação de contrato
+* [ ] Evolução por idade
+* [ ] Potencial dos jogadores
 
 ---
 
-### Mercado (v0.6)
+# 🏆 Modo Carreira (v0.7)
 
-- [ ] Valor de mercado dos jogadores
-- [ ] Sistema financeiro dos clubes
-- [ ] Salários
-- [ ] Transferências
-- [ ] Mercado de transferências
-- [ ] Renovação de contrato
-- [ ] Idade e evolução de overall
-
----
-
-### Modo Carreira (v0.7)
-
-- [ ] Temporadas
-- [ ] Envelhecimento dos jogadores
-- [ ] Aposentadoria
-- [ ] Geração de jovens talentos
-- [ ] Categorias de base
-- [ ] Histórico de campeões
-- [ ] Hall da Fama
+* [ ] Temporadas
+* [ ] Histórico de campeões
+* [ ] Envelhecimento
+* [ ] Aposentadoria
+* [ ] Geração de jovens
+* [ ] Categorias de base
+* [ ] Hall da Fama
 
 ---
 
-### Persistência (v0.8)
+# 💾 Persistência (v0.8)
 
-- [ ] Banco de dados SQLite
-- [ ] Salvar partidas
-- [ ] Carregar save
-- [ ] Sistema de autosave
-
----
-
-### Web (v1.0)
-
-- [ ] API Flask
-- [ ] Interface Web
-- [ ] Dashboard dos campeonatos
-- [ ] Dashboard financeiro
-- [ ] Estatísticas avançadas
-- [ ] Painel de transferências
+* [ ] SQLite
+* [ ] Sistema de Save
+* [ ] Carregar Save
+* [ ] Autosave
 
 ---
 
-## 📁 Estrutura do Projeto
+# 🌐 Web (v1.0)
+
+* [ ] API Flask
+* [ ] Interface Web
+* [ ] Dashboard do campeonato
+* [ ] Dashboard financeiro
+* [ ] Painel de jogadores
+* [ ] Mercado de transferências
+* [ ] Estatísticas avançadas
+
+---
+
+# 📁 Estrutura
 
 ```text
 TaldoManager/
 │
-├── main.py
+├── data/
+│   ├── jogadores.json
+│   ├── clubes.json
+│   └── loader.py
+│
 ├── jogadores.py
 ├── clubes.py
 ├── partidas.py
 ├── campeonatos.py
+├── main.py
+│
 └── README.md
+```
 
-## 🎯 Meta de Desenvolvimento
+---
 
-Objetivo: manter consistência de desenvolvimento entre 1 e 3 horas por dia.
+# 🎯 Meta de Desenvolvimento
 
-### Julho 2026
+**Objetivo:** manter uma rotina consistente de **1 a 3 horas por dia**.
 
-- [ ] Clean Sheets dos goleiros
-- [ ] Hat-tricks
-- [ ] Melhor jogador da partida
-- [ ] MVP do campeonato
-- [ ] Valor de mercado dos jogadores
-- [ ] Sistema financeiro dos clubes
-- [ ] Compra e venda de jogadores
-- [ ] Evolução por idade
-- [ ] Temporadas completas
-- [ ] Histórico de campeões
+## Regras do Projeto
 
-### Regra do Projeto
+* ✅ Desenvolver pelo menos uma funcionalidade por semana
+* ✅ Não iniciar um sistema novo antes de concluir o atual
+* ✅ Testar todas as implementações
+* ✅ Refatorar quando necessário
+* ✅ Fazer commit ao final de cada sessão
+* ✅ Executar `git push` após cada commit
+* ✅ Atualizar o roadmap sempre que uma funcionalidade for concluída
 
-- Desenvolver pelo menos 1 funcionalidade por semana
-- Não iniciar um sistema novo sem concluir o atual
-- Sempre testar após cada implementação
-- Fazer commit ao final de cada sessão
-- Atualizar o roadmap sempre que concluir uma funcionalidade
+---
 
-### Objetivo de Curto Prazo
+# 🎯 Objetivo de Curto Prazo
 
-Transformar o TaldoManager de um simulador de campeonato em um Football Manager com:
+Transformar o Isaque Manager em um simulador completo de campeonatos com:
 
-✅ Estatísticas completas  
-✅ Mercado de transferências  
-✅ Evolução de jogadores  
-✅ Temporadas contínuas  
-✅ Sistema de save
+* ✅ Estatísticas completas
+* ⏳ Eventos de partida
+* ⏳ Mercado de transferências
+* ⏳ Evolução dos jogadores
+* ⏳ Temporadas contínuas
+* ⏳ Sistema de Save
 
-### Objetivo de Longo Prazo
+---
 
-- Banco de dados SQLite
-- API Flask
-- Interface Web
-- Dashboard completo
-- Versão jogável via navegador
+# 🎯 Objetivo Final
 
-🚀 Lembrete: consistência vence intensidade. Mesmo 1 hora por dia significa mais de 30 horas de desenvolvimento por mês.
+Criar um Football Manager totalmente jogável contendo:
+
+* Banco de Dados SQLite
+* API Flask
+* Interface Web
+* Dashboard completo
+* Mercado de transferências
+* Sistema financeiro
+* Modo carreira
+* Temporadas infinitas
+* Versão jogável pelo navegador
+
+---
+
+> **🚀 Lembrete:** consistência vence intensidade. Desenvolver entre **1 e 3 horas por dia** representa aproximadamente **30 a 90 horas de evolução por mês**. Pequenos avanços diários constroem grandes projetos.

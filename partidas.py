@@ -17,6 +17,9 @@ class Partida:
         self.gols_c1, self.gols_c2 = self.gerar_gols()
 
         estatisticas = self.criar_estatisticas()
+        
+        self.distribuir_cartoes(self.clube1)
+        self.distribuir_cartoes(self.clube2)
 
         self.distribuir_gols(
             self.clube1,
@@ -32,9 +35,6 @@ class Partida:
         
         self.simular_penalti(self.clube1, estatisticas)
         self.simular_penalti(self.clube2, estatisticas)
-        
-        self.distribuir_cartoes(self.clube1)
-        self.distribuir_cartoes(self.clube2)
         
         self.verificar_hat_tricks(
             estatisticas
@@ -95,7 +95,10 @@ class Partida:
     
     def distribuir_gols(self, clube, quantidade_gols, estatisticas):
 
-        lista = []
+        lista = [
+            j for j in clube.jogadores
+            if not j.expulso
+        ]
 
         for jogador in clube.jogadores:
 
@@ -103,6 +106,9 @@ class Partida:
                 continue
 
             peso = jogador.peso_gol()
+            
+            if jogador.posicao == "Goleiro":
+                peso *= 0.01
 
             if peso > 0:
                 lista.extend([jogador] * peso)
@@ -136,6 +142,9 @@ class Partida:
         lista = []
 
         for jogador in clube.jogadores:
+            
+            if jogador.expulso:
+                continue
 
             if (
                 jogador != artilheiro
@@ -422,25 +431,45 @@ class Partida:
 
         for evento in eventos:
 
-            minuto = int(evento["minuto"])
+            tipo = evento.get("tipo")
 
-            if evento["tipo"] == "gol":
-                print(f"{minuto}' ⚽ {evento['jogador'].nome}")
-
-            elif evento["tipo"] == "penalti":
-                print(f"{minuto}' ⚽ (P) {evento['jogador'].nome}")
-
-            elif evento["tipo"] == "penalti_perdido":
+            if tipo == "gol":
                 print(
-                    f"{minuto}' ❌ Pênalti perdido - "
+                    f"{int(evento['minuto'])}' ⚽ "
                     f"{evento['jogador'].nome}"
                 )
 
-            elif evento["tipo"] == "amarelo":
-                print(f"{minuto}' 🟨 {evento['jogador'].nome}")
+            elif tipo == "cartao_amarelo":
+                print(
+                    f"{int(evento['minuto'])}' 🟨 "
+                    f"{evento['jogador'].nome}"
+                )
 
-            elif evento["tipo"] == "expulsao":
-                print(f"{minuto}' 🟥 {evento['jogador'].nome}")
+            elif tipo == "expulsao":
+                print(
+                    f"{int(evento['minuto'])}' 🟥 "
+                    f"{evento['jogador'].nome}"
+                )
+
+            elif tipo == "penalti":
+                print(
+                    f"{int(evento['minuto'])}' ⚽ (P) "
+                    f"{evento['jogador'].nome}"
+                )
+                
+            elif tipo == "penalti_perdido":
+                print(
+                    f"{int(evento['minuto'])}' ❌ (P) "
+                    f"{evento['jogador'].nome}"
+                )
+
+            else:
+                print(
+                    evento.get(
+                        "texto",
+                        "Evento desconhecido"
+                    )
+                )
     
     def mostrar_melhor_em_campo(self, jogador, nota):
 
@@ -537,7 +566,6 @@ class Partida:
                 "minuto": minuto,
                 "tipo": "penalti",
                 "jogador": cobrador,
-                "texto": f"{minuto}' ⚽ (P) {cobrador.nome}"
             })
 
         else:
@@ -548,7 +576,6 @@ class Partida:
                 "minuto": minuto,
                 "tipo": "penalti_perdido",
                 "jogador": cobrador,
-                "texto": f"{minuto}' ❌ Pênalti perdido - {cobrador.nome}"
             })
     
     def escolher_cobrador(self, clube):
@@ -570,8 +597,8 @@ class Partida:
     def distribuir_cartoes(self, clube):
 
         quantidade = random.choices(
-            [0, 1, 2, 3],
-            weights=[40, 40, 15, 5]
+            [0,1,2,3,4],
+            weights=[55,30,12,3,1]
         )[0]
 
         for _ in range(quantidade):
@@ -589,7 +616,7 @@ class Partida:
             minuto = random.randint(1, 90)
 
             # Vermelho direto
-            if random.random() < 0.05:
+            if random.random() < 0.01:
 
                 jogador.vermelhos += 1
                 jogador.expulso = True
@@ -608,18 +635,21 @@ class Partida:
 
             self.eventos.append({
                 "minuto": minuto,
-                "tipo": "amarelo",
+                "tipo": "cartao_amarelo",
                 "jogador": jogador
             })
 
             # Segundo amarelo
-            if jogador.amarelos_partida == 2:
+            if (
+                jogador.amarelos_partida >= 2
+                and random.random() < 0.30
+            ):
 
                 jogador.vermelhos += 1
                 jogador.expulso = True
 
                 self.eventos.append({
-                    "minuto": minuto + 0.1,
+                    "minuto": minuto,
                     "tipo": "expulsao",
                     "jogador": jogador
                 })

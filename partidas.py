@@ -287,7 +287,7 @@ class Partida:
         bonus_posicao = {
             "Atacante": (0.8, 0.4),
             "Meio-Campo": (0.9, 0.6),
-            "Defesa": (0.8, 0.7),
+            "Defesa": (0.6, 0.6),
             "Goleiro": (1.5, 1.0)
         }
 
@@ -546,6 +546,8 @@ class Partida:
 
             self.eventos.append({
                 "minuto": minuto,
+                "tipo": "penalti_perdido",
+                "jogador": cobrador,
                 "texto": f"{minuto}' ❌ Pênalti perdido - {cobrador.nome}"
             })
     

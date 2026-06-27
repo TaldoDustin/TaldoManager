@@ -51,7 +51,7 @@ class Jogador:
         base = {
             "Atacante": 12,
             "Meio-Campo": 5,
-            "Defesa": 1
+            "Defesa": 0
         }
 
         return base[self.posicao] + (self.overall // 15)

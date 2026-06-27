@@ -22,6 +22,12 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 * ✅ Melhor nota
 * ✅ Pior nota
 * ✅ Melhor em campo
+* ✅ Hat-tricks
+* ✅ Pênaltis convertidos
+* ✅ Pênaltis perdidos
+* ✅ Clean Sheets
+* ✅ Cartões amarelos
+* ✅ Cartões vermelhos
 
 ---
 
@@ -49,6 +55,14 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 * ✅ Resultado automático
 * ✅ Empates
 * ✅ Placar completo
+* ✅ Hat-tricks
+* ✅ Pênaltis
+* ✅ Pênaltis perdidos
+* ✅ Cartões amarelos
+* ✅ Cartões vermelhos
+* ✅ Segundo amarelo
+* ✅ Eventos cronológicos
+* ✅ Ordenação por minuto
 
 ---
 
@@ -65,6 +79,8 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 * ✅ Ranking de notas
 * ✅ MVP do campeonato
 * ✅ Ranking de Clean Sheets
+* ✅ Ranking de Hat-tricks
+* ✅ Recordes do campeonato
 
 ---
 
@@ -74,6 +90,8 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 * ✅ Arquivos JSON
 * ✅ Carregamento automático dos dados
 * ✅ Código refatorado em métodos menores
+* ✅ Eventos estruturados em dicionários
+* ✅ Processamento cronológico de eventos
 
 ---
 
@@ -104,7 +122,7 @@ Este projeto tem como objetivo estudar:
 
 # 🗺️ Roadmap
 
-## ✅ Versão Atual (v0.4) — Concluída
+## ✅ Versão Atual (v0.5) — Concluída
 
 ### Base do jogo
 
@@ -125,6 +143,14 @@ Este projeto tem como objetivo estudar:
 * [x] Sistema de notas
 * [x] Melhor jogador da partida
 * [x] Clean Sheets
+* [x] Hat-tricks
+* [x] Pênaltis
+* [x] Pênaltis perdidos
+* [x] Cartões amarelos
+* [x] Cartões vermelhos
+* [x] Segundo amarelo
+* [x] Eventos cronológicos
+* [x] Ordenação dos eventos
 
 ### Campeonato
 
@@ -137,6 +163,8 @@ Este projeto tem como objetivo estudar:
 * [x] Assistências
 * [x] Ranking de notas
 * [x] MVP do campeonato
+* [x] Ranking de Hat-tricks
+* [x] Recordes do campeonato
 
 ### Código
 
@@ -144,33 +172,42 @@ Este projeto tem como objetivo estudar:
 * [x] Refatoração da classe Campeonato
 * [x] Métodos reutilizáveis
 * [x] Organização do projeto
+* [x] Sistema de eventos estruturados
 
 ---
 
-# 🚧 Próxima Sprint (v0.5)
+# 🚧 Próxima Sprint (v0.6)
 
-## Eventos da Partida
+## Eventos Avançados
 
-* [ ] Hat-trick
-* [ ] Cartão amarelo
-* [ ] Cartão vermelho
+* [ ] Expulsão afetando força do time
+* [ ] Suspensão automática por vermelho
+* [ ] Suspensão por acúmulo de amarelos
 * [ ] Lesões
-* [ ] Pênaltis
 * [ ] Pênaltis defendidos
 * [ ] Defesas difíceis
-* [ ] Substituições
 * [ ] Acréscimos
-* [ ] Eventos minuto a minuto
+* [ ] Substituições
 
-## Estatísticas
+## Estatísticas da Partida
 
-* [ ] Recordes do campeonato
+* [ ] Posse de bola
+* [ ] Finalizações
+* [ ] Chutes no gol
+* [ ] Escanteios
+* [ ] Faltas
+
+## Estatísticas Gerais
+
 * [ ] Histórico individual dos jogadores
 * [ ] Estatísticas por temporada
+* [ ] Ranking de cartões
+* [ ] Ranking de pênaltis
+* [ ] Ranking de melhores em campo
 
 ---
 
-# 💰 Mercado (v0.6)
+# 💰 Mercado (v0.7)
 
 * [ ] Valor de mercado
 * [ ] Salários
@@ -184,7 +221,7 @@ Este projeto tem como objetivo estudar:
 
 ---
 
-# 🏆 Modo Carreira (v0.7)
+# 🏆 Modo Carreira (v0.8)
 
 * [ ] Temporadas
 * [ ] Histórico de campeões
@@ -196,7 +233,7 @@ Este projeto tem como objetivo estudar:
 
 ---
 
-# 💾 Persistência (v0.8)
+# 💾 Persistência (v0.9)
 
 * [ ] SQLite
 * [ ] Sistema de Save
@@ -256,10 +293,10 @@ TaldoManager/
 
 # 🎯 Objetivo de Curto Prazo
 
-Transformar o Isaque Manager em um simulador completo de campeonatos com:
+Transformar o Taldo Manager em um simulador completo de campeonatos com:
 
 * ✅ Estatísticas completas
-* ⏳ Eventos de partida
+* ⏳ Eventos avançados
 * ⏳ Mercado de transferências
 * ⏳ Evolução dos jogadores
 * ⏳ Temporadas contínuas
@@ -283,4 +320,4 @@ Criar um Football Manager totalmente jogável contendo:
 
 ---
 
-> **🚀 Lembrete:** consistência vence intensidade. Desenvolver entre **1 e 3 horas por dia** representa aproximadamente **30 a 90 horas de evolução por mês**. Pequenos avanços diários constroem grandes projetos.
+> 🚀 **Lembrete:** consistência vence intensidade. Desenvolver entre **1 e 3 horas por dia** representa aproximadamente **30 a 90 horas de evolução por mês**. Pequenos avanços diários constroem grandes projetos.

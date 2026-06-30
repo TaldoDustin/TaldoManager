@@ -19,6 +19,13 @@ class Jogador:
         self.penaltis_perdidos = 0
         self.amarelos = 0
         self.vermelhos = 0
+        # estatísticas da partida
+        self.chutes_partida = 0
+        self.chutes_gol_partida = 0
+        self.defesas_partida = 0
+        self.desarmes_partida = 0
+        self.interceptacoes_partida = 0
+        self.passes_chave_partida = 0
         
         # controle por partida
         self.amarelos_partida = 0
@@ -42,17 +49,17 @@ class Jogador:
         )    
     
     def peso_gol(self):
-
         if self.posicao == "Goleiro":
             return 0
 
-        base = {
-            "Atacante": 12,
-            "Meio-Campo": 5,
-            "Defesa": 0
-        }
+        if self.posicao == "Defesa":
+            return 1 
 
-        return base[self.posicao] + (self.overall // 15)
+        if self.posicao == "Meio-Campo":
+            return 5 + (self.overall // 15)
+
+        if self.posicao == "Atacante":
+            return 12 + (self.overall // 15)
     
     def peso_assistencia(self):
 

@@ -13,6 +13,12 @@ class Partida:
         for jogador in self.clube1.jogadores + self.clube2.jogadores:
             jogador.expulso = False
             jogador.amarelos_partida = 0
+            jogador.chutes_partida = 0
+            jogador.chutes_gol_partida = 0
+            jogador.defesas_partida = 0
+            jogador.desarmes_partida = 0
+            jogador.interceptacoes_partida = 0
+            jogador.passes_chave_partida = 0
 
         self.gols_c1, self.gols_c2 = self.gerar_gols()
 
@@ -48,6 +54,8 @@ class Partida:
         self.atualizar_classificacao()
         self.atualizar_estatisticas_clubes()
         self.atualizar_clean_sheet()
+        
+        self.gerar_estatisticas_partida()
 
         melhor_jogador, maior_nota = self.calcular_notas(estatisticas)
 
@@ -173,6 +181,49 @@ class Partida:
                 print(
                     f"\n🎩 HAT-TRICK DE "
                     f"{jogador.nome}!"
+                )
+                
+    def gerar_estatisticas_partida(self):
+
+        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+
+            if jogador.expulso:
+                continue
+
+            if jogador.posicao == "Atacante":
+
+                jogador.chutes_partida = random.randint(1, 7)
+                jogador.chutes_gol_partida = random.randint(
+                    0,
+                    jogador.chutes_partida
+                )
+
+            elif jogador.posicao == "Meio-Campo":
+
+                jogador.chutes_partida = random.randint(0, 4)
+                jogador.chutes_gol_partida = random.randint(
+                    0,
+                    jogador.chutes_partida
+                )
+
+                jogador.passes_chave_partida = random.randint(0, 5)
+
+            elif jogador.posicao == "Defesa":
+
+                jogador.desarmes_partida = random.randint(1, 8)
+                jogador.interceptacoes_partida = random.randint(0, 6)
+
+            elif jogador.posicao == "Goleiro":
+
+                gols_sofridos = (
+                    self.gols_c2
+                    if jogador in self.clube1.jogadores
+                    else self.gols_c1
+                )
+
+                jogador.defesas_partida = random.randint(
+                    gols_sofridos,
+                    gols_sofridos + 6
                 )
 
 #resultado
@@ -300,7 +351,7 @@ class Partida:
         maior_nota = 0
 
         bonus_posicao = {
-            "Atacante": (0.8, 0.4),
+            "Atacante": (0.9, 0.4),
             "Meio-Campo": (0.9, 0.6),
             "Defesa": (0.6, 0.6),
             "Goleiro": (1.5, 1.0)
@@ -317,6 +368,45 @@ class Partida:
 
             nota += gols * bonus_gol
             nota += assistencias * bonus_assistencia
+            
+            # ==========================
+            # ESTATÍSTICAS DA PARTIDA
+            # ==========================
+
+            if jogador.posicao == "Atacante":
+
+                nota += (
+                    jogador.chutes_gol_partida * 0.10
+                )
+
+
+            elif jogador.posicao == "Meio-Campo":
+
+                nota += (
+                    jogador.passes_chave_partida * 0.05
+                )
+
+                nota += (
+                    jogador.chutes_gol_partida * 0.05
+                )
+
+
+            elif jogador.posicao == "Defesa":
+
+                nota += (
+                    jogador.desarmes_partida * 0.06
+                )
+
+                nota += (
+                    jogador.interceptacoes_partida * 0.04
+                )
+
+
+            elif jogador.posicao == "Goleiro":
+
+                nota += (
+                    jogador.defesas_partida * 0.07
+                )
 
             # ==========================
             # IDENTIFICA O TIME
@@ -709,16 +799,16 @@ class Partida:
         chance_c2 = 1 - chance_c1
 
         if diferenca_abs <= 2:
-            chance_empate = 0.15
+            chance_empate = 0.18
 
         elif diferenca_abs <= 5:
-            chance_empate = 0.12
+            chance_empate = 0.15
 
         elif diferenca_abs <= 8:
-            chance_empate = 0.08
+            chance_empate = 0.11
 
         else:
-            chance_empate = 0.05
+            chance_empate = 0.08
 
         total = chance_c1 + chance_c2
 

@@ -11,14 +11,7 @@ class Partida:
     def simular_partida(self):
         
         for jogador in self.clube1.jogadores + self.clube2.jogadores:
-            jogador.expulso = False
-            jogador.amarelos_partida = 0
-            jogador.chutes_partida = 0
-            jogador.chutes_gol_partida = 0
-            jogador.defesas_partida = 0
-            jogador.desarmes_partida = 0
-            jogador.interceptacoes_partida = 0
-            jogador.passes_chave_partida = 0
+            jogador.resetar_estatisticas_partida()
 
         self.gols_c1, self.gols_c2 = self.gerar_gols()
 
@@ -225,6 +218,19 @@ class Partida:
                     gols_sofridos,
                     gols_sofridos + 6
                 )
+                
+    def resetar_estatisticas_partida(self):
+
+        self.amarelos_partida = 0
+        self.expulso = False
+
+        self.chutes_partida = 0
+        self.chutes_gol_partida = 0
+        self.passes_chave_partida = 0
+
+        self.desarmes_partida = 0
+        self.interceptacoes_partida = 0
+        self.defesas_partida = 0
 
 #resultado
 

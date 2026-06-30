@@ -19,13 +19,15 @@ class Jogador:
         self.penaltis_perdidos = 0
         self.amarelos = 0
         self.vermelhos = 0
-        # estatísticas da partida
+        # estatísticas ofensivas da partida
         self.chutes_partida = 0
         self.chutes_gol_partida = 0
+        self.passes_chave_partida = 0
+        # estatísticas defensivas da partida
         self.defesas_partida = 0
         self.desarmes_partida = 0
         self.interceptacoes_partida = 0
-        self.passes_chave_partida = 0
+        
         
         # controle por partida
         self.amarelos_partida = 0

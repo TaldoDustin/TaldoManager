@@ -367,11 +367,23 @@ class Partida:
             ):
                 nota += 0.5
 
-            if (
-                jogador.posicao == "Goleiro"
-                and clean_sheet
-            ):
-                nota += 0.2
+            if jogador.posicao == "Goleiro":
+
+                if clean_sheet:
+                    nota += 0.7
+
+                    if saldo > 0:
+                        nota += 0.3
+
+                    elif saldo == 0:
+                        nota += 0.2
+
+                if gols_contra == 2:
+                    nota -= 0.2
+
+                elif gols_contra >= 3:
+                    nota -= 0.4
+
 
             # Futuramente
             # if jogador.capitao:

@@ -2,33 +2,401 @@
     {
         "id": 1,
         "nome": "FC Taldo",
-        "pais": "Brasil",
-        "dinheiro": 1000000,
-        "torcedores": 0,
-        "elenco": [1, 2, 3, 4]
+        "pais": "Inglaterra",
+        "dinheiro": 6823529,
+        "torcedores": 4718138,
+        "elenco": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
     },
     {
         "id": 2,
         "nome": "Real Taldo",
-        "pais": "Espanha",
-        "dinheiro": 2000000,
-        "torcedores": 0,
-        "elenco": [5, 6, 7, 8]
+        "pais": "Brasil",
+        "dinheiro": 8074952,
+        "torcedores": 7286690,
+        "elenco": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+        ]
     },
     {
         "id": 3,
         "nome": "Taldo United",
-        "pais": "Inglaterra",
-        "dinheiro": 1500000,
-        "torcedores": 0,
-        "elenco": [9, 10, 11, 12]
+        "pais": "Itália",
+        "dinheiro": 32430815,
+        "torcedores": 2958343,
+        "elenco": [
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+        ]
     },
     {
         "id": 4,
         "nome": "Taldo City",
+        "pais": "Inglaterra",
+        "dinheiro": 12046565,
+        "torcedores": 4506274,
+        "elenco": [
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44
+        ]
+    },
+    {
+        "id": 5,
+        "nome": "Atlético Taldo",
+        "pais": "Brasil",
+        "dinheiro": 40290176,
+        "torcedores": 800820,
+        "elenco": [
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+        ]
+    },
+    {
+        "id": 6,
+        "nome": "Sport Taldo",
+        "pais": "Inglaterra",
+        "dinheiro": 5858805,
+        "torcedores": 351961,
+        "elenco": [
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66
+        ]
+    },
+    {
+        "id": 7,
+        "nome": "Taldo Internacional",
+        "pais": "França",
+        "dinheiro": 43404452,
+        "torcedores": 8655630,
+        "elenco": [
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77
+        ]
+    },
+    {
+        "id": 8,
+        "nome": "Taldo Rangers",
+        "pais": "Portugal",
+        "dinheiro": 3839661,
+        "torcedores": 4260118,
+        "elenco": [
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88
+        ]
+    },
+    {
+        "id": 9,
+        "nome": "Taldo Athletic",
+        "pais": "Brasil",
+        "dinheiro": 41807749,
+        "torcedores": 9519612,
+        "elenco": [
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99
+        ]
+    },
+    {
+        "id": 10,
+        "nome": "EC Taldo",
+        "pais": "Argentina",
+        "dinheiro": 24464218,
+        "torcedores": 8128617,
+        "elenco": [
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110
+        ]
+    },
+    {
+        "id": 11,
+        "nome": "Taldo Nacional",
+        "pais": "Brasil",
+        "dinheiro": 21534421,
+        "torcedores": 649350,
+        "elenco": [
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121
+        ]
+    },
+    {
+        "id": 12,
+        "nome": "Taldo Stars",
+        "pais": "Brasil",
+        "dinheiro": 40663447,
+        "torcedores": 4018734,
+        "elenco": [
+            122,
+            123,
+            124,
+            125,
+            126,
+            127,
+            128,
+            129,
+            130,
+            131,
+            132
+        ]
+    },
+    {
+        "id": 13,
+        "nome": "Taldo Sporting",
+        "pais": "Espanha",
+        "dinheiro": 10265877,
+        "torcedores": 3520861,
+        "elenco": [
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143
+        ]
+    },
+    {
+        "id": 14,
+        "nome": "Taldo Galaxy",
+        "pais": "Argentina",
+        "dinheiro": 5621185,
+        "torcedores": 4740847,
+        "elenco": [
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154
+        ]
+    },
+    {
+        "id": 15,
+        "nome": "Taldo Royals",
+        "pais": "Inglaterra",
+        "dinheiro": 29196490,
+        "torcedores": 2075812,
+        "elenco": [
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165
+        ]
+    },
+    {
+        "id": 16,
+        "nome": "Taldo Warriors",
+        "pais": "Alemanha",
+        "dinheiro": 8271653,
+        "torcedores": 3446804,
+        "elenco": [
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176
+        ]
+    },
+    {
+        "id": 17,
+        "nome": "Taldo Legends",
         "pais": "Itália",
-        "dinheiro": 1200000,
-        "torcedores": 0,
-        "elenco": [13, 14, 15, 16]
+        "dinheiro": 37012504,
+        "torcedores": 6908278,
+        "elenco": [
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187
+        ]
+    },
+    {
+        "id": 18,
+        "nome": "Taldo Dragons",
+        "pais": "Brasil",
+        "dinheiro": 25883467,
+        "torcedores": 849210,
+        "elenco": [
+            188,
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198
+        ]
+    },
+    {
+        "id": 19,
+        "nome": "Taldo Empire",
+        "pais": "Brasil",
+        "dinheiro": 46749565,
+        "torcedores": 3289625,
+        "elenco": [
+            199,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209
+        ]
+    },
+    {
+        "id": 20,
+        "nome": "Taldo FC",
+        "pais": "Espanha",
+        "dinheiro": 8235196,
+        "torcedores": 5197237,
+        "elenco": [
+            210,
+            211,
+            212,
+            213,
+            214,
+            215,
+            216,
+            217,
+            218,
+            219,
+            220
+        ]
     }
 ]

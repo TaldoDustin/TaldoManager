@@ -1,3 +1,8 @@
+import sys
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 from data_loader import carregar_campeonato
 
 campeonato = carregar_campeonato()

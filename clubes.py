@@ -23,6 +23,8 @@ class Clube:
 
         self.forma = []
         
+        self.penalidade_expulsao = 0
+        
     def atualizar_forma(self, resultado):
 
         self.forma.append(resultado)
@@ -60,10 +62,27 @@ class Clube:
         self.jogadores.append(jogador)
         
     def calcular_forca(self):
+
         if not self.jogadores:
             return 0
-        total_overall = sum(jogador.overall for jogador in self.jogadores)
-        return total_overall / len(self.jogadores)
+
+        total = sum(
+            jogador.overall
+            for jogador in self.jogadores
+            if not jogador.expulso
+        )
+
+        ativos = [
+            j for j in self.jogadores
+            if not j.expulso
+        ]
+
+        if not ativos:
+            return 0
+
+        return (
+            total / len(ativos)
+        ) - self.penalidade_expulsao
     
     def saldo_gols(self):
         return self.gols_marcados - self.gols_sofridos

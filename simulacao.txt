@@ -1,0 +1,8678 @@
+=== TALDO MANAGER ===
+
+========================================
+Rodada 1
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 82.5 | chance 35.5%
+Taldo FC: força 83.8 | chance 49.5%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 2 x 1 Taldo FC
+FC Taldo venceu!
+
+
+EVENTOS
+45' ⚽ João Martin
+62' ⚽ Leonardo Mendes
+65' ⚽ Gabriel Costa
+
+⭐ MELHOR EM CAMPO
+Gabriel Costa (Atacante) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 42.5%
+Taldo Empire: força 83.4 | chance 42.5%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 2 x 1 Taldo Empire
+Real Taldo venceu!
+
+
+EVENTOS
+14' ⚽ Gabriel Barbosa
+20' ⚽ Carlos Ribeiro
+51' ⚽ Pierre Silva
+82' 🟨 Pedro Mendes
+
+⭐ MELHOR EM CAMPO
+Gabriel Barbosa (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 82.2 | chance 48.5%
+Taldo Dragons: força 81.0 | chance 36.5%
+Chance empate: 15.0%
+--------------------------
+Taldo United 0 x 1 Taldo Dragons
+Taldo Dragons venceu!
+
+
+EVENTOS
+67' ⚽ Oliver Dubois
+CS -> Taldo Dragons (placar 1x0)
+   Enzo Lopez: 1
+
+⭐ MELHOR EM CAMPO
+Oliver Dubois (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 81.2 | chance 58.9%
+Taldo Legends: força 78.4 | chance 29.1%
+Chance empate: 12.0%
+--------------------------
+Taldo City 2 x 1 Taldo Legends
+Taldo City venceu!
+
+
+EVENTOS
+8' ⚽ Rodrigo Brown
+9' 🟨 Alejandro Costa
+12' 🟨 Thiago Costa
+58' ⚽ Thiago Johnson
+90' ⚽ Diego Rocha
+
+⭐ MELHOR EM CAMPO
+Thiago Johnson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 83.9 | chance 75.1%
+Taldo Warriors: força 78.6 | chance 16.9%
+Chance empate: 8.0%
+--------------------------
+Atlético Taldo 3 x 0 Taldo Warriors
+Atlético Taldo venceu!
+
+
+EVENTOS
+61' ⚽ Arthur Ribeiro
+84' ⚽ Gabriel Almeida
+90' ⚽ Arthur Costa
+CS -> Atlético Taldo (placar 3x0)
+   Gustavo Johnson: 1
+
+⭐ MELHOR EM CAMPO
+Arthur Costa (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 83.0 | chance 44.4%
+Taldo Royals: força 82.6 | chance 40.6%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 1 x 0 Taldo Royals
+Sport Taldo venceu!
+
+
+EVENTOS
+25' ⚽ Pablo Wilson
+CS -> Sport Taldo (placar 1x0)
+   Jack Souza: 1
+
+⭐ MELHOR EM CAMPO
+Pablo Wilson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 82.8 | chance 49.5%
+Taldo Galaxy: força 81.5 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 1 x 1 Taldo Galaxy
+Empate!
+
+
+EVENTOS
+17' 🟨 Thiago Gomes
+28' ⚽ Pedro Lima
+36' 🟨 Juan Pereira
+46' ⚽ Liam Barbosa
+63' 🟨 Noah Walker
+83' 🟨 Thiago Dubois
+85' 🟨 Matheus Wilson
+
+⭐ MELHOR EM CAMPO
+Liam Barbosa (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 81.1 | chance 49.5%
+Taldo Sporting: força 79.7 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 1 x 1 Taldo Sporting
+Empate!
+
+
+EVENTOS
+21' 🟨 Rafael Taylor
+36' ⚽ Liam Rodriguez
+38' 🟨 Gabriel Rocha
+44' 🟨 Alejandro Garcia
+47' 🟨 Miguel Lopez
+74' 🟨 João Rocha
+80' ⚽ Gabriel Rocha
+
+⭐ MELHOR EM CAMPO
+Gabriel Rocha (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 83.5 | chance 42.0%
+Taldo Stars: força 83.6 | chance 43.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 2 x 1 Taldo Stars
+Taldo Athletic venceu!
+
+
+EVENTOS
+38' ⚽ Luca Silva
+39' ⚽ Jack Bianchi
+55' ⚽ Alejandro Taylor
+
+⭐ MELHOR EM CAMPO
+Alejandro Taylor (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 82.9 | chance 47.1%
+Taldo Nacional: força 82.0 | chance 37.9%
+Chance empate: 15.0%
+--------------------------
+EC Taldo 1 x 2 Taldo Nacional
+Taldo Nacional venceu!
+
+
+EVENTOS
+13' 🟨 Diego Garcia
+45' 🟨 Luca Rocha
+47' 🟨 Miguel Smith
+68' ⚽ Diego Lima
+70' ⚽ Vinicius Wilson
+89' ⚽ Gabriel Martins
+
+⭐ MELHOR EM CAMPO
+Vinicius Wilson (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 2
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 83.5 | chance 48.1%
+Taldo Empire: força 82.4 | chance 36.9%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 1 x 0 Taldo Empire
+FC Taldo venceu!
+
+
+EVENTOS
+90' ⚽ Gabriel Costa
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 1
+
+⭐ MELHOR EM CAMPO
+Gabriel Costa (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 82.8 | chance 51.8%
+Taldo Dragons: força 81.0 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 2 x 1 Taldo Dragons
+Taldo FC venceu!
+
+
+EVENTOS
+15' ⚽ Pedro Lopez
+22' ⚽ Miguel Santos
+25' ⚽ Oliver Dubois
+79' 🟨 Caio Pereira
+
+⭐ MELHOR EM CAMPO
+Lucas Ribeiro (Goleiro) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 82.4 | chance 65.1%
+Taldo Legends: força 78.4 | chance 22.9%
+Chance empate: 12.0%
+--------------------------
+Real Taldo 3 x 0 Taldo Legends
+Real Taldo venceu!
+
+
+EVENTOS
+14' ⚽ Isaque Souza
+63' ⚽ Isaque Souza
+76' ⚽ Jack Silva
+82' 🟨 Juan Rossi
+CS -> Real Taldo (placar 3x0)
+   Pierre Brown: 1
+
+⭐ MELHOR EM CAMPO
+Isaque Souza (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 83.2 | chance 62.7%
+Taldo Warriors: força 79.6 | chance 25.3%
+Chance empate: 12.0%
+--------------------------
+Taldo United 3 x 1 Taldo Warriors
+Taldo United venceu!
+
+
+EVENTOS
+14' ⚽ André Oliveira
+31' 🟨 João Wilson
+37' ⚽ Marco Gomes
+43' ⚽ Marco Perez
+80' ⚽ Carlos Fernandez
+
+⭐ MELHOR EM CAMPO
+Thiago Santos (Meio-Campo) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 83.2 | chance 50.4%
+Taldo Royals: força 81.6 | chance 34.6%
+Chance empate: 15.0%
+--------------------------
+Taldo City 1 x 0 Taldo Royals
+Taldo City venceu!
+
+
+EVENTOS
+7' ⚽ André Lopez
+28' 🟨 Caio Walker
+41' 🟨 Pierre Dubois
+49' 🟨 Harry Martin
+CS -> Taldo City (placar 1x0)
+   Francesco Oliveira: 1
+
+⭐ MELHOR EM CAMPO
+André Lopez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 83.9 | chance 44.8%
+Taldo Galaxy: força 83.5 | chance 40.2%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 0 x 1 Taldo Galaxy
+Taldo Galaxy venceu!
+
+
+EVENTOS
+22' 🟨 Noah Walker
+22' 🟥 Noah Walker
+41' ⚽ Pablo Oliveira
+90' 🟨 Gustavo Johnson
+CS -> Taldo Galaxy (placar 1x0)
+   Thiago Gomes: 1
+
+⭐ MELHOR EM CAMPO
+Pablo Oliveira (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 84.0 | chance 56.0%
+Taldo Sporting: força 81.7 | chance 32.0%
+Chance empate: 12.0%
+--------------------------
+Sport Taldo 3 x 1 Taldo Sporting
+Sport Taldo venceu!
+
+
+EVENTOS
+12' ⚽ Luca Dubois
+29' ⚽ Leonardo Almeida
+43' ⚽ Miguel Lopez
+76' ⚽ Thiago Lima
+
+⭐ MELHOR EM CAMPO
+Leonardo Almeida (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 33.2%
+Taldo Stars: força 83.6 | chance 51.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 1 x 2 Taldo Stars
+Taldo Stars venceu!
+
+
+EVENTOS
+22' 🟨 Miguel Costa
+27' ⚽ Noah Ferreira
+36' ⚽ Vinicius Garcia
+45' ⚽ Oliver Moretti
+59' 🟨 Gustavo Moretti
+78' 🟨 Miguel Costa
+
+⭐ MELHOR EM CAMPO
+Vinicius Garcia (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 48.1%
+Taldo Nacional: força 81.0 | chance 36.9%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 0 x 1 Taldo Nacional
+Taldo Nacional venceu!
+
+
+EVENTOS
+4' 🟨 André Moretti
+9' 🟨 Thiago Taylor
+51' ⚽ Vinicius Wilson
+83' 🟨 Miguel Pereira
+CS -> Taldo Nacional (placar 1x0)
+   Bruno Rossi: 1
+
+⭐ MELHOR EM CAMPO
+Vinicius Wilson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 82.5 | chance 35.5%
+EC Taldo: força 83.9 | chance 49.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 1 x 2 EC Taldo
+EC Taldo venceu!
+
+
+EVENTOS
+14' ⚽ Noah Ribeiro
+72' ⚽ Arthur Wilson
+74' ⚽ Gabriel Martins
+
+⭐ MELHOR EM CAMPO
+Arthur Wilson (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 3
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 82.5 | chance 49.9%
+Taldo Dragons: força 81.0 | chance 35.1%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 1 x 0 Taldo Dragons
+FC Taldo venceu!
+
+
+EVENTOS
+75' ⚽ Pedro Araujo
+77' 🟨 Francesco Fernandez
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 2
+
+⭐ MELHOR EM CAMPO
+Pedro Araujo (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 84.4 | chance 70.4%
+Taldo Legends: força 79.4 | chance 17.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 2 x 1 Taldo Legends
+Taldo Empire venceu!
+
+
+EVENTOS
+3' ⚽ Thiago Smith
+38' ⚽ Miguel Oliveira
+42' ⚽ Carlos Martin
+86' 🟨 Matheus Martins
+
+⭐ MELHOR EM CAMPO
+Thiago Smith (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 82.8 | chance 60.8%
+Taldo Warriors: força 79.6 | chance 27.2%
+Chance empate: 12.0%
+--------------------------
+Taldo FC 3 x 0 Taldo Warriors
+Taldo FC venceu!
+
+
+EVENTOS
+22' ⚽ Louis Rocha
+25' 🟨 João Silva
+49' ⚽ Vinicius Brown
+59' ⚽ Enzo Barbosa
+CS -> Taldo FC (placar 3x0)
+   Lucas Ribeiro: 1
+
+⭐ MELHOR EM CAMPO
+Vinicius Brown (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 82.4 | chance 46.2%
+Taldo Royals: força 81.6 | chance 38.8%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 1 x 2 Taldo Royals
+Taldo Royals venceu!
+
+
+EVENTOS
+4' ⚽ Louis Bianchi
+26' ⚽ Pablo Johnson
+76' ⚽ Enzo Brown
+
+⭐ MELHOR EM CAMPO
+Louis Bianchi (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 81.2 | chance 32.0%
+Taldo Galaxy: força 83.5 | chance 56.0%
+Chance empate: 12.0%
+--------------------------
+Taldo United 0 x 0 Taldo Galaxy
+Empate!
+
+
+EVENTOS
+32' 🟨 Thiago Gomes
+46' 🟨 André Santos
+CS -> Taldo United (placar 0x0)
+   Miguel Araujo: 1
+CS -> Taldo Galaxy (placar 0x0)
+   Thiago Gomes: 2
+
+⭐ MELHOR EM CAMPO
+Miguel Araujo (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 82.2 | chance 57.0%
+Taldo Sporting: força 79.7 | chance 31.0%
+Chance empate: 12.0%
+--------------------------
+Taldo City 0 x 0 Taldo Sporting
+Empate!
+
+
+EVENTOS
+36' 🟨 Leonardo Rodriguez
+CS -> Taldo City (placar 0x0)
+   Francesco Oliveira: 2
+CS -> Taldo Sporting (placar 0x0)
+   Luca Gomes: 1
+
+⭐ MELHOR EM CAMPO
+Francesco Oliveira (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 82.9 | chance 49.0%
+Taldo Stars: força 81.6 | chance 36.0%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 4 x 2 Taldo Stars
+Atlético Taldo venceu!
+
+
+EVENTOS
+5' ⚽ Jack Ribeiro
+13' ⚽ Arthur Ribeiro
+34' 🟨 Miguel Gomes
+64' ⚽ Luca Silva
+77' ⚽ (P) Arthur Martin
+81' ⚽ Arthur Ribeiro
+82' ⚽ Louis Smith
+
+⭐ MELHOR EM CAMPO
+Arthur Ribeiro (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 83.0 | chance 47.6%
+Taldo Nacional: força 82.0 | chance 37.4%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 2 x 1 Taldo Nacional
+Sport Taldo venceu!
+
+
+EVENTOS
+7' 🟨 Miguel Moretti
+12' ⚽ Thiago Taylor
+71' ⚽ Luca Dubois
+74' ⚽ Luca Dubois
+
+⭐ MELHOR EM CAMPO
+Luca Dubois (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 82.8 | chance 36.9%
+EC Taldo: força 83.9 | chance 48.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 2 x 1 EC Taldo
+Taldo Internacional venceu!
+
+
+EVENTOS
+3' ⚽ Liam Barbosa
+10' ⚽ Arthur Wilson
+74' ⚽ Jack Rocha
+
+⭐ MELHOR EM CAMPO
+Liam Barbosa (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 40.2%
+Taldo Athletic: força 82.5 | chance 44.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 2 x 1 Taldo Athletic
+Taldo Rangers venceu!
+
+
+EVENTOS
+31' 🟨 Noah Ribeiro
+46' ⚽ Gabriel Rocha
+59' ⚽ Alejandro Johnson
+79' ⚽ Diego Rossi
+
+⭐ MELHOR EM CAMPO
+Gabriel Rocha (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 4
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 83.5 | chance 65.6%
+Taldo Legends: força 79.4 | chance 22.4%
+Chance empate: 12.0%
+--------------------------
+FC Taldo 2 x 0 Taldo Legends
+FC Taldo venceu!
+
+
+EVENTOS
+49' ⚽ Felipe Bianchi
+66' ⚽ Gabriel Costa
+CS -> FC Taldo (placar 2x0)
+   Noah Smith: 3
+
+⭐ MELHOR EM CAMPO
+Luca Rodriguez (Meio-Campo) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 81.0 | chance 49.5%
+Taldo Warriors: força 79.6 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 0 Taldo Warriors
+Taldo Dragons venceu!
+
+
+EVENTOS
+36' ⚽ Antoine Brown
+44' 🟨 Pierre Mendes
+CS -> Taldo Dragons (placar 1x0)
+   Enzo Lopez: 2
+
+⭐ MELHOR EM CAMPO
+Antoine Brown (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 85.4 | chance 69.0%
+Taldo Royals: força 80.6 | chance 19.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 1 x 0 Taldo Royals
+Taldo Empire venceu!
+
+
+EVENTOS
+27' 🟨 Pablo Johnson
+67' ⚽ Pedro Mendes
+CS -> Taldo Empire (placar 1x0)
+   Jack Perez: 1
+
+⭐ MELHOR EM CAMPO
+Pedro Mendes (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 84.8 | chance 61.8%
+Taldo Galaxy: força 81.5 | chance 26.2%
+Chance empate: 12.0%
+--------------------------
+Taldo FC 0 x 0 Taldo Galaxy
+Empate!
+
+
+EVENTOS
+25' 🟨 André Santos
+59' 🟨 Pablo Oliveira
+72' 🟨 Pedro Lima
+CS -> Taldo FC (placar 0x0)
+   Lucas Ribeiro: 2
+CS -> Taldo Galaxy (placar 0x0)
+   Thiago Gomes: 3
+
+⭐ MELHOR EM CAMPO
+Lucas Ribeiro (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 84.4 | chance 68.5%
+Taldo Sporting: força 79.7 | chance 19.5%
+Chance empate: 12.0%
+--------------------------
+Real Taldo 2 x 1 Taldo Sporting
+Real Taldo venceu!
+
+
+EVENTOS
+45' ⚽ Juan Rocha
+64' ⚽ Juan Rocha
+72' ⚽ João Rocha
+
+⭐ MELHOR EM CAMPO
+Juan Rocha (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 82.2 | chance 35.1%
+Taldo Stars: força 83.6 | chance 49.9%
+Chance empate: 15.0%
+--------------------------
+Taldo United 1 x 2 Taldo Stars
+Taldo Stars venceu!
+
+
+EVENTOS
+4' 🟨 Miguel Costa
+51' ⚽ Carlos Rossi
+57' ⚽ Antoine Walker
+85' ⚽ Noah Pereira
+
+⭐ MELHOR EM CAMPO
+Antoine Walker (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 81.2 | chance 38.3%
+Taldo Nacional: força 82.0 | chance 46.7%
+Chance empate: 15.0%
+--------------------------
+Taldo City 1 x 2 Taldo Nacional
+Taldo Nacional venceu!
+
+
+EVENTOS
+25' ⚽ Thiago Taylor
+62' ⚽ Luca Rocha
+66' 🟨 Miguel Johnson
+69' 🟨 Alejandro Gomes
+75' ⚽ Thiago Johnson
+
+⭐ MELHOR EM CAMPO
+Thiago Taylor (Atacante) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 82.9 | chance 37.4%
+EC Taldo: força 83.9 | chance 47.6%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 1 x 2 EC Taldo
+EC Taldo venceu!
+
+
+EVENTOS
+59' 🟨 Arthur Wilson
+67' ⚽ Arthur Costa
+69' 🟨 Miguel Smith
+83' ⚽ Arthur Wilson
+89' ⚽ Gabriel Martins
+
+⭐ MELHOR EM CAMPO
+Arthur Wilson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 82.0 | chance 34.6%
+Taldo Athletic: força 83.5 | chance 50.4%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 1 x 0 Taldo Athletic
+Sport Taldo venceu!
+
+
+EVENTOS
+25' ⚽ Antoine Wilson
+CS -> Sport Taldo (placar 1x0)
+   Jack Souza: 2
+
+⭐ MELHOR EM CAMPO
+Antoine Wilson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 82.8 | chance 63.7%
+Taldo Rangers: força 79.1 | chance 24.3%
+Chance empate: 12.0%
+--------------------------
+Taldo Internacional 2 x 1 Taldo Rangers
+Taldo Internacional venceu!
+
+
+EVENTOS
+27' 🟨 Antoine Rossi
+33' 🟨 Pierre Costa
+40' ⚽ Marco Martins
+48' ⚽ Diego Walker
+61' ⚽ Pierre Pereira
+
+⭐ MELHOR EM CAMPO
+Pierre Pereira (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 5
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 83.5 | chance 78.1%
+Taldo Warriors: força 77.6 | chance 13.9%
+Chance empate: 8.0%
+--------------------------
+FC Taldo 1 x 0 Taldo Warriors
+FC Taldo venceu!
+
+
+EVENTOS
+35' ⚽ Felipe Bianchi
+50' 🟨 Giovanni Johnson
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 4
+
+⭐ MELHOR EM CAMPO
+Felipe Bianchi (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 78.4 | chance 21.4%
+Taldo Royals: força 82.6 | chance 66.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Legends 0 x 2 Taldo Royals
+Taldo Royals venceu!
+
+
+EVENTOS
+7' ⚽ Luca Johnson
+70' ⚽ André Garcia
+CS -> Taldo Royals (placar 2x0)
+   Gabriel Fernandez: 1
+
+⭐ MELHOR EM CAMPO
+André Garcia (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 81.0 | chance 35.1%
+Taldo Galaxy: força 82.5 | chance 49.9%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 1 Taldo Galaxy
+Empate!
+
+
+EVENTOS
+5' ⚽ Louis Walker
+6' 🟨 João Araujo
+27' 🟨 Lucas Bianchi
+78' ⚽ Pablo Oliveira
+
+⭐ MELHOR EM CAMPO
+Louis Walker (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 83.4 | chance 57.9%
+Taldo Sporting: força 80.7 | chance 30.1%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 2 x 0 Taldo Sporting
+Taldo Empire venceu!
+
+
+EVENTOS
+8' ⚽ Pedro Mendes
+70' ⚽ Arthur Taylor
+CS -> Taldo Empire (placar 2x0)
+   Jack Perez: 2
+
+⭐ MELHOR EM CAMPO
+Pedro Mendes (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 83.8 | chance 55.5%
+Taldo Stars: força 81.6 | chance 32.5%
+Chance empate: 12.0%
+--------------------------
+Taldo FC 1 x 0 Taldo Stars
+Taldo FC venceu!
+
+
+EVENTOS
+59' ⚽ Antoine Martins
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 3
+
+⭐ MELHOR EM CAMPO
+Antoine Martins (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 49.5%
+Taldo Nacional: força 82.0 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 2 x 1 Taldo Nacional
+Real Taldo venceu!
+
+
+EVENTOS
+14' ⚽ Giovanni Ribeiro
+25' ⚽ Gabriel Barbosa
+80' ⚽ Francesco Dubois
+
+⭐ MELHOR EM CAMPO
+Francesco Dubois (Atacante) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 82.2 | chance 43.9%
+EC Taldo: força 81.9 | chance 41.1%
+Chance empate: 15.0%
+--------------------------
+Taldo United 1 x 0 EC Taldo
+Taldo United venceu!
+
+
+EVENTOS
+22' 🟨 Marco Rossi
+24' 🟨 Arthur Wilson
+36' ⚽ Thiago Santos
+57' 🟨 Marco Rossi
+65' 🟨 Francesco Pereira
+CS -> Taldo United (placar 1x0)
+   Miguel Araujo: 2
+
+⭐ MELHOR EM CAMPO
+Thiago Santos (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 83.2 | chance 50.8%
+Taldo Athletic: força 81.5 | chance 34.2%
+Chance empate: 15.0%
+--------------------------
+Taldo City 1 x 0 Taldo Athletic
+Taldo City venceu!
+
+
+EVENTOS
+84' ⚽ Thiago Johnson
+CS -> Taldo City (placar 1x0)
+   Francesco Oliveira: 3
+
+⭐ MELHOR EM CAMPO
+Thiago Johnson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 83.9 | chance 69.4%
+Taldo Rangers: força 79.1 | chance 18.6%
+Chance empate: 12.0%
+--------------------------
+Atlético Taldo 2 x 0 Taldo Rangers
+Atlético Taldo venceu!
+
+
+EVENTOS
+9' 🟨 Diego Ribeiro
+13' ⚽ Arthur Ribeiro
+43' ⚽ Giovanni Rossi
+69' 🟨 Diego Rossi
+CS -> Atlético Taldo (placar 2x0)
+   Gustavo Johnson: 2
+
+⭐ MELHOR EM CAMPO
+Arthur Ribeiro (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 82.0 | chance 48.5%
+Taldo Internacional: força 80.8 | chance 36.5%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 2 x 1 Taldo Internacional
+Sport Taldo venceu!
+
+
+EVENTOS
+20' ⚽ Oliver Pereira
+31' ⚽ Thiago Walker
+40' ⚽ Diego Walker
+
+⭐ MELHOR EM CAMPO
+Thiago Walker (Defesa) - Nota 6.9
+
+
+========================================
+Rodada 6
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 81.5 | chance 41.6%
+Taldo Royals: força 81.6 | chance 43.4%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 0 x 0 Taldo Royals
+Empate!
+
+
+EVENTOS
+6' 🟨 Felipe Bianchi
+21' 🟨 Harry Martin
+CS -> FC Taldo (placar 0x0)
+   Noah Smith: 5
+CS -> Taldo Royals (placar 0x0)
+   Gabriel Fernandez: 2
+
+⭐ MELHOR EM CAMPO
+Noah Smith (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 18.6%
+Taldo Galaxy: força 83.5 | chance 69.4%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 2 x 0 Taldo Galaxy
+Taldo Warriors venceu!
+
+
+EVENTOS
+9' ⚽ Marco Perez
+15' 🟨 Pierre Mendes
+35' 🟨 Pablo Oliveira
+44' 🟨 Juan Pereira
+61' ⚽ Marco Perez
+65' 🟨 Arthur Johnson
+CS -> Taldo Warriors (placar 2x0)
+   Gabriel Bianchi: 1
+
+⭐ MELHOR EM CAMPO
+Marco Perez (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 78.4 | chance 35.5%
+Taldo Sporting: força 79.7 | chance 49.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Legends 1 x 2 Taldo Sporting
+Taldo Sporting venceu!
+
+
+EVENTOS
+21' ⚽ Jack Lima
+35' ⚽ Pablo Rossi
+59' 🟨 Caio Johnson
+87' 🟨 Juan Johnson
+89' ⚽ João Rocha
+
+⭐ MELHOR EM CAMPO
+Luca Gomes (Goleiro) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 83.0 | chance 49.5%
+Taldo Stars: força 81.6 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 2 x 1 Taldo Stars
+Taldo Dragons venceu!
+
+
+EVENTOS
+33' ⚽ Alejandro Brown
+40' 🟨 Enzo Ferreira
+76' ⚽ Oliver Dubois
+86' ⚽ Luca Silva
+
+⭐ MELHOR EM CAMPO
+Oliver Dubois (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 84.4 | chance 56.5%
+Taldo Nacional: força 82.0 | chance 31.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 0 x 2 Taldo Nacional
+Taldo Nacional venceu!
+
+
+EVENTOS
+15' 🟨 Matheus Pereira
+29' ⚽ Thiago Taylor
+35' ⚽ Diego Lima
+CS -> Taldo Nacional (placar 2x0)
+   Bruno Rossi: 2
+
+⭐ MELHOR EM CAMPO
+Diego Lima (Atacante) - Nota 7.7
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 82.8 | chance 47.1%
+EC Taldo: força 81.9 | chance 37.9%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 2 x 1 EC Taldo
+Taldo FC venceu!
+
+
+EVENTOS
+12' ⚽ Pedro Lopez
+16' ⚽ Pedro Dubois
+21' 🟨 Marco Rossi
+47' ⚽ Pedro Lopez
+55' 🟨 Arthur Wilson
+68' 🟨 Juan Ferreira
+
+⭐ MELHOR EM CAMPO
+Pedro Lopez (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 82.4 | chance 36.5%
+Taldo Athletic: força 83.5 | chance 48.5%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 1 x 2 Taldo Athletic
+Taldo Athletic venceu!
+
+
+EVENTOS
+1' 🟨 Francesco Dubois
+59' ⚽ Liam Costa
+68' ⚽ André Rossi
+73' ⚽ Gabriel Rossi
+
+⭐ MELHOR EM CAMPO
+Alejandro Johnson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 81.2 | chance 55.0%
+Taldo Rangers: força 79.1 | chance 33.0%
+Chance empate: 12.0%
+--------------------------
+Taldo United 0 x 2 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+17' ⚽ Marco Martins
+79' ⚽ Marco Martins
+CS -> Taldo Rangers (placar 2x0)
+   Antoine Rodriguez: 1
+
+⭐ MELHOR EM CAMPO
+Marco Martins (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 81.2 | chance 39.3%
+Taldo Internacional: força 81.8 | chance 45.7%
+Chance empate: 15.0%
+--------------------------
+Taldo City 1 x 2 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+13' 🟨 Miguel Walker
+33' ⚽ Diego Walker
+85' ⚽ Diego Gomes
+86' ⚽ Miguel Johnson
+
+⭐ MELHOR EM CAMPO
+Diego Gomes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 82.9 | chance 52.2%
+Sport Taldo: força 81.0 | chance 32.8%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 0 x 1 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+13' 🟨 Arthur Martin
+15' 🟨 Leonardo Almeida
+83' ⚽ Luca Dubois
+85' 🟨 Gabriel Almeida
+CS -> Sport Taldo (placar 1x0)
+   Jack Souza: 3
+
+⭐ MELHOR EM CAMPO
+Luca Dubois (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 7
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 81.5 | chance 42.5%
+Taldo Galaxy: força 81.5 | chance 42.5%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 1 x 1 Taldo Galaxy
+Empate!
+
+
+EVENTOS
+9' ⚽ Gabriel Costa
+24' 🟨 Luca Rodriguez
+39' 🟨 Francesco Lopez
+46' ⚽ Pablo Oliveira
+73' 🟨 Francesco Lopez
+
+⭐ MELHOR EM CAMPO
+Gabriel Costa (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 82.6 | chance 59.4%
+Taldo Sporting: força 79.7 | chance 28.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Royals 2 x 1 Taldo Sporting
+Taldo Royals venceu!
+
+
+EVENTOS
+68' ⚽ Miguel Lopez
+73' ⚽ Pablo Johnson
+85' ⚽ Louis Bianchi
+
+⭐ MELHOR EM CAMPO
+Louis Bianchi (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 28.2%
+Taldo Stars: força 81.6 | chance 59.8%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 0 x 1 Taldo Stars
+Taldo Stars venceu!
+
+
+EVENTOS
+20' 🟨 Marco Perez
+56' 🟨 Miguel Costa
+68' 🟨 Diego Almeida
+73' ⚽ Vinicius Garcia
+CS -> Taldo Stars (placar 1x0)
+   Gustavo Moretti: 1
+
+⭐ MELHOR EM CAMPO
+Vinicius Garcia (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 80.4 | chance 34.2%
+Taldo Nacional: força 82.0 | chance 50.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Legends 1 x 2 Taldo Nacional
+Taldo Nacional venceu!
+
+
+EVENTOS
+37' ⚽ Alejandro Gomes
+54' ⚽ Carlos Martin
+74' ⚽ Diego Lima
+
+⭐ MELHOR EM CAMPO
+Alejandro Gomes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 83.0 | chance 43.0%
+EC Taldo: força 82.9 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 0 EC Taldo
+Taldo Dragons venceu!
+
+
+EVENTOS
+11' ⚽ Liam Wilson
+79' 🟨 Caio Pereira
+CS -> Taldo Dragons (placar 1x0)
+   Enzo Lopez: 3
+
+⭐ MELHOR EM CAMPO
+Liam Wilson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 84.4 | chance 46.7%
+Taldo Athletic: força 83.5 | chance 38.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Empire 0 x 1 Taldo Athletic
+Taldo Athletic venceu!
+
+
+EVENTOS
+23' 🟨 Jack Perez
+47' ⚽ Jack Bianchi
+CS -> Taldo Athletic (placar 1x0)
+   Harry Taylor: 1
+
+⭐ MELHOR EM CAMPO
+Jack Bianchi (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 84.8 | chance 77.6%
+Taldo Rangers: força 79.1 | chance 14.4%
+Chance empate: 8.0%
+--------------------------
+Taldo FC 1 x 0 Taldo Rangers
+Taldo FC venceu!
+
+
+EVENTOS
+23' 🟨 Diego Rossi
+73' 🟨 Rodrigo Araujo
+83' ⚽ Pedro Lopez
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 4
+
+⭐ MELHOR EM CAMPO
+Pedro Lopez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 82.4 | chance 50.4%
+Taldo Internacional: força 80.8 | chance 34.6%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 1 x 2 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+35' 🟨 Isaque Souza
+35' ⚽ Pierre Pereira
+40' ⚽ Jack Silva
+70' ⚽ Liam Barbosa
+
+⭐ MELHOR EM CAMPO
+Liam Barbosa (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 83.2 | chance 43.4%
+Sport Taldo: força 83.0 | chance 41.6%
+Chance empate: 15.0%
+--------------------------
+Taldo United 1 x 2 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+8' 🟨 João Wilson
+26' ⚽ Thiago Lima
+49' 🟨 Jack Souza
+59' ⚽ Luca Dubois
+83' ⚽ Carlos Fernandez
+
+⭐ MELHOR EM CAMPO
+Luca Dubois (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 83.2 | chance 56.0%
+Atlético Taldo: força 80.9 | chance 32.0%
+Chance empate: 12.0%
+--------------------------
+Taldo City 0 x 2 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+7' 🟨 Harry Araujo
+32' 🟨 Harry Araujo
+37' ⚽ Harry Araujo
+78' 🟨 Miguel Johnson
+81' ⚽ Louis Smith
+CS -> Atlético Taldo (placar 2x0)
+   Gustavo Johnson: 3
+
+⭐ MELHOR EM CAMPO
+Harry Araujo (Atacante) - Nota 7.3
+
+
+========================================
+Rodada 8
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 82.5 | chance 51.3%
+Taldo Sporting: força 80.7 | chance 33.7%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 1 x 0 Taldo Sporting
+FC Taldo venceu!
+
+
+EVENTOS
+28' 🟨 Gabriel Costa
+79' ⚽ Pedro Araujo
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 6
+
+⭐ MELHOR EM CAMPO
+Pedro Araujo (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 46.7%
+Taldo Stars: força 81.6 | chance 38.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 2 x 2 Taldo Stars
+Empate!
+
+
+EVENTOS
+21' ⚽ Miguel Costa
+39' ⚽ Luca Silva
+67' 🟨 Thiago Dubois
+67' ⚽ Arthur Johnson
+70' ⚽ Leonardo Souza
+
+⭐ MELHOR EM CAMPO
+Pablo Ferreira (Defesa) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 82.6 | chance 45.7%
+Taldo Nacional: força 82.0 | chance 39.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 1 Taldo Nacional
+Empate!
+
+
+EVENTOS
+13' ⚽ Pablo Johnson
+32' 🟨 Gabriel Fernandez
+54' 🟨 Giovanni Ribeiro
+76' 🟨 Pierre Dubois
+77' ⚽ Thiago Taylor
+
+⭐ MELHOR EM CAMPO
+Pablo Johnson (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 21.4%
+EC Taldo: força 82.9 | chance 66.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 0 x 1 EC Taldo
+EC Taldo venceu!
+
+
+EVENTOS
+24' 🟨 Pedro Dubois
+36' ⚽ Francesco Pereira
+49' 🟨 Lucas Rossi
+61' 🟨 Miguel Smith
+80' 🟨 Pedro Santos
+CS -> EC Taldo (placar 1x0)
+   Miguel Smith: 1
+
+⭐ MELHOR EM CAMPO
+Francesco Pereira (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 80.4 | chance 27.2%
+Taldo Athletic: força 83.5 | chance 60.8%
+Chance empate: 12.0%
+--------------------------
+Taldo Legends 1 x 2 Taldo Athletic
+Taldo Athletic venceu!
+
+
+EVENTOS
+12' ⚽ André Lima
+13' ⚽ Noah Ribeiro
+49' ⚽ Carlos Martin
+
+⭐ MELHOR EM CAMPO
+André Lima (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 81.0 | chance 52.2%
+Taldo Rangers: força 79.1 | chance 32.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 2 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+3' 🟨 Liam Wilson
+46' ⚽ Gabriel Rocha
+76' ⚽ Liam Wilson
+78' ⚽ Gabriel Rocha
+
+⭐ MELHOR EM CAMPO
+Gabriel Rocha (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 84.4 | chance 62.7%
+Taldo Internacional: força 80.8 | chance 25.3%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 1 x 0 Taldo Internacional
+Taldo Empire venceu!
+
+
+EVENTOS
+10' 🟨 Alejandro Almeida
+12' 🟨 Oliver Brown
+28' 🟨 Thiago Smith
+29' 🟨 Liam Barbosa
+82' ⚽ Harry Oliveira
+CS -> Taldo Empire (placar 1x0)
+   Jack Perez: 3
+
+⭐ MELHOR EM CAMPO
+Harry Oliveira (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 82.8 | chance 51.8%
+Sport Taldo: força 81.0 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 1 x 2 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+4' 🟨 Jack Souza
+13' 🟨 Thiago Fernandez
+36' ⚽ Luca Dubois
+53' ⚽ Pablo Wilson
+70' ⚽ Vinicius Brown
+79' 🟨 Leonardo Almeida
+
+⭐ MELHOR EM CAMPO
+Pablo Wilson (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 49.9%
+Atlético Taldo: força 81.9 | chance 35.1%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 1 x 0 Atlético Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+54' ⚽ Jack Silva
+60' 🟨 Lucas Smith
+CS -> Real Taldo (placar 1x0)
+   Pierre Brown: 2
+
+⭐ MELHOR EM CAMPO
+Jack Silva (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 83.2 | chance 52.7%
+Taldo City: força 81.2 | chance 32.3%
+Chance empate: 15.0%
+--------------------------
+Taldo United 1 x 0 Taldo City
+Taldo United venceu!
+
+
+EVENTOS
+15' ⚽ Oliver Wilson
+32' 🟨 Alejandro Costa
+41' 🟨 Thiago Costa
+50' 🟨 Francesco Oliveira
+70' 🟨 Alejandro Costa
+CS -> Taldo United (placar 1x0)
+   Miguel Araujo: 3
+
+⭐ MELHOR EM CAMPO
+Oliver Wilson (Defesa) - Nota 7.1
+
+
+========================================
+Rodada 9
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 83.5 | chance 46.7%
+Taldo Stars: força 82.6 | chance 38.3%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 2 x 1 Taldo Stars
+FC Taldo venceu!
+
+
+EVENTOS
+8' ⚽ Francesco Lopez
+10' ⚽ Jack Ribeiro
+14' 🟨 Gabriel Costa
+41' 🟨 Leonardo Mendes
+51' ⚽ Louis Martins
+54' 🟨 Pedro Araujo
+84' 🟨 Pedro Walker
+
+⭐ MELHOR EM CAMPO
+Francesco Lopez (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 82.7 | chance 51.3%
+Taldo Nacional: força 81.0 | chance 33.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 1 x 0 Taldo Nacional
+Taldo Sporting venceu!
+
+
+EVENTOS
+55' 🟨 Alejandro Garcia
+59' ⚽ Miguel Lopez
+CS -> Taldo Sporting (placar 1x0)
+   Luca Gomes: 2
+
+⭐ MELHOR EM CAMPO
+Miguel Lopez (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 84.5 | chance 45.3%
+EC Taldo: força 83.9 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 0 x 1 EC Taldo
+EC Taldo venceu!
+
+
+EVENTOS
+29' 🟨 Arthur Wilson
+57' ⚽ Marco Rossi
+63' ❌ (P) Pablo Oliveira
+72' 🟨 Pedro Santos
+CS -> EC Taldo (placar 1x0)
+   Miguel Smith: 2
+
+⭐ MELHOR EM CAMPO
+Marco Rossi (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 82.6 | chance 37.9%
+Taldo Athletic: força 83.5 | chance 47.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 2 Taldo Athletic
+Taldo Athletic venceu!
+
+
+EVENTOS
+18' ⚽ Luca Johnson
+60' ⚽ Noah Ribeiro
+76' ⚽ André Lima
+
+⭐ MELHOR EM CAMPO
+André Lima (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 80.6 | chance 50.4%
+Taldo Rangers: força 79.1 | chance 34.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 1 x 2 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+11' 🟨 Juan Fernandez
+24' ⚽ Diego Ribeiro
+62' ⚽ Marco Perez
+79' ⚽ Gabriel Rocha
+
+⭐ MELHOR EM CAMPO
+Gabriel Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 79.4 | chance 25.8%
+Taldo Internacional: força 82.8 | chance 62.2%
+Chance empate: 12.0%
+--------------------------
+Taldo Legends 0 x 2 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+16' 🟨 Diego Walker
+25' ⚽ Francesco Brown
+34' ⚽ Diego Walker
+CS -> Taldo Internacional (placar 2x0)
+   Matheus Wilson: 1
+
+⭐ MELHOR EM CAMPO
+Diego Walker (Atacante) - Nota 7.7
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 82.0 | chance 37.4%
+Sport Taldo: força 83.0 | chance 47.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 2 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+34' ⚽ Alejandro Brown
+55' ⚽ Thiago Walker
+57' ⚽ Pablo Wilson
+
+⭐ MELHOR EM CAMPO
+Pablo Wilson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 83.4 | chance 57.0%
+Atlético Taldo: força 80.9 | chance 31.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 1 x 2 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+13' ⚽ Alejandro Almeida
+39' ⚽ Lucas Smith
+76' ⚽ Harry Araujo
+
+⭐ MELHOR EM CAMPO
+Harry Araujo (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 83.8 | chance 57.9%
+Taldo City: força 81.2 | chance 30.1%
+Chance empate: 12.0%
+--------------------------
+Taldo FC 0 x 1 Taldo City
+Taldo City venceu!
+
+
+EVENTOS
+72' 🟨 Thiago Johnson
+80' ⚽ Leonardo Rodriguez
+85' 🟨 Thiago Costa
+CS -> Taldo City (placar 1x0)
+   Francesco Oliveira: 4
+
+⭐ MELHOR EM CAMPO
+Leonardo Rodriguez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 60.8%
+Taldo United: força 80.2 | chance 27.2%
+Chance empate: 12.0%
+--------------------------
+Real Taldo 0 x 2 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+36' 🟨 Antoine Smith
+54' ⚽ Harry Fernandez
+62' ⚽ André Oliveira
+CS -> Taldo United (placar 2x0)
+   Miguel Araujo: 4
+
+⭐ MELHOR EM CAMPO
+André Oliveira (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 10
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 81.5 | chance 44.8%
+Taldo Nacional: força 81.0 | chance 40.2%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 0 x 0 Taldo Nacional
+Empate!
+
+
+EVENTOS
+CS -> FC Taldo (placar 0x0)
+   Noah Smith: 7
+CS -> Taldo Nacional (placar 0x0)
+   Bruno Rossi: 3
+
+⭐ MELHOR EM CAMPO
+Noah Smith (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 83.6 | chance 51.3%
+EC Taldo: força 81.9 | chance 33.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Stars 1 x 0 EC Taldo
+Taldo Stars venceu!
+
+
+EVENTOS
+6' ⚽ Vinicius Garcia
+45' 🟨 Miguel Costa
+66' 🟨 Lucas Rossi
+83' 🟨 Miguel Gomes
+CS -> Taldo Stars (placar 1x0)
+   Gustavo Moretti: 2
+
+⭐ MELHOR EM CAMPO
+Vinicius Garcia (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 81.7 | chance 33.2%
+Taldo Athletic: força 83.5 | chance 51.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 2 x 1 Taldo Athletic
+Taldo Sporting venceu!
+
+
+EVENTOS
+15' 🟨 Noah Ribeiro
+24' ⚽ Francesco Martin
+54' 🟨 Alejandro Garcia
+60' ⚽ Caio Johnson
+70' ⚽ Diego Brown
+
+⭐ MELHOR EM CAMPO
+Caio Johnson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 56.5%
+Taldo Rangers: força 80.1 | chance 31.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Galaxy 0 x 2 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+11' 🟨 Leonardo Souza
+39' ⚽ Diego Rossi
+42' 🟨 João Araujo
+64' 🟨 Thiago Dubois
+81' ⚽ Rodrigo Araujo
+CS -> Taldo Rangers (placar 2x0)
+   Antoine Rodriguez: 2
+
+⭐ MELHOR EM CAMPO
+Rodrigo Araujo (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 81.6 | chance 41.6%
+Taldo Internacional: força 81.8 | chance 43.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 0 Taldo Internacional
+Taldo Royals venceu!
+
+
+EVENTOS
+21' 🟨 Gabriel Fernandez
+50' ⚽ Rodrigo Moretti
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 3
+
+⭐ MELHOR EM CAMPO
+Rodrigo Moretti (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 31.5%
+Sport Taldo: força 81.0 | chance 56.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 0 x 0 Sport Taldo
+Empate!
+
+
+EVENTOS
+29' 🟨 Lucas Ferreira
+CS -> Taldo Warriors (placar 0x0)
+   Gabriel Bianchi: 2
+CS -> Sport Taldo (placar 0x0)
+   Jack Souza: 4
+
+⭐ MELHOR EM CAMPO
+Gabriel Bianchi (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 80.4 | chance 34.6%
+Atlético Taldo: força 81.9 | chance 50.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Legends 3 x 2 Atlético Taldo
+Taldo Legends venceu!
+
+
+EVENTOS
+9' 🟨 Carlos Martin
+27' ⚽ Arthur Ribeiro
+28' ⚽ Carlos Martin
+53' ⚽ Matheus Martins
+76' ⚽ Juan Rossi
+86' ⚽ Harry Araujo
+
+⭐ MELHOR EM CAMPO
+Matheus Martins (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 83.0 | chance 51.8%
+Taldo City: força 81.2 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 0 Taldo City
+Taldo Dragons venceu!
+
+
+EVENTOS
+3' ⚽ Alejandro Rodriguez
+32' 🟨 André Lopez
+CS -> Taldo Dragons (placar 1x0)
+   Enzo Lopez: 4
+
+⭐ MELHOR EM CAMPO
+Alejandro Rodriguez (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 84.4 | chance 60.8%
+Taldo United: força 81.2 | chance 27.2%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 0 x 2 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+2' ⚽ Thiago Santos
+6' 🟨 Marco Gomes
+31' 🟨 Marco Gomes
+51' 🟨 Harry Fernandez
+74' 🟨 João Wilson
+78' ⚽ João Wilson
+CS -> Taldo United (placar 2x0)
+   Miguel Araujo: 5
+
+⭐ MELHOR EM CAMPO
+Thiago Santos (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 83.8 | chance 49.9%
+Real Taldo: força 82.4 | chance 35.1%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 2 x 1 Real Taldo
+Taldo FC venceu!
+
+
+EVENTOS
+7' ⚽ Antoine Martins
+24' ⚽ Isaque Souza
+70' 🟨 Antoine Martins
+70' 🟨 Lucas Ribeiro
+87' ⚽ Francesco Walker
+90' 🟨 Caio Gomes
+
+⭐ MELHOR EM CAMPO
+Antoine Martins (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 11
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 81.5 | chance 31.0%
+EC Taldo: força 83.9 | chance 57.0%
+Chance empate: 12.0%
+--------------------------
+FC Taldo 1 x 1 EC Taldo
+Empate!
+
+
+EVENTOS
+2' 🟨 Pedro Araujo
+15' ⚽ Pedro Araujo
+27' ⚽ Francesco Pereira
+38' 🟨 Francesco Lopez
+78' 🟨 Miguel Smith
+
+⭐ MELHOR EM CAMPO
+Francesco Pereira (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 83.0 | chance 49.9%
+Taldo Athletic: força 81.5 | chance 35.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 1 x 2 Taldo Athletic
+Taldo Athletic venceu!
+
+
+EVENTOS
+38' ⚽ Louis Santos
+39' ⚽ Jack Bianchi
+45' 🟨 Miguel Rossi
+79' ⚽ Alejandro Johnson
+
+⭐ MELHOR EM CAMPO
+Alejandro Johnson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 76.6%
+Taldo Rangers: força 79.1 | chance 15.4%
+Chance empate: 8.0%
+--------------------------
+Taldo Stars 2 x 1 Taldo Rangers
+Taldo Stars venceu!
+
+
+EVENTOS
+13' ⚽ Miguel Costa
+23' ⚽ Pablo Ferreira
+67' 🟨 Gabriel Martin
+68' 🟨 Miguel Gomes
+75' ⚽ Pierre Costa
+
+⭐ MELHOR EM CAMPO
+Antoine Walker (Meio-Campo) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 80.7 | chance 33.0%
+Taldo Internacional: força 82.8 | chance 55.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Sporting 0 x 1 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+83' ⚽ Francesco Brown
+CS -> Taldo Internacional (placar 1x0)
+   Matheus Wilson: 2
+
+⭐ MELHOR EM CAMPO
+Francesco Brown (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 84.5 | chance 49.9%
+Sport Taldo: força 83.0 | chance 35.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 0 x 1 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+52' ⚽ Antoine Wilson
+76' 🟨 Thiago Walker
+86' 🟨 Luca Dubois
+89' 🟨 Thiago Lima
+CS -> Sport Taldo (placar 1x0)
+   Jack Souza: 5
+
+⭐ MELHOR EM CAMPO
+Antoine Wilson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 83.6 | chance 51.3%
+Atlético Taldo: força 81.9 | chance 33.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 0 Atlético Taldo
+Taldo Royals venceu!
+
+
+EVENTOS
+81' ⚽ Rodrigo Moretti
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 4
+
+⭐ MELHOR EM CAMPO
+Rodrigo Moretti (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 34.6%
+Taldo City: força 80.2 | chance 50.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 1 x 2 Taldo City
+Taldo City venceu!
+
+
+EVENTOS
+9' 🟨 Marco Perez
+55' ⚽ Leonardo Rodriguez
+69' ⚽ André Lopez
+80' ⚽ Diego Almeida
+
+⭐ MELHOR EM CAMPO
+André Lopez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 80.4 | chance 38.3%
+Taldo United: força 81.2 | chance 46.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Legends 0 x 1 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+1' 🟨 Liam Perez
+2' 🟨 Leonardo Brown
+6' 🟨 Carlos Rossi
+41' 🟨 Oliver Wilson
+66' ⚽ Carlos Fernandez
+CS -> Taldo United (placar 1x0)
+   Miguel Araujo: 6
+
+⭐ MELHOR EM CAMPO
+Carlos Fernandez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 81.0 | chance 31.5%
+Real Taldo: força 83.4 | chance 56.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Dragons 0 x 1 Real Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+38' ⚽ Francesco Dubois
+50' 🟨 Jack Silva
+CS -> Real Taldo (placar 1x0)
+   Pierre Brown: 3
+
+⭐ MELHOR EM CAMPO
+Francesco Dubois (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 84.4 | chance 57.4%
+Taldo FC: força 81.8 | chance 30.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 1 x 0 Taldo FC
+Taldo Empire venceu!
+
+
+EVENTOS
+37' ⚽ Harry Oliveira
+46' 🟨 Francesco Walker
+CS -> Taldo Empire (placar 1x0)
+   Jack Perez: 4
+
+⭐ MELHOR EM CAMPO
+Harry Oliveira (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 12
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 81.5 | chance 33.0%
+Taldo Athletic: força 83.5 | chance 55.0%
+Chance empate: 12.0%
+--------------------------
+FC Taldo 2 x 1 Taldo Athletic
+FC Taldo venceu!
+
+
+EVENTOS
+16' ⚽ André Lima
+20' 🟨 André Lima
+52' ⚽ Gabriel Costa
+77' ⚽ Luca Rodriguez
+
+⭐ MELHOR EM CAMPO
+Luca Rodriguez (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 82.9 | chance 58.9%
+Taldo Rangers: força 80.1 | chance 29.1%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 0 x 1 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+6' ⚽ Gabriel Martin
+66' 🟨 Arthur Wilson
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 3
+
+⭐ MELHOR EM CAMPO
+Gabriel Martin (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 84.0 | chance 48.5%
+Taldo Internacional: força 82.8 | chance 36.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 1 x 2 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+27' ⚽ Vinicius Wilson
+35' 🟨 Pierre Pereira
+63' ⚽ Diego Gomes
+85' ⚽ Antoine Rossi
+
+⭐ MELHOR EM CAMPO
+Diego Gomes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 82.6 | chance 40.6%
+Sport Taldo: força 83.0 | chance 44.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Stars 0 x 0 Sport Taldo
+Empate!
+
+
+EVENTOS
+85' 🟨 Thiago Fernandez
+CS -> Taldo Stars (placar 0x0)
+   Gustavo Moretti: 3
+CS -> Sport Taldo (placar 0x0)
+   Jack Souza: 6
+
+⭐ MELHOR EM CAMPO
+Gustavo Moretti (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 82.7 | chance 41.6%
+Atlético Taldo: força 82.9 | chance 43.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 1 x 2 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+16' 🟨 Liam Rodriguez
+19' ⚽ Pedro Ferreira
+20' ⚽ Louis Smith
+72' ⚽ Rafael Costa
+
+⭐ MELHOR EM CAMPO
+Louis Smith (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 83.5 | chance 56.0%
+Taldo City: força 81.2 | chance 32.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Galaxy 2 x 0 Taldo City
+Taldo Galaxy venceu!
+
+
+EVENTOS
+1' 🟨 Thiago Gomes
+34' 🟨 Thiago Costa
+62' ⚽ Noah Walker
+90' ⚽ André Santos
+CS -> Taldo Galaxy (placar 2x0)
+   Thiago Gomes: 4
+
+⭐ MELHOR EM CAMPO
+André Santos (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 81.6 | chance 39.7%
+Taldo United: força 82.2 | chance 45.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 2 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+10' ⚽ André Garcia
+19' 🟨 Louis Bianchi
+68' ⚽ João Wilson
+80' ⚽ Marco Gomes
+
+⭐ MELHOR EM CAMPO
+Marco Gomes (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 79.6 | chance 33.7%
+Real Taldo: força 81.4 | chance 51.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 0 x 0 Real Taldo
+Empate!
+
+
+EVENTOS
+CS -> Taldo Warriors (placar 0x0)
+   Gabriel Bianchi: 3
+CS -> Real Taldo (placar 0x0)
+   Pierre Brown: 4
+
+⭐ MELHOR EM CAMPO
+Gabriel Bianchi (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 80.4 | chance 35.1%
+Taldo FC: força 81.8 | chance 49.9%
+Chance empate: 15.0%
+--------------------------
+Taldo Legends 1 x 2 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+44' ⚽ João Martin
+70' ⚽ Matheus Martins
+78' ⚽ João Martin
+
+⭐ MELHOR EM CAMPO
+João Martin (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 83.0 | chance 45.7%
+Taldo Empire: força 82.4 | chance 39.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 0 x 1 Taldo Empire
+Taldo Empire venceu!
+
+
+EVENTOS
+10' ⚽ Miguel Oliveira
+CS -> Taldo Empire (placar 1x0)
+   Jack Perez: 5
+
+⭐ MELHOR EM CAMPO
+Miguel Oliveira (Defesa) - Nota 7.1
+
+
+========================================
+Rodada 13
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 83.5 | chance 61.8%
+Taldo Rangers: força 80.1 | chance 26.2%
+Chance empate: 12.0%
+--------------------------
+FC Taldo 0 x 2 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+1' ⚽ Diego Ribeiro
+59' 🟨 Antoine Rodriguez
+72' 🟨 Pierre Costa
+75' ⚽ Pierre Costa
+CS -> Taldo Rangers (placar 2x0)
+   Antoine Rodriguez: 4
+
+⭐ MELHOR EM CAMPO
+Diego Ribeiro (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 82.5 | chance 51.3%
+Taldo Internacional: força 80.8 | chance 33.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 0 x 1 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+67' ⚽ Francesco Brown
+82' 🟨 Alejandro Taylor
+CS -> Taldo Internacional (placar 1x0)
+   Matheus Wilson: 3
+
+⭐ MELHOR EM CAMPO
+Francesco Brown (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 82.9 | chance 47.1%
+Sport Taldo: força 82.0 | chance 37.9%
+Chance empate: 15.0%
+--------------------------
+EC Taldo 3 x 2 Sport Taldo
+EC Taldo venceu!
+
+
+EVENTOS
+14' ⚽ Thiago Fernandez
+17' ⚽ Leonardo Almeida
+30' ⚽ Diego Garcia
+48' ⚽ Juan Ferreira
+55' 🟨 Arthur Dubois
+58' ⚽ Pedro Dubois
+66' 🟨 Gabriel Martins
+
+⭐ MELHOR EM CAMPO
+Pedro Dubois (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 84.0 | chance 55.0%
+Atlético Taldo: força 81.9 | chance 33.0%
+Chance empate: 12.0%
+--------------------------
+
+🎩 HAT-TRICK DE Vinicius Wilson!
+Taldo Nacional 3 x 1 Atlético Taldo
+Taldo Nacional venceu!
+
+
+EVENTOS
+7' ⚽ Vinicius Wilson
+34' ⚽ Harry Araujo
+61' 🟨 Luca Rocha
+71' ⚽ Vinicius Wilson
+74' ⚽ Vinicius Wilson
+
+⭐ MELHOR EM CAMPO
+Vinicius Wilson (Atacante) - Nota 8.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 57.0%
+Taldo City: força 82.2 | chance 31.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 3 x 1 Taldo City
+Taldo Stars venceu!
+
+
+EVENTOS
+1' ⚽ Luca Silva
+49' ⚽ Miguel Gomes
+52' ⚽ Miguel Johnson
+55' 🟨 Thiago Costa
+61' ⚽ Miguel Gomes
+
+⭐ MELHOR EM CAMPO
+Miguel Gomes (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 80.7 | chance 35.1%
+Taldo United: força 82.2 | chance 49.9%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 1 x 1 Taldo United
+Empate!
+
+
+EVENTOS
+22' 🟨 Miguel Rodriguez
+45' ⚽ Oliver Wilson
+69' ⚽ Caio Johnson
+76' 🟨 Pedro Ferreira
+
+⭐ MELHOR EM CAMPO
+Caio Johnson (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 83.5 | chance 48.1%
+Real Taldo: força 82.4 | chance 36.9%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 0 x 1 Real Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+18' ⚽ Isaque Souza
+46' 🟨 Juan Pereira
+CS -> Real Taldo (placar 1x0)
+   Pierre Brown: 5
+
+⭐ MELHOR EM CAMPO
+Isaque Souza (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 81.6 | chance 32.5%
+Taldo FC: força 83.8 | chance 55.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Royals 0 x 2 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+14' 🟨 Miguel Santos
+44' ⚽ Miguel Santos
+87' ⚽ João Martin
+CS -> Taldo FC (placar 2x0)
+   Lucas Ribeiro: 5
+
+⭐ MELHOR EM CAMPO
+João Martin (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 80.6 | chance 33.7%
+Taldo Empire: força 82.4 | chance 51.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 2 x 1 Taldo Empire
+Taldo Warriors venceu!
+
+
+EVENTOS
+18' 🟨 Thiago Smith
+25' ⚽ Diego Almeida
+29' ⚽ Carlos Ribeiro
+40' 🟨 Louis Pereira
+52' ⚽ Marco Perez
+77' 🟨 Thiago Smith
+
+⭐ MELHOR EM CAMPO
+Diego Almeida (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 79.4 | chance 39.3%
+Taldo Dragons: força 80.0 | chance 45.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Legends 1 x 2 Taldo Dragons
+Taldo Dragons venceu!
+
+
+EVENTOS
+24' 🟨 Matheus Martins
+31' ⚽ Oliver Dubois
+40' ⚽ Oliver Dubois
+70' ⚽ Juan Johnson
+
+⭐ MELHOR EM CAMPO
+Oliver Dubois (Atacante) - Nota 7.9
+
+
+========================================
+Rodada 14
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 83.5 | chance 45.7%
+Taldo Internacional: força 82.8 | chance 39.3%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 1 x 2 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+1' ⚽ Pierre Pereira
+16' 🟨 Pedro Walker
+39' ⚽ Leonardo Mendes
+41' 🟨 Francesco Brown
+70' ⚽ Diego Walker
+
+⭐ MELHOR EM CAMPO
+Pierre Pereira (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 81.1 | chance 43.0%
+Sport Taldo: força 81.0 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 1 x 2 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+16' 🟨 Antoine Wilson
+43' ⚽ Gabriel Mendes
+47' 🟨 Thiago Lima
+72' ⚽ Thiago Lima
+87' ⚽ Pierre Costa
+89' 🟨 Gabriel Mendes
+
+⭐ MELHOR EM CAMPO
+Gabriel Mendes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 83.5 | chance 45.7%
+Atlético Taldo: força 82.9 | chance 39.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 1 x 2 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+29' ⚽ Arthur Ribeiro
+70' ⚽ André Lima
+75' ⚽ Giovanni Rossi
+
+⭐ MELHOR EM CAMPO
+Giovanni Rossi (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 82.9 | chance 46.2%
+Taldo City: força 82.2 | chance 38.8%
+Chance empate: 15.0%
+--------------------------
+EC Taldo 1 x 2 Taldo City
+Taldo City venceu!
+
+
+EVENTOS
+15' 🟨 Juan Ferreira
+24' ⚽ Gabriel Martins
+52' ⚽ Thiago Johnson
+66' ⚽ Leonardo Rodriguez
+70' 🟨 Arthur Wilson
+
+⭐ MELHOR EM CAMPO
+Thiago Johnson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 82.0 | chance 46.7%
+Taldo United: força 81.2 | chance 38.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 2 x 1 Taldo United
+Taldo Nacional venceu!
+
+
+EVENTOS
+5' ⚽ Miguel Pereira
+42' 🟨 Marco Gomes
+46' ⚽ Carlos Fernandez
+53' ⚽ Thiago Taylor
+
+⭐ MELHOR EM CAMPO
+Thiago Taylor (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 61.3%
+Real Taldo: força 81.4 | chance 26.7%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 2 x 1 Real Taldo
+Taldo Stars venceu!
+
+
+EVENTOS
+22' ⚽ Pierre Silva
+47' ⚽ Vinicius Garcia
+79' ⚽ Miguel Gomes
+
+⭐ MELHOR EM CAMPO
+Vinicius Garcia (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 80.7 | chance 36.9%
+Taldo FC: força 81.8 | chance 48.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 2 x 1 Taldo FC
+Taldo Sporting venceu!
+
+
+EVENTOS
+7' ⚽ Rafael Taylor
+13' 🟨 Marco Rocha
+33' ⚽ Alejandro Garcia
+40' 🟨 João Rocha
+50' 🟨 Luca Pereira
+51' ⚽ Marco Rocha
+
+⭐ MELHOR EM CAMPO
+Alejandro Garcia (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 37.9%
+Taldo Empire: força 83.4 | chance 47.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 1 x 0 Taldo Empire
+Taldo Galaxy venceu!
+
+
+EVENTOS
+63' ⚽ Arthur Johnson
+CS -> Taldo Galaxy (placar 1x0)
+   Thiago Gomes: 5
+
+⭐ MELHOR EM CAMPO
+Arthur Johnson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 83.6 | chance 63.2%
+Taldo Dragons: força 80.0 | chance 24.8%
+Chance empate: 12.0%
+--------------------------
+Taldo Royals 3 x 0 Taldo Dragons
+Taldo Royals venceu!
+
+
+EVENTOS
+4' ⚽ Juan Martins
+43' 🟨 Caio Walker
+61' ⚽ André Garcia
+86' ⚽ Harry Martin
+CS -> Taldo Royals (placar 3x0)
+   Gabriel Fernandez: 5
+
+⭐ MELHOR EM CAMPO
+André Garcia (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 79.6 | chance 43.9%
+Taldo Legends: força 79.4 | chance 41.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 2 x 1 Taldo Legends
+Taldo Warriors venceu!
+
+
+EVENTOS
+62' ⚽ Carlos Martin
+75' 🟥 Juan Rossi
+76' 🟨 Lucas Ferreira
+80' ⚽ Pierre Mendes
+81' ⚽ João Silva
+
+⭐ MELHOR EM CAMPO
+Pierre Mendes (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 15
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 83.5 | chance 57.0%
+Sport Taldo: força 81.0 | chance 31.0%
+Chance empate: 12.0%
+--------------------------
+FC Taldo 2 x 1 Sport Taldo
+FC Taldo venceu!
+
+
+EVENTOS
+7' ⚽ Luca Dubois
+15' ⚽ Luca Rodriguez
+30' ⚽ Rafael Martins
+
+⭐ MELHOR EM CAMPO
+Luca Rodriguez (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 82.8 | chance 42.0%
+Atlético Taldo: força 82.9 | chance 43.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 2 x 1 Atlético Taldo
+Taldo Internacional venceu!
+
+
+EVENTOS
+40' ⚽ Pierre Pereira
+54' ⚽ Pierre Pereira
+77' 🟨 Enzo Walker
+79' ⚽ Harry Araujo
+
+⭐ MELHOR EM CAMPO
+Pierre Pereira (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 80.1 | chance 33.0%
+Taldo City: força 82.2 | chance 55.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Rangers 1 x 0 Taldo City
+Taldo Rangers venceu!
+
+
+EVENTOS
+59' ⚽ Gabriel Rocha
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 5
+
+⭐ MELHOR EM CAMPO
+Gabriel Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 84.5 | chance 56.5%
+Taldo United: força 82.2 | chance 31.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Athletic 1 x 2 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+21' ⚽ Marco Gomes
+24' 🟨 Marco Gomes
+44' 🟨 Harry Fernandez
+69' ⚽ Francesco Martin
+87' ⚽ Miguel Rodriguez
+
+⭐ MELHOR EM CAMPO
+André Oliveira (Meio-Campo) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 83.9 | chance 57.4%
+Real Taldo: força 81.4 | chance 30.6%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 3 x 0 Real Taldo
+EC Taldo venceu!
+
+
+EVENTOS
+21' ⚽ Arthur Wilson
+35' 🟨 Lucas Rossi
+56' 🟨 Miguel Smith
+63' ⚽ Marco Rossi
+63' ⚽ Arthur Wilson
+CS -> EC Taldo (placar 3x0)
+   Miguel Smith: 3
+
+⭐ MELHOR EM CAMPO
+Arthur Wilson (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 83.0 | chance 43.4%
+Taldo FC: força 82.8 | chance 41.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 2 x 1 Taldo FC
+Taldo Nacional venceu!
+
+
+EVENTOS
+4' ⚽ Enzo Barbosa
+12' 🟨 Giovanni Ribeiro
+45' ⚽ Luca Rocha
+64' ⚽ Thiago Taylor
+
+⭐ MELHOR EM CAMPO
+Luca Rocha (Defesa) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 56.0%
+Taldo Empire: força 82.4 | chance 32.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 2 x 1 Taldo Empire
+Taldo Stars venceu!
+
+
+EVENTOS
+7' ⚽ Pablo Ferreira
+16' 🟨 Miguel Gomes
+19' ⚽ Thiago Smith
+27' 🟨 Oliver Brown
+31' 🟨 Noah Pereira
+78' ⚽ Noah Pereira
+
+⭐ MELHOR EM CAMPO
+Pablo Ferreira (Defesa) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 80.7 | chance 41.1%
+Taldo Dragons: força 81.0 | chance 43.9%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 1 x 1 Taldo Dragons
+Empate!
+
+
+EVENTOS
+58' ⚽ Oliver Dubois
+83' ⚽ Liam Rodriguez
+90' 🟨 Miguel Mendes
+
+⭐ MELHOR EM CAMPO
+Liam Rodriguez (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 80.8%
+Taldo Legends: força 72.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Galaxy 5 x 0 Taldo Legends
+Taldo Galaxy venceu!
+
+
+EVENTOS
+32' ⚽ Leonardo Souza
+41' ⚽ Arthur Johnson
+41' ⚽ Pedro Lima
+47' ⚽ Pedro Lima
+47' ⚽ João Araujo
+87' 🟨 Juan Pereira
+CS -> Taldo Galaxy (placar 5x0)
+   Thiago Gomes: 6
+
+⭐ MELHOR EM CAMPO
+Pedro Lima (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 81.6 | chance 52.7%
+Taldo Warriors: força 79.6 | chance 32.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 0 Taldo Warriors
+Taldo Royals venceu!
+
+
+EVENTOS
+32' ⚽ Luca Johnson
+71' 🟨 João Silva
+87' 🟨 Rodrigo Moretti
+88' 🟨 Pierre Mendes
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 6
+
+⭐ MELHOR EM CAMPO
+Luca Johnson (Defesa) - Nota 7.1
+
+
+========================================
+Rodada 16
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 81.5 | chance 40.2%
+Atlético Taldo: força 81.9 | chance 44.8%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 1 x 3 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+4' 🟨 Pedro Walker
+15' ⚽ Gabriel Almeida
+40' ⚽ Enzo Walker
+64' ⚽ Louis Martins
+88' ⚽ (P) Giovanni Rossi
+
+⭐ MELHOR EM CAMPO
+Enzo Walker (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 84.0 | chance 51.8%
+Taldo City: força 82.2 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 0 x 0 Taldo City
+Empate!
+
+
+EVENTOS
+16' 🟨 Miguel Walker
+44' 🟨 Bruno Barbosa
+CS -> Sport Taldo (placar 0x0)
+   Jack Souza: 7
+CS -> Taldo City (placar 0x0)
+   Francesco Oliveira: 5
+
+⭐ MELHOR EM CAMPO
+Jack Souza (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 40.6%
+Taldo United: força 82.2 | chance 44.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 2 x 1 Taldo United
+Taldo Internacional venceu!
+
+
+EVENTOS
+24' ⚽ Marco Gomes
+34' ⚽ Diego Walker
+73' 🟨 Antoine Smith
+88' ⚽ Diego Walker
+
+⭐ MELHOR EM CAMPO
+Diego Walker (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 46.2%
+Real Taldo: força 81.4 | chance 38.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 1 x 0 Real Taldo
+Taldo Rangers venceu!
+
+
+EVENTOS
+68' ⚽ Pablo Garcia
+79' 🟨 Pablo Garcia
+79' 🟨 Rodrigo Araujo
+90' 🟨 Pierre Brown
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 6
+
+⭐ MELHOR EM CAMPO
+Pablo Garcia (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 82.5 | chance 46.2%
+Taldo FC: força 81.8 | chance 38.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 0 x 1 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+48' 🟨 Liam Costa
+61' ⚽ Marco Rocha
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 6
+
+⭐ MELHOR EM CAMPO
+Marco Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 84.9 | chance 45.3%
+Taldo Empire: força 84.4 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+EC Taldo 3 x 2 Taldo Empire
+EC Taldo venceu!
+
+
+EVENTOS
+15' 🟨 Oliver Brown
+30' ⚽ Oliver Brown
+31' ⚽ Arthur Dubois
+43' ⚽ Alejandro Almeida
+51' ⚽ Arthur Wilson
+65' ⚽ Arthur Dubois
+
+⭐ MELHOR EM CAMPO
+Arthur Dubois (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 82.0 | chance 42.5%
+Taldo Dragons: força 82.0 | chance 42.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 2 x 1 Taldo Dragons
+Taldo Nacional venceu!
+
+
+EVENTOS
+28' ⚽ Liam Wilson
+42' ⚽ Thiago Taylor
+67' ⚽ Matheus Pereira
+
+⭐ MELHOR EM CAMPO
+Matheus Pereira (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 80.8%
+Taldo Legends: força 74.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Stars 1 x 0 Taldo Legends
+Taldo Stars venceu!
+
+
+EVENTOS
+27' 🟨 Louis Gomes
+40' ⚽ Oliver Moretti
+48' 🟨 Marco Rodriguez
+CS -> Taldo Stars (placar 1x0)
+   Gustavo Moretti: 4
+
+⭐ MELHOR EM CAMPO
+Oliver Moretti (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 82.7 | chance 60.3%
+Taldo Warriors: força 79.6 | chance 27.7%
+Chance empate: 12.0%
+--------------------------
+Taldo Sporting 2 x 2 Taldo Warriors
+Empate!
+
+
+EVENTOS
+17' 🟨 Pierre Mendes
+21' ⚽ Pierre Mendes
+29' 🟨 Pedro Taylor
+35' ⚽ Liam Rodriguez
+71' ⚽ Marco Perez
+88' ⚽ Liam Rodriguez
+
+⭐ MELHOR EM CAMPO
+Liam Rodriguez (Atacante) - Nota 7.6
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 83.5 | chance 51.8%
+Taldo Royals: força 81.6 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 1 x 0 Taldo Royals
+Taldo Galaxy venceu!
+
+
+EVENTOS
+71' ⚽ Leonardo Souza
+CS -> Taldo Galaxy (placar 1x0)
+   Thiago Gomes: 7
+
+⭐ MELHOR EM CAMPO
+Leonardo Souza (Defesa) - Nota 7.1
+
+
+========================================
+Rodada 17
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 83.5 | chance 49.0%
+Taldo City: força 82.2 | chance 36.0%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 3 x 2 Taldo City
+FC Taldo venceu!
+
+
+EVENTOS
+16' ⚽ Leonardo Rodriguez
+37' ⚽ Luca Rodriguez
+57' ⚽ Miguel Johnson
+81' ⚽ Gabriel Costa
+87' ⚽ Gabriel Costa
+
+⭐ MELHOR EM CAMPO
+Gabriel Costa (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 82.9 | chance 58.4%
+Taldo United: força 80.2 | chance 29.6%
+Chance empate: 12.0%
+--------------------------
+Atlético Taldo 1 x 2 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+55' ⚽ Harry Araujo
+63' ⚽ Marco Gomes
+63' ⚽ Carlos Fernandez
+77' 🟨 Gustavo Johnson
+86' 🟨 Harry Fernandez
+
+⭐ MELHOR EM CAMPO
+Carlos Fernandez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 83.0 | chance 45.7%
+Real Taldo: força 82.4 | chance 39.3%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 1 x 2 Real Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+11' ⚽ Luca Dubois
+14' 🟨 André Costa
+38' ⚽ Enzo Brown
+41' ⚽ Juan Rocha
+59' 🟨 Thiago Lima
+
+⭐ MELHOR EM CAMPO
+Juan Rocha (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 83.8 | chance 47.6%
+Taldo FC: força 82.8 | chance 37.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 0 x 1 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+24' ⚽ Marco Rocha
+69' 🟨 Diego Walker
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 7
+
+⭐ MELHOR EM CAMPO
+Marco Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 81.1 | chance 32.0%
+Taldo Empire: força 83.4 | chance 56.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Rangers 1 x 2 Taldo Empire
+Taldo Empire venceu!
+
+
+EVENTOS
+15' ⚽ Rodrigo Martins
+46' 🟨 Gabriel Martin
+74' ⚽ Harry Oliveira
+76' ⚽ Gabriel Martin
+87' 🟨 Gabriel Rocha
+
+⭐ MELHOR EM CAMPO
+Rodrigo Martins (Atacante) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 83.5 | chance 50.4%
+Taldo Dragons: força 82.0 | chance 34.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 1 x 0 Taldo Dragons
+Taldo Athletic venceu!
+
+
+EVENTOS
+71' ⚽ Alejandro Taylor
+CS -> Taldo Athletic (placar 1x0)
+   Harry Taylor: 2
+
+⭐ MELHOR EM CAMPO
+Alejandro Taylor (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 84.9 | chance 80.8%
+Taldo Legends: força 74.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+EC Taldo 5 x 0 Taldo Legends
+EC Taldo venceu!
+
+
+EVENTOS
+18' ⚽ Diego Garcia
+43' ⚽ Arthur Wilson
+50' 🟨 Francesco Pereira
+65' ⚽ Diego Garcia
+78' ⚽ Arthur Wilson
+85' ⚽ Gabriel Martins
+CS -> EC Taldo (placar 5x0)
+   Miguel Smith: 4
+
+⭐ MELHOR EM CAMPO
+Diego Garcia (Meio-Campo) - Nota 8.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 82.0 | chance 67.0%
+Taldo Warriors: força 77.6 | chance 21.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Nacional 2 x 1 Taldo Warriors
+Taldo Nacional venceu!
+
+
+EVENTOS
+7' ⚽ Pierre Mendes
+44' 🟨 Marco Perez
+50' ⚽ Vinicius Wilson
+75' 🟨 Pedro Taylor
+78' ⚽ Giovanni Ribeiro
+
+⭐ MELHOR EM CAMPO
+Giovanni Ribeiro (Defesa) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 52.7%
+Taldo Royals: força 82.6 | chance 32.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Stars 2 x 1 Taldo Royals
+Taldo Stars venceu!
+
+
+EVENTOS
+5' ⚽ Pablo Johnson
+13' ⚽ Jack Ribeiro
+24' ⚽ Miguel Gomes
+
+⭐ MELHOR EM CAMPO
+Miguel Gomes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 80.7 | chance 33.7%
+Taldo Galaxy: força 82.5 | chance 51.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 1 x 2 Taldo Galaxy
+Taldo Galaxy venceu!
+
+
+EVENTOS
+4' ⚽ João Araujo
+45' 🟨 João Araujo
+55' ⚽ Juan Pereira
+79' ⚽ Caio Johnson
+84' 🟨 Pedro Lima
+
+⭐ MELHOR EM CAMPO
+João Araujo (Meio-Campo) - Nota 7.9
+
+
+========================================
+Rodada 18
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 81.5 | chance 43.9%
+Taldo United: força 81.2 | chance 41.1%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 0 x 1 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+16' ⚽ Carlos Rossi
+78' 🟨 Oliver Wilson
+CS -> Taldo United (placar 1x0)
+   Miguel Araujo: 7
+
+⭐ MELHOR EM CAMPO
+Carlos Rossi (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 82.2 | chance 46.7%
+Real Taldo: força 81.4 | chance 38.3%
+Chance empate: 15.0%
+--------------------------
+Taldo City 1 x 0 Real Taldo
+Taldo City venceu!
+
+
+EVENTOS
+14' ⚽ André Lopez
+63' 🟨 André Lopez
+CS -> Taldo City (placar 1x0)
+   Francesco Oliveira: 6
+
+⭐ MELHOR EM CAMPO
+André Lopez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 81.9 | chance 32.8%
+Taldo FC: força 83.8 | chance 52.2%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 1 x 1 Taldo FC
+Empate!
+
+
+EVENTOS
+42' 🟨 Arthur Ribeiro
+55' ⚽ Pedro Lopez
+70' 🟨 Enzo Barbosa
+73' ⚽ Harry Araujo
+80' 🟨 Harry Araujo
+90' 🟨 Arthur Ribeiro
+
+⭐ MELHOR EM CAMPO
+Harry Araujo (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 83.0 | chance 45.7%
+Taldo Empire: força 82.4 | chance 39.3%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 2 x 1 Taldo Empire
+Sport Taldo venceu!
+
+
+EVENTOS
+8' ⚽ Luca Dubois
+21' 🟨 Thiago Walker
+21' 🟨 Miguel Oliveira
+29' ⚽ Pablo Wilson
+29' ⚽ Rodrigo Martins
+
+⭐ MELHOR EM CAMPO
+Pablo Wilson (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 82.8 | chance 46.7%
+Taldo Dragons: força 82.0 | chance 38.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 1 x 1 Taldo Dragons
+Empate!
+
+
+EVENTOS
+29' ❌ (P) Alejandro Brown
+30' ⚽ Liam Wilson
+47' 🟨 Antoine Brown
+51' ⚽ Diego Walker
+56' 🟨 Antoine Rossi
+62' 🟨 André Silva
+77' 🟨 Louis Walker
+79' 🟨 Noah Ferreira
+
+⭐ MELHOR EM CAMPO
+Liam Wilson (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 80.8%
+Taldo Legends: força 73.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Rangers 3 x 0 Taldo Legends
+Taldo Rangers venceu!
+
+
+EVENTOS
+6' ⚽ André Moretti
+11' ⚽ Gabriel Martin
+20' 🟨 Marco Rodriguez
+33' 🟨 Diego Rossi
+66' ⚽ Gabriel Rocha
+90' 🟨 Pablo Garcia
+CS -> Taldo Rangers (placar 3x0)
+   Antoine Rodriguez: 7
+
+⭐ MELHOR EM CAMPO
+Gabriel Martin (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 82.5 | chance 69.9%
+Taldo Warriors: força 77.6 | chance 18.1%
+Chance empate: 12.0%
+--------------------------
+Taldo Athletic 1 x 0 Taldo Warriors
+Taldo Athletic venceu!
+
+
+EVENTOS
+23' 🟨 João Silva
+36' ⚽ Francesco Martin
+CS -> Taldo Athletic (placar 1x0)
+   Harry Taylor: 3
+
+⭐ MELHOR EM CAMPO
+Francesco Martin (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 82.9 | chance 56.0%
+Taldo Royals: força 80.6 | chance 32.0%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 2 x 1 Taldo Royals
+EC Taldo venceu!
+
+
+EVENTOS
+33' ⚽ Arthur Wilson
+39' ⚽ Caio Walker
+61' ⚽ Arthur Wilson
+
+⭐ MELHOR EM CAMPO
+Arthur Wilson (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 84.0 | chance 50.4%
+Taldo Galaxy: força 82.5 | chance 34.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 2 x 1 Taldo Galaxy
+Taldo Nacional venceu!
+
+
+EVENTOS
+60' ⚽ Matheus Pereira
+62' ⚽ Matheus Pereira
+76' 🟨 Miguel Pereira
+76' ⚽ Lucas Bianchi
+
+⭐ MELHOR EM CAMPO
+Matheus Pereira (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 82.6 | chance 52.2%
+Taldo Sporting: força 80.7 | chance 32.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Stars 2 x 2 Taldo Sporting
+Empate!
+
+
+EVENTOS
+30' ⚽ Diego Brown
+45' 🟨 Jack Lima
+50' ⚽ Miguel Costa
+58' ⚽ Caio Johnson
+81' ⚽ Miguel Costa
+
+⭐ MELHOR EM CAMPO
+Miguel Costa (Atacante) - Nota 7.6
+
+
+========================================
+Rodada 19
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+FC Taldo: força 82.5 | chance 43.0%
+Real Taldo: força 82.4 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+FC Taldo 0 x 1 Real Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+1' 🟨 Rafael Martins
+9' 🟨 Pierre Brown
+11' ⚽ Pierre Silva
+CS -> Real Taldo (placar 1x0)
+   Pierre Brown: 6
+
+⭐ MELHOR EM CAMPO
+Pierre Silva (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 83.2 | chance 39.3%
+Taldo FC: força 83.8 | chance 45.7%
+Chance empate: 15.0%
+--------------------------
+Taldo United 0 x 1 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+31' ⚽ Louis Rocha
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 8
+
+⭐ MELHOR EM CAMPO
+Louis Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 83.2 | chance 41.6%
+Taldo Empire: força 83.4 | chance 43.4%
+Chance empate: 15.0%
+--------------------------
+Taldo City 1 x 2 Taldo Empire
+Taldo Empire venceu!
+
+
+EVENTOS
+3' ⚽ Bruno Barbosa
+15' ⚽ Pedro Mendes
+41' 🟨 Leonardo Araujo
+84' ⚽ Alejandro Almeida
+
+⭐ MELHOR EM CAMPO
+Alejandro Almeida (Defesa) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 83.9 | chance 59.4%
+Taldo Dragons: força 81.0 | chance 28.6%
+Chance empate: 12.0%
+--------------------------
+Atlético Taldo 1 x 0 Taldo Dragons
+Atlético Taldo venceu!
+
+
+EVENTOS
+4' 🟨 Felipe Oliveira
+55' ⚽ Lucas Smith
+CS -> Atlético Taldo (placar 1x0)
+   Gustavo Johnson: 4
+
+⭐ MELHOR EM CAMPO
+Lucas Smith (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 83.0 | chance 80.8%
+Taldo Legends: força 74.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Sport Taldo 1 x 1 Taldo Legends
+Empate!
+
+
+EVENTOS
+10' ⚽ Luca Dubois
+64' ⚽ Matheus Martins
+
+⭐ MELHOR EM CAMPO
+Matheus Martins (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 55.5%
+Taldo Warriors: força 79.6 | chance 32.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Internacional 3 x 0 Taldo Warriors
+Taldo Internacional venceu!
+
+
+EVENTOS
+2' ⚽ Francesco Brown
+12' ⚽ Antoine Rossi
+35' ⚽ André Silva
+49' 🟨 Pedro Taylor
+78' 🟨 Matheus Wilson
+CS -> Taldo Internacional (placar 3x0)
+   Matheus Wilson: 4
+
+⭐ MELHOR EM CAMPO
+Francesco Brown (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 49.9%
+Taldo Royals: força 80.6 | chance 35.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 0 x 1 Taldo Royals
+Taldo Royals venceu!
+
+
+EVENTOS
+72' ⚽ Pierre Dubois
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 7
+
+⭐ MELHOR EM CAMPO
+Pierre Dubois (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 83.5 | chance 43.0%
+Taldo Galaxy: força 83.5 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 3 x 2 Taldo Galaxy
+Taldo Athletic venceu!
+
+
+EVENTOS
+15' ⚽ André Santos
+33' ⚽ André Lima
+64' ⚽ Juan Pereira
+66' ⚽ Jack Bianchi
+84' ⚽ Liam Costa
+
+⭐ MELHOR EM CAMPO
+André Lima (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 84.9 | chance 66.1%
+Taldo Sporting: força 80.7 | chance 21.9%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 0 x 0 Taldo Sporting
+Empate!
+
+
+EVENTOS
+86' 🟨 Marco Rossi
+CS -> EC Taldo (placar 0x0)
+   Miguel Smith: 5
+CS -> Taldo Sporting (placar 0x0)
+   Luca Gomes: 3
+
+⭐ MELHOR EM CAMPO
+Miguel Smith (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 83.0 | chance 49.5%
+Taldo Stars: força 81.6 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 1 x 0 Taldo Stars
+Taldo Nacional venceu!
+
+
+EVENTOS
+35' ⚽ Matheus Pereira
+47' 🟨 Vinicius Garcia
+CS -> Taldo Nacional (placar 1x0)
+   Bruno Rossi: 4
+
+⭐ MELHOR EM CAMPO
+Matheus Pereira (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 20
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 84.8 | chance 56.5%
+FC Taldo: força 82.5 | chance 31.5%
+Chance empate: 12.0%
+--------------------------
+Taldo FC 2 x 1 FC Taldo
+Taldo FC venceu!
+
+
+EVENTOS
+13' ⚽ Antoine Martins
+22' ⚽ Luca Pereira
+51' ⚽ Louis Martins
+
+⭐ MELHOR EM CAMPO
+Antoine Martins (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 84.4 | chance 59.8%
+Real Taldo: força 81.4 | chance 28.2%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 1 x 2 Real Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+34' ⚽ Leonardo Araujo
+35' ⚽ Juan Rocha
+36' 🟨 Leonardo Araujo
+56' ⚽ Pierre Silva
+
+⭐ MELHOR EM CAMPO
+Pierre Silva (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 82.0 | chance 51.8%
+Taldo United: força 80.2 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 3 x 2 Taldo United
+Taldo Dragons venceu!
+
+
+EVENTOS
+7' ⚽ Felipe Oliveira
+46' 🟨 Miguel Araujo
+59' ⚽ Carlos Rossi
+80' ⚽ Caio Pereira
+82' ⚽ Caio Pereira
+87' ⚽ Harry Fernandez
+
+⭐ MELHOR EM CAMPO
+Caio Pereira (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 74.4 | chance 13.9%
+Taldo City: força 80.2 | chance 78.1%
+Chance empate: 8.0%
+--------------------------
+Taldo Legends 0 x 1 Taldo City
+Taldo City venceu!
+
+
+EVENTOS
+38' ⚽ Miguel Walker
+CS -> Taldo City (placar 1x0)
+   Francesco Oliveira: 7
+
+⭐ MELHOR EM CAMPO
+Miguel Walker (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 79.6 | chance 32.0%
+Atlético Taldo: força 81.9 | chance 56.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 0 x 2 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+23' ⚽ Harry Araujo
+70' ⚽ Enzo Walker
+CS -> Atlético Taldo (placar 2x0)
+   Gustavo Johnson: 5
+
+⭐ MELHOR EM CAMPO
+Harry Araujo (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 82.6 | chance 40.6%
+Sport Taldo: força 83.0 | chance 44.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 0 Sport Taldo
+Taldo Royals venceu!
+
+
+EVENTOS
+16' 🟨 Leonardo Almeida
+78' ⚽ Rodrigo Moretti
+86' 🟨 Thiago Almeida
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 8
+
+⭐ MELHOR EM CAMPO
+Rodrigo Moretti (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 84.5 | chance 57.9%
+Taldo Internacional: força 81.8 | chance 30.1%
+Chance empate: 12.0%
+--------------------------
+Taldo Galaxy 0 x 1 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+52' 🟨 Lucas Bianchi
+89' ⚽ Liam Barbosa
+CS -> Taldo Internacional (placar 1x0)
+   Matheus Wilson: 5
+
+⭐ MELHOR EM CAMPO
+Liam Barbosa (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 82.7 | chance 57.9%
+Taldo Rangers: força 80.1 | chance 30.1%
+Chance empate: 12.0%
+--------------------------
+Taldo Sporting 1 x 2 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+11' 🟨 Miguel Lopez
+18' ⚽ Gabriel Martin
+40' 🟨 João Rocha
+44' ⚽ Pedro Ferreira
+76' 🟨 Pierre Costa
+90' ⚽ Luca Costa
+
+⭐ MELHOR EM CAMPO
+Gabriel Martin (Atacante) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 60.3%
+Taldo Athletic: força 81.5 | chance 27.7%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 2 x 0 Taldo Athletic
+Taldo Stars venceu!
+
+
+EVENTOS
+10' 🟨 Harry Taylor
+11' ⚽ Jack Ribeiro
+32' 🟨 Miguel Rossi
+62' ⚽ Luca Silva
+69' 🟨 Vinicius Garcia
+CS -> Taldo Stars (placar 2x0)
+   Gustavo Moretti: 5
+
+⭐ MELHOR EM CAMPO
+Luca Silva (Atacante) - Nota 7.7
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 83.0 | chance 43.0%
+EC Taldo: força 82.9 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 0 x 1 EC Taldo
+EC Taldo venceu!
+
+
+EVENTOS
+12' ⚽ Arthur Dubois
+CS -> EC Taldo (placar 1x0)
+   Miguel Smith: 6
+
+⭐ MELHOR EM CAMPO
+Arthur Dubois (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 21
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 83.4 | chance 52.2%
+FC Taldo: força 81.5 | chance 32.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Empire 1 x 0 FC Taldo
+Taldo Empire venceu!
+
+
+EVENTOS
+49' 🟨 Rodrigo Martins
+49' 🟥 Rodrigo Martins
+59' ⚽ Leonardo Araujo
+88' 🟥 Harry Oliveira
+CS -> Taldo Empire (placar 1x0)
+   Jack Perez: 6
+
+⭐ MELHOR EM CAMPO
+Leonardo Araujo (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 82.0 | chance 43.4%
+Taldo FC: força 81.8 | chance 41.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 2 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+6' 🟨 Oliver Dubois
+6' ⚽ Enzo Barbosa
+33' 🟨 Felipe Oliveira
+42' ⚽ Luca Pereira
+47' ⚽ Oliver Dubois
+63' 🟨 Caio Pereira
+74' 🟨 Louis Walker
+
+⭐ MELHOR EM CAMPO
+Enzo Barbosa (Defesa) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 75.4 | chance 13.8%
+Real Taldo: força 83.4 | chance 78.2%
+Chance empate: 8.0%
+--------------------------
+Taldo Legends 1 x 2 Real Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+30' ⚽ Gabriel Barbosa
+39' ⚽ Isaque Souza
+45' ⚽ Carlos Martin
+59' 🟨 André Costa
+72' 🟨 Francesco Dubois
+
+⭐ MELHOR EM CAMPO
+Gabriel Barbosa (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 80.6 | chance 34.6%
+Taldo United: força 82.2 | chance 50.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 1 x 2 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+5' ⚽ Oliver Wilson
+59' ⚽ Matheus Garcia
+90' ⚽ Marco Gomes
+
+⭐ MELHOR EM CAMPO
+Marco Gomes (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 82.6 | chance 44.8%
+Taldo City: força 82.2 | chance 40.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 2 Taldo City
+Taldo City venceu!
+
+
+EVENTOS
+21' ⚽ Pierre Dubois
+35' ⚽ Miguel Johnson
+36' 🟨 André Garcia
+56' ⚽ André Lopez
+76' 🟨 André Garcia
+79' 🟨 Miguel Walker
+
+⭐ MELHOR EM CAMPO
+Francesco Oliveira (Goleiro) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 45.3%
+Atlético Taldo: força 81.9 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 1 x 2 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+9' 🟨 Leonardo Souza
+19' ⚽ Rafael Costa
+37' ⚽ Noah Walker
+47' 🟨 Leonardo Souza
+47' 🟥 Leonardo Souza
+49' ⚽ Harry Araujo
+
+⭐ MELHOR EM CAMPO
+Harry Araujo (Atacante) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 80.7 | chance 32.0%
+Sport Taldo: força 83.0 | chance 56.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Sporting 0 x 1 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+6' 🟨 Miguel Lopez
+36' 🟨 Jack Lima
+39' 🟨 Jack Lima
+45' 🟨 Thiago Walker
+50' ⚽ Thiago Fernandez
+CS -> Sport Taldo (placar 1x0)
+   Jack Souza: 8
+
+⭐ MELHOR EM CAMPO
+Thiago Fernandez (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 83.6 | chance 51.8%
+Taldo Internacional: força 81.8 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Stars 2 x 1 Taldo Internacional
+Taldo Stars venceu!
+
+
+EVENTOS
+3' ⚽ Vinicius Garcia
+20' ⚽ Vinicius Garcia
+57' ⚽ Diego Walker
+
+⭐ MELHOR EM CAMPO
+Vinicius Garcia (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 82.0 | chance 52.2%
+Taldo Rangers: força 80.1 | chance 32.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 1 x 0 Taldo Rangers
+Taldo Nacional venceu!
+
+
+EVENTOS
+35' ⚽ Alejandro Gomes
+CS -> Taldo Nacional (placar 1x0)
+   Bruno Rossi: 5
+
+⭐ MELHOR EM CAMPO
+Alejandro Gomes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 84.9 | chance 56.5%
+Taldo Athletic: força 82.5 | chance 31.5%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 1 x 0 Taldo Athletic
+EC Taldo venceu!
+
+
+EVENTOS
+9' ⚽ Juan Ferreira
+CS -> EC Taldo (placar 1x0)
+   Miguel Smith: 7
+
+⭐ MELHOR EM CAMPO
+Juan Ferreira (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 22
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 81.0 | chance 45.3%
+FC Taldo: força 80.5 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 2 x 2 FC Taldo
+Empate!
+
+
+EVENTOS
+39' ⚽ Enzo Ferreira
+64' 🟨 Francesco Lopez
+67' ⚽ Alejandro Brown
+68' ⚽ Luca Rodriguez
+81' ⚽ Luca Rodriguez
+
+⭐ MELHOR EM CAMPO
+Luca Rodriguez (Meio-Campo) - Nota 7.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 75.4 | chance 22.9%
+Taldo Empire: força 79.4 | chance 65.1%
+Chance empate: 12.0%
+--------------------------
+Taldo Legends 1 x 2 Taldo Empire
+Taldo Empire venceu!
+
+
+EVENTOS
+21' ⚽ Pablo Rossi
+28' ⚽ Thiago Smith
+30' ⚽ Oliver Brown
+
+⭐ MELHOR EM CAMPO
+Oliver Brown (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 17.4%
+Taldo FC: força 83.8 | chance 74.6%
+Chance empate: 8.0%
+--------------------------
+Taldo Warriors 2 x 0 Taldo FC
+Taldo Warriors venceu!
+
+
+EVENTOS
+23' ⚽ João Silva
+65' 🟨 Vinicius Brown
+68' 🟨 Juan Fernandez
+70' ⚽ Juan Fernandez
+CS -> Taldo Warriors (placar 2x0)
+   Gabriel Bianchi: 4
+
+⭐ MELHOR EM CAMPO
+João Silva (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 83.6 | chance 49.0%
+Real Taldo: força 82.4 | chance 36.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 0 Real Taldo
+Taldo Royals venceu!
+
+
+EVENTOS
+77' ⚽ André Garcia
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 9
+
+⭐ MELHOR EM CAMPO
+André Garcia (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 83.5 | chance 49.0%
+Taldo United: força 82.2 | chance 36.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 0 x 1 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+6' 🟨 Thiago Dubois
+52' ⚽ Carlos Rossi
+CS -> Taldo United (placar 1x0)
+   Miguel Araujo: 8
+
+⭐ MELHOR EM CAMPO
+Carlos Rossi (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 81.7 | chance 45.3%
+Taldo City: força 81.2 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 2 x 1 Taldo City
+Taldo Sporting venceu!
+
+
+EVENTOS
+1' ⚽ Miguel Johnson
+22' 🟨 Miguel Lopez
+45' ⚽ Liam Rodriguez
+82' ⚽ Jack Lima
+
+⭐ MELHOR EM CAMPO
+Jack Lima (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 83.6 | chance 58.4%
+Atlético Taldo: força 80.9 | chance 29.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 2 x 0 Atlético Taldo
+Taldo Stars venceu!
+
+
+EVENTOS
+8' 🟨 Rafael Costa
+11' ⚽ Oliver Moretti
+42' 🟨 Pablo Ferreira
+53' ⚽ Luca Silva
+CS -> Taldo Stars (placar 2x0)
+   Gustavo Moretti: 6
+
+⭐ MELHOR EM CAMPO
+Luca Silva (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 84.0 | chance 52.7%
+Sport Taldo: força 82.0 | chance 32.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 0 x 0 Sport Taldo
+Empate!
+
+
+EVENTOS
+18' 🟨 Thiago Fernandez
+64' 🟨 Rafael Moretti
+CS -> Taldo Nacional (placar 0x0)
+   Bruno Rossi: 6
+CS -> Sport Taldo (placar 0x0)
+   Jack Souza: 9
+
+⭐ MELHOR EM CAMPO
+Bruno Rossi (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 83.9 | chance 60.3%
+Taldo Internacional: força 80.8 | chance 27.7%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 0 x 1 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+35' 🟨 Liam Barbosa
+35' ⚽ Francesco Brown
+CS -> Taldo Internacional (placar 1x0)
+   Matheus Wilson: 6
+
+⭐ MELHOR EM CAMPO
+Francesco Brown (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 83.5 | chance 62.2%
+Taldo Rangers: força 80.1 | chance 25.8%
+Chance empate: 12.0%
+--------------------------
+Taldo Athletic 0 x 1 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+54' ⚽ Gabriel Martin
+76' 🟨 Noah Ribeiro
+83' 🟨 André Rossi
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 8
+
+⭐ MELHOR EM CAMPO
+Gabriel Martin (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 23
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 73.4 | chance 14.2%
+FC Taldo: força 81.5 | chance 80.8%
+Chance empate: 5.0%
+--------------------------
+Taldo Legends 1 x 2 FC Taldo
+FC Taldo venceu!
+
+
+EVENTOS
+4' ⚽ Leonardo Brown
+21' ⚽ Felipe Bianchi
+39' 🟨 Pedro Walker
+52' ⚽ Francesco Lopez
+54' 🟨 Marco Rodriguez
+
+⭐ MELHOR EM CAMPO
+Francesco Lopez (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 80.6 | chance 40.6%
+Taldo Dragons: força 81.0 | chance 44.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 1 x 2 Taldo Dragons
+Taldo Dragons venceu!
+
+
+EVENTOS
+41' ⚽ Marco Perez
+65' ⚽ Oliver Dubois
+78' 🟨 Juan Fernandez
+87' ⚽ Oliver Dubois
+
+⭐ MELHOR EM CAMPO
+Oliver Dubois (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 83.6 | chance 75.1%
+Taldo Empire: força 78.4 | chance 16.9%
+Chance empate: 8.0%
+--------------------------
+Taldo Royals 2 x 0 Taldo Empire
+Taldo Royals venceu!
+
+
+EVENTOS
+49' ⚽ Louis Bianchi
+58' ⚽ Louis Bianchi
+CS -> Taldo Royals (placar 2x0)
+   Gabriel Fernandez: 10
+
+⭐ MELHOR EM CAMPO
+Louis Bianchi (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 35.5%
+Taldo FC: força 83.8 | chance 49.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 1 x 2 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+34' ⚽ João Martin
+54' ⚽ João Araujo
+72' 🟨 Thiago Gomes
+78' 🟨 André Santos
+78' 🟨 Enzo Barbosa
+90' ⚽ João Martin
+
+⭐ MELHOR EM CAMPO
+João Martin (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 81.7 | chance 44.4%
+Real Taldo: força 81.4 | chance 40.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 1 x 0 Real Taldo
+Taldo Sporting venceu!
+
+
+EVENTOS
+20' ⚽ Caio Johnson
+CS -> Taldo Sporting (placar 1x0)
+   Luca Gomes: 4
+
+⭐ MELHOR EM CAMPO
+Caio Johnson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 57.0%
+Taldo United: força 82.2 | chance 31.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 2 x 1 Taldo United
+Taldo Stars venceu!
+
+
+EVENTOS
+11' ⚽ Thiago Santos
+29' ⚽ Antoine Walker
+85' ⚽ Oliver Moretti
+
+⭐ MELHOR EM CAMPO
+Antoine Walker (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 83.0 | chance 58.9%
+Taldo City: força 80.2 | chance 29.1%
+Chance empate: 12.0%
+--------------------------
+Taldo Nacional 1 x 1 Taldo City
+Empate!
+
+
+EVENTOS
+13' ⚽ André Lopez
+35' 🟨 Thiago Taylor
+43' ⚽ Diego Lima
+
+⭐ MELHOR EM CAMPO
+Diego Lima (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 84.9 | chance 65.1%
+Atlético Taldo: força 80.9 | chance 22.9%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 1 x 2 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+16' ⚽ Arthur Dubois
+41' 🟨 Rafael Costa
+53' ⚽ Arthur Ribeiro
+69' ⚽ Enzo Walker
+
+⭐ MELHOR EM CAMPO
+Enzo Walker (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 84.5 | chance 57.4%
+Sport Taldo: força 82.0 | chance 30.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Athletic 1 x 2 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+9' ⚽ Thiago Lima
+41' ⚽ Leonardo Almeida
+84' ⚽ Noah Ribeiro
+
+⭐ MELHOR EM CAMPO
+Leonardo Almeida (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 49.0%
+Taldo Internacional: força 80.8 | chance 36.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 0 x 0 Taldo Internacional
+Empate!
+
+
+EVENTOS
+31' 🟨 Diego Rossi
+37' 🟨 Diego Ribeiro
+76' 🟨 Enzo Ribeiro
+84' 🟨 Gabriel Martin
+CS -> Taldo Rangers (placar 0x0)
+   Antoine Rodriguez: 9
+CS -> Taldo Internacional (placar 0x0)
+   Matheus Wilson: 7
+
+⭐ MELHOR EM CAMPO
+Antoine Rodriguez (Goleiro) - Nota 6.2
+
+
+========================================
+Rodada 24
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 23.8%
+FC Taldo: força 82.5 | chance 64.2%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 0 x 2 FC Taldo
+FC Taldo venceu!
+
+
+EVENTOS
+32' 🟨 Louis Martins
+53' ⚽ Luca Rodriguez
+63' ⚽ Luca Rodriguez
+CS -> FC Taldo (placar 2x0)
+   Noah Smith: 8
+
+⭐ MELHOR EM CAMPO
+Luca Rodriguez (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 82.6 | chance 80.8%
+Taldo Legends: força 73.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Royals 2 x 1 Taldo Legends
+Taldo Royals venceu!
+
+
+EVENTOS
+17' 🟨 Rodrigo Moretti
+32' ⚽ Rodrigo Moretti
+52' 🟨 Thiago Almeida
+88' ⚽ Juan Johnson
+89' ⚽ Rodrigo Moretti
+
+⭐ MELHOR EM CAMPO
+Rodrigo Moretti (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 83.5 | chance 57.0%
+Taldo Dragons: força 81.0 | chance 31.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Galaxy 2 x 1 Taldo Dragons
+Taldo Galaxy venceu!
+
+
+EVENTOS
+10' ⚽ Louis Walker
+26' 🟨 Louis Walker
+37' ⚽ Arthur Johnson
+45' ⚽ Lucas Bianchi
+86' 🟨 Thiago Gomes
+
+⭐ MELHOR EM CAMPO
+Arthur Johnson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 81.7 | chance 61.8%
+Taldo Empire: força 78.4 | chance 26.2%
+Chance empate: 12.0%
+--------------------------
+Taldo Sporting 2 x 1 Taldo Empire
+Taldo Sporting venceu!
+
+
+EVENTOS
+7' ⚽ Jack Lima
+14' 🟨 Miguel Lopez
+30' 🟨 João Rocha
+35' 🟨 Miguel Oliveira
+44' ⚽ Jack Lima
+46' ⚽ Thiago Smith
+59' 🟨 Arthur Taylor
+
+⭐ MELHOR EM CAMPO
+Jack Lima (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 83.6 | chance 46.7%
+Taldo FC: força 82.8 | chance 38.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Stars 1 x 0 Taldo FC
+Taldo Stars venceu!
+
+
+EVENTOS
+14' ⚽ Oliver Moretti
+CS -> Taldo Stars (placar 1x0)
+   Gustavo Moretti: 7
+
+⭐ MELHOR EM CAMPO
+Oliver Moretti (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 83.0 | chance 50.8%
+Real Taldo: força 81.4 | chance 34.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 0 x 1 Real Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+38' 🟨 Thiago Taylor
+39' 🟨 Gabriel Rossi
+84' 🟨 Gabriel Rossi
+87' ⚽ Juan Rocha
+CS -> Real Taldo (placar 1x0)
+   Pierre Brown: 7
+
+⭐ MELHOR EM CAMPO
+Juan Rocha (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 82.9 | chance 58.4%
+Taldo United: força 80.2 | chance 29.6%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 1 x 2 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+29' ⚽ Arthur Dubois
+40' ⚽ Marco Gomes
+48' ⚽ Antoine Smith
+
+⭐ MELHOR EM CAMPO
+Antoine Smith (Defesa) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 82.5 | chance 49.5%
+Taldo City: força 81.2 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 1 x 0 Taldo City
+Taldo Athletic venceu!
+
+
+EVENTOS
+78' ⚽ Juan Mendes
+CS -> Taldo Athletic (placar 1x0)
+   Harry Taylor: 4
+
+⭐ MELHOR EM CAMPO
+Juan Mendes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 81.1 | chance 38.3%
+Atlético Taldo: força 81.9 | chance 46.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 0 x 1 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+18' 🟨 Louis Smith
+43' ❌ (P) Enzo Walker
+60' 🟨 Arthur Costa
+64' ⚽ Harry Araujo
+CS -> Atlético Taldo (placar 1x0)
+   Gustavo Johnson: 6
+
+⭐ MELHOR EM CAMPO
+Harry Araujo (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 36.5%
+Sport Taldo: força 83.0 | chance 48.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 2 x 1 Sport Taldo
+Taldo Internacional venceu!
+
+
+EVENTOS
+8' ⚽ Diego Walker
+32' ⚽ Antoine Rossi
+41' ⚽ Leonardo Almeida
+70' 🟨 Matheus Wilson
+
+⭐ MELHOR EM CAMPO
+Diego Gomes (Meio-Campo) - Nota 7.5
+
+
+========================================
+Rodada 25
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 83.6 | chance 48.5%
+FC Taldo: força 82.5 | chance 36.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 2 x 2 FC Taldo
+Empate!
+
+
+EVENTOS
+4' ⚽ Francesco Fernandez
+10' ⚽ (P) Juan Martins
+13' ⚽ Felipe Bianchi
+23' 🟨 Pedro Walker
+41' ⚽ Louis Bianchi
+89' 🟨 Noah Smith
+
+⭐ MELHOR EM CAMPO
+Louis Bianchi (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 69.4%
+Taldo Warriors: força 77.6 | chance 18.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Galaxy 2 x 0 Taldo Warriors
+Taldo Galaxy venceu!
+
+
+EVENTOS
+2' ⚽ Juan Pereira
+52' ⚽ Leonardo Souza
+79' 🟨 Diego Almeida
+CS -> Taldo Galaxy (placar 2x0)
+   Thiago Gomes: 8
+
+⭐ MELHOR EM CAMPO
+Juan Pereira (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 82.7 | chance 80.8%
+Taldo Legends: força 74.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Sporting 5 x 0 Taldo Legends
+Taldo Sporting venceu!
+
+
+EVENTOS
+11' ⚽ Rafael Taylor
+14' ⚽ (P) Diego Brown
+23' ⚽ Liam Rodriguez
+75' ⚽ Miguel Lopez
+77' ⚽ Caio Johnson
+CS -> Taldo Sporting (placar 5x0)
+   Luca Gomes: 5
+
+⭐ MELHOR EM CAMPO
+Miguel Lopez (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 82.6 | chance 45.7%
+Taldo Dragons: força 82.0 | chance 39.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Stars 0 x 1 Taldo Dragons
+Taldo Dragons venceu!
+
+
+EVENTOS
+8' ⚽ Alejandro Rodriguez
+74' 🟨 Antoine Brown
+CS -> Taldo Dragons (placar 1x0)
+   Enzo Lopez: 5
+
+⭐ MELHOR EM CAMPO
+Alejandro Rodriguez (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 84.0 | chance 68.5%
+Taldo Empire: força 79.4 | chance 19.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Nacional 1 x 0 Taldo Empire
+Taldo Nacional venceu!
+
+
+EVENTOS
+4' 🟨 Jack Perez
+49' 🟨 Alejandro Gomes
+85' ⚽ Miguel Moretti
+88' 🟨 Miguel Oliveira
+CS -> Taldo Nacional (placar 1x0)
+   Bruno Rossi: 7
+
+⭐ MELHOR EM CAMPO
+Miguel Moretti (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 84.9 | chance 60.3%
+Taldo FC: força 81.8 | chance 27.7%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 2 x 0 Taldo FC
+EC Taldo venceu!
+
+
+EVENTOS
+7' 🟨 Lucas Ribeiro
+20' ⚽ Arthur Dubois
+53' ⚽ Arthur Dubois
+55' 🟥 Diego Garcia
+65' 🟨 Juan Ferreira
+67' 🟨 Pedro Dubois
+CS -> EC Taldo (placar 2x0)
+   Miguel Smith: 8
+
+⭐ MELHOR EM CAMPO
+Arthur Dubois (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 83.5 | chance 43.4%
+Real Taldo: força 83.4 | chance 41.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 3 x 2 Real Taldo
+Taldo Athletic venceu!
+
+
+EVENTOS
+20' ⚽ Alejandro Taylor
+24' ⚽ Juan Rocha
+34' ⚽ Enzo Brown
+43' ⚽ Alejandro Taylor
+79' ⚽ Francesco Martin
+
+⭐ MELHOR EM CAMPO
+Alejandro Taylor (Meio-Campo) - Nota 8.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 80.1 | chance 42.0%
+Taldo United: força 80.2 | chance 43.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 1 x 0 Taldo United
+Taldo Rangers venceu!
+
+
+EVENTOS
+42' 🟨 Pierre Costa
+68' ⚽ Rodrigo Araujo
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 10
+
+⭐ MELHOR EM CAMPO
+Rodrigo Araujo (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 45.7%
+Taldo City: força 81.2 | chance 39.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 0 x 1 Taldo City
+Taldo City venceu!
+
+
+EVENTOS
+51' ⚽ Bruno Barbosa
+62' 🟨 Miguel Johnson
+CS -> Taldo City (placar 1x0)
+   Francesco Oliveira: 8
+
+⭐ MELHOR EM CAMPO
+Bruno Barbosa (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 82.0 | chance 43.0%
+Atlético Taldo: força 81.9 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 1 x 2 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+8' ⚽ Louis Smith
+12' ⚽ Louis Smith
+24' ⚽ Luca Dubois
+
+⭐ MELHOR EM CAMPO
+Louis Smith (Meio-Campo) - Nota 8.1
+
+
+========================================
+Rodada 26
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 52.7%
+FC Taldo: força 80.5 | chance 32.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 3 x 2 FC Taldo
+Taldo Galaxy venceu!
+
+
+EVENTOS
+23' ⚽ Thiago Dubois
+34' ⚽ João Araujo
+53' ⚽ André Santos
+62' ⚽ Felipe Bianchi
+88' ⚽ Louis Martins
+
+⭐ MELHOR EM CAMPO
+Thiago Dubois (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 81.7 | chance 48.1%
+Taldo Royals: força 80.6 | chance 36.9%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 0 x 1 Taldo Royals
+Taldo Royals venceu!
+
+
+EVENTOS
+11' 🟨 Alejandro Garcia
+18' 🟨 André Garcia
+30' ⚽ Pablo Johnson
+48' 🟨 Miguel Mendes
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 11
+
+⭐ MELHOR EM CAMPO
+Pablo Johnson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 83.6 | chance 65.1%
+Taldo Warriors: força 79.6 | chance 22.9%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 3 x 1 Taldo Warriors
+Taldo Stars venceu!
+
+
+EVENTOS
+2' ⚽ Miguel Gomes
+18' ⚽ Jack Ribeiro
+59' ⚽ Antoine Walker
+89' ⚽ Diego Almeida
+
+⭐ MELHOR EM CAMPO
+Jack Ribeiro (Defesa) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 83.0 | chance 80.8%
+Taldo Legends: força 72.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Nacional 2 x 1 Taldo Legends
+Taldo Nacional venceu!
+
+
+EVENTOS
+64' ⚽ Pablo Rossi
+74' ⚽ Louis Santos
+74' ⚽ Thiago Taylor
+
+⭐ MELHOR EM CAMPO
+Louis Santos (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 79.9 | chance 42.0%
+Taldo Dragons: força 80.0 | chance 43.0%
+Chance empate: 15.0%
+--------------------------
+EC Taldo 1 x 1 Taldo Dragons
+Empate!
+
+
+EVENTOS
+11' ⚽ Louis Walker
+28' ⚽ Diego Garcia
+
+⭐ MELHOR EM CAMPO
+Diego Garcia (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 83.5 | chance 74.6%
+Taldo Empire: força 78.4 | chance 17.4%
+Chance empate: 8.0%
+--------------------------
+Taldo Athletic 1 x 1 Taldo Empire
+Empate!
+
+
+EVENTOS
+6' ⚽ Carlos Ribeiro
+49' 🟨 Rodrigo Martins
+61' ⚽ Miguel Rossi
+83' 🟨 Thiago Smith
+
+⭐ MELHOR EM CAMPO
+Carlos Ribeiro (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 33.7%
+Taldo FC: força 83.8 | chance 51.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 0 x 1 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+7' 🟨 Marco Martins
+43' 🟨 André Moretti
+52' 🟨 Diego Ribeiro
+90' ⚽ Marco Rocha
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 9
+
+⭐ MELHOR EM CAMPO
+Marco Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 82.8 | chance 49.9%
+Real Taldo: força 81.4 | chance 35.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 2 x 2 Real Taldo
+Empate!
+
+
+EVENTOS
+7' ⚽ André Costa
+52' ⚽ (P) Francesco Dubois
+55' 🟨 Diego Walker
+64' ⚽ Francesco Brown
+72' ⚽ Enzo Ribeiro
+
+⭐ MELHOR EM CAMPO
+Francesco Brown (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 84.0 | chance 51.8%
+Taldo United: força 82.2 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 2 x 1 Taldo United
+Sport Taldo venceu!
+
+
+EVENTOS
+43' ⚽ Leonardo Almeida
+71' 🟨 Harry Fernandez
+71' ⚽ Luca Dubois
+74' ⚽ Miguel Rodriguez
+
+⭐ MELHOR EM CAMPO
+Leonardo Almeida (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 81.9 | chance 46.2%
+Taldo City: força 81.2 | chance 38.8%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 1 x 0 Taldo City
+Atlético Taldo venceu!
+
+
+EVENTOS
+16' ⚽ Harry Araujo
+55' 🟨 André Lopez
+68' 🟥 Alejandro Costa
+CS -> Atlético Taldo (placar 1x0)
+   Gustavo Johnson: 7
+
+⭐ MELHOR EM CAMPO
+Harry Araujo (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 27
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 80.7 | chance 33.7%
+FC Taldo: força 82.5 | chance 51.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 0 x 1 FC Taldo
+FC Taldo venceu!
+
+
+EVENTOS
+5' 🟨 Louis Martins
+21' ⚽ Gabriel Costa
+44' 🟨 Pedro Ferreira
+89' 🟨 Francesco Lopez
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 9
+
+⭐ MELHOR EM CAMPO
+Gabriel Costa (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 83.6 | chance 55.5%
+Taldo Galaxy: força 81.5 | chance 32.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 2 x 1 Taldo Galaxy
+Taldo Stars venceu!
+
+
+EVENTOS
+29' 🟨 Noah Pereira
+42' ⚽ Jack Ribeiro
+83' ⚽ Pedro Lima
+90' ⚽ Oliver Moretti
+
+⭐ MELHOR EM CAMPO
+Oliver Moretti (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 84.0 | chance 49.5%
+Taldo Royals: força 82.6 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 1 x 0 Taldo Royals
+Taldo Nacional venceu!
+
+
+EVENTOS
+36' 🟨 Matheus Pereira
+59' ⚽ Diego Lima
+CS -> Taldo Nacional (placar 1x0)
+   Bruno Rossi: 8
+
+⭐ MELHOR EM CAMPO
+Diego Lima (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 79.9 | chance 49.0%
+Taldo Warriors: força 78.6 | chance 36.0%
+Chance empate: 15.0%
+--------------------------
+EC Taldo 1 x 0 Taldo Warriors
+EC Taldo venceu!
+
+
+EVENTOS
+14' ⚽ Arthur Wilson
+CS -> EC Taldo (placar 1x0)
+   Miguel Smith: 9
+
+⭐ MELHOR EM CAMPO
+Arthur Wilson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 84.5 | chance 80.8%
+Taldo Legends: força 72.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Athletic 2 x 0 Taldo Legends
+Taldo Athletic venceu!
+
+
+EVENTOS
+7' ⚽ Francesco Martin
+90' ⚽ Francesco Martin
+CS -> Taldo Athletic (placar 2x0)
+   Harry Taylor: 5
+
+⭐ MELHOR EM CAMPO
+Francesco Martin (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 81.1 | chance 43.0%
+Taldo Dragons: força 81.0 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 3 x 2 Taldo Dragons
+Taldo Rangers venceu!
+
+
+EVENTOS
+12' ⚽ Marco Martins
+19' 🟨 Alejandro Rodriguez
+23' 🟨 Diego Ribeiro
+24' ⚽ Marco Martins
+28' 🟨 Rodrigo Araujo
+32' ⚽ Rodrigo Araujo
+34' 🟨 Caio Pereira
+35' 🟨 Pablo Martin
+48' ⚽ Enzo Ferreira
+49' ⚽ Antoine Brown
+83' 🟨 Pablo Garcia
+
+⭐ MELHOR EM CAMPO
+Marco Martins (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 83.8 | chance 78.2%
+Taldo Empire: força 77.4 | chance 13.8%
+Chance empate: 8.0%
+--------------------------
+Taldo Internacional 2 x 1 Taldo Empire
+Taldo Internacional venceu!
+
+
+EVENTOS
+20' ⚽ Rodrigo Martins
+68' ⚽ André Silva
+74' ⚽ Diego Walker
+
+⭐ MELHOR EM CAMPO
+Liam Barbosa (Meio-Campo) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 83.0 | chance 43.4%
+Taldo FC: força 82.8 | chance 41.6%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 2 x 1 Taldo FC
+Sport Taldo venceu!
+
+
+EVENTOS
+34' ⚽ Luca Dubois
+72' ⚽ Antoine Martins
+77' ⚽ Pablo Wilson
+
+⭐ MELHOR EM CAMPO
+Pablo Wilson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 82.9 | chance 45.3%
+Real Taldo: força 82.4 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 1 x 2 Real Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+12' ⚽ André Costa
+28' 🟨 Gabriel Barbosa
+54' 🟨 Isaque Souza
+57' ⚽ Arthur Ribeiro
+80' ⚽ Jack Silva
+
+⭐ MELHOR EM CAMPO
+Jack Silva (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 76.2 | chance 13.8%
+Taldo United: força 82.2 | chance 78.2%
+Chance empate: 8.0%
+--------------------------
+Taldo City 0 x 1 Taldo United
+Taldo United venceu!
+
+
+EVENTOS
+50' ⚽ Oliver Wilson
+CS -> Taldo United (placar 1x0)
+   Miguel Araujo: 9
+
+⭐ MELHOR EM CAMPO
+Oliver Wilson (Defesa) - Nota 7.1
+
+
+========================================
+Rodada 28
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 83.6 | chance 48.5%
+FC Taldo: força 82.5 | chance 36.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Stars 1 x 1 FC Taldo
+Empate!
+
+
+EVENTOS
+44' ⚽ Leonardo Mendes
+65' 🟨 Pedro Araujo
+72' 🟨 Felipe Bianchi
+78' 🟨 Miguel Costa
+78' ⚽ Luca Silva
+82' 🟨 Francesco Fernandez
+
+⭐ MELHOR EM CAMPO
+Luca Silva (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 82.0 | chance 49.0%
+Taldo Sporting: força 80.7 | chance 36.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 1 x 0 Taldo Sporting
+Taldo Nacional venceu!
+
+
+EVENTOS
+10' 🟨 Thiago Taylor
+30' ⚽ Vinicius Wilson
+CS -> Taldo Nacional (placar 1x0)
+   Bruno Rossi: 9
+
+⭐ MELHOR EM CAMPO
+Vinicius Wilson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 79.9 | chance 30.6%
+Taldo Galaxy: força 82.5 | chance 57.4%
+Chance empate: 12.0%
+--------------------------
+EC Taldo 1 x 2 Taldo Galaxy
+Taldo Galaxy venceu!
+
+
+EVENTOS
+6' ⚽ Arthur Wilson
+20' ⚽ Pedro Lima
+33' 🟨 João Araujo
+56' 🟥 Gabriel Martins
+59' 🟨 Arthur Wilson
+86' ⚽ Pedro Lima
+
+⭐ MELHOR EM CAMPO
+Pedro Lima (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 84.5 | chance 52.2%
+Taldo Royals: força 82.6 | chance 32.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 1 x 2 Taldo Royals
+Taldo Royals venceu!
+
+
+EVENTOS
+4' ⚽ Juan Martins
+6' ⚽ Noah Ribeiro
+60' ⚽ André Garcia
+
+⭐ MELHOR EM CAMPO
+André Garcia (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 67.5%
+Taldo Warriors: força 77.6 | chance 20.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Rangers 1 x 2 Taldo Warriors
+Taldo Warriors venceu!
+
+
+EVENTOS
+18' ⚽ Diego Almeida
+23' 🟨 Juan Fernandez
+65' ⚽ Giovanni Johnson
+71' 🟨 Lucas Ferreira
+78' ⚽ Marco Martins
+82' 🟨 Pierre Mendes
+85' 🟨 Gabriel Bianchi
+
+⭐ MELHOR EM CAMPO
+Giovanni Johnson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 82.8 | chance 80.8%
+Taldo Legends: força 74.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Internacional 2 x 0 Taldo Legends
+Taldo Internacional venceu!
+
+
+EVENTOS
+12' ⚽ Francesco Brown
+24' 🟨 André Silva
+39' 🟨 Diego Gomes
+52' ⚽ Enzo Ribeiro
+CS -> Taldo Internacional (placar 2x0)
+   Matheus Wilson: 8
+
+⭐ MELHOR EM CAMPO
+Francesco Brown (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 82.0 | chance 47.6%
+Taldo Dragons: força 81.0 | chance 37.4%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 1 x 0 Taldo Dragons
+Sport Taldo venceu!
+
+
+EVENTOS
+12' ⚽ Gabriel Mendes
+22' 🟨 Enzo Ferreira
+48' 🟨 Thiago Walker
+50' 🟨 Alejandro Rodriguez
+62' 🟨 Gabriel Mendes
+CS -> Sport Taldo (placar 1x0)
+   Jack Souza: 10
+
+⭐ MELHOR EM CAMPO
+Gabriel Mendes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 81.9 | chance 57.4%
+Taldo Empire: força 79.4 | chance 30.6%
+Chance empate: 12.0%
+--------------------------
+Atlético Taldo 3 x 0 Taldo Empire
+Atlético Taldo venceu!
+
+
+EVENTOS
+3' ⚽ Harry Araujo
+59' ⚽ Louis Smith
+70' ⚽ Enzo Walker
+79' 🟨 Arthur Taylor
+CS -> Atlético Taldo (placar 3x0)
+   Gustavo Johnson: 8
+
+⭐ MELHOR EM CAMPO
+Louis Smith (Meio-Campo) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 76.2 | chance 13.8%
+Taldo FC: força 82.8 | chance 78.2%
+Chance empate: 8.0%
+--------------------------
+Taldo City 1 x 2 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+41' ⚽ Antoine Martins
+44' ⚽ Miguel Johnson
+74' 🟨 Marco Rocha
+87' ⚽ Marco Rocha
+
+⭐ MELHOR EM CAMPO
+Marco Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 82.2 | chance 36.5%
+Real Taldo: força 83.4 | chance 48.5%
+Chance empate: 15.0%
+--------------------------
+Taldo United 0 x 0 Real Taldo
+Empate!
+
+
+EVENTOS
+CS -> Taldo United (placar 0x0)
+   Miguel Araujo: 10
+CS -> Real Taldo (placar 0x0)
+   Pierre Brown: 8
+
+⭐ MELHOR EM CAMPO
+Miguel Araujo (Goleiro) - Nota 6.2
+
+
+========================================
+Rodada 29
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Nacional: força 82.0 | chance 45.3%
+FC Taldo: força 81.5 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Nacional 2 x 1 FC Taldo
+Taldo Nacional venceu!
+
+
+EVENTOS
+32' 🟨 Luca Rodriguez
+53' ⚽ Matheus Pereira
+57' 🟨 Alejandro Gomes
+57' ⚽ Louis Martins
+70' ⚽ Thiago Taylor
+
+⭐ MELHOR EM CAMPO
+Matheus Pereira (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 73.9 | chance 14.2%
+Taldo Stars: força 83.6 | chance 80.8%
+Chance empate: 5.0%
+--------------------------
+EC Taldo 1 x 0 Taldo Stars
+EC Taldo venceu!
+
+
+EVENTOS
+24' 🟨 Miguel Smith
+69' ⚽ Arthur Dubois
+CS -> EC Taldo (placar 1x0)
+   Miguel Smith: 10
+
+⭐ MELHOR EM CAMPO
+Arthur Dubois (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 82.5 | chance 58.9%
+Taldo Sporting: força 79.7 | chance 29.1%
+Chance empate: 12.0%
+--------------------------
+Taldo Athletic 1 x 1 Taldo Sporting
+Empate!
+
+
+EVENTOS
+7' ⚽ Alejandro Johnson
+47' ⚽ (P) Rafael Taylor
+
+⭐ MELHOR EM CAMPO
+Alejandro Johnson (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 81.1 | chance 35.5%
+Taldo Galaxy: força 82.5 | chance 49.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 1 x 0 Taldo Galaxy
+Taldo Rangers venceu!
+
+
+EVENTOS
+30' ⚽ Gabriel Rocha
+49' 🟨 Gabriel Rocha
+62' 🟨 Thiago Dubois
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 11
+
+⭐ MELHOR EM CAMPO
+Gabriel Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 43.4%
+Taldo Royals: força 81.6 | chance 41.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 1 x 2 Taldo Royals
+Taldo Royals venceu!
+
+
+EVENTOS
+3' ⚽ Louis Bianchi
+24' ⚽ Harry Martin
+38' ⚽ Liam Barbosa
+48' 🟨 Diego Gomes
+
+⭐ MELHOR EM CAMPO
+Louis Bianchi (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 84.0 | chance 67.0%
+Taldo Warriors: força 79.6 | chance 21.0%
+Chance empate: 12.0%
+--------------------------
+Sport Taldo 1 x 0 Taldo Warriors
+Sport Taldo venceu!
+
+
+EVENTOS
+22' ⚽ Antoine Wilson
+CS -> Sport Taldo (placar 1x0)
+   Jack Souza: 11
+
+⭐ MELHOR EM CAMPO
+Antoine Wilson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 83.9 | chance 80.8%
+Taldo Legends: força 73.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Atlético Taldo 3 x 0 Taldo Legends
+Atlético Taldo venceu!
+
+
+EVENTOS
+68' ⚽ Arthur Costa
+70' ⚽ Arthur Costa
+90' ⚽ Arthur Ribeiro
+CS -> Atlético Taldo (placar 3x0)
+   Gustavo Johnson: 9
+
+⭐ MELHOR EM CAMPO
+Arthur Costa (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 78.2 | chance 29.1%
+Taldo Dragons: força 81.0 | chance 58.9%
+Chance empate: 12.0%
+--------------------------
+Taldo City 1 x 1 Taldo Dragons
+Empate!
+
+
+EVENTOS
+19' ⚽ Alejandro Brown
+25' 🟨 Thiago Costa
+34' 🟨 Alejandro Brown
+72' ⚽ Diego Rocha
+
+⭐ MELHOR EM CAMPO
+Alejandro Brown (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 81.2 | chance 51.8%
+Taldo Empire: força 79.4 | chance 33.2%
+Chance empate: 15.0%
+--------------------------
+Taldo United 1 x 1 Taldo Empire
+Empate!
+
+
+EVENTOS
+21' ⚽ Thiago Santos
+39' ⚽ Thiago Smith
+
+⭐ MELHOR EM CAMPO
+Thiago Santos (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 40.2%
+Taldo FC: força 83.8 | chance 44.8%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 0 x 1 Taldo FC
+Taldo FC venceu!
+
+
+EVENTOS
+59' ⚽ Antoine Martins
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 10
+
+⭐ MELHOR EM CAMPO
+Antoine Martins (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 30
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+EC Taldo: força 73.9 | chance 13.8%
+FC Taldo: força 80.5 | chance 78.2%
+Chance empate: 8.0%
+--------------------------
+EC Taldo 0 x 1 FC Taldo
+FC Taldo venceu!
+
+
+EVENTOS
+2' ⚽ Leonardo Mendes
+51' 🟨 Leonardo Mendes
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 10
+
+⭐ MELHOR EM CAMPO
+Leonardo Mendes (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 83.5 | chance 45.3%
+Taldo Nacional: força 83.0 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Athletic 3 x 2 Taldo Nacional
+Taldo Athletic venceu!
+
+
+EVENTOS
+20' ⚽ Francesco Martin
+24' ⚽ Thiago Taylor
+30' ⚽ André Lima
+51' ⚽ Vinicius Wilson
+88' ⚽ Liam Costa
+
+⭐ MELHOR EM CAMPO
+Liam Costa (Defesa) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 81.1 | chance 39.7%
+Taldo Stars: força 81.6 | chance 45.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 1 x 0 Taldo Stars
+Taldo Rangers venceu!
+
+
+EVENTOS
+63' ⚽ Gabriel Rocha
+65' 🟨 Marco Martins
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 12
+
+⭐ MELHOR EM CAMPO
+Gabriel Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 43.0%
+Taldo Sporting: força 81.7 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 1 x 1 Taldo Sporting
+Empate!
+
+
+EVENTOS
+16' ⚽ Diego Walker
+38' ⚽ João Rocha
+
+⭐ MELHOR EM CAMPO
+Diego Walker (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 83.0 | chance 45.3%
+Taldo Galaxy: força 82.5 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 1 x 0 Taldo Galaxy
+Sport Taldo venceu!
+
+
+EVENTOS
+35' ⚽ Gabriel Mendes
+59' 🟨 André Santos
+CS -> Sport Taldo (placar 1x0)
+   Jack Souza: 12
+
+⭐ MELHOR EM CAMPO
+Gabriel Mendes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 82.9 | chance 56.0%
+Taldo Royals: força 80.6 | chance 32.0%
+Chance empate: 12.0%
+--------------------------
+Atlético Taldo 2 x 0 Taldo Royals
+Atlético Taldo venceu!
+
+
+EVENTOS
+2' 🟨 Louis Bianchi
+31' ⚽ Louis Smith
+63' ⚽ Giovanni Rossi
+CS -> Atlético Taldo (placar 2x0)
+   Gustavo Johnson: 10
+
+⭐ MELHOR EM CAMPO
+Louis Smith (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 77.2 | chance 35.1%
+Taldo Warriors: força 78.6 | chance 49.9%
+Chance empate: 15.0%
+--------------------------
+Taldo City 0 x 1 Taldo Warriors
+Taldo Warriors venceu!
+
+
+EVENTOS
+20' 🟨 Miguel Walker
+56' 🟨 Thiago Costa
+69' ⚽ Marco Perez
+CS -> Taldo Warriors (placar 1x0)
+   Gabriel Bianchi: 5
+
+⭐ MELHOR EM CAMPO
+Marco Perez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 83.2 | chance 80.8%
+Taldo Legends: força 74.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo United 2 x 0 Taldo Legends
+Taldo United venceu!
+
+
+EVENTOS
+3' ⚽ João Wilson
+8' ⚽ Thiago Santos
+21' 🟨 Gabriel Rodriguez
+CS -> Taldo United (placar 2x0)
+   Miguel Araujo: 11
+
+⭐ MELHOR EM CAMPO
+João Wilson (Defesa) - Nota 7.7
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 84.4 | chance 67.0%
+Taldo Dragons: força 80.0 | chance 21.0%
+Chance empate: 12.0%
+--------------------------
+Real Taldo 3 x 1 Taldo Dragons
+Real Taldo venceu!
+
+
+EVENTOS
+13' ⚽ Pierre Silva
+53' 🟨 Liam Wilson
+65' ⚽ Francesco Dubois
+84' ⚽ Caio Gomes
+89' ⚽ Oliver Dubois
+
+⭐ MELHOR EM CAMPO
+Francesco Dubois (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 84.8 | chance 78.2%
+Taldo Empire: força 78.4 | chance 13.8%
+Chance empate: 8.0%
+--------------------------
+Taldo FC 2 x 0 Taldo Empire
+Taldo FC venceu!
+
+
+EVENTOS
+4' 🟨 Miguel Santos
+14' 🟨 Marco Rocha
+54' 🟨 Lucas Ribeiro
+57' 🟨 Louis Rocha
+69' ⚽ Pedro Lopez
+77' ⚽ Louis Rocha
+87' 🟨 Miguel Oliveira
+CS -> Taldo FC (placar 2x0)
+   Lucas Ribeiro: 11
+
+⭐ MELHOR EM CAMPO
+Pedro Lopez (Atacante) - Nota 7.3
+
+
+========================================
+Rodada 31
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Athletic: força 84.5 | chance 55.0%
+FC Taldo: força 82.5 | chance 33.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Athletic 1 x 0 FC Taldo
+Taldo Athletic venceu!
+
+
+EVENTOS
+19' ⚽ Liam Costa
+CS -> Taldo Athletic (placar 1x0)
+   Harry Taylor: 6
+
+⭐ MELHOR EM CAMPO
+Liam Costa (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 81.1 | chance 78.2%
+EC Taldo: força 73.9 | chance 13.8%
+Chance empate: 8.0%
+--------------------------
+Taldo Rangers 4 x 1 EC Taldo
+Taldo Rangers venceu!
+
+
+EVENTOS
+6' ⚽ Rodrigo Araujo
+23' ⚽ Rodrigo Araujo
+32' ⚽ Francesco Pereira
+38' ⚽ Gabriel Rocha
+39' 🟨 Pierre Costa
+79' ⚽ Diego Ribeiro
+
+⭐ MELHOR EM CAMPO
+Gabriel Rocha (Meio-Campo) - Nota 8.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 82.8 | chance 41.6%
+Taldo Nacional: força 83.0 | chance 43.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 0 x 0 Taldo Nacional
+Empate!
+
+
+EVENTOS
+1' 🟨 Pierre Pereira
+16' 🟨 Diego Walker
+44' 🟨 Matheus Pereira
+83' 🟨 Alejandro Gomes
+CS -> Taldo Internacional (placar 0x0)
+   Matheus Wilson: 9
+CS -> Taldo Nacional (placar 0x0)
+   Bruno Rossi: 10
+
+⭐ MELHOR EM CAMPO
+Matheus Wilson (Goleiro) - Nota 6.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 83.0 | chance 39.3%
+Taldo Stars: força 83.6 | chance 45.7%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 3 x 2 Taldo Stars
+Sport Taldo venceu!
+
+
+EVENTOS
+16' ⚽ Thiago Lima
+20' 🟨 Luca Silva
+41' 🟨 Gustavo Moretti
+46' ⚽ Pablo Wilson
+50' ⚽ Noah Pereira
+55' 🟨 Oliver Pereira
+72' ⚽ Miguel Gomes
+75' ⚽ Leonardo Almeida
+
+⭐ MELHOR EM CAMPO
+Pablo Wilson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 83.9 | chance 66.1%
+Taldo Sporting: força 79.7 | chance 21.9%
+Chance empate: 12.0%
+--------------------------
+Atlético Taldo 0 x 2 Taldo Sporting
+Taldo Sporting venceu!
+
+
+EVENTOS
+12' 🟨 Caio Johnson
+33' ⚽ Diego Brown
+41' ⚽ Liam Rodriguez
+72' 🟨 Miguel Lopez
+CS -> Taldo Sporting (placar 2x0)
+   Luca Gomes: 6
+
+⭐ MELHOR EM CAMPO
+Liam Rodriguez (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 77.2 | chance 21.4%
+Taldo Galaxy: força 81.5 | chance 66.6%
+Chance empate: 12.0%
+--------------------------
+Taldo City 1 x 2 Taldo Galaxy
+Taldo Galaxy venceu!
+
+
+EVENTOS
+1' 🟨 Noah Walker
+2' 🟨 André Perez
+4' 🟨 Miguel Johnson
+15' ⚽ Arthur Johnson
+27' ⚽ Juan Pereira
+42' ⚽ Miguel Johnson
+
+⭐ MELHOR EM CAMPO
+Arthur Johnson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 83.2 | chance 45.3%
+Taldo Royals: força 82.6 | chance 39.7%
+Chance empate: 15.0%
+--------------------------
+Taldo United 0 x 1 Taldo Royals
+Taldo Royals venceu!
+
+
+EVENTOS
+27' 🟨 Harry Martin
+30' ⚽ Rodrigo Moretti
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 12
+
+⭐ MELHOR EM CAMPO
+Rodrigo Moretti (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 82.4 | chance 58.4%
+Taldo Warriors: força 79.6 | chance 29.6%
+Chance empate: 12.0%
+--------------------------
+Real Taldo 3 x 1 Taldo Warriors
+Real Taldo venceu!
+
+
+EVENTOS
+4' ⚽ Gabriel Rossi
+14' 🟨 João Silva
+28' 🟨 João Silva
+32' 🟨 Caio Gomes
+38' ⚽ Gabriel Barbosa
+43' 🟨 Isaque Souza
+52' 🟨 João Silva
+66' ⚽ Marco Perez
+82' ⚽ Juan Rocha
+85' 🟨 André Costa
+
+⭐ MELHOR EM CAMPO
+Juan Rocha (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 83.8 | chance 80.8%
+Taldo Legends: força 73.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo FC 3 x 0 Taldo Legends
+Taldo FC venceu!
+
+
+EVENTOS
+11' ⚽ Vinicius Brown
+23' ⚽ Luca Pereira
+52' ⚽ João Martin
+CS -> Taldo FC (placar 3x0)
+   Lucas Ribeiro: 12
+
+⭐ MELHOR EM CAMPO
+João Martin (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 80.4 | chance 34.2%
+Taldo Dragons: força 82.0 | chance 50.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Empire 2 x 1 Taldo Dragons
+Taldo Empire venceu!
+
+
+EVENTOS
+33' ⚽ Leonardo Araujo
+60' ⚽ Felipe Oliveira
+76' ⚽ Rodrigo Martins
+
+⭐ MELHOR EM CAMPO
+Leonardo Araujo (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 32
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Rangers: força 82.1 | chance 50.8%
+FC Taldo: força 80.5 | chance 34.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Rangers 1 x 0 FC Taldo
+Taldo Rangers venceu!
+
+
+EVENTOS
+79' ⚽ Gabriel Martin
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 13
+
+⭐ MELHOR EM CAMPO
+Gabriel Martin (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 33.7%
+Taldo Athletic: força 83.5 | chance 51.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 1 x 1 Taldo Athletic
+Empate!
+
+
+EVENTOS
+36' 🟨 Antoine Rossi
+74' ⚽ Francesco Brown
+82' ⚽ André Lima
+
+⭐ MELHOR EM CAMPO
+André Lima (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 84.0 | chance 80.8%
+EC Taldo: força 71.9 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Sport Taldo 3 x 2 EC Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+15' ⚽ Pablo Wilson
+40' 🟨 Diego Garcia
+44' ⚽ Thiago Lima
+51' 🟨 Lucas Rossi
+59' 🟨 Pedro Santos
+60' ⚽ (P) Pedro Dubois
+69' ⚽ Pablo Wilson
+69' ⚽ Gabriel Martins
+83' 🟨 Gabriel Mendes
+
+⭐ MELHOR EM CAMPO
+Pablo Wilson (Meio-Campo) - Nota 8.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 82.9 | chance 47.1%
+Taldo Nacional: força 82.0 | chance 37.9%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 2 x 1 Taldo Nacional
+Atlético Taldo venceu!
+
+
+EVENTOS
+9' 🟨 Louis Santos
+46' ⚽ Arthur Ribeiro
+47' ⚽ Alejandro Gomes
+62' ⚽ Arthur Costa
+
+⭐ MELHOR EM CAMPO
+Arthur Costa (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 78.2 | chance 20.5%
+Taldo Stars: força 82.6 | chance 67.5%
+Chance empate: 12.0%
+--------------------------
+Taldo City 1 x 2 Taldo Stars
+Taldo Stars venceu!
+
+
+EVENTOS
+2' ⚽ Alejandro Costa
+5' 🟨 Pablo Ferreira
+76' ⚽ Miguel Costa
+84' ⚽ Oliver Moretti
+
+⭐ MELHOR EM CAMPO
+Miguel Costa (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 82.2 | chance 49.9%
+Taldo Sporting: força 80.7 | chance 35.1%
+Chance empate: 15.0%
+--------------------------
+Taldo United 3 x 2 Taldo Sporting
+Taldo United venceu!
+
+
+EVENTOS
+9' 🟨 Miguel Lopez
+23' ⚽ Liam Rodriguez
+32' ⚽ João Wilson
+33' ⚽ Thiago Santos
+41' ⚽ Jack Lima
+70' 🟨 Marco Gomes
+88' ⚽ André Oliveira
+
+⭐ MELHOR EM CAMPO
+André Oliveira (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 82.4 | chance 42.0%
+Taldo Galaxy: força 82.5 | chance 43.0%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 0 x 1 Taldo Galaxy
+Taldo Galaxy venceu!
+
+
+EVENTOS
+1' 🟨 Thiago Dubois
+37' ⚽ Pedro Lima
+84' 🟨 Thiago Gomes
+CS -> Taldo Galaxy (placar 1x0)
+   Thiago Gomes: 9
+
+⭐ MELHOR EM CAMPO
+Pedro Lima (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 83.8 | chance 48.5%
+Taldo Royals: força 82.6 | chance 36.5%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 1 x 1 Taldo Royals
+Empate!
+
+
+EVENTOS
+15' 🟨 Marco Rocha
+28' 🟨 João Martin
+34' 🟨 Lucas Ribeiro
+46' ⚽ Juan Martins
+79' ⚽ Vinicius Brown
+
+⭐ MELHOR EM CAMPO
+Vinicius Brown (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 80.4 | chance 58.4%
+Taldo Warriors: força 77.6 | chance 29.6%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 0 x 2 Taldo Warriors
+Taldo Warriors venceu!
+
+
+EVENTOS
+27' ⚽ Marco Perez
+36' ⚽ João Silva
+51' 🟨 Carlos Ribeiro
+CS -> Taldo Warriors (placar 2x0)
+   Gabriel Bianchi: 6
+
+⭐ MELHOR EM CAMPO
+Marco Perez (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 83.0 | chance 80.8%
+Taldo Legends: força 73.4 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Dragons 2 x 0 Taldo Legends
+Taldo Dragons venceu!
+
+
+EVENTOS
+24' ⚽ Antoine Brown
+29' ⚽ Felipe Oliveira
+CS -> Taldo Dragons (placar 2x0)
+   Enzo Lopez: 6
+
+⭐ MELHOR EM CAMPO
+Felipe Oliveira (Defesa) - Nota 7.1
+
+
+========================================
+Rodada 33
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Internacional: força 81.8 | chance 44.4%
+FC Taldo: força 81.5 | chance 40.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Internacional 0 x 1 FC Taldo
+FC Taldo venceu!
+
+
+EVENTOS
+5' 🟨 Diego Walker
+11' ⚽ Rafael Martins
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 11
+
+⭐ MELHOR EM CAMPO
+Rafael Martins (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 82.0 | chance 47.1%
+Taldo Rangers: força 81.1 | chance 37.9%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 1 x 2 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+65' ⚽ Antoine Wilson
+82' ⚽ Diego Ribeiro
+89' ⚽ Pablo Garcia
+
+⭐ MELHOR EM CAMPO
+Diego Ribeiro (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 83.9 | chance 49.5%
+Taldo Athletic: força 82.5 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 1 x 1 Taldo Athletic
+Empate!
+
+
+EVENTOS
+5' ⚽ Arthur Costa
+65' ⚽ Noah Ribeiro
+
+⭐ MELHOR EM CAMPO
+Arthur Costa (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 76.2 | chance 66.6%
+EC Taldo: força 71.9 | chance 21.4%
+Chance empate: 12.0%
+--------------------------
+Taldo City 0 x 2 EC Taldo
+EC Taldo venceu!
+
+
+EVENTOS
+10' ⚽ Pedro Santos
+14' 🟨 Marco Rossi
+35' ⚽ Francesco Pereira
+CS -> EC Taldo (placar 2x0)
+   Miguel Smith: 11
+
+⭐ MELHOR EM CAMPO
+Francesco Pereira (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 83.2 | chance 43.4%
+Taldo Nacional: força 83.0 | chance 41.6%
+Chance empate: 15.0%
+--------------------------
+Taldo United 0 x 1 Taldo Nacional
+Taldo Nacional venceu!
+
+
+EVENTOS
+20' 🟨 Oliver Wilson
+44' ⚽ Vinicius Wilson
+CS -> Taldo Nacional (placar 1x0)
+   Bruno Rossi: 11
+
+⭐ MELHOR EM CAMPO
+Vinicius Wilson (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 46.2%
+Taldo Stars: força 82.6 | chance 38.8%
+Chance empate: 15.0%
+--------------------------
+Real Taldo 2 x 1 Taldo Stars
+Real Taldo venceu!
+
+
+EVENTOS
+14' ⚽ Miguel Costa
+24' ⚽ Isaque Souza
+25' 🟨 Pierre Silva
+86' ⚽ Pierre Silva
+
+⭐ MELHOR EM CAMPO
+Isaque Souza (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 82.8 | chance 60.3%
+Taldo Sporting: força 79.7 | chance 27.7%
+Chance empate: 12.0%
+--------------------------
+Taldo FC 0 x 2 Taldo Sporting
+Taldo Sporting venceu!
+
+
+EVENTOS
+9' ⚽ João Rocha
+35' 🟨 João Rocha
+62' ⚽ João Rocha
+78' 🟨 Antoine Martins
+CS -> Taldo Sporting (placar 2x0)
+   Luca Gomes: 7
+
+⭐ MELHOR EM CAMPO
+João Rocha (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 79.4 | chance 33.0%
+Taldo Galaxy: força 81.5 | chance 55.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 0 x 1 Taldo Galaxy
+Taldo Galaxy venceu!
+
+
+EVENTOS
+41' ⚽ Pablo Oliveira
+CS -> Taldo Galaxy (placar 1x0)
+   Thiago Gomes: 10
+
+⭐ MELHOR EM CAMPO
+Pablo Oliveira (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 83.0 | chance 49.5%
+Taldo Royals: força 81.6 | chance 35.5%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 0 Taldo Royals
+Taldo Dragons venceu!
+
+
+EVENTOS
+2' ⚽ Enzo Ferreira
+38' 🟨 Oliver Dubois
+CS -> Taldo Dragons (placar 1x0)
+   Enzo Lopez: 7
+
+⭐ MELHOR EM CAMPO
+Enzo Ferreira (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 74.4 | chance 26.7%
+Taldo Warriors: força 77.6 | chance 61.3%
+Chance empate: 12.0%
+--------------------------
+Taldo Legends 1 x 2 Taldo Warriors
+Taldo Warriors venceu!
+
+
+EVENTOS
+31' ⚽ Pedro Taylor
+33' ⚽ Juan Fernandez
+50' ⚽ Juan Johnson
+
+⭐ MELHOR EM CAMPO
+Pedro Taylor (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 34
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Sport Taldo: força 82.0 | chance 40.2%
+FC Taldo: força 82.5 | chance 44.8%
+Chance empate: 15.0%
+--------------------------
+Sport Taldo 1 x 1 FC Taldo
+Empate!
+
+
+EVENTOS
+22' ⚽ Gabriel Mendes
+71' ⚽ Francesco Fernandez
+
+⭐ MELHOR EM CAMPO
+Gabriel Mendes (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 81.9 | chance 43.0%
+Taldo Internacional: força 81.8 | chance 42.0%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 2 x 1 Taldo Internacional
+Atlético Taldo venceu!
+
+
+EVENTOS
+5' 🟨 Noah Ferreira
+42' ⚽ Liam Barbosa
+61' ⚽ Louis Smith
+63' 🟨 Jack Rocha
+88' ⚽ Harry Araujo
+
+⭐ MELHOR EM CAMPO
+Louis Smith (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 78.2 | chance 37.9%
+Taldo Rangers: força 79.1 | chance 47.1%
+Chance empate: 15.0%
+--------------------------
+Taldo City 2 x 1 Taldo Rangers
+Taldo City venceu!
+
+
+EVENTOS
+2' ⚽ Thiago Johnson
+17' 🟨 Miguel Walker
+34' 🟨 André Perez
+36' ⚽ Miguel Johnson
+80' ⚽ Diego Ribeiro
+
+⭐ MELHOR EM CAMPO
+Thiago Johnson (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 81.2 | chance 35.5%
+Taldo Athletic: força 82.5 | chance 49.5%
+Chance empate: 15.0%
+--------------------------
+Taldo United 1 x 1 Taldo Athletic
+Empate!
+
+
+EVENTOS
+10' ⚽ (P) Thiago Santos
+33' ⚽ Alejandro Taylor
+38' 🟨 Miguel Araujo
+
+⭐ MELHOR EM CAMPO
+Thiago Santos (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 80.8%
+EC Taldo: força 73.9 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Real Taldo 2 x 0 EC Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+2' ⚽ Caio Gomes
+13' 🟨 Jack Silva
+52' ⚽ Jack Silva
+73' 🟨 Jack Silva
+CS -> Real Taldo (placar 2x0)
+   Pierre Brown: 9
+
+⭐ MELHOR EM CAMPO
+Jack Silva (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 82.8 | chance 41.6%
+Taldo Nacional: força 83.0 | chance 43.4%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 1 x 2 Taldo Nacional
+Taldo Nacional venceu!
+
+
+EVENTOS
+9' ⚽ Pedro Lopez
+28' 🟨 Luca Pereira
+28' 🟥 Luca Pereira
+57' ⚽ Louis Santos
+62' 🟨 Miguel Moretti
+74' 🟨 Vinicius Wilson
+88' ⚽ Alejandro Gomes
+
+⭐ MELHOR EM CAMPO
+Louis Santos (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 80.4 | chance 32.0%
+Taldo Stars: força 82.6 | chance 56.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 2 x 1 Taldo Stars
+Taldo Empire venceu!
+
+
+EVENTOS
+7' ⚽ Miguel Costa
+15' 🟨 Noah Pereira
+35' ⚽ Rodrigo Martins
+64' 🟨 Jack Ribeiro
+71' ⚽ Rodrigo Martins
+
+⭐ MELHOR EM CAMPO
+Rodrigo Martins (Atacante) - Nota 7.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 81.0 | chance 38.8%
+Taldo Sporting: força 81.7 | chance 46.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 2 Taldo Sporting
+Taldo Sporting venceu!
+
+
+EVENTOS
+2' ⚽ Jack Lima
+4' ⚽ Liam Rodriguez
+24' ⚽ Antoine Brown
+42' 🟨 Caio Johnson
+49' 🟨 Antoine Brown
+
+⭐ MELHOR EM CAMPO
+Jack Lima (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 73.4 | chance 14.2%
+Taldo Galaxy: força 82.5 | chance 80.8%
+Chance empate: 5.0%
+--------------------------
+Taldo Legends 1 x 0 Taldo Galaxy
+Taldo Legends venceu!
+
+
+EVENTOS
+19' ⚽ Pablo Rossi
+CS -> Taldo Legends (placar 1x0)
+   Gabriel Rodriguez: 1
+
+⭐ MELHOR EM CAMPO
+Pablo Rossi (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 80.6 | chance 32.3%
+Taldo Royals: força 82.6 | chance 52.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 2 x 1 Taldo Royals
+Taldo Warriors venceu!
+
+
+EVENTOS
+20' ⚽ Marco Perez
+37' ⚽ André Garcia
+44' ⚽ Giovanni Johnson
+46' 🟨 Juan Fernandez
+
+⭐ MELHOR EM CAMPO
+Giovanni Johnson (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 35
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Atlético Taldo: força 82.9 | chance 44.8%
+FC Taldo: força 82.5 | chance 40.2%
+Chance empate: 15.0%
+--------------------------
+Atlético Taldo 0 x 1 FC Taldo
+FC Taldo venceu!
+
+
+EVENTOS
+84' ⚽ Leonardo Mendes
+85' 🟨 Luca Rodriguez
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 12
+
+⭐ MELHOR EM CAMPO
+Leonardo Mendes (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 78.2 | chance 29.1%
+Sport Taldo: força 81.0 | chance 58.9%
+Chance empate: 12.0%
+--------------------------
+Taldo City 0 x 2 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+15' ⚽ Thiago Lima
+23' 🟨 Antoine Wilson
+33' 🟨 Thiago Fernandez
+74' ⚽ Pablo Wilson
+CS -> Sport Taldo (placar 2x0)
+   Jack Souza: 13
+
+⭐ MELHOR EM CAMPO
+Thiago Lima (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 81.2 | chance 34.2%
+Taldo Internacional: força 82.8 | chance 50.8%
+Chance empate: 15.0%
+--------------------------
+Taldo United 1 x 2 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+3' ⚽ Pierre Pereira
+16' 🟨 Thiago Santos
+31' ⚽ Diego Walker
+66' 🟨 Antoine Smith
+82' ⚽ Carlos Fernandez
+
+⭐ MELHOR EM CAMPO
+Pierre Pereira (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 66.6%
+Taldo Rangers: força 79.1 | chance 21.4%
+Chance empate: 12.0%
+--------------------------
+Real Taldo 2 x 0 Taldo Rangers
+Real Taldo venceu!
+
+
+EVENTOS
+49' ⚽ Isaque Souza
+55' ⚽ Pierre Silva
+83' 🟨 Pierre Silva
+CS -> Real Taldo (placar 2x0)
+   Pierre Brown: 10
+
+⭐ MELHOR EM CAMPO
+Isaque Souza (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 82.8 | chance 38.8%
+Taldo Athletic: força 83.5 | chance 46.2%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 2 x 1 Taldo Athletic
+Taldo FC venceu!
+
+
+EVENTOS
+12' ⚽ Louis Rocha
+33' 🟨 Francesco Walker
+52' 🟨 Luca Pereira
+72' ⚽ Antoine Martins
+74' ⚽ Jack Bianchi
+
+⭐ MELHOR EM CAMPO
+Louis Rocha (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 78.4 | chance 78.2%
+EC Taldo: força 71.9 | chance 13.8%
+Chance empate: 8.0%
+--------------------------
+Taldo Empire 3 x 1 EC Taldo
+Taldo Empire venceu!
+
+
+EVENTOS
+22' ⚽ Carlos Ribeiro
+41' ⚽ Pedro Mendes
+59' ⚽ Pedro Mendes
+60' ⚽ Arthur Dubois
+
+⭐ MELHOR EM CAMPO
+Pedro Mendes (Defesa) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 83.0 | chance 47.6%
+Taldo Nacional: força 82.0 | chance 37.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 2 x 2 Taldo Nacional
+Empate!
+
+
+EVENTOS
+6' ⚽ Alejandro Brown
+25' 🟨 Pablo Martin
+27' 🟨 Giovanni Ribeiro
+30' ⚽ Diego Lima
+49' ⚽ Enzo Ferreira
+54' ⚽ Alejandro Gomes
+61' 🟨 Louis Walker
+
+⭐ MELHOR EM CAMPO
+Enzo Ferreira (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 73.4 | chance 14.2%
+Taldo Stars: força 81.6 | chance 80.8%
+Chance empate: 5.0%
+--------------------------
+Taldo Legends 0 x 1 Taldo Stars
+Taldo Stars venceu!
+
+
+EVENTOS
+72' ⚽ Antoine Walker
+CS -> Taldo Stars (placar 1x0)
+   Gustavo Moretti: 8
+
+⭐ MELHOR EM CAMPO
+Antoine Walker (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 79.6 | chance 42.0%
+Taldo Sporting: força 79.7 | chance 43.0%
+Chance empate: 15.0%
+--------------------------
+Taldo Warriors 1 x 0 Taldo Sporting
+Taldo Warriors venceu!
+
+
+EVENTOS
+24' 🟨 Juan Fernandez
+47' ⚽ Marco Perez
+83' 🟨 Jack Lima
+CS -> Taldo Warriors (placar 1x0)
+   Gabriel Bianchi: 7
+
+⭐ MELHOR EM CAMPO
+Marco Perez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 81.6 | chance 38.3%
+Taldo Galaxy: força 82.5 | chance 46.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 0 Taldo Galaxy
+Taldo Royals venceu!
+
+
+EVENTOS
+21' ⚽ Pablo Johnson
+36' 🟨 Rodrigo Moretti
+84' 🟨 João Araujo
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 13
+
+⭐ MELHOR EM CAMPO
+Pablo Johnson (Atacante) - Nota 7.1
+
+
+========================================
+Rodada 36
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo City: força 78.2 | chance 26.7%
+FC Taldo: força 81.5 | chance 61.3%
+Chance empate: 12.0%
+--------------------------
+Taldo City 0 x 1 FC Taldo
+FC Taldo venceu!
+
+
+EVENTOS
+7' ❌ (P) Alejandro Costa
+46' ⚽ Luca Rodriguez
+63' 🟨 Noah Smith
+CS -> FC Taldo (placar 1x0)
+   Noah Smith: 13
+
+⭐ MELHOR EM CAMPO
+Luca Rodriguez (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 81.2 | chance 43.9%
+Atlético Taldo: força 80.9 | chance 41.1%
+Chance empate: 15.0%
+--------------------------
+Taldo United 0 x 1 Atlético Taldo
+Atlético Taldo venceu!
+
+
+EVENTOS
+49' ⚽ Arthur Costa
+56' 🟨 Marco Gomes
+CS -> Atlético Taldo (placar 1x0)
+   Gustavo Johnson: 11
+
+⭐ MELHOR EM CAMPO
+Arthur Costa (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 83.4 | chance 56.5%
+Sport Taldo: força 81.0 | chance 31.5%
+Chance empate: 12.0%
+--------------------------
+Real Taldo 1 x 0 Sport Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+73' ⚽ Isaque Souza
+CS -> Real Taldo (placar 1x0)
+   Pierre Brown: 11
+
+⭐ MELHOR EM CAMPO
+Isaque Souza (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 83.8 | chance 52.7%
+Taldo Internacional: força 81.8 | chance 32.3%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 1 x 0 Taldo Internacional
+Taldo FC venceu!
+
+
+EVENTOS
+61' ⚽ Miguel Santos
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 13
+
+⭐ MELHOR EM CAMPO
+Miguel Santos (Defesa) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 79.4 | chance 33.7%
+Taldo Rangers: força 81.1 | chance 51.3%
+Chance empate: 15.0%
+--------------------------
+Taldo Empire 0 x 1 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+10' 🟨 Diego Ribeiro
+11' 🟨 Gabriel Rocha
+36' 🟨 Rodrigo Araujo
+62' 🟨 Pierre Costa
+79' ⚽ Marco Martins
+CS -> Taldo Rangers (placar 1x0)
+   Antoine Rodriguez: 14
+
+⭐ MELHOR EM CAMPO
+Marco Martins (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 82.0 | chance 34.6%
+Taldo Athletic: força 83.5 | chance 50.4%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 2 Taldo Athletic
+Taldo Athletic venceu!
+
+
+EVENTOS
+14' 🟨 Liam Wilson
+22' ⚽ Jack Bianchi
+46' ⚽ André Lima
+60' 🟨 Juan Mendes
+62' ⚽ Enzo Ferreira
+86' 🟨 André Lima
+
+⭐ MELHOR EM CAMPO
+André Lima (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 74.4 | chance 44.8%
+EC Taldo: força 73.9 | chance 40.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Legends 2 x 2 EC Taldo
+Empate!
+
+
+EVENTOS
+3' ⚽ Arthur Wilson
+5' ⚽ Rodrigo Brown
+33' ⚽ Arthur Dubois
+74' ⚽ Pablo Rossi
+
+⭐ MELHOR EM CAMPO
+Rodrigo Brown (Atacante) - Nota 6.8
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 80.6 | chance 31.5%
+Taldo Nacional: força 83.0 | chance 56.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 1 x 2 Taldo Nacional
+Taldo Nacional venceu!
+
+
+EVENTOS
+6' ⚽ João Silva
+22' ⚽ Louis Santos
+39' ⚽ Alejandro Gomes
+64' 🟨 Giovanni Johnson
+66' 🟨 Diego Almeida
+72' 🟨 Pierre Mendes
+
+⭐ MELHOR EM CAMPO
+Louis Santos (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 81.6 | chance 37.4%
+Taldo Stars: força 82.6 | chance 47.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 2 Taldo Stars
+Taldo Stars venceu!
+
+
+EVENTOS
+9' 🟨 Noah Pereira
+12' 🟨 Gustavo Moretti
+34' ⚽ Antoine Walker
+80' ⚽ Juan Martins
+86' ⚽ Antoine Walker
+
+⭐ MELHOR EM CAMPO
+Antoine Walker (Meio-Campo) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 51.3%
+Taldo Sporting: força 80.7 | chance 33.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 3 x 2 Taldo Sporting
+Taldo Galaxy venceu!
+
+
+EVENTOS
+19' ⚽ Miguel Lopez
+51' ⚽ Noah Walker
+52' ⚽ Pablo Oliveira
+55' 🟨 Diego Brown
+75' ⚽ João Rocha
+76' ⚽ João Araujo
+
+⭐ MELHOR EM CAMPO
+João Araujo (Meio-Campo) - Nota 7.2
+
+
+========================================
+Rodada 37
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Taldo United: força 83.2 | chance 58.4%
+FC Taldo: força 80.5 | chance 29.6%
+Chance empate: 12.0%
+--------------------------
+Taldo United 3 x 0 FC Taldo
+Taldo United venceu!
+
+
+EVENTOS
+18' ⚽ Harry Fernandez
+36' ⚽ (P) Harry Fernandez
+39' ⚽ Oliver Wilson
+50' 🟨 Carlos Fernandez
+CS -> Taldo United (placar 3x0)
+   Miguel Araujo: 12
+
+⭐ MELHOR EM CAMPO
+Harry Fernandez (Defesa) - Nota 7.7
+
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 82.4 | chance 74.6%
+Taldo City: força 77.2 | chance 17.4%
+Chance empate: 8.0%
+--------------------------
+Real Taldo 2 x 1 Taldo City
+Real Taldo venceu!
+
+
+EVENTOS
+22' ⚽ Francesco Dubois
+41' ⚽ Miguel Walker
+84' ⚽ Gabriel Barbosa
+
+⭐ MELHOR EM CAMPO
+Gabriel Barbosa (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 83.8 | chance 47.1%
+Atlético Taldo: força 82.9 | chance 37.9%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 3 x 2 Atlético Taldo
+Taldo FC venceu!
+
+
+EVENTOS
+10' ⚽ João Martin
+11' ⚽ Harry Araujo
+22' 🟨 Louis Rocha
+52' ⚽ Pedro Lopez
+71' ⚽ Vinicius Brown
+76' ⚽ Harry Araujo
+80' 🟨 Lucas Ribeiro
+
+⭐ MELHOR EM CAMPO
+Louis Rocha (Meio-Campo) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 80.4 | chance 39.3%
+Sport Taldo: força 81.0 | chance 45.7%
+Chance empate: 15.0%
+--------------------------
+Taldo Empire 2 x 1 Sport Taldo
+Taldo Empire venceu!
+
+
+EVENTOS
+37' ⚽ Miguel Oliveira
+62' 🟨 Oliver Pereira
+80' ⚽ Thiago Smith
+82' ⚽ Thiago Walker
+90' 🟨 Miguel Oliveira
+
+⭐ MELHOR EM CAMPO
+Thiago Smith (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 81.0 | chance 33.2%
+Taldo Internacional: força 82.8 | chance 51.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Dragons 1 x 0 Taldo Internacional
+Taldo Dragons venceu!
+
+
+EVENTOS
+66' ⚽ Oliver Dubois
+74' 🟨 Antoine Brown
+CS -> Taldo Dragons (placar 1x0)
+   Enzo Lopez: 8
+
+⭐ MELHOR EM CAMPO
+Oliver Dubois (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 73.4 | chance 13.8%
+Taldo Rangers: força 80.1 | chance 78.2%
+Chance empate: 8.0%
+--------------------------
+Taldo Legends 0 x 2 Taldo Rangers
+Taldo Rangers venceu!
+
+
+EVENTOS
+11' ⚽ Marco Martins
+83' ⚽ Marco Martins
+CS -> Taldo Rangers (placar 2x0)
+   Antoine Rodriguez: 15
+
+⭐ MELHOR EM CAMPO
+Marco Martins (Atacante) - Nota 8.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 18.1%
+Taldo Athletic: força 83.5 | chance 69.9%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 0 x 1 Taldo Athletic
+Taldo Athletic venceu!
+
+
+EVENTOS
+46' 🟨 Lucas Ferreira
+71' ⚽ Juan Mendes
+CS -> Taldo Athletic (placar 1x0)
+   Harry Taylor: 7
+
+⭐ MELHOR EM CAMPO
+Juan Mendes (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 83.6 | chance 80.8%
+EC Taldo: força 72.9 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Royals 3 x 0 EC Taldo
+Taldo Royals venceu!
+
+
+EVENTOS
+19' ⚽ Pablo Johnson
+30' 🟨 Pedro Santos
+52' 🟨 Juan Martins
+54' ⚽ Rodrigo Moretti
+55' ⚽ Caio Walker
+83' 🟨 Arthur Wilson
+CS -> Taldo Royals (placar 3x0)
+   Gabriel Fernandez: 14
+
+⭐ MELHOR EM CAMPO
+Pablo Johnson (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 82.5 | chance 44.8%
+Taldo Nacional: força 82.0 | chance 40.2%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 1 x 1 Taldo Nacional
+Empate!
+
+
+EVENTOS
+25' ⚽ Alejandro Gomes
+26' ⚽ Pedro Lima
+53' 🟨 Noah Walker
+
+⭐ MELHOR EM CAMPO
+Alejandro Gomes (Meio-Campo) - Nota 6.9
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 82.7 | chance 37.9%
+Taldo Stars: força 83.6 | chance 47.1%
+Chance empate: 15.0%
+--------------------------
+Taldo Sporting 2 x 1 Taldo Stars
+Taldo Sporting venceu!
+
+
+EVENTOS
+11' 🟨 Jack Ribeiro
+21' ⚽ Miguel Costa
+26' ⚽ João Rocha
+51' 🟨 Antoine Walker
+54' ⚽ João Rocha
+90' 🟨 Antoine Walker
+
+⭐ MELHOR EM CAMPO
+João Rocha (Atacante) - Nota 7.9
+
+
+========================================
+Rodada 38
+========================================
+
+--- ANÁLISE DA PARTIDA ---
+Real Taldo: força 84.4 | chance 64.6%
+FC Taldo: força 80.5 | chance 23.4%
+Chance empate: 12.0%
+--------------------------
+Real Taldo 3 x 1 FC Taldo
+Real Taldo venceu!
+
+
+EVENTOS
+3' ⚽ Luca Rodriguez
+16' ⚽ Juan Rocha
+19' 🟨 Pierre Silva
+21' ⚽ Gabriel Barbosa
+89' ⚽ Gabriel Rossi
+
+⭐ MELHOR EM CAMPO
+Juan Rocha (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo FC: força 83.8 | chance 50.8%
+Taldo United: força 82.2 | chance 34.2%
+Chance empate: 15.0%
+--------------------------
+Taldo FC 1 x 0 Taldo United
+Taldo FC venceu!
+
+
+EVENTOS
+2' ⚽ Pedro Lopez
+CS -> Taldo FC (placar 1x0)
+   Lucas Ribeiro: 14
+
+⭐ MELHOR EM CAMPO
+Pedro Lopez (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Empire: força 79.4 | chance 66.1%
+Taldo City: força 75.2 | chance 21.9%
+Chance empate: 12.0%
+--------------------------
+Taldo Empire 2 x 1 Taldo City
+Taldo Empire venceu!
+
+
+EVENTOS
+4' ⚽ Pedro Mendes
+50' ⚽ Leonardo Araujo
+79' ⚽ Leonardo Rodriguez
+
+⭐ MELHOR EM CAMPO
+Leonardo Araujo (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Dragons: força 83.0 | chance 55.0%
+Atlético Taldo: força 80.9 | chance 33.0%
+Chance empate: 12.0%
+--------------------------
+Taldo Dragons 2 x 1 Atlético Taldo
+Taldo Dragons venceu!
+
+
+EVENTOS
+46' ⚽ Louis Walker
+50' ⚽ Felipe Oliveira
+60' ⚽ Rafael Costa
+
+⭐ MELHOR EM CAMPO
+Louis Walker (Atacante) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Legends: força 74.4 | chance 14.2%
+Sport Taldo: força 83.0 | chance 80.8%
+Chance empate: 5.0%
+--------------------------
+Taldo Legends 0 x 2 Sport Taldo
+Sport Taldo venceu!
+
+
+EVENTOS
+74' ⚽ Antoine Wilson
+74' ⚽ Luca Dubois
+CS -> Sport Taldo (placar 2x0)
+   Jack Souza: 14
+
+⭐ MELHOR EM CAMPO
+Luca Dubois (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Warriors: força 78.6 | chance 32.5%
+Taldo Internacional: força 80.8 | chance 55.5%
+Chance empate: 12.0%
+--------------------------
+Taldo Warriors 0 x 2 Taldo Internacional
+Taldo Internacional venceu!
+
+
+EVENTOS
+30' 🟨 Liam Barbosa
+49' 🟨 Giovanni Johnson
+60' 🟨 Matheus Wilson
+72' ⚽ Pierre Pereira
+73' ⚽ Jack Rocha
+76' 🟨 Diego Gomes
+CS -> Taldo Internacional (placar 2x0)
+   Matheus Wilson: 10
+
+⭐ MELHOR EM CAMPO
+Pierre Pereira (Atacante) - Nota 7.3
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Royals: força 82.6 | chance 50.4%
+Taldo Rangers: força 81.1 | chance 34.6%
+Chance empate: 15.0%
+--------------------------
+Taldo Royals 1 x 0 Taldo Rangers
+Taldo Royals venceu!
+
+
+EVENTOS
+47' 🟨 Pierre Dubois
+73' ⚽ Caio Walker
+CS -> Taldo Royals (placar 1x0)
+   Gabriel Fernandez: 15
+
+⭐ MELHOR EM CAMPO
+Caio Walker (Meio-Campo) - Nota 7.2
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Galaxy: força 83.5 | chance 52.2%
+Taldo Athletic: força 81.5 | chance 32.8%
+Chance empate: 15.0%
+--------------------------
+Taldo Galaxy 1 x 0 Taldo Athletic
+Taldo Galaxy venceu!
+
+
+EVENTOS
+4' 🟨 Lucas Bianchi
+9' ⚽ André Santos
+20' 🟨 Noah Walker
+54' 🟨 Noah Ribeiro
+CS -> Taldo Galaxy (placar 1x0)
+   Thiago Gomes: 11
+
+⭐ MELHOR EM CAMPO
+André Santos (Atacante) - Nota 7.1
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Sporting: força 82.7 | chance 80.8%
+EC Taldo: força 71.9 | chance 14.3%
+Chance empate: 5.0%
+--------------------------
+Taldo Sporting 3 x 1 EC Taldo
+Taldo Sporting venceu!
+
+
+EVENTOS
+5' ⚽ Rafael Taylor
+20' ⚽ Rafael Taylor
+56' ⚽ João Rocha
+58' ⚽ Juan Ferreira
+65' 🟨 Diego Brown
+
+⭐ MELHOR EM CAMPO
+Rafael Taylor (Defesa) - Nota 7.5
+
+
+--- ANÁLISE DA PARTIDA ---
+Taldo Stars: força 84.6 | chance 63.2%
+Taldo Nacional: força 81.0 | chance 24.8%
+Chance empate: 12.0%
+--------------------------
+Taldo Stars 0 x 0 Taldo Nacional
+Empate!
+
+
+EVENTOS
+70' 🟨 Giovanni Ribeiro
+CS -> Taldo Stars (placar 0x0)
+   Gustavo Moretti: 9
+CS -> Taldo Nacional (placar 0x0)
+   Bruno Rossi: 12
+
+⭐ MELHOR EM CAMPO
+Gustavo Moretti (Goleiro) - Nota 6.2
+
+Classificação do campeonato Taldo:
+1. Sport Taldo | P: 75 | J: 38 | V: 23 | E: 6 | D: 9 | GP: 51 | GC: 34 | SG: 17 | Forma: E V D D V
+2. Taldo FC | P: 72 | J: 38 | V: 23 | E: 3 | D: 12 | GP: 48 | GC: 34 | SG: 14 | Forma: D V V V V
+3. Taldo Nacional | P: 71 | J: 38 | V: 21 | E: 8 | D: 9 | GP: 48 | GC: 34 | SG: 14 | Forma: V E V E E
+4. Real Taldo | P: 66 | J: 38 | V: 21 | E: 3 | D: 14 | GP: 49 | GC: 38 | SG: 11 | Forma: V V V V V
+5. Atlético Taldo | P: 65 | J: 38 | V: 21 | E: 2 | D: 15 | GP: 56 | GC: 41 | SG: 15 | Forma: V D V D D
+6. Taldo Rangers | P: 65 | J: 38 | V: 21 | E: 2 | D: 15 | GP: 44 | GC: 32 | SG: 12 | Forma: D D V V D
+7. Taldo Stars | P: 65 | J: 38 | V: 20 | E: 5 | D: 13 | GP: 52 | GC: 42 | SG: 10 | Forma: D V V D E
+8. Taldo Internacional | P: 64 | J: 38 | V: 19 | E: 7 | D: 12 | GP: 46 | GC: 34 | SG: 12 | Forma: D V D D V
+9. Taldo Royals | P: 61 | J: 38 | V: 19 | E: 4 | D: 15 | GP: 41 | GC: 33 | SG: 8 | Forma: D V D V V
+10. FC Taldo | P: 59 | J: 38 | V: 17 | E: 8 | D: 13 | GP: 41 | GC: 40 | SG: 1 | Forma: E V V D D
+11. Taldo United | P: 56 | J: 38 | V: 17 | E: 5 | D: 16 | GP: 43 | GC: 37 | SG: 6 | Forma: E D D V D
+12. Taldo Athletic | P: 53 | J: 38 | V: 16 | E: 5 | D: 17 | GP: 43 | GC: 44 | SG: -1 | Forma: E D V V D
+13. Taldo Galaxy | P: 52 | J: 38 | V: 15 | E: 7 | D: 16 | GP: 41 | GC: 38 | SG: 3 | Forma: D D V E V
+14. EC Taldo | P: 49 | J: 38 | V: 15 | E: 4 | D: 19 | GP: 46 | GC: 49 | SG: -3 | Forma: D D E D D
+15. Taldo Sporting | P: 48 | J: 38 | V: 13 | E: 9 | D: 16 | GP: 47 | GC: 45 | SG: 2 | Forma: V D D V V
+16. Taldo Empire | P: 47 | J: 38 | V: 15 | E: 2 | D: 21 | GP: 38 | GC: 49 | SG: -11 | Forma: V V D V V
+17. Taldo Dragons | P: 46 | J: 38 | V: 13 | E: 7 | D: 18 | GP: 41 | GC: 48 | SG: -7 | Forma: D E D V V
+18. Taldo City | P: 37 | J: 38 | V: 11 | E: 4 | D: 23 | GP: 30 | GC: 47 | SG: -17 | Forma: V D D D D
+19. Taldo Warriors | P: 33 | J: 38 | V: 10 | E: 3 | D: 25 | GP: 29 | GC: 54 | SG: -25 | Forma: V V D D D
+20. Taldo Legends | P: 8 | J: 38 | V: 2 | E: 2 | D: 34 | GP: 21 | GC: 82 | SG: -61 | Forma: V D E D D
+Histórico do campeonato Taldo:
+- Rodada 1: FC Taldo 2 x 1 Taldo FC
+- Rodada 1: Real Taldo 2 x 1 Taldo Empire
+- Rodada 1: Taldo United 0 x 1 Taldo Dragons
+- Rodada 1: Taldo City 2 x 1 Taldo Legends
+- Rodada 1: Atlético Taldo 3 x 0 Taldo Warriors
+- Rodada 1: Sport Taldo 1 x 0 Taldo Royals
+- Rodada 1: Taldo Internacional 1 x 1 Taldo Galaxy
+- Rodada 1: Taldo Rangers 1 x 1 Taldo Sporting
+- Rodada 1: Taldo Athletic 2 x 1 Taldo Stars
+- Rodada 1: EC Taldo 1 x 2 Taldo Nacional
+- Rodada 2: FC Taldo 1 x 0 Taldo Empire
+- Rodada 2: Taldo FC 2 x 1 Taldo Dragons
+- Rodada 2: Real Taldo 3 x 0 Taldo Legends
+- Rodada 2: Taldo United 3 x 1 Taldo Warriors
+- Rodada 2: Taldo City 1 x 0 Taldo Royals
+- Rodada 2: Atlético Taldo 0 x 1 Taldo Galaxy
+- Rodada 2: Sport Taldo 3 x 1 Taldo Sporting
+- Rodada 2: Taldo Internacional 1 x 2 Taldo Stars
+- Rodada 2: Taldo Rangers 0 x 1 Taldo Nacional
+- Rodada 2: Taldo Athletic 1 x 2 EC Taldo
+- Rodada 3: FC Taldo 1 x 0 Taldo Dragons
+- Rodada 3: Taldo Empire 2 x 1 Taldo Legends
+- Rodada 3: Taldo FC 3 x 0 Taldo Warriors
+- Rodada 3: Real Taldo 1 x 2 Taldo Royals
+- Rodada 3: Taldo United 0 x 0 Taldo Galaxy
+- Rodada 3: Taldo City 0 x 0 Taldo Sporting
+- Rodada 3: Atlético Taldo 4 x 2 Taldo Stars
+- Rodada 3: Sport Taldo 2 x 1 Taldo Nacional
+- Rodada 3: Taldo Internacional 2 x 1 EC Taldo
+- Rodada 3: Taldo Rangers 2 x 1 Taldo Athletic
+- Rodada 4: FC Taldo 2 x 0 Taldo Legends
+- Rodada 4: Taldo Dragons 1 x 0 Taldo Warriors
+- Rodada 4: Taldo Empire 1 x 0 Taldo Royals
+- Rodada 4: Taldo FC 0 x 0 Taldo Galaxy
+- Rodada 4: Real Taldo 2 x 1 Taldo Sporting
+- Rodada 4: Taldo United 1 x 2 Taldo Stars
+- Rodada 4: Taldo City 1 x 2 Taldo Nacional
+- Rodada 4: Atlético Taldo 1 x 2 EC Taldo
+- Rodada 4: Sport Taldo 1 x 0 Taldo Athletic
+- Rodada 4: Taldo Internacional 2 x 1 Taldo Rangers
+- Rodada 5: FC Taldo 1 x 0 Taldo Warriors
+- Rodada 5: Taldo Legends 0 x 2 Taldo Royals
+- Rodada 5: Taldo Dragons 1 x 1 Taldo Galaxy
+- Rodada 5: Taldo Empire 2 x 0 Taldo Sporting
+- Rodada 5: Taldo FC 1 x 0 Taldo Stars
+- Rodada 5: Real Taldo 2 x 1 Taldo Nacional
+- Rodada 5: Taldo United 1 x 0 EC Taldo
+- Rodada 5: Taldo City 1 x 0 Taldo Athletic
+- Rodada 5: Atlético Taldo 2 x 0 Taldo Rangers
+- Rodada 5: Sport Taldo 2 x 1 Taldo Internacional
+- Rodada 6: FC Taldo 0 x 0 Taldo Royals
+- Rodada 6: Taldo Warriors 2 x 0 Taldo Galaxy
+- Rodada 6: Taldo Legends 1 x 2 Taldo Sporting
+- Rodada 6: Taldo Dragons 2 x 1 Taldo Stars
+- Rodada 6: Taldo Empire 0 x 2 Taldo Nacional
+- Rodada 6: Taldo FC 2 x 1 EC Taldo
+- Rodada 6: Real Taldo 1 x 2 Taldo Athletic
+- Rodada 6: Taldo United 0 x 2 Taldo Rangers
+- Rodada 6: Taldo City 1 x 2 Taldo Internacional
+- Rodada 6: Atlético Taldo 0 x 1 Sport Taldo
+- Rodada 7: FC Taldo 1 x 1 Taldo Galaxy
+- Rodada 7: Taldo Royals 2 x 1 Taldo Sporting
+- Rodada 7: Taldo Warriors 0 x 1 Taldo Stars
+- Rodada 7: Taldo Legends 1 x 2 Taldo Nacional
+- Rodada 7: Taldo Dragons 1 x 0 EC Taldo
+- Rodada 7: Taldo Empire 0 x 1 Taldo Athletic
+- Rodada 7: Taldo FC 1 x 0 Taldo Rangers
+- Rodada 7: Real Taldo 1 x 2 Taldo Internacional
+- Rodada 7: Taldo United 1 x 2 Sport Taldo
+- Rodada 7: Taldo City 0 x 2 Atlético Taldo
+- Rodada 8: FC Taldo 1 x 0 Taldo Sporting
+- Rodada 8: Taldo Galaxy 2 x 2 Taldo Stars
+- Rodada 8: Taldo Royals 1 x 1 Taldo Nacional
+- Rodada 8: Taldo Warriors 0 x 1 EC Taldo
+- Rodada 8: Taldo Legends 1 x 2 Taldo Athletic
+- Rodada 8: Taldo Dragons 1 x 2 Taldo Rangers
+- Rodada 8: Taldo Empire 1 x 0 Taldo Internacional
+- Rodada 8: Taldo FC 1 x 2 Sport Taldo
+- Rodada 8: Real Taldo 1 x 0 Atlético Taldo
+- Rodada 8: Taldo United 1 x 0 Taldo City
+- Rodada 9: FC Taldo 2 x 1 Taldo Stars
+- Rodada 9: Taldo Sporting 1 x 0 Taldo Nacional
+- Rodada 9: Taldo Galaxy 0 x 1 EC Taldo
+- Rodada 9: Taldo Royals 1 x 2 Taldo Athletic
+- Rodada 9: Taldo Warriors 1 x 2 Taldo Rangers
+- Rodada 9: Taldo Legends 0 x 2 Taldo Internacional
+- Rodada 9: Taldo Dragons 1 x 2 Sport Taldo
+- Rodada 9: Taldo Empire 1 x 2 Atlético Taldo
+- Rodada 9: Taldo FC 0 x 1 Taldo City
+- Rodada 9: Real Taldo 0 x 2 Taldo United
+- Rodada 10: FC Taldo 0 x 0 Taldo Nacional
+- Rodada 10: Taldo Stars 1 x 0 EC Taldo
+- Rodada 10: Taldo Sporting 2 x 1 Taldo Athletic
+- Rodada 10: Taldo Galaxy 0 x 2 Taldo Rangers
+- Rodada 10: Taldo Royals 1 x 0 Taldo Internacional
+- Rodada 10: Taldo Warriors 0 x 0 Sport Taldo
+- Rodada 10: Taldo Legends 3 x 2 Atlético Taldo
+- Rodada 10: Taldo Dragons 1 x 0 Taldo City
+- Rodada 10: Taldo Empire 0 x 2 Taldo United
+- Rodada 10: Taldo FC 2 x 1 Real Taldo
+- Rodada 11: FC Taldo 1 x 1 EC Taldo
+- Rodada 11: Taldo Nacional 1 x 2 Taldo Athletic
+- Rodada 11: Taldo Stars 2 x 1 Taldo Rangers
+- Rodada 11: Taldo Sporting 0 x 1 Taldo Internacional
+- Rodada 11: Taldo Galaxy 0 x 1 Sport Taldo
+- Rodada 11: Taldo Royals 1 x 0 Atlético Taldo
+- Rodada 11: Taldo Warriors 1 x 2 Taldo City
+- Rodada 11: Taldo Legends 0 x 1 Taldo United
+- Rodada 11: Taldo Dragons 0 x 1 Real Taldo
+- Rodada 11: Taldo Empire 1 x 0 Taldo FC
+- Rodada 12: FC Taldo 2 x 1 Taldo Athletic
+- Rodada 12: EC Taldo 0 x 1 Taldo Rangers
+- Rodada 12: Taldo Nacional 1 x 2 Taldo Internacional
+- Rodada 12: Taldo Stars 0 x 0 Sport Taldo
+- Rodada 12: Taldo Sporting 1 x 2 Atlético Taldo
+- Rodada 12: Taldo Galaxy 2 x 0 Taldo City
+- Rodada 12: Taldo Royals 1 x 2 Taldo United
+- Rodada 12: Taldo Warriors 0 x 0 Real Taldo
+- Rodada 12: Taldo Legends 1 x 2 Taldo FC
+- Rodada 12: Taldo Dragons 0 x 1 Taldo Empire
+- Rodada 13: FC Taldo 0 x 2 Taldo Rangers
+- Rodada 13: Taldo Athletic 0 x 1 Taldo Internacional
+- Rodada 13: EC Taldo 3 x 2 Sport Taldo
+- Rodada 13: Taldo Nacional 3 x 1 Atlético Taldo
+- Rodada 13: Taldo Stars 3 x 1 Taldo City
+- Rodada 13: Taldo Sporting 1 x 1 Taldo United
+- Rodada 13: Taldo Galaxy 0 x 1 Real Taldo
+- Rodada 13: Taldo Royals 0 x 2 Taldo FC
+- Rodada 13: Taldo Warriors 2 x 1 Taldo Empire
+- Rodada 13: Taldo Legends 1 x 2 Taldo Dragons
+- Rodada 14: FC Taldo 1 x 2 Taldo Internacional
+- Rodada 14: Taldo Rangers 1 x 2 Sport Taldo
+- Rodada 14: Taldo Athletic 1 x 2 Atlético Taldo
+- Rodada 14: EC Taldo 1 x 2 Taldo City
+- Rodada 14: Taldo Nacional 2 x 1 Taldo United
+- Rodada 14: Taldo Stars 2 x 1 Real Taldo
+- Rodada 14: Taldo Sporting 2 x 1 Taldo FC
+- Rodada 14: Taldo Galaxy 1 x 0 Taldo Empire
+- Rodada 14: Taldo Royals 3 x 0 Taldo Dragons
+- Rodada 14: Taldo Warriors 2 x 1 Taldo Legends
+- Rodada 15: FC Taldo 2 x 1 Sport Taldo
+- Rodada 15: Taldo Internacional 2 x 1 Atlético Taldo
+- Rodada 15: Taldo Rangers 1 x 0 Taldo City
+- Rodada 15: Taldo Athletic 1 x 2 Taldo United
+- Rodada 15: EC Taldo 3 x 0 Real Taldo
+- Rodada 15: Taldo Nacional 2 x 1 Taldo FC
+- Rodada 15: Taldo Stars 2 x 1 Taldo Empire
+- Rodada 15: Taldo Sporting 1 x 1 Taldo Dragons
+- Rodada 15: Taldo Galaxy 5 x 0 Taldo Legends
+- Rodada 15: Taldo Royals 1 x 0 Taldo Warriors
+- Rodada 16: FC Taldo 1 x 3 Atlético Taldo
+- Rodada 16: Sport Taldo 0 x 0 Taldo City
+- Rodada 16: Taldo Internacional 2 x 1 Taldo United
+- Rodada 16: Taldo Rangers 1 x 0 Real Taldo
+- Rodada 16: Taldo Athletic 0 x 1 Taldo FC
+- Rodada 16: EC Taldo 3 x 2 Taldo Empire
+- Rodada 16: Taldo Nacional 2 x 1 Taldo Dragons
+- Rodada 16: Taldo Stars 1 x 0 Taldo Legends
+- Rodada 16: Taldo Sporting 2 x 2 Taldo Warriors
+- Rodada 16: Taldo Galaxy 1 x 0 Taldo Royals
+- Rodada 17: FC Taldo 3 x 2 Taldo City
+- Rodada 17: Atlético Taldo 1 x 2 Taldo United
+- Rodada 17: Sport Taldo 1 x 2 Real Taldo
+- Rodada 17: Taldo Internacional 0 x 1 Taldo FC
+- Rodada 17: Taldo Rangers 1 x 2 Taldo Empire
+- Rodada 17: Taldo Athletic 1 x 0 Taldo Dragons
+- Rodada 17: EC Taldo 5 x 0 Taldo Legends
+- Rodada 17: Taldo Nacional 2 x 1 Taldo Warriors
+- Rodada 17: Taldo Stars 2 x 1 Taldo Royals
+- Rodada 17: Taldo Sporting 1 x 2 Taldo Galaxy
+- Rodada 18: FC Taldo 0 x 1 Taldo United
+- Rodada 18: Taldo City 1 x 0 Real Taldo
+- Rodada 18: Atlético Taldo 1 x 1 Taldo FC
+- Rodada 18: Sport Taldo 2 x 1 Taldo Empire
+- Rodada 18: Taldo Internacional 1 x 1 Taldo Dragons
+- Rodada 18: Taldo Rangers 3 x 0 Taldo Legends
+- Rodada 18: Taldo Athletic 1 x 0 Taldo Warriors
+- Rodada 18: EC Taldo 2 x 1 Taldo Royals
+- Rodada 18: Taldo Nacional 2 x 1 Taldo Galaxy
+- Rodada 18: Taldo Stars 2 x 2 Taldo Sporting
+- Rodada 19: FC Taldo 0 x 1 Real Taldo
+- Rodada 19: Taldo United 0 x 1 Taldo FC
+- Rodada 19: Taldo City 1 x 2 Taldo Empire
+- Rodada 19: Atlético Taldo 1 x 0 Taldo Dragons
+- Rodada 19: Sport Taldo 1 x 1 Taldo Legends
+- Rodada 19: Taldo Internacional 3 x 0 Taldo Warriors
+- Rodada 19: Taldo Rangers 0 x 1 Taldo Royals
+- Rodada 19: Taldo Athletic 3 x 2 Taldo Galaxy
+- Rodada 19: EC Taldo 0 x 0 Taldo Sporting
+- Rodada 19: Taldo Nacional 1 x 0 Taldo Stars
+- Rodada 20: Taldo FC 2 x 1 FC Taldo
+- Rodada 20: Taldo Empire 1 x 2 Real Taldo
+- Rodada 20: Taldo Dragons 3 x 2 Taldo United
+- Rodada 20: Taldo Legends 0 x 1 Taldo City
+- Rodada 20: Taldo Warriors 0 x 2 Atlético Taldo
+- Rodada 20: Taldo Royals 1 x 0 Sport Taldo
+- Rodada 20: Taldo Galaxy 0 x 1 Taldo Internacional
+- Rodada 20: Taldo Sporting 1 x 2 Taldo Rangers
+- Rodada 20: Taldo Stars 2 x 0 Taldo Athletic
+- Rodada 20: Taldo Nacional 0 x 1 EC Taldo
+- Rodada 21: Taldo Empire 1 x 0 FC Taldo
+- Rodada 21: Taldo Dragons 1 x 2 Taldo FC
+- Rodada 21: Taldo Legends 1 x 2 Real Taldo
+- Rodada 21: Taldo Warriors 1 x 2 Taldo United
+- Rodada 21: Taldo Royals 1 x 2 Taldo City
+- Rodada 21: Taldo Galaxy 1 x 2 Atlético Taldo
+- Rodada 21: Taldo Sporting 0 x 1 Sport Taldo
+- Rodada 21: Taldo Stars 2 x 1 Taldo Internacional
+- Rodada 21: Taldo Nacional 1 x 0 Taldo Rangers
+- Rodada 21: EC Taldo 1 x 0 Taldo Athletic
+- Rodada 22: Taldo Dragons 2 x 2 FC Taldo
+- Rodada 22: Taldo Legends 1 x 2 Taldo Empire
+- Rodada 22: Taldo Warriors 2 x 0 Taldo FC
+- Rodada 22: Taldo Royals 1 x 0 Real Taldo
+- Rodada 22: Taldo Galaxy 0 x 1 Taldo United
+- Rodada 22: Taldo Sporting 2 x 1 Taldo City
+- Rodada 22: Taldo Stars 2 x 0 Atlético Taldo
+- Rodada 22: Taldo Nacional 0 x 0 Sport Taldo
+- Rodada 22: EC Taldo 0 x 1 Taldo Internacional
+- Rodada 22: Taldo Athletic 0 x 1 Taldo Rangers
+- Rodada 23: Taldo Legends 1 x 2 FC Taldo
+- Rodada 23: Taldo Warriors 1 x 2 Taldo Dragons
+- Rodada 23: Taldo Royals 2 x 0 Taldo Empire
+- Rodada 23: Taldo Galaxy 1 x 2 Taldo FC
+- Rodada 23: Taldo Sporting 1 x 0 Real Taldo
+- Rodada 23: Taldo Stars 2 x 1 Taldo United
+- Rodada 23: Taldo Nacional 1 x 1 Taldo City
+- Rodada 23: EC Taldo 1 x 2 Atlético Taldo
+- Rodada 23: Taldo Athletic 1 x 2 Sport Taldo
+- Rodada 23: Taldo Rangers 0 x 0 Taldo Internacional
+- Rodada 24: Taldo Warriors 0 x 2 FC Taldo
+- Rodada 24: Taldo Royals 2 x 1 Taldo Legends
+- Rodada 24: Taldo Galaxy 2 x 1 Taldo Dragons
+- Rodada 24: Taldo Sporting 2 x 1 Taldo Empire
+- Rodada 24: Taldo Stars 1 x 0 Taldo FC
+- Rodada 24: Taldo Nacional 0 x 1 Real Taldo
+- Rodada 24: EC Taldo 1 x 2 Taldo United
+- Rodada 24: Taldo Athletic 1 x 0 Taldo City
+- Rodada 24: Taldo Rangers 0 x 1 Atlético Taldo
+- Rodada 24: Taldo Internacional 2 x 1 Sport Taldo
+- Rodada 25: Taldo Royals 2 x 2 FC Taldo
+- Rodada 25: Taldo Galaxy 2 x 0 Taldo Warriors
+- Rodada 25: Taldo Sporting 5 x 0 Taldo Legends
+- Rodada 25: Taldo Stars 0 x 1 Taldo Dragons
+- Rodada 25: Taldo Nacional 1 x 0 Taldo Empire
+- Rodada 25: EC Taldo 2 x 0 Taldo FC
+- Rodada 25: Taldo Athletic 3 x 2 Real Taldo
+- Rodada 25: Taldo Rangers 1 x 0 Taldo United
+- Rodada 25: Taldo Internacional 0 x 1 Taldo City
+- Rodada 25: Sport Taldo 1 x 2 Atlético Taldo
+- Rodada 26: Taldo Galaxy 3 x 2 FC Taldo
+- Rodada 26: Taldo Sporting 0 x 1 Taldo Royals
+- Rodada 26: Taldo Stars 3 x 1 Taldo Warriors
+- Rodada 26: Taldo Nacional 2 x 1 Taldo Legends
+- Rodada 26: EC Taldo 1 x 1 Taldo Dragons
+- Rodada 26: Taldo Athletic 1 x 1 Taldo Empire
+- Rodada 26: Taldo Rangers 0 x 1 Taldo FC
+- Rodada 26: Taldo Internacional 2 x 2 Real Taldo
+- Rodada 26: Sport Taldo 2 x 1 Taldo United
+- Rodada 26: Atlético Taldo 1 x 0 Taldo City
+- Rodada 27: Taldo Sporting 0 x 1 FC Taldo
+- Rodada 27: Taldo Stars 2 x 1 Taldo Galaxy
+- Rodada 27: Taldo Nacional 1 x 0 Taldo Royals
+- Rodada 27: EC Taldo 1 x 0 Taldo Warriors
+- Rodada 27: Taldo Athletic 2 x 0 Taldo Legends
+- Rodada 27: Taldo Rangers 3 x 2 Taldo Dragons
+- Rodada 27: Taldo Internacional 2 x 1 Taldo Empire
+- Rodada 27: Sport Taldo 2 x 1 Taldo FC
+- Rodada 27: Atlético Taldo 1 x 2 Real Taldo
+- Rodada 27: Taldo City 0 x 1 Taldo United
+- Rodada 28: Taldo Stars 1 x 1 FC Taldo
+- Rodada 28: Taldo Nacional 1 x 0 Taldo Sporting
+- Rodada 28: EC Taldo 1 x 2 Taldo Galaxy
+- Rodada 28: Taldo Athletic 1 x 2 Taldo Royals
+- Rodada 28: Taldo Rangers 1 x 2 Taldo Warriors
+- Rodada 28: Taldo Internacional 2 x 0 Taldo Legends
+- Rodada 28: Sport Taldo 1 x 0 Taldo Dragons
+- Rodada 28: Atlético Taldo 3 x 0 Taldo Empire
+- Rodada 28: Taldo City 1 x 2 Taldo FC
+- Rodada 28: Taldo United 0 x 0 Real Taldo
+- Rodada 29: Taldo Nacional 2 x 1 FC Taldo
+- Rodada 29: EC Taldo 1 x 0 Taldo Stars
+- Rodada 29: Taldo Athletic 1 x 1 Taldo Sporting
+- Rodada 29: Taldo Rangers 1 x 0 Taldo Galaxy
+- Rodada 29: Taldo Internacional 1 x 2 Taldo Royals
+- Rodada 29: Sport Taldo 1 x 0 Taldo Warriors
+- Rodada 29: Atlético Taldo 3 x 0 Taldo Legends
+- Rodada 29: Taldo City 1 x 1 Taldo Dragons
+- Rodada 29: Taldo United 1 x 1 Taldo Empire
+- Rodada 29: Real Taldo 0 x 1 Taldo FC
+- Rodada 30: EC Taldo 0 x 1 FC Taldo
+- Rodada 30: Taldo Athletic 3 x 2 Taldo Nacional
+- Rodada 30: Taldo Rangers 1 x 0 Taldo Stars
+- Rodada 30: Taldo Internacional 1 x 1 Taldo Sporting
+- Rodada 30: Sport Taldo 1 x 0 Taldo Galaxy
+- Rodada 30: Atlético Taldo 2 x 0 Taldo Royals
+- Rodada 30: Taldo City 0 x 1 Taldo Warriors
+- Rodada 30: Taldo United 2 x 0 Taldo Legends
+- Rodada 30: Real Taldo 3 x 1 Taldo Dragons
+- Rodada 30: Taldo FC 2 x 0 Taldo Empire
+- Rodada 31: Taldo Athletic 1 x 0 FC Taldo
+- Rodada 31: Taldo Rangers 4 x 1 EC Taldo
+- Rodada 31: Taldo Internacional 0 x 0 Taldo Nacional
+- Rodada 31: Sport Taldo 3 x 2 Taldo Stars
+- Rodada 31: Atlético Taldo 0 x 2 Taldo Sporting
+- Rodada 31: Taldo City 1 x 2 Taldo Galaxy
+- Rodada 31: Taldo United 0 x 1 Taldo Royals
+- Rodada 31: Real Taldo 3 x 1 Taldo Warriors
+- Rodada 31: Taldo FC 3 x 0 Taldo Legends
+- Rodada 31: Taldo Empire 2 x 1 Taldo Dragons
+- Rodada 32: Taldo Rangers 1 x 0 FC Taldo
+- Rodada 32: Taldo Internacional 1 x 1 Taldo Athletic
+- Rodada 32: Sport Taldo 3 x 2 EC Taldo
+- Rodada 32: Atlético Taldo 2 x 1 Taldo Nacional
+- Rodada 32: Taldo City 1 x 2 Taldo Stars
+- Rodada 32: Taldo United 3 x 2 Taldo Sporting
+- Rodada 32: Real Taldo 0 x 1 Taldo Galaxy
+- Rodada 32: Taldo FC 1 x 1 Taldo Royals
+- Rodada 32: Taldo Empire 0 x 2 Taldo Warriors
+- Rodada 32: Taldo Dragons 2 x 0 Taldo Legends
+- Rodada 33: Taldo Internacional 0 x 1 FC Taldo
+- Rodada 33: Sport Taldo 1 x 2 Taldo Rangers
+- Rodada 33: Atlético Taldo 1 x 1 Taldo Athletic
+- Rodada 33: Taldo City 0 x 2 EC Taldo
+- Rodada 33: Taldo United 0 x 1 Taldo Nacional
+- Rodada 33: Real Taldo 2 x 1 Taldo Stars
+- Rodada 33: Taldo FC 0 x 2 Taldo Sporting
+- Rodada 33: Taldo Empire 0 x 1 Taldo Galaxy
+- Rodada 33: Taldo Dragons 1 x 0 Taldo Royals
+- Rodada 33: Taldo Legends 1 x 2 Taldo Warriors
+- Rodada 34: Sport Taldo 1 x 1 FC Taldo
+- Rodada 34: Atlético Taldo 2 x 1 Taldo Internacional
+- Rodada 34: Taldo City 2 x 1 Taldo Rangers
+- Rodada 34: Taldo United 1 x 1 Taldo Athletic
+- Rodada 34: Real Taldo 2 x 0 EC Taldo
+- Rodada 34: Taldo FC 1 x 2 Taldo Nacional
+- Rodada 34: Taldo Empire 2 x 1 Taldo Stars
+- Rodada 34: Taldo Dragons 1 x 2 Taldo Sporting
+- Rodada 34: Taldo Legends 1 x 0 Taldo Galaxy
+- Rodada 34: Taldo Warriors 2 x 1 Taldo Royals
+- Rodada 35: Atlético Taldo 0 x 1 FC Taldo
+- Rodada 35: Taldo City 0 x 2 Sport Taldo
+- Rodada 35: Taldo United 1 x 2 Taldo Internacional
+- Rodada 35: Real Taldo 2 x 0 Taldo Rangers
+- Rodada 35: Taldo FC 2 x 1 Taldo Athletic
+- Rodada 35: Taldo Empire 3 x 1 EC Taldo
+- Rodada 35: Taldo Dragons 2 x 2 Taldo Nacional
+- Rodada 35: Taldo Legends 0 x 1 Taldo Stars
+- Rodada 35: Taldo Warriors 1 x 0 Taldo Sporting
+- Rodada 35: Taldo Royals 1 x 0 Taldo Galaxy
+- Rodada 36: Taldo City 0 x 1 FC Taldo
+- Rodada 36: Taldo United 0 x 1 Atlético Taldo
+- Rodada 36: Real Taldo 1 x 0 Sport Taldo
+- Rodada 36: Taldo FC 1 x 0 Taldo Internacional
+- Rodada 36: Taldo Empire 0 x 1 Taldo Rangers
+- Rodada 36: Taldo Dragons 1 x 2 Taldo Athletic
+- Rodada 36: Taldo Legends 2 x 2 EC Taldo
+- Rodada 36: Taldo Warriors 1 x 2 Taldo Nacional
+- Rodada 36: Taldo Royals 1 x 2 Taldo Stars
+- Rodada 36: Taldo Galaxy 3 x 2 Taldo Sporting
+- Rodada 37: Taldo United 3 x 0 FC Taldo
+- Rodada 37: Real Taldo 2 x 1 Taldo City
+- Rodada 37: Taldo FC 3 x 2 Atlético Taldo
+- Rodada 37: Taldo Empire 2 x 1 Sport Taldo
+- Rodada 37: Taldo Dragons 1 x 0 Taldo Internacional
+- Rodada 37: Taldo Legends 0 x 2 Taldo Rangers
+- Rodada 37: Taldo Warriors 0 x 1 Taldo Athletic
+- Rodada 37: Taldo Royals 3 x 0 EC Taldo
+- Rodada 37: Taldo Galaxy 1 x 1 Taldo Nacional
+- Rodada 37: Taldo Sporting 2 x 1 Taldo Stars
+- Rodada 38: Real Taldo 3 x 1 FC Taldo
+- Rodada 38: Taldo FC 1 x 0 Taldo United
+- Rodada 38: Taldo Empire 2 x 1 Taldo City
+- Rodada 38: Taldo Dragons 2 x 1 Atlético Taldo
+- Rodada 38: Taldo Legends 0 x 2 Sport Taldo
+- Rodada 38: Taldo Warriors 0 x 2 Taldo Internacional
+- Rodada 38: Taldo Royals 1 x 0 Taldo Rangers
+- Rodada 38: Taldo Galaxy 1 x 0 Taldo Athletic
+- Rodada 38: Taldo Sporting 3 x 1 EC Taldo
+- Rodada 38: Taldo Stars 0 x 0 Taldo Nacional
+
+=== ARTILHARIA ===
+Harry Araujo | G: 15 | A: 5 | N: 6.5
+Luca Dubois | G: 14 | A: 2 | N: 6.5
+Diego Walker | G: 13 | A: 2 | N: 6.4
+Arthur Wilson | G: 13 | A: 2 | N: 6.3
+Marco Perez | G: 12 | A: 1 | N: 6.2
+Oliver Dubois | G: 11 | A: 3 | N: 6.3
+Arthur Ribeiro | G: 10 | A: 3 | N: 6.4
+Gabriel Rocha | G: 10 | A: 8 | N: 6.5
+Arthur Dubois | G: 10 | A: 2 | N: 6.3
+Vinicius Wilson | G: 10 | A: 5 | N: 6.4
+Thiago Taylor | G: 10 | A: 5 | N: 6.4
+Luca Rodriguez | G: 9 | A: 6 | N: 6.4
+Pablo Wilson | G: 9 | A: 6 | N: 6.5
+Marco Martins | G: 9 | A: 4 | N: 6.3
+Liam Rodriguez | G: 9 | A: 6 | N: 6.3
+João Rocha | G: 9 | A: 3 | N: 6.3
+Pedro Lopez | G: 9 | A: 8 | N: 6.4
+Gabriel Costa | G: 8 | A: 3 | N: 6.3
+Isaque Souza | G: 8 | A: 2 | N: 6.3
+Juan Rocha | G: 8 | A: 5 | N: 6.3
+Miguel Johnson | G: 8 | A: 0 | N: 6.1
+Louis Smith | G: 8 | A: 6 | N: 6.4
+Francesco Brown | G: 8 | A: 1 | N: 6.3
+André Lima | G: 8 | A: 3 | N: 6.3
+Miguel Costa | G: 8 | A: 6 | N: 6.3
+Luca Silva | G: 8 | A: 4 | N: 6.3
+Pedro Lima | G: 8 | A: 3 | N: 6.2
+João Martin | G: 8 | A: 2 | N: 6.3
+Pierre Silva | G: 7 | A: 6 | N: 6.3
+Thiago Santos | G: 7 | A: 5 | N: 6.3
+Marco Gomes | G: 7 | A: 2 | N: 6.2
+Arthur Costa | G: 7 | A: 2 | N: 6.3
+Thiago Lima | G: 7 | A: 5 | N: 6.3
+Pierre Pereira | G: 7 | A: 1 | N: 6.3
+Francesco Martin | G: 7 | A: 2 | N: 6.2
+Alejandro Gomes | G: 7 | A: 3 | N: 6.3
+Oliver Moretti | G: 7 | A: 1 | N: 6.3
+Rodrigo Moretti | G: 7 | A: 2 | N: 6.3
+Pablo Johnson | G: 7 | A: 4 | N: 6.3
+Antoine Martins | G: 7 | A: 1 | N: 6.3
+Gabriel Barbosa | G: 6 | A: 5 | N: 6.3
+Carlos Fernandez | G: 6 | A: 2 | N: 6.2
+Leonardo Almeida | G: 6 | A: 4 | N: 6.3
+Liam Barbosa | G: 6 | A: 6 | N: 6.3
+Gabriel Martin | G: 6 | A: 3 | N: 6.3
+Noah Ribeiro | G: 6 | A: 0 | N: 6.2
+Jack Bianchi | G: 6 | A: 1 | N: 6.2
+Gabriel Martins | G: 6 | A: 2 | N: 6.2
+Diego Lima | G: 6 | A: 5 | N: 6.3
+Jack Ribeiro | G: 6 | A: 5 | N: 6.3
+Antoine Walker | G: 6 | A: 4 | N: 6.3
+Vinicius Garcia | G: 6 | A: 3 | N: 6.3
+Miguel Gomes | G: 6 | A: 3 | N: 6.3
+Jack Lima | G: 6 | A: 3 | N: 6.2
+Caio Johnson | G: 6 | A: 2 | N: 6.2
+Louis Bianchi | G: 6 | A: 4 | N: 6.3
+André Garcia | G: 6 | A: 1 | N: 6.2
+Carlos Martin | G: 6 | A: 2 | N: 6.0
+Pedro Mendes | G: 6 | A: 0 | N: 6.1
+Rodrigo Martins | G: 6 | A: 5 | N: 6.2
+Thiago Smith | G: 6 | A: 4 | N: 6.2
+Louis Martins | G: 5 | A: 4 | N: 6.2
+Felipe Bianchi | G: 5 | A: 2 | N: 6.2
+Leonardo Mendes | G: 5 | A: 6 | N: 6.2
+Francesco Dubois | G: 5 | A: 4 | N: 6.3
+Jack Silva | G: 5 | A: 2 | N: 6.2
+Oliver Wilson | G: 5 | A: 3 | N: 6.2
+Thiago Johnson | G: 5 | A: 3 | N: 6.1
+André Lopez | G: 5 | A: 2 | N: 6.1
+Leonardo Rodriguez | G: 5 | A: 1 | N: 6.1
+Antoine Wilson | G: 5 | A: 5 | N: 6.3
+Rodrigo Araujo | G: 5 | A: 4 | N: 6.3
+Diego Ribeiro | G: 5 | A: 3 | N: 6.3
+Alejandro Taylor | G: 5 | A: 5 | N: 6.2
+Matheus Pereira | G: 5 | A: 3 | N: 6.3
+Rafael Taylor | G: 5 | A: 1 | N: 6.2
+Miguel Lopez | G: 5 | A: 5 | N: 6.2
+Pablo Oliveira | G: 5 | A: 1 | N: 6.2
+Arthur Johnson | G: 5 | A: 4 | N: 6.2
+João Araujo | G: 5 | A: 4 | N: 6.2
+Juan Martins | G: 5 | A: 3 | N: 6.2
+Pablo Rossi | G: 5 | A: 1 | N: 6.0
+Enzo Ferreira | G: 5 | A: 2 | N: 6.2
+Alejandro Brown | G: 5 | A: 3 | N: 6.2
+Marco Rocha | G: 5 | A: 6 | N: 6.3
+Vinicius Brown | G: 5 | A: 4 | N: 6.3
+Harry Fernandez | G: 4 | A: 2 | N: 6.2
+João Wilson | G: 4 | A: 5 | N: 6.3
+Carlos Rossi | G: 4 | A: 3 | N: 6.2
+Enzo Walker | G: 4 | A: 5 | N: 6.3
+Giovanni Rossi | G: 4 | A: 4 | N: 6.2
+Gabriel Mendes | G: 4 | A: 5 | N: 6.3
+Liam Costa | G: 4 | A: 2 | N: 6.2
+Diego Garcia | G: 4 | A: 2 | N: 6.2
+Francesco Pereira | G: 4 | A: 5 | N: 6.2
+Louis Santos | G: 4 | A: 3 | N: 6.3
+Diego Brown | G: 4 | A: 0 | N: 6.1
+Leonardo Souza | G: 4 | A: 1 | N: 6.2
+Juan Pereira | G: 4 | A: 7 | N: 6.2
+André Santos | G: 4 | A: 2 | N: 6.2
+Diego Almeida | G: 4 | A: 4 | N: 6.1
+João Silva | G: 4 | A: 1 | N: 6.1
+Felipe Oliveira | G: 4 | A: 2 | N: 6.1
+Antoine Brown | G: 4 | A: 3 | N: 6.2
+Liam Wilson | G: 4 | A: 4 | N: 6.2
+Louis Walker | G: 4 | A: 2 | N: 6.1
+Leonardo Araujo | G: 4 | A: 2 | N: 6.1
+Carlos Ribeiro | G: 4 | A: 2 | N: 6.1
+Louis Rocha | G: 4 | A: 7 | N: 6.3
+Pedro Araujo | G: 3 | A: 0 | N: 6.2
+Enzo Brown | G: 3 | A: 2 | N: 6.2
+Gabriel Rossi | G: 3 | A: 1 | N: 6.2
+André Oliveira | G: 3 | A: 5 | N: 6.2
+Rafael Costa | G: 3 | A: 2 | N: 6.2
+Thiago Walker | G: 3 | A: 1 | N: 6.3
+Antoine Rossi | G: 3 | A: 2 | N: 6.2
+Pierre Costa | G: 3 | A: 2 | N: 6.2
+Alejandro Johnson | G: 3 | A: 4 | N: 6.2
+Pedro Dubois | G: 3 | A: 8 | N: 6.2
+Juan Ferreira | G: 3 | A: 4 | N: 6.2
+Noah Pereira | G: 3 | A: 2 | N: 6.2
+Noah Walker | G: 3 | A: 2 | N: 6.2
+Luca Johnson | G: 3 | A: 3 | N: 6.2
+Caio Walker | G: 3 | A: 3 | N: 6.2
+Pierre Mendes | G: 3 | A: 3 | N: 6.1
+Matheus Martins | G: 3 | A: 2 | N: 5.9
+Juan Johnson | G: 3 | A: 0 | N: 5.9
+Alejandro Almeida | G: 3 | A: 3 | N: 6.1
+Miguel Oliveira | G: 3 | A: 1 | N: 6.1
+Harry Oliveira | G: 3 | A: 0 | N: 6.1
+Miguel Santos | G: 3 | A: 1 | N: 6.3
+Enzo Barbosa | G: 3 | A: 0 | N: 6.2
+Luca Pereira | G: 3 | A: 2 | N: 6.3
+Francesco Fernandez | G: 2 | A: 2 | N: 6.2
+Rafael Martins | G: 2 | A: 1 | N: 6.2
+Francesco Lopez | G: 2 | A: 2 | N: 6.1
+André Costa | G: 2 | A: 2 | N: 6.2
+Caio Gomes | G: 2 | A: 1 | N: 6.2
+Miguel Rodriguez | G: 2 | A: 3 | N: 6.1
+Bruno Barbosa | G: 2 | A: 1 | N: 6.1
+Diego Rocha | G: 2 | A: 3 | N: 6.1
+Miguel Walker | G: 2 | A: 4 | N: 6.1
+Gabriel Almeida | G: 2 | A: 4 | N: 6.2
+Lucas Smith | G: 2 | A: 0 | N: 6.2
+Thiago Fernandez | G: 2 | A: 4 | N: 6.3
+Enzo Ribeiro | G: 2 | A: 5 | N: 6.2
+Jack Rocha | G: 2 | A: 1 | N: 6.2
+André Silva | G: 2 | A: 6 | N: 6.2
+Diego Gomes | G: 2 | A: 5 | N: 6.2
+Pablo Garcia | G: 2 | A: 2 | N: 6.2
+Diego Rossi | G: 2 | A: 0 | N: 6.2
+Juan Mendes | G: 2 | A: 5 | N: 6.2
+Marco Rossi | G: 2 | A: 2 | N: 6.1
+Luca Rocha | G: 2 | A: 3 | N: 6.3
+Giovanni Ribeiro | G: 2 | A: 2 | N: 6.2
+Pablo Ferreira | G: 2 | A: 7 | N: 6.3
+Pedro Ferreira | G: 2 | A: 3 | N: 6.1
+Lucas Bianchi | G: 2 | A: 0 | N: 6.1
+Harry Martin | G: 2 | A: 1 | N: 6.2
+Pierre Dubois | G: 2 | A: 0 | N: 6.2
+Juan Fernandez | G: 2 | A: 1 | N: 6.0
+Giovanni Johnson | G: 2 | A: 0 | N: 6.0
+Rodrigo Brown | G: 2 | A: 3 | N: 5.9
+Alejandro Rodriguez | G: 2 | A: 3 | N: 6.1
+Caio Pereira | G: 2 | A: 5 | N: 6.1
+Oliver Brown | G: 2 | A: 4 | N: 6.1
+Antoine Smith | G: 1 | A: 2 | N: 6.2
+Alejandro Costa | G: 1 | A: 2 | N: 6.1
+Arthur Martin | G: 1 | A: 3 | N: 6.2
+Oliver Pereira | G: 1 | A: 1 | N: 6.2
+Noah Ferreira | G: 1 | A: 0 | N: 6.2
+Luca Costa | G: 1 | A: 0 | N: 6.2
+André Moretti | G: 1 | A: 3 | N: 6.2
+André Rossi | G: 1 | A: 1 | N: 6.1
+Miguel Rossi | G: 1 | A: 2 | N: 6.1
+Pedro Santos | G: 1 | A: 2 | N: 6.1
+Miguel Moretti | G: 1 | A: 0 | N: 6.2
+Miguel Pereira | G: 1 | A: 4 | N: 6.3
+Alejandro Garcia | G: 1 | A: 5 | N: 6.1
+Thiago Dubois | G: 1 | A: 5 | N: 6.1
+Matheus Garcia | G: 1 | A: 3 | N: 6.0
+Pedro Taylor | G: 1 | A: 2 | N: 6.0
+Juan Rossi | G: 1 | A: 0 | N: 5.9
+Leonardo Brown | G: 1 | A: 2 | N: 5.9
+Arthur Taylor | G: 1 | A: 3 | N: 6.1
+Francesco Walker | G: 1 | A: 3 | N: 6.3
+
+=== MELHORES NOTAS ===
+Harry Araujo | Média: 6.5 | Melhor: 7.5 | Pior: 5.8
+Luca Dubois | Média: 6.47 | Melhor: 7.9 | Pior: 5.8
+Pablo Wilson | Média: 6.45 | Melhor: 8.8 | Pior: 5.8
+Gabriel Rocha | Média: 6.45 | Melhor: 8.5 | Pior: 5.8
+Pedro Lopez | Média: 6.41 | Melhor: 7.9 | Pior: 5.8
+Diego Walker | Média: 6.4 | Melhor: 7.9 | Pior: 5.8
+Vinicius Wilson | Média: 6.39 | Melhor: 8.9 | Pior: 5.8
+Thiago Taylor | Média: 6.39 | Melhor: 7.5 | Pior: 5.8
+Luca Rodriguez | Média: 6.38 | Melhor: 8.1 | Pior: 5.8
+Louis Smith | Média: 6.38 | Melhor: 8.1 | Pior: 5.8
+Arthur Ribeiro | Média: 6.38 | Melhor: 8.1 | Pior: 5.8
+Marco Martins | Média: 6.35 | Melhor: 8.1 | Pior: 5.8
+Thiago Lima | Média: 6.35 | Melhor: 7.7 | Pior: 5.8
+Pierre Silva | Média: 6.35 | Melhor: 7.5 | Pior: 5.8
+Juan Rocha | Média: 6.34 | Melhor: 7.9 | Pior: 5.8
+Leonardo Almeida | Média: 6.34 | Melhor: 7.9 | Pior: 5.8
+Miguel Costa | Média: 6.34 | Melhor: 7.6 | Pior: 5.8
+Arthur Wilson | Média: 6.33 | Melhor: 8.1 | Pior: 5.8
+João Martin | Média: 6.33 | Melhor: 7.9 | Pior: 5.8
+Marco Rocha | Média: 6.33 | Melhor: 7.2 | Pior: 5.8
+Alejandro Gomes | Média: 6.33 | Melhor: 7.2 | Pior: 5.8
+Gabriel Barbosa | Média: 6.32 | Melhor: 7.9 | Pior: 5.8
+Luca Silva | Média: 6.32 | Melhor: 7.7 | Pior: 5.8
+Liam Barbosa | Média: 6.32 | Melhor: 7.5 | Pior: 5.8
+Louis Rocha | Média: 6.32 | Melhor: 7.5 | Pior: 5.8
+Isaque Souza | Média: 6.31 | Melhor: 8.1 | Pior: 5.8
+Diego Lima | Média: 6.31 | Melhor: 7.7 | Pior: 5.8
+Jack Ribeiro | Média: 6.31 | Melhor: 7.5 | Pior: 5.8
+Antoine Wilson | Média: 6.31 | Melhor: 7.3 | Pior: 5.8
+Gabriel Mendes | Média: 6.31 | Melhor: 7.2 | Pior: 5.8
+Arthur Costa | Média: 6.3 | Melhor: 8.1 | Pior: 5.8
+Vinicius Brown | Média: 6.3 | Melhor: 7.9 | Pior: 5.8
+Antoine Martins | Média: 6.3 | Melhor: 7.1 | Pior: 5.8
+Thiago Fernandez | Média: 6.3 | Melhor: 7.1 | Pior: 5.8
+Antoine Walker | Média: 6.29 | Melhor: 8.1 | Pior: 5.8
+Liam Rodriguez | Média: 6.29 | Melhor: 7.6 | Pior: 5.8
+Thiago Santos | Média: 6.29 | Melhor: 7.5 | Pior: 5.8
+Francesco Brown | Média: 6.29 | Melhor: 7.3 | Pior: 5.8
+Louis Bianchi | Média: 6.28 | Melhor: 8.1 | Pior: 5.8
+Vinicius Garcia | Média: 6.28 | Melhor: 8.1 | Pior: 5.8
+Matheus Pereira | Média: 6.28 | Melhor: 8.1 | Pior: 5.8
+Miguel Gomes | Média: 6.28 | Melhor: 8.1 | Pior: 5.8
+Oliver Dubois | Média: 6.28 | Melhor: 7.9 | Pior: 5.8
+Gabriel Costa | Média: 6.28 | Melhor: 7.9 | Pior: 5.8
+Gabriel Martin | Média: 6.28 | Melhor: 7.5 | Pior: 5.8
+Pablo Johnson | Média: 6.28 | Melhor: 7.3 | Pior: 5.8
+Pablo Ferreira | Média: 6.28 | Melhor: 7.2 | Pior: 5.8
+Rodrigo Moretti | Média: 6.27 | Melhor: 8.1 | Pior: 5.8
+Arthur Dubois | Média: 6.27 | Melhor: 8.1 | Pior: 5.8
+Rodrigo Araujo | Média: 6.27 | Melhor: 8.1 | Pior: 5.8
+Pierre Pereira | Média: 6.27 | Melhor: 7.9 | Pior: 5.8
+Francesco Dubois | Média: 6.27 | Melhor: 7.5 | Pior: 5.8
+Oliver Moretti | Média: 6.27 | Melhor: 7.3 | Pior: 5.8
+André Lima | Média: 6.27 | Melhor: 7.2 | Pior: 5.8
+Luca Pereira | Média: 6.27 | Melhor: 7.1 | Pior: 5.8
+Thiago Walker | Média: 6.27 | Melhor: 6.9 | Pior: 5.8
+João Rocha | Média: 6.26 | Melhor: 8.1 | Pior: 5.8
+João Wilson | Média: 6.26 | Melhor: 7.7 | Pior: 5.8
+Luca Rocha | Média: 6.26 | Melhor: 7.5 | Pior: 5.8
+Diego Ribeiro | Média: 6.26 | Melhor: 7.3 | Pior: 5.8
+Louis Santos | Média: 6.26 | Melhor: 7.2 | Pior: 5.8
+Enzo Walker | Média: 6.26 | Melhor: 7.2 | Pior: 5.8
+Miguel Santos | Média: 6.26 | Melhor: 7.1 | Pior: 5.8
+Miguel Pereira | Média: 6.26 | Melhor: 7.1 | Pior: 5.8
+Francesco Walker | Média: 6.26 | Melhor: 6.9 | Pior: 5.8
+Pedro Lima | Média: 6.25 | Melhor: 8.1 | Pior: 5.8
+Jack Silva | Média: 6.25 | Melhor: 7.3 | Pior: 5.8
+Louis Martins | Média: 6.25 | Melhor: 7.2 | Pior: 5.8
+Enzo Ribeiro | Média: 6.25 | Melhor: 7.1 | Pior: 5.8
+Alejandro Taylor | Média: 6.24 | Melhor: 8.8 | Pior: 5.8
+Giovanni Ribeiro | Média: 6.24 | Melhor: 7.5 | Pior: 5.8
+Marco Gomes | Média: 6.24 | Melhor: 7.3 | Pior: 5.8
+Giovanni Rossi | Média: 6.24 | Melhor: 7.2 | Pior: 5.8
+Leonardo Mendes | Média: 6.24 | Melhor: 7.1 | Pior: 5.8
+Oliver Wilson | Média: 6.24 | Melhor: 7.1 | Pior: 5.8
+Luca Johnson | Média: 6.24 | Melhor: 7.1 | Pior: 5.8
+Enzo Barbosa | Média: 6.24 | Melhor: 7.1 | Pior: 5.8
+Pierre Costa | Média: 6.24 | Melhor: 7.1 | Pior: 5.8
+Gabriel Almeida | Média: 6.24 | Melhor: 7.1 | Pior: 5.8
+Oliver Pereira | Média: 6.24 | Melhor: 6.9 | Pior: 5.8
+Marco Perez | Média: 6.23 | Melhor: 8.1 | Pior: 5.8
+André Garcia | Média: 6.23 | Melhor: 7.3 | Pior: 5.8
+Juan Martins | Média: 6.23 | Melhor: 7.3 | Pior: 5.8
+André Silva | Média: 6.23 | Melhor: 7.2 | Pior: 5.8
+Pablo Garcia | Média: 6.23 | Melhor: 7.1 | Pior: 5.8
+Enzo Brown | Média: 6.23 | Melhor: 7.1 | Pior: 5.8
+Pedro Dubois | Média: 6.22 | Melhor: 8.1 | Pior: 5.8
+Miguel Lopez | Média: 6.22 | Melhor: 7.9 | Pior: 5.8
+João Araujo | Média: 6.22 | Melhor: 7.9 | Pior: 5.8
+Carlos Fernandez | Média: 6.22 | Melhor: 7.3 | Pior: 5.8
+Lucas Ribeiro | Média: 6.22 | Melhor: 7.3 | Pior: 5.8
+Arthur Johnson | Média: 6.22 | Melhor: 7.2 | Pior: 5.8
+Antoine Rossi | Média: 6.22 | Melhor: 7.1 | Pior: 5.8
+Rafael Costa | Média: 6.22 | Melhor: 6.9 | Pior: 5.8
+Noah Pereira | Média: 6.22 | Melhor: 6.9 | Pior: 5.8
+Rafael Moretti | Média: 6.22 | Melhor: 6.9 | Pior: 5.8
+Jack Lima | Média: 6.21 | Melhor: 8.1 | Pior: 5.8
+Francesco Martin | Média: 6.21 | Melhor: 8.1 | Pior: 5.8
+Harry Fernandez | Média: 6.21 | Melhor: 7.7 | Pior: 5.8
+Diego Gomes | Média: 6.21 | Melhor: 7.5 | Pior: 5.8
+Juan Pereira | Média: 6.21 | Melhor: 7.3 | Pior: 5.8
+Bruno Rossi | Média: 6.21 | Melhor: 7.3 | Pior: 5.8
+Arthur Martin | Média: 6.21 | Melhor: 7.1 | Pior: 5.8
+André Costa | Média: 6.21 | Melhor: 6.9 | Pior: 5.8
+Jack Souza | Média: 6.21 | Melhor: 6.5 | Pior: 5.8
+Rodrigo Martins | Média: 6.2 | Melhor: 7.9 | Pior: 5.8
+André Oliveira | Média: 6.2 | Melhor: 7.5 | Pior: 5.8
+Felipe Bianchi | Média: 6.2 | Melhor: 7.3 | Pior: 5.8
+Miguel Moretti | Média: 6.2 | Melhor: 7.1 | Pior: 5.8
+Gabriel Martins | Média: 6.2 | Melhor: 7.1 | Pior: 5.8
+Francesco Fernandez | Média: 6.2 | Melhor: 7.1 | Pior: 5.8
+Caio Gomes | Média: 6.2 | Melhor: 7.1 | Pior: 5.8
+Harry Martin | Média: 6.2 | Melhor: 7.1 | Pior: 5.8
+Diego Rossi | Média: 6.2 | Melhor: 7.1 | Pior: 5.8
+Pedro Walker | Média: 6.2 | Melhor: 7.1 | Pior: 5.8
+Caio Johnson | Média: 6.19 | Melhor: 7.7 | Pior: 5.8
+Caio Walker | Média: 6.19 | Melhor: 7.2 | Pior: 5.8
+Thiago Smith | Média: 6.19 | Melhor: 7.1 | Pior: 5.8
+Pablo Oliveira | Média: 6.19 | Melhor: 7.1 | Pior: 5.8
+Carlos Rossi | Média: 6.19 | Melhor: 7.1 | Pior: 5.8
+Jack Rocha | Média: 6.19 | Melhor: 7.1 | Pior: 5.8
+Francesco Pereira | Média: 6.18 | Melhor: 7.3 | Pior: 5.8
+Gabriel Rossi | Média: 6.18 | Melhor: 7.2 | Pior: 5.8
+Pedro Araujo | Média: 6.18 | Melhor: 7.1 | Pior: 5.8
+Jack Bianchi | Média: 6.18 | Melhor: 7.1 | Pior: 5.8
+Rafael Martins | Média: 6.18 | Melhor: 7.1 | Pior: 5.8
+Lucas Smith | Média: 6.18 | Melhor: 7.1 | Pior: 5.8
+Pierre Dubois | Média: 6.18 | Melhor: 7.1 | Pior: 5.8
+Luca Costa | Média: 6.18 | Melhor: 6.9 | Pior: 5.8
+Liam Costa | Média: 6.17 | Melhor: 7.5 | Pior: 5.8
+Liam Wilson | Média: 6.17 | Melhor: 7.2 | Pior: 5.8
+Leonardo Souza | Média: 6.17 | Melhor: 7.1 | Pior: 5.8
+Noah Walker | Média: 6.17 | Melhor: 7.1 | Pior: 5.8
+Miguel Mendes | Média: 6.17 | Melhor: 7.1 | Pior: 5.8
+Louis Gomes | Média: 6.17 | Melhor: 7.1 | Pior: 5.8
+Noah Ribeiro | Média: 6.17 | Melhor: 6.9 | Pior: 5.8
+Antoine Rodriguez | Média: 6.17 | Melhor: 6.5 | Pior: 5.8
+Antoine Smith | Média: 6.16 | Melhor: 7.5 | Pior: 5.8
+André Santos | Média: 6.16 | Melhor: 7.3 | Pior: 5.8
+Enzo Ferreira | Média: 6.16 | Melhor: 7.2 | Pior: 5.8
+Juan Mendes | Média: 6.16 | Melhor: 7.2 | Pior: 5.8
+André Moretti | Média: 6.16 | Melhor: 7.2 | Pior: 5.8
+Antoine Brown | Média: 6.16 | Melhor: 7.1 | Pior: 5.8
+Noah Ferreira | Média: 6.16 | Melhor: 6.5 | Pior: 5.8
+Diego Garcia | Média: 6.15 | Melhor: 8.8 | Pior: 5.8
+Rafael Taylor | Média: 6.15 | Melhor: 7.5 | Pior: 5.8
+Juan Ferreira | Média: 6.15 | Melhor: 7.2 | Pior: 5.8
+Alejandro Johnson | Média: 6.15 | Melhor: 7.1 | Pior: 5.8
+Alejandro Brown | Média: 6.15 | Melhor: 7.1 | Pior: 5.8
+Pierre Brown | Média: 6.15 | Melhor: 6.5 | Pior: 5.8
+Gabriel Fernandez | Média: 6.15 | Melhor: 6.5 | Pior: 5.8
+Thiago Almeida | Média: 6.15 | Melhor: 6.5 | Pior: 5.8
+Francesco Lopez | Média: 6.14 | Melhor: 7.2 | Pior: 5.8
+Thiago Dubois | Média: 6.14 | Melhor: 7.2 | Pior: 5.8
+Miguel Rodriguez | Média: 6.14 | Melhor: 7.2 | Pior: 5.8
+Felipe Oliveira | Média: 6.14 | Melhor: 7.1 | Pior: 5.8
+Marco Rossi | Média: 6.14 | Melhor: 7.1 | Pior: 5.8
+Gustavo Moretti | Média: 6.14 | Melhor: 6.5 | Pior: 5.8
+Matheus Wilson | Média: 6.14 | Melhor: 6.5 | Pior: 5.8
+Gustavo Johnson | Média: 6.14 | Melhor: 6.5 | Pior: 5.8
+Caio Pereira | Média: 6.13 | Melhor: 8.1 | Pior: 5.8
+Pedro Mendes | Média: 6.13 | Melhor: 7.5 | Pior: 5.8
+Alejandro Almeida | Média: 6.13 | Melhor: 7.5 | Pior: 5.8
+Thiago Johnson | Média: 6.13 | Melhor: 7.2 | Pior: 5.8
+Leonardo Araujo | Média: 6.13 | Melhor: 7.2 | Pior: 5.8
+Carlos Ribeiro | Média: 6.13 | Melhor: 7.2 | Pior: 5.8
+Alejandro Rodriguez | Média: 6.13 | Melhor: 7.1 | Pior: 5.8
+Miguel Johnson | Média: 6.13 | Melhor: 7.1 | Pior: 5.8
+Pedro Ferreira | Média: 6.13 | Melhor: 7.1 | Pior: 5.8
+Noah Smith | Média: 6.13 | Melhor: 6.5 | Pior: 5.8
+Oliver Brown | Média: 6.12 | Melhor: 7.9 | Pior: 5.8
+Louis Walker | Média: 6.12 | Melhor: 7.5 | Pior: 5.8
+Alejandro Garcia | Média: 6.12 | Melhor: 7.2 | Pior: 5.8
+Diego Brown | Média: 6.12 | Melhor: 7.1 | Pior: 5.8
+Miguel Rossi | Média: 6.12 | Melhor: 7.1 | Pior: 5.8
+Pedro Santos | Média: 6.12 | Melhor: 7.1 | Pior: 5.8
+Lucas Bianchi | Média: 6.12 | Melhor: 6.9 | Pior: 5.8
+André Rossi | Média: 6.11 | Melhor: 6.9 | Pior: 5.8
+Miguel Araujo | Média: 6.11 | Melhor: 6.5 | Pior: 5.8
+Miguel Oliveira | Média: 6.1 | Melhor: 7.1 | Pior: 5.8
+Arthur Taylor | Média: 6.1 | Melhor: 7.1 | Pior: 5.8
+Harry Taylor | Média: 6.1 | Melhor: 6.8 | Pior: 5.8
+André Lopez | Média: 6.09 | Melhor: 7.1 | Pior: 5.8
+Diego Almeida | Média: 6.09 | Melhor: 7.1 | Pior: 5.8
+Diego Rocha | Média: 6.09 | Melhor: 7.1 | Pior: 5.8
+Lucas Rossi | Média: 6.09 | Melhor: 7.1 | Pior: 5.8
+Thiago Gomes | Média: 6.09 | Melhor: 6.5 | Pior: 5.8
+Luca Gomes | Média: 6.08 | Melhor: 7.3 | Pior: 5.8
+Miguel Walker | Média: 6.08 | Melhor: 7.2 | Pior: 5.8
+Harry Oliveira | Média: 6.08 | Melhor: 7.1 | Pior: 5.8
+Leonardo Rodriguez | Média: 6.08 | Melhor: 7.1 | Pior: 5.8
+Pablo Martin | Média: 6.08 | Melhor: 6.9 | Pior: 5.8
+Miguel Smith | Média: 6.08 | Melhor: 6.5 | Pior: 5.8
+Pierre Mendes | Média: 6.07 | Melhor: 7.6 | Pior: 5.8
+João Silva | Média: 6.06 | Melhor: 7.3 | Pior: 5.8
+Bruno Barbosa | Média: 6.06 | Melhor: 7.1 | Pior: 5.8
+Alejandro Costa | Média: 6.06 | Melhor: 6.6 | Pior: 5.8
+Matheus Garcia | Média: 6.05 | Melhor: 6.9 | Pior: 5.8
+Enzo Lopez | Média: 6.05 | Melhor: 6.5 | Pior: 5.8
+Thiago Costa | Média: 6.04 | Melhor: 7.1 | Pior: 5.8
+Jack Perez | Média: 6.04 | Melhor: 6.5 | Pior: 5.8
+Francesco Oliveira | Média: 6.03 | Melhor: 7.3 | Pior: 5.8
+Juan Fernandez | Média: 6.03 | Melhor: 7.1 | Pior: 5.8
+Carlos Martin | Média: 6.01 | Melhor: 7.2 | Pior: 5.8
+Pedro Taylor | Média: 6.0 | Melhor: 7.2 | Pior: 5.8
+Lucas Ferreira | Média: 6.0 | Melhor: 6.5 | Pior: 5.8
+André Perez | Média: 6.0 | Melhor: 6.4 | Pior: 5.8
+Giovanni Johnson | Média: 5.99 | Melhor: 7.2 | Pior: 5.8
+Gabriel Bianchi | Média: 5.98 | Melhor: 6.5 | Pior: 5.8
+Louis Pereira | Média: 5.98 | Melhor: 6.5 | Pior: 5.8
+Pablo Rossi | Média: 5.95 | Melhor: 7.1 | Pior: 5.8
+Matheus Martins | Média: 5.94 | Melhor: 7.9 | Pior: 5.8
+Rodrigo Brown | Média: 5.91 | Melhor: 6.8 | Pior: 5.8
+Juan Johnson | Média: 5.9 | Melhor: 6.6 | Pior: 5.8
+Leonardo Brown | Média: 5.89 | Melhor: 6.9 | Pior: 5.8
+Marco Wilson | Média: 5.88 | Melhor: 6.6 | Pior: 5.8
+Liam Perez | Média: 5.87 | Melhor: 6.5 | Pior: 5.8
+Juan Rossi | Média: 5.86 | Melhor: 6.9 | Pior: 5.8
+Marco Rodriguez | Média: 5.86 | Melhor: 6.5 | Pior: 5.8
+Gabriel Rodriguez | Média: 5.84 | Melhor: 6.5 | Pior: 5.8
+
+=== ASSISTÊNCIAS ===
+Gabriel Rocha | A: 8
+Pedro Dubois | A: 8
+Pedro Lopez | A: 8
+Pablo Ferreira | A: 7
+Miguel Mendes | A: 7
+Juan Pereira | A: 7
+Louis Rocha | A: 7
+Luca Rodriguez | A: 6
+Leonardo Mendes | A: 6
+Pierre Silva | A: 6
+Louis Smith | A: 6
+Pablo Wilson | A: 6
+Liam Barbosa | A: 6
+André Silva | A: 6
+Miguel Costa | A: 6
+Liam Rodriguez | A: 6
+Marco Rocha | A: 6
+Gabriel Barbosa | A: 5
+Juan Rocha | A: 5
+João Wilson | A: 5
+André Oliveira | A: 5
+Thiago Santos | A: 5
+Enzo Walker | A: 5
+Harry Araujo | A: 5
+Gabriel Mendes | A: 5
+Thiago Lima | A: 5
+Antoine Wilson | A: 5
+Enzo Ribeiro | A: 5
+Diego Gomes | A: 5
+Alejandro Taylor | A: 5
+Juan Mendes | A: 5
+Francesco Pereira | A: 5
+Vinicius Wilson | A: 5
+Diego Lima | A: 5
+Thiago Taylor | A: 5
+Jack Ribeiro | A: 5
+Miguel Lopez | A: 5
+Alejandro Garcia | A: 5
+Thiago Dubois | A: 5
+Caio Pereira | A: 5
+Rodrigo Martins | A: 5
+Pedro Walker | A: 4
+Louis Martins | A: 4
+Francesco Dubois | A: 4
+Miguel Walker | A: 4
+Gabriel Almeida | A: 4
+Giovanni Rossi | A: 4
+Thiago Fernandez | A: 4
+Leonardo Almeida | A: 4
+Rodrigo Araujo | A: 4
+Marco Martins | A: 4
+Alejandro Johnson | A: 4
+Juan Ferreira | A: 4
+Miguel Pereira | A: 4
+Antoine Walker | A: 4
+Luca Silva | A: 4
+Arthur Johnson | A: 4
+João Araujo | A: 4
+Louis Bianchi | A: 4
+Pablo Johnson | A: 4
+Diego Almeida | A: 4
+Liam Wilson | A: 4
+Oliver Brown | A: 4
+Thiago Smith | A: 4
+Vinicius Brown | A: 4
+Gabriel Costa | A: 3
+Oliver Wilson | A: 3
+Miguel Rodriguez | A: 3
+Carlos Rossi | A: 3
+Diego Rocha | A: 3
+Thiago Johnson | A: 3
+Arthur Martin | A: 3
+Arthur Ribeiro | A: 3
+André Moretti | A: 3
+Gabriel Martin | A: 3
+Diego Ribeiro | A: 3
+André Lima | A: 3
+Luca Rocha | A: 3
+Louis Santos | A: 3
+Alejandro Gomes | A: 3
+Matheus Pereira | A: 3
+Vinicius Garcia | A: 3
+Miguel Gomes | A: 3
+Pedro Ferreira | A: 3
+Jack Lima | A: 3
+João Rocha | A: 3
+Pedro Lima | A: 3
+Luca Johnson | A: 3
+Caio Walker | A: 3
+Juan Martins | A: 3
+Matheus Garcia | A: 3
+Pierre Mendes | A: 3
+Marco Wilson | A: 3
+Rodrigo Brown | A: 3
+Alejandro Rodriguez | A: 3
+Antoine Brown | A: 3
+Oliver Dubois | A: 3
+Alejandro Brown | A: 3
+Alejandro Almeida | A: 3
+Arthur Taylor | A: 3
+Francesco Walker | A: 3
+Francesco Fernandez | A: 2
+Francesco Lopez | A: 2
+Felipe Bianchi | A: 2
+André Costa | A: 2
+Isaque Souza | A: 2
+Enzo Brown | A: 2
+Jack Silva | A: 2
+Harry Fernandez | A: 2
+Antoine Smith | A: 2
+Carlos Fernandez | A: 2
+Marco Gomes | A: 2
+Alejandro Costa | A: 2
+Thiago Costa | A: 2
+André Perez | A: 2
+André Lopez | A: 2
+Rafael Costa | A: 2
+Arthur Costa | A: 2
+Luca Dubois | A: 2
+Antoine Rossi | A: 2
+Diego Walker | A: 2
+Pierre Costa | A: 2
+Pablo Garcia | A: 2
+Liam Costa | A: 2
+Miguel Rossi | A: 2
+Francesco Martin | A: 2
+Marco Rossi | A: 2
+Gabriel Martins | A: 2
+Pedro Santos | A: 2
+Diego Garcia | A: 2
+Arthur Dubois | A: 2
+Arthur Wilson | A: 2
+Giovanni Ribeiro | A: 2
+Louis Gomes | A: 2
+Noah Pereira | A: 2
+Caio Johnson | A: 2
+Noah Walker | A: 2
+André Santos | A: 2
+Rodrigo Moretti | A: 2
+Pedro Taylor | A: 2
+Liam Perez | A: 2
+Leonardo Brown | A: 2
+Matheus Martins | A: 2
+Carlos Martin | A: 2
+Pablo Martin | A: 2
+Felipe Oliveira | A: 2
+Enzo Ferreira | A: 2
+Louis Walker | A: 2
+Leonardo Araujo | A: 2
+Carlos Ribeiro | A: 2
+Luca Pereira | A: 2
+João Martin | A: 2
+Rafael Martins | A: 1
+Caio Gomes | A: 1
+Gabriel Rossi | A: 1
+Francesco Oliveira | A: 1
+Bruno Barbosa | A: 1
+Leonardo Rodriguez | A: 1
+Thiago Walker | A: 1
+Oliver Pereira | A: 1
+Rafael Moretti | A: 1
+Jack Rocha | A: 1
+Pierre Pereira | A: 1
+Francesco Brown | A: 1
+Harry Taylor | A: 1
+André Rossi | A: 1
+Jack Bianchi | A: 1
+Lucas Rossi | A: 1
+Bruno Rossi | A: 1
+Oliver Moretti | A: 1
+Luca Gomes | A: 1
+Rafael Taylor | A: 1
+Leonardo Souza | A: 1
+Pablo Oliveira | A: 1
+Harry Martin | A: 1
+André Garcia | A: 1
+Lucas Ferreira | A: 1
+Juan Fernandez | A: 1
+Marco Perez | A: 1
+João Silva | A: 1
+Marco Rodriguez | A: 1
+Pablo Rossi | A: 1
+Miguel Oliveira | A: 1
+Lucas Ribeiro | A: 1
+Miguel Santos | A: 1
+Antoine Martins | A: 1
+
+=== CLEAN SHEETS ===
+Antoine Rodriguez | CS: 15
+Gabriel Fernandez | CS: 15
+Lucas Ribeiro | CS: 14
+Jack Souza | CS: 14
+Noah Smith | CS: 13
+Bruno Rossi | CS: 12
+Miguel Araujo | CS: 12
+Pierre Brown | CS: 11
+Gustavo Johnson | CS: 11
+Thiago Gomes | CS: 11
+Miguel Smith | CS: 11
+Matheus Wilson | CS: 10
+Gustavo Moretti | CS: 9
+Enzo Lopez | CS: 8
+Francesco Oliveira | CS: 8
+Harry Taylor | CS: 7
+Luca Gomes | CS: 7
+Gabriel Bianchi | CS: 7
+Jack Perez | CS: 6
+Gabriel Rodriguez | CS: 1
+
+🏆 MVP DO CAMPEONATO
+---------------------------
+Jogador: Gabriel Rocha
+Posição: Meio-Campo
+Overall: 93
+Melhores em campo: 8
+Nota média: 6.45
+Gols: 10
+Assistências: 8

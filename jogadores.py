@@ -24,8 +24,6 @@ class Jogador:
         self.amarelos_partida = 0
         self.expulso = False
         
-        self.expulso = False
-        
     def mostrar(self):
         print(
             f"Nome: {self.nome}, "

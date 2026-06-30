@@ -95,10 +95,7 @@ class Partida:
     
     def distribuir_gols(self, clube, quantidade_gols, estatisticas):
 
-        lista = [
-            j for j in clube.jogadores
-            if not j.expulso
-        ]
+        lista = []
 
         for jogador in clube.jogadores:
 
@@ -106,9 +103,6 @@ class Partida:
                 continue
 
             peso = jogador.peso_gol()
-            
-            if jogador.posicao == "Goleiro":
-                peso *= 0.01
 
             if peso > 0:
                 lista.extend([jogador] * peso)
@@ -270,21 +264,33 @@ class Partida:
         
     def atualizar_clean_sheet(self):
 
-        for jogador in self.clube1.jogadores:
+        if self.gols_c2 == 0:
+            print(
+                f"CS -> {self.clube1.nome} "
+                f"(placar {self.gols_c1}x{self.gols_c2})"
+            )
 
-            if (
-                jogador.posicao == "Goleiro"
-                and self.gols_c2 == 0
-            ):
-                jogador.clean_sheets += 1
+            for jogador in self.clube1.jogadores:
+                if jogador.posicao == "Goleiro":
+                    jogador.clean_sheets += 1
+                    print(
+                        f"   {jogador.nome}: "
+                        f"{jogador.clean_sheets}"
+                    )
 
-        for jogador in self.clube2.jogadores:
+        if self.gols_c1 == 0:
+            print(
+                f"CS -> {self.clube2.nome} "
+                f"(placar {self.gols_c2}x{self.gols_c1})"
+            )
 
-            if (
-                jogador.posicao == "Goleiro"
-                and self.gols_c1 == 0
-            ):
-                jogador.clean_sheets += 1
+            for jogador in self.clube2.jogadores:
+                if jogador.posicao == "Goleiro":
+                    jogador.clean_sheets += 1
+                    print(
+                        f"   {jogador.nome}: "
+                        f"{jogador.clean_sheets}"
+                    )
 
 #jogadores
 
@@ -359,7 +365,7 @@ class Partida:
                 jogador.posicao == "Defesa"
                 and clean_sheet
             ):
-                nota += 0.2
+                nota += 0.5
 
             if (
                 jogador.posicao == "Goleiro"
@@ -541,7 +547,7 @@ class Partida:
         
     def simular_penalti(self, clube, estatisticas):
 
-        if random.random() > 0.10:
+        if random.random() > 0.03:
             return
 
         cobrador = self.escolher_cobrador(clube)
@@ -620,6 +626,8 @@ class Partida:
 
                 jogador.vermelhos += 1
                 jogador.expulso = True
+                
+                clube.penalidade_expulsao += 5
 
                 self.eventos.append({
                     "minuto": minuto,

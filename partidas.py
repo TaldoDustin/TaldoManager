@@ -40,6 +40,7 @@ class Partida:
         )
 
         self.processar_eventos()
+        self.gerar_estatisticas_partida()
         self.definir_resultado()
         self.mostrar_resultado()
         self.mostrar_eventos()
@@ -48,7 +49,7 @@ class Partida:
         self.atualizar_estatisticas_clubes()
         self.atualizar_clean_sheet()
         
-        self.gerar_estatisticas_partida()
+        
 
         melhor_jogador, maior_nota = self.calcular_notas(estatisticas)
 
@@ -178,34 +179,111 @@ class Partida:
                 
     def gerar_estatisticas_partida(self):
 
-        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+        jogadores = (
+            self.clube1.jogadores +
+            self.clube2.jogadores
+        )
+
+        for jogador in jogadores:
 
             if jogador.expulso:
                 continue
 
+            # ==========================
+            # ATACANTES
+            # ==========================
             if jogador.posicao == "Atacante":
 
                 jogador.chutes_partida = random.randint(1, 7)
+
                 jogador.chutes_gol_partida = random.randint(
                     0,
                     jogador.chutes_partida
                 )
 
+                jogador.dribles_partida = random.randint(
+                    0,
+                    6
+                )
+
+                jogador.passes_chave_partida = random.randint(
+                    0,
+                    3
+                )
+
+                jogador.faltas_partida = random.randint(
+                    0,
+                    3
+                )
+
+            # ==========================
+            # MEIO-CAMPISTAS
+            # ==========================
             elif jogador.posicao == "Meio-Campo":
 
-                jogador.chutes_partida = random.randint(0, 4)
+                jogador.chutes_partida = random.randint(
+                    0,
+                    4
+                )
+
                 jogador.chutes_gol_partida = random.randint(
                     0,
                     jogador.chutes_partida
                 )
 
-                jogador.passes_chave_partida = random.randint(0, 5)
+                jogador.passes_chave_partida = random.randint(
+                    0,
+                    5
+                )
 
+                jogador.dribles_partida = random.randint(
+                    0,
+                    4
+                )
+
+                jogador.interceptacoes_partida = random.randint(
+                    0,
+                    4
+                )
+
+                jogador.faltas_partida = random.randint(
+                    0,
+                    4
+                )
+
+            # ==========================
+            # DEFENSORES
+            # ==========================
             elif jogador.posicao == "Defesa":
 
-                jogador.desarmes_partida = random.randint(1, 8)
-                jogador.interceptacoes_partida = random.randint(0, 6)
+                jogador.desarmes_partida = random.randint(
+                    1,
+                    8
+                )
 
+                jogador.interceptacoes_partida = random.randint(
+                    0,
+                    6
+                )
+
+                jogador.cortes_partida = random.randint(
+                    1,
+                    10
+                )
+
+                jogador.bloqueios_partida = random.randint(
+                    0,
+                    4
+                )
+
+                jogador.faltas_partida = random.randint(
+                    0,
+                    4
+                )
+
+            # ==========================
+            # GOLEIROS
+            # ==========================
             elif jogador.posicao == "Goleiro":
 
                 gols_sofridos = (
@@ -214,24 +292,17 @@ class Partida:
                     else self.gols_c1
                 )
 
+                jogador.gols_sofridos_partida = gols_sofridos
+
                 jogador.defesas_partida = random.randint(
                     gols_sofridos,
-                    gols_sofridos + 6
+                    gols_sofridos + 5
                 )
-                
-    def resetar_estatisticas_partida(self):
 
-        self.amarelos_partida = 0
-        self.expulso = False
-
-        self.chutes_partida = 0
-        self.chutes_gol_partida = 0
-        self.passes_chave_partida = 0
-
-        self.desarmes_partida = 0
-        self.interceptacoes_partida = 0
-        self.defesas_partida = 0
-
+                jogador.faltas_partida = random.randint(
+                    0,
+                    1
+                )
 #resultado
 
     def definir_resultado(self):
@@ -356,63 +427,12 @@ class Partida:
         melhor_jogador = None
         maior_nota = 0
 
-        bonus_posicao = {
-            "Atacante": (0.9, 0.4),
-            "Meio-Campo": (0.9, 0.6),
-            "Defesa": (0.6, 0.6),
-            "Goleiro": (1.5, 1.0)
-        }
-
         for jogador in self.clube1.jogadores + self.clube2.jogadores:
 
             nota = 6.0
 
             gols = estatisticas[jogador]["gols"]
             assistencias = estatisticas[jogador]["assistencias"]
-
-            bonus_gol, bonus_assistencia = bonus_posicao[jogador.posicao]
-
-            nota += gols * bonus_gol
-            nota += assistencias * bonus_assistencia
-            
-            # ==========================
-            # ESTATÍSTICAS DA PARTIDA
-            # ==========================
-
-            if jogador.posicao == "Atacante":
-
-                nota += (
-                    jogador.chutes_gol_partida * 0.10
-                )
-
-
-            elif jogador.posicao == "Meio-Campo":
-
-                nota += (
-                    jogador.passes_chave_partida * 0.05
-                )
-
-                nota += (
-                    jogador.chutes_gol_partida * 0.05
-                )
-
-
-            elif jogador.posicao == "Defesa":
-
-                nota += (
-                    jogador.desarmes_partida * 0.06
-                )
-
-                nota += (
-                    jogador.interceptacoes_partida * 0.04
-                )
-
-
-            elif jogador.posicao == "Goleiro":
-
-                nota += (
-                    jogador.defesas_partida * 0.07
-                )
 
             # ==========================
             # IDENTIFICA O TIME
@@ -431,7 +451,46 @@ class Partida:
             clean_sheet = gols_contra == 0
 
             # ==========================
-            # RESULTADO DA PARTIDA
+            # AÇÕES DA PARTIDA
+            # ==========================
+
+            if jogador.posicao == "Atacante":
+
+                nota += gols * 1.4
+                nota += assistencias * 0.8
+                nota += jogador.chutes_gol_partida * 0.12
+                nota += jogador.dribles_partida * 0.05
+
+            elif jogador.posicao == "Meio-Campo":
+
+                nota += gols * 1.1
+                nota += assistencias * 1.0
+                nota += jogador.passes_chave_partida * 0.10
+                nota += jogador.interceptacoes_partida * 0.04
+                nota += jogador.dribles_partida * 0.03
+
+            elif jogador.posicao == "Defesa":
+
+                nota += gols * 1.5
+                nota += assistencias * 0.5
+                nota += jogador.desarmes_partida * 0.06
+                nota += jogador.interceptacoes_partida * 0.05
+                nota += jogador.cortes_partida * 0.02
+
+                if clean_sheet:
+                    nota += 0.25
+
+            elif jogador.posicao == "Goleiro":
+
+                nota += jogador.defesas_partida * 0.18
+
+                if clean_sheet:
+                    nota += 0.60
+
+                nota -= jogador.gols_sofridos_partida * 0.15
+
+            # ==========================
+            # RESULTADO
             # ==========================
 
             if saldo > 0:
@@ -441,7 +500,7 @@ class Partida:
                 nota -= 0.2
 
             # ==========================
-            # BÔNUS POR POSIÇÃO
+            # BÔNUS EXTRAS
             # ==========================
 
             if (
@@ -458,42 +517,17 @@ class Partida:
                 nota += 0.1
 
             if (
-                jogador.posicao == "Defesa"
+                jogador.posicao == "Goleiro"
+                and saldo == 0
                 and clean_sheet
             ):
-                nota += 0.5
-
-            if jogador.posicao == "Goleiro":
-
-                if clean_sheet:
-                    nota += 0.7
-
-                    if saldo > 0:
-                        nota += 0.3
-
-                    elif saldo == 0:
-                        nota += 0.2
-
-                if gols_contra == 2:
-                    nota -= 0.2
-
-                elif gols_contra >= 3:
-                    nota -= 0.4
-
-
-            # Futuramente
-            # if jogador.capitao:
-            #     nota += 0.1
+                nota += 0.2
 
             # ==========================
-            # LIMITA A NOTA
+            # LIMITA NOTA
             # ==========================
 
             nota = max(0, min(10, nota))
-
-            # ==========================
-            # SALVA ESTATÍSTICAS
-            # ==========================
 
             jogador.soma_nota += nota
             jogador.partidas += 1
@@ -509,7 +543,6 @@ class Partida:
             # ==========================
 
             if melhor_jogador is None:
-
                 melhor_jogador = jogador
                 maior_nota = nota
 
@@ -526,14 +559,13 @@ class Partida:
                     )
                 )
             ):
-
                 melhor_jogador = jogador
                 maior_nota = nota
 
         melhor_jogador.melhor_em_campo += 1
 
         return melhor_jogador, maior_nota
-    
+
     def mostrar_eventos(self):
 
         print("\nEVENTOS")
@@ -700,7 +732,20 @@ class Partida:
             and not j.expulso
         ]
 
-        pesos = [j.overall for j in cobradores]
+        pesos = []
+
+        for jogador in cobradores:
+
+            if jogador.posicao == "Atacante":
+                peso = jogador.overall * 4
+
+            elif jogador.posicao == "Meio-Campo":
+                peso = jogador.overall * 2
+
+            else:  # Defesa
+                peso = max(1, jogador.overall // 8)
+
+            pesos.append(peso)
 
         return random.choices(
             cobradores,

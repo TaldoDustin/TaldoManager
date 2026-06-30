@@ -19,17 +19,42 @@ class Jogador:
         self.penaltis_perdidos = 0
         self.amarelos = 0
         self.vermelhos = 0
-        # estatísticas ofensivas da partida
+        # Estatisticas ofensivas 
         self.chutes_partida = 0
         self.chutes_gol_partida = 0
         self.passes_chave_partida = 0
-        # estatísticas defensivas da partida
-        self.defesas_partida = 0
+        self.dribles_partida = 0
+        # Estatisticas defensivas 
         self.desarmes_partida = 0
         self.interceptacoes_partida = 0
-        
-        
+        self.cortes_partida = 0
+        self.bloqueios_partida = 0
+        # Estatisticas Goleiro
+        self.cortes_partida = 0
+        self.bloqueios_partida = 0
+        # Disciplina
+        self.faltas_partida = 0
         # controle por partida
+        self.amarelos_partida = 0
+        self.expulso = False
+        
+    def resetar_estatisticas_partida(self):
+
+        self.chutes_partida = 0
+        self.chutes_gol_partida = 0
+        self.passes_chave_partida = 0
+        self.dribles_partida = 0
+
+        self.desarmes_partida = 0
+        self.interceptacoes_partida = 0
+        self.cortes_partida = 0
+        self.bloqueios_partida = 0
+
+        self.defesas_partida = 0
+        self.gols_sofridos_partida = 0
+
+        self.faltas_partida = 0
+
         self.amarelos_partida = 0
         self.expulso = False
         
@@ -55,7 +80,7 @@ class Jogador:
             return 0
 
         if self.posicao == "Defesa":
-            return 1 
+            return 0
 
         if self.posicao == "Meio-Campo":
             return 5 + (self.overall // 15)

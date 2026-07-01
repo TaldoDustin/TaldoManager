@@ -119,66 +119,7 @@ class Partida:
             nota
         )
     
-    def simular_cartoes(self):
-
-        self.distribuir_cartoes(
-            self.clube1
-        )
-
-        self.distribuir_cartoes(
-            self.clube2
-        )
-    
-    def simular_cartao(
-        self,
-        minuto
-    ):
-
-        # aproximadamente 3 cartões por jogo
-        if random.random() > 0.03:
-            return
-
-        clube = random.choice([
-            self.clube1,
-            self.clube2
-        ])
-
-        self.distribuir_cartao(
-            clube,
-            minuto
-        )
-    
-    def simular_gols(
-        self,
-        estatisticas
-    ):
-
-        self.distribuir_gols(
-            self.clube1,
-            self.gols_c1,
-            estatisticas
-        )
-
-        self.distribuir_gols(
-            self.clube2,
-            self.gols_c2,
-            estatisticas
-        )
-    
-    def simular_penaltis(
-        self,
-        estatisticas
-    ):
-
-        self.simular_penalti(
-            self.clube1,
-            estatisticas
-        )
-
-        self.simular_penalti(
-            self.clube2,
-            estatisticas
-        )
+    #Engine
     
     def simular_ataque(
         self,
@@ -186,25 +127,17 @@ class Partida:
         estatisticas
     ):
 
-        forca_c1 = (
-            self.clube1.calcular_forca()
-            - self.clube1.penalidade_expulsao
-        )
-
-        forca_c2 = (
-            self.clube2.calcular_forca()
-            - self.clube2.penalidade_expulsao
-        )
-
         # houve ataque?
-        if random.random() > 0.18:
+        if random.random() > 0.25:
             return
 
         # quem atacou?
         clube_atacando = random.choices(
             [self.clube1, self.clube2],
-            weights=[forca_c1, forca_c2],
-            k=1
+            weights=[
+                self.posse_c1,
+                self.posse_c2
+            ]
         )[0]
 
         # quem defendeu?
@@ -215,7 +148,7 @@ class Partida:
         )
 
         # houve finalização?
-        chance_finalizacao = 0.30
+        chance_finalizacao = 0.33
 
         if random.random() < chance_finalizacao:
 
@@ -233,7 +166,7 @@ class Partida:
 
             artilheiro.chutes_partida += 1
 
-            chance_no_gol = 0.45
+            chance_no_gol = 0.53
 
             if random.random() > chance_no_gol:
 
@@ -263,7 +196,7 @@ class Partida:
                 estatisticas,
                 artilheiro
             )
-            
+    
     def goleiro_defendeu(
         self,
         clube
@@ -291,53 +224,6 @@ class Partida:
             return True
 
         return False
-    
-    def simular_penalti_minuto(
-        self,
-        minuto,
-        estatisticas
-    ):
-        pass
-    
-    #Simulação
-    
-    def gerar_gols(self):
-
-        forca_c1, forca_c2 = self.calcular_forcas()
-
-        (
-            chance_c1,
-            chance_c2,
-            chance_empate,
-            diferenca_abs
-        ) = self.calcular_probabilidades(
-            forca_c1,
-            forca_c2
-        )
-
-        self.mostrar_analise(
-            forca_c1,
-            forca_c2,
-            chance_c1,
-            chance_c2,
-            chance_empate
-        )
-
-        (
-            vitorias_favorito,
-            vitorias_azarao,
-            empates
-        ) = self.definir_placares(
-            diferenca_abs
-        )
-
-        return self.sortear_resultado(
-            chance_c1,
-            chance_empate,
-            vitorias_favorito,
-            vitorias_azarao,
-            empates
-        )
     
     def marcar_gol(
         self,
@@ -374,6 +260,15 @@ class Partida:
             estatisticas
         )
     
+    def simular_penalti_minuto(
+        self,
+        minuto,
+        estatisticas
+    ):
+        pass
+    
+    #Escolhas
+    
     def escolher_artilheiro(
         self,
         clube
@@ -400,171 +295,6 @@ class Partida:
             return None
 
         return random.choice(lista)
-    
-    def distribuir_gols(
-        self,
-        clube,
-        quantidade_gols,
-        estatisticas
-    ):
-
-        for _ in range(quantidade_gols):
-
-            minuto = random.randint(
-                1,
-                90
-            )
-
-            self.marcar_gol(
-                clube,
-                minuto,
-                estatisticas
-            )
-    
-    def distribuir_assistencia(self, clube, artilheiro, estatisticas):
-
-        lista = []
-
-        for jogador in clube.jogadores:
-            
-            if jogador.expulso:
-                continue
-
-            if (
-                jogador != artilheiro
-                and not jogador.expulso
-            ):
-
-                peso = jogador.peso_assistencia()
-
-                if peso > 0:
-                    lista.extend([jogador] * peso)
-
-        if lista and random.random() < 0.70:
-
-            assistente = random.choice(lista)
-
-            assistente.assistencias += 1
-            estatisticas[assistente]["assistencias"] += 1
-            
-    def distribuir_cartao(
-        self,
-        clube,
-        minuto
-    ):
-
-        jogadores_validos = [
-            j for j in clube.jogadores
-            if not j.expulso
-        ]
-
-        if not jogadores_validos:
-            return
-
-        jogador = random.choice(
-            jogadores_validos
-        )
-
-        # vermelho direto
-        if random.random() < 0.01:
-
-            jogador.vermelhos += 1
-            jogador.expulso = True
-
-            clube.penalidade_expulsao += 5
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "expulsao",
-                "jogador": jogador
-            })
-
-            return
-
-        # amarelo
-        jogador.amarelos += 1
-        jogador.amarelos_partida += 1
-
-        self.eventos.append({
-            "minuto": minuto,
-            "tipo": "cartao_amarelo",
-            "jogador": jogador
-        })
-
-        # segundo amarelo
-        if (
-            jogador.amarelos_partida >= 2
-            and random.random() < 0.30
-        ):
-
-            jogador.vermelhos += 1
-            jogador.expulso = True
-
-            clube.penalidade_expulsao += 5
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "expulsao",
-                "jogador": jogador
-            })
-    
-    def distribuir_cartoes(self, clube):
-
-        quantidade = random.choices(
-            [0,1,2,3,4],
-            weights=[55,30,12,3,1]
-        )[0]
-
-        for _ in range(quantidade):
-
-            minuto = random.randint(
-                1,
-                90
-            )
-
-            self.distribuir_cartao(
-                clube,
-                minuto
-            )
-    
-    def simular_penalti(self, clube, estatisticas):
-
-        if random.random() > 0.03:
-            return
-
-        cobrador = self.escolher_cobrador(clube)
-
-        minuto = random.randint(1, 90)
-
-        if random.random() < 0.80:
-
-            cobrador.gols += 1
-            cobrador.penaltis += 1
-
-            # ADICIONE ESTA LINHA
-            estatisticas[cobrador]["gols"] += 1
-
-            # Atualiza o placar
-            if clube == self.clube1:
-                self.gols_c1 += 1
-            else:
-                self.gols_c2 += 1
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "penalti",
-                "jogador": cobrador,
-            })
-
-        else:
-
-            cobrador.penaltis_perdidos += 1
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "penalti_perdido",
-                "jogador": cobrador,
-            })
     
     def escolher_cobrador(self, clube):
 
@@ -594,6 +324,63 @@ class Partida:
             weights=pesos,
             k=1
         )[0]
+    
+    def distribuir_assistencia(self, clube, artilheiro, estatisticas):
+
+        lista = []
+
+        for jogador in clube.jogadores:
+            
+            if jogador.expulso:
+                continue
+
+            if (
+                jogador != artilheiro
+                and not jogador.expulso
+            ):
+
+                peso = jogador.peso_assistencia()
+
+                if peso > 0:
+                    lista.extend([jogador] * peso)
+
+        if lista and random.random() < 0.70:
+
+            assistente = random.choice(lista)
+
+            assistente.assistencias += 1
+            estatisticas[assistente]["assistencias"] += 1
+    
+    #Cartões
+    
+    def simular_cartoes(self):
+
+        self.distribuir_cartoes(
+            self.clube1
+        )
+
+        self.distribuir_cartoes(
+            self.clube2
+        )
+    
+    def simular_cartao(
+        self,
+        minuto
+    ):
+
+        # aproximadamente 3 cartões por jogo
+        if random.random() > 0.03:
+            return
+
+        clube = random.choice([
+            self.clube1,
+            self.clube2
+        ])
+
+        self.distribuir_cartao(
+            clube,
+            minuto
+        )
     
     #Eventos
     
@@ -629,7 +416,7 @@ class Partida:
             "jogador": jogador,
             "texto": texto
         })
-    
+            
     def processar_eventos(self):
 
         self.eventos.sort(
@@ -657,54 +444,19 @@ class Partida:
 
         print("\nEVENTOS")
 
-        eventos = sorted(
+        for evento in sorted(
             self.eventos,
             key=lambda e: e["minuto"]
-        )
+        ):
 
-        for evento in eventos:
-
-            tipo = evento.get("tipo")
-
-            if tipo == "gol":
-                print(
-                    f"{int(evento['minuto'])}' ⚽ "
-                    f"{evento['jogador'].nome}"
+            print(
+                evento.get(
+                    "texto",
+                    "Evento"
                 )
-
-            elif tipo == "cartao_amarelo":
-                print(
-                    f"{int(evento['minuto'])}' 🟨 "
-                    f"{evento['jogador'].nome}"
-                )
-
-            elif tipo == "expulsao":
-                print(
-                    f"{int(evento['minuto'])}' 🟥 "
-                    f"{evento['jogador'].nome}"
-                )
-
-            elif tipo == "penalti":
-                print(
-                    f"{int(evento['minuto'])}' ⚽ (P) "
-                    f"{evento['jogador'].nome}"
-                )
-                
-            elif tipo == "penalti_perdido":
-                print(
-                    f"{int(evento['minuto'])}' ❌ (P) "
-                    f"{evento['jogador'].nome}"
-                )
-
-            else:
-                print(
-                    evento.get(
-                        "texto",
-                        "Evento desconhecido"
-                    )
-                )
+            )
     
-    #Estatisticas
+    #Estatísticas
     
     def criar_estatisticas(self):
 
@@ -1000,245 +752,9 @@ class Partida:
                         f"   {jogador.nome}: "
                         f"{jogador.clean_sheets}"
                     )
+            
+    #Utilidade
     
-    #Engine
-    
-    def calcular_forcas(self):
-
-        forca_c1 = self.clube1.calcular_forca()
-        forca_c2 = self.clube2.calcular_forca()
-
-        # vantagem do mandante
-        forca_c1 += 1
-
-        # dia bom / ruim
-        forca_c1 += random.randint(-1, 1)
-        forca_c2 += random.randint(-1, 1)
-
-        return forca_c1, forca_c2
-    
-    def calcular_probabilidades(
-        self,
-        forca_c1,
-        forca_c2
-    ):
-
-        diferenca = forca_c1 - forca_c2
-        diferenca_abs = abs(diferenca)
-
-        chance_c1 = 0.5 + (diferenca * 0.06)
-
-        chance_c1 = max(
-            0.15,
-            min(0.85, chance_c1)
-        )
-
-        chance_c2 = 1 - chance_c1
-
-        if diferenca_abs <= 2:
-            chance_empate = 0.20
-
-        elif diferenca_abs <= 5:
-            chance_empate = 0.18
-
-        elif diferenca_abs <= 8:
-            chance_empate = 0.12
-
-        else:
-            chance_empate = 0.10
-
-        total = chance_c1 + chance_c2
-
-        chance_c1 = (
-            chance_c1 / total
-        ) * (1 - chance_empate)
-
-        chance_c2 = (
-            chance_c2 / total
-        ) * (1 - chance_empate)
-
-        return (
-            chance_c1,
-            chance_c2,
-            chance_empate,
-            diferenca_abs
-        )
-    
-    def definir_placares(
-        self,
-        diferenca_abs
-    ):
-
-        if diferenca_abs <= 2:
-
-            vitorias_favorito = [
-                (1,0),
-                (1,0),
-                (1,0),
-                (2,1),
-                (2,1),
-                (2,1),
-                (3,2)
-            ]
-
-            vitorias_azarao = [
-                (1,0),
-                (1,0),
-                (2,1),
-                (2,1)
-            ]
-
-            empates = [
-                (0,0),
-                (1,1),
-                (1,1),
-                (1,1),
-                (2,2)
-            ]
-
-        elif diferenca_abs <= 6:
-
-            vitorias_favorito = [
-                (1,0),
-                (1,0),
-                (2,0),
-                (2,0),
-                (2,1),
-                (2,1),
-                (3,1),
-                (3,0)
-            ]
-
-            vitorias_azarao = [
-                (1,0),
-                (1,0),
-                (2,1),
-                (2,1),
-                (2,0)
-            ]
-
-            empates = [
-                (0,0),
-                (1,1),
-                (1,1),
-                (2,2)
-            ]
-
-        else:
-
-            vitorias_favorito = [
-                (1,0),
-                (2,0),
-                (2,0),
-                (2,0),
-                (2,1),
-                (3,0),
-                (3,1),
-                (3,1),
-                (4,0),
-                (4,1)
-            ]
-
-            vitorias_azarao = [
-                (1,0),
-                (1,0),
-                (2,0),
-                (2,1)
-            ]
-
-            empates = [
-                (0,0),
-                (1,1)
-            ]
-
-        if diferenca_abs >= 10:
-
-            vitorias_favorito.extend([
-                (2,0),
-                (3,0),
-                (3,1),
-                (4,0),
-                (5,0)
-            ])
-
-            vitorias_azarao = [
-                (1,0),
-                (1,0),
-                (2,0),
-                (2,1)
-            ]
-
-            empates = [
-                (0,0),
-                (1,1)
-            ]
-
-        return (
-            vitorias_favorito,
-            vitorias_azarao,
-            empates
-        )
-    
-    def sortear_resultado(
-        self,
-        chance_c1,
-        chance_empate,
-        vitorias_favorito,
-        vitorias_azarao,
-        empates
-    ):
-
-        sorteio = random.random()
-
-        if sorteio < chance_c1:
-
-            gols_c1, gols_c2 = random.choice(
-                vitorias_favorito
-            )
-
-        elif sorteio < chance_c1 + chance_empate:
-
-            gols_c1, gols_c2 = random.choice(
-                empates
-            )
-
-        else:
-
-            gols_c2, gols_c1 = random.choice(
-                vitorias_azarao
-            )
-
-        return gols_c1, gols_c2
-    
-    def mostrar_analise(
-        self,
-        forca_c1,
-        forca_c2,
-        chance_c1,
-        chance_c2,
-        chance_empate
-    ):
-
-        print("\n--- ANÁLISE DA PARTIDA ---")
-
-        print(
-            f"{self.clube1.nome}: "
-            f"força {forca_c1:.1f} | "
-            f"chance {chance_c1:.1%}"
-        )
-
-        print(
-            f"{self.clube2.nome}: "
-            f"força {forca_c2:.1f} | "
-            f"chance {chance_c2:.1%}"
-        )
-
-        print(
-            f"Chance empate: {chance_empate:.1%}"
-        )
-
-        print("--------------------------")
-        
     def calcular_posse(self):
 
         ataque1 = sum(
@@ -1275,3 +791,146 @@ class Partida:
         )
 
         self.posse_c2 = 100 - self.posse_c1
+    
+    
+    #REMOVER FUTURAMENTE
+    
+    def distribuir_gols(
+        self,
+        clube,
+        quantidade_gols,
+        estatisticas
+    ):
+
+        for _ in range(quantidade_gols):
+
+            minuto = random.randint(
+                1,
+                90
+            )
+
+            self.marcar_gol(
+                clube,
+                minuto,
+                estatisticas
+            )
+    
+    def distribuir_cartoes(self, clube):
+
+        quantidade = random.choices(
+            [0,1,2,3,4],
+            weights=[55,30,12,3,1]
+        )[0]
+
+        for _ in range(quantidade):
+
+            minuto = random.randint(
+                1,
+                90
+            )
+
+            self.distribuir_cartao(
+                clube,
+                minuto
+            )
+            
+    def simular_penalti(self, clube, estatisticas):
+
+        if random.random() > 0.03:
+            return
+
+        cobrador = self.escolher_cobrador(clube)
+
+        minuto = random.randint(1, 90)
+
+        if random.random() < 0.80:
+
+            cobrador.gols += 1
+            cobrador.penaltis += 1
+
+            # ADICIONE ESTA LINHA
+            estatisticas[cobrador]["gols"] += 1
+
+            # Atualiza o placar
+            if clube == self.clube1:
+                self.gols_c1 += 1
+            else:
+                self.gols_c2 += 1
+
+            self.eventos.append({
+                "minuto": minuto,
+                "tipo": "penalti",
+                "jogador": cobrador,
+            })
+
+        else:
+
+            cobrador.penaltis_perdidos += 1
+
+            self.eventos.append({
+                "minuto": minuto,
+                "tipo": "penalti_perdido",
+                "jogador": cobrador,
+            })
+            
+    def distribuir_cartao(
+        self,
+        clube,
+        minuto
+    ):
+
+        jogadores_validos = [
+            j for j in clube.jogadores
+            if not j.expulso
+        ]
+
+        if not jogadores_validos:
+            return
+
+        jogador = random.choice(
+            jogadores_validos
+        )
+
+        # vermelho direto
+        if random.random() < 0.01:
+
+            jogador.vermelhos += 1
+            jogador.expulso = True
+
+            clube.penalidade_expulsao += 5
+
+            self.eventos.append({
+                "minuto": minuto,
+                "tipo": "expulsao",
+                "jogador": jogador
+            })
+
+            return
+
+        # amarelo
+        jogador.amarelos += 1
+        jogador.amarelos_partida += 1
+
+        self.eventos.append({
+            "minuto": minuto,
+            "tipo": "cartao_amarelo",
+            "jogador": jogador
+        })
+
+        # segundo amarelo
+        if (
+            jogador.amarelos_partida >= 2
+            and random.random() < 0.30
+        ):
+
+            jogador.vermelhos += 1
+            jogador.expulso = True
+
+            clube.penalidade_expulsao += 5
+
+            self.eventos.append({
+                "minuto": minuto,
+                "tipo": "expulsao",
+                "jogador": jogador
+            })        
+    

@@ -12,15 +12,19 @@ class Partida:
         
     def preparar_partida(self):
 
+        self.gols_c1 = 0
+        self.gols_c2 = 0
+
+        self.eventos = []
+
+        self.clube1.penalidade_expulsao = 0
+        self.clube2.penalidade_expulsao = 0
+
         for jogador in (
             self.clube1.jogadores +
             self.clube2.jogadores
         ):
             jogador.resetar_estatisticas_partida()
-
-        self.gols_c1, self.gols_c2 = (
-            self.gerar_gols()
-        )
     
     def executar_simulacao(
         self,
@@ -84,7 +88,19 @@ class Partida:
         self.preparar_partida()
 
         estatisticas = (
-            self.executar_simulacao()
+            self.criar_estatisticas()
+        )
+
+        self.executar_simulacao(
+            estatisticas
+        )
+
+        self.processar_eventos()
+
+        self.gerar_estatisticas_partida()
+
+        self.verificar_hat_tricks(
+            estatisticas
         )
 
         self.finalizar_partida()

@@ -7,18 +7,132 @@ class Partida:
         self.gols_c1 = 0
         self.gols_c2 = 0
         self.eventos = []
-    
-    def simular_partida(self):
         
-        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+    #Orquestração
+        
+    def preparar_partida(self):
+
+        for jogador in (
+            self.clube1.jogadores +
+            self.clube2.jogadores
+        ):
             jogador.resetar_estatisticas_partida()
 
-        self.gols_c1, self.gols_c2 = self.gerar_gols()
+        self.gols_c1, self.gols_c2 = (
+            self.gerar_gols()
+        )
+    
+    def executar_simulacao(
+        self,
+        estatisticas
+    ):
 
-        estatisticas = self.criar_estatisticas()
-        
-        self.distribuir_cartoes(self.clube1)
-        self.distribuir_cartoes(self.clube2)
+        for minuto in range(1, 91):
+
+            self.simular_ataque(
+                minuto,
+                estatisticas
+            )
+
+            self.simular_cartao(
+                minuto
+            )
+
+            self.simular_penalti_minuto(
+                minuto,
+                estatisticas
+            )
+    
+    def simular_minuto(
+        self,
+        minuto,
+        estatisticas
+    ):
+
+        self.simular_ataque(
+            minuto,
+            estatisticas
+        )
+
+        self.simular_cartao(
+            minuto
+        )
+
+        self.simular_penalti_minuto(
+            minuto,
+            estatisticas
+        )
+    
+    def finalizar_partida(self):
+
+        self.recalcular_placar()
+
+        self.definir_resultado()
+
+        self.mostrar_resultado()
+
+        self.mostrar_eventos()
+
+        self.atualizar_classificacao()
+
+        self.atualizar_estatisticas_clubes()
+
+        self.atualizar_clean_sheet()
+    
+    def simular_partida(self):
+
+        self.preparar_partida()
+
+        estatisticas = (
+            self.executar_simulacao()
+        )
+
+        self.finalizar_partida()
+
+        melhor, nota = (
+            self.calcular_notas(
+                estatisticas
+            )
+        )
+
+        self.mostrar_melhor_em_campo(
+            melhor,
+            nota
+        )
+    
+    def simular_cartoes(self):
+
+        self.distribuir_cartoes(
+            self.clube1
+        )
+
+        self.distribuir_cartoes(
+            self.clube2
+        )
+    
+    def simular_cartao(
+        self,
+        minuto
+    ):
+
+        # aproximadamente 3 cartões por jogo
+        if random.random() > 0.03:
+            return
+
+        clube = random.choice([
+            self.clube1,
+            self.clube2
+        ])
+
+        self.distribuir_cartao(
+            clube,
+            minuto
+        )
+    
+    def simular_gols(
+        self,
+        estatisticas
+    ):
 
         self.distribuir_gols(
             self.clube1,
@@ -31,71 +145,192 @@ class Partida:
             self.gols_c2,
             estatisticas
         )
-        
-        self.simular_penalti(self.clube1, estatisticas)
-        self.simular_penalti(self.clube2, estatisticas)
-        
-        self.verificar_hat_tricks(
+    
+    def simular_penaltis(
+        self,
+        estatisticas
+    ):
+
+        self.simular_penalti(
+            self.clube1,
             estatisticas
         )
 
-        self.processar_eventos()
-        self.gerar_estatisticas_partida()
-        self.definir_resultado()
-        self.mostrar_resultado()
-        self.mostrar_eventos()
-
-        self.atualizar_classificacao()
-        self.atualizar_estatisticas_clubes()
-        self.atualizar_clean_sheet()
-        
-        
-
-        melhor_jogador, maior_nota = self.calcular_notas(estatisticas)
-
-        self.mostrar_melhor_em_campo(
-            melhor_jogador,
-            maior_nota
-        )    
-
-#distribuição
-
-    def criar_estatisticas(self):
-
-        estatisticas = {}
-
-        for jogador in self.clube1.jogadores + self.clube2.jogadores:
-            estatisticas[jogador] = {
-                "gols": 0, 
-                "assistencias": 0
-            }
-
-        return estatisticas
+        self.simular_penalti(
+            self.clube2,
+            estatisticas
+        )
     
-    def adicionar_evento(
+    def simular_ataque(
         self,
         minuto,
-        tipo,
-        jogador
+        estatisticas
     ):
 
-        simbolos = {
-            "gol": "⚽",
-            "assistencia": "🅰️",
-            "penalti": "⚽ (P)",
-            "penalti_perdido": "❌"
-        }
+        forca_c1 = (
+            self.clube1.calcular_forca()
+            - self.clube1.penalidade_expulsao
+        )
 
-        texto = f"{minuto}' {simbolos[tipo]} {jogador.nome}"
+        forca_c2 = (
+            self.clube2.calcular_forca()
+            - self.clube2.penalidade_expulsao
+        )
 
-        self.eventos.append({
-            "minuto": minuto,
-            "tipo": tipo,
-            "jogador": jogador,
-            "texto": texto
-        })
+        # houve ataque?
+        if random.random() > 0.18:
+            return
+
+        # quem atacou?
+        clube_atacando = random.choices(
+            [self.clube1, self.clube2],
+            weights=[forca_c1, forca_c2],
+            k=1
+        )[0]
+
+        # quem defendeu?
+        clube_defendendo = (
+            self.clube2
+            if clube_atacando == self.clube1
+            else self.clube1
+        )
+
+        # houve finalização?
+        chance_finalizacao = 0.22
+
+        if random.random() < chance_finalizacao:
+
+            # o goleiro defendeu?
+            if self.goleiro_defendeu(
+                clube_defendendo
+            ):
+                return
+
+            # foi gol
+            self.marcar_gol(
+                clube_atacando,
+                minuto,
+                estatisticas
+            )
+            
+    def goleiro_defendeu(
+        self,
+        clube
+    ):
+
+        goleiro = next(
+            (
+                j for j in clube.jogadores
+                if j.posicao == "Goleiro"
+            ),
+            None
+        )
+
+        if goleiro is None:
+            return False
+
+        chance_defesa = (
+            0.18 +
+            (goleiro.overall - 70) * 0.012
+        )
+
+        if random.random() < chance_defesa:
+
+            goleiro.defesas_partida += 1
+            return True
+
+        return False
     
-    def distribuir_gols(self, clube, quantidade_gols, estatisticas):
+    def simular_penalti_minuto(
+        self,
+        minuto,
+        estatisticas
+    ):
+        pass
+    
+    #Simulação
+    
+    def gerar_gols(self):
+
+        forca_c1, forca_c2 = self.calcular_forcas()
+
+        (
+            chance_c1,
+            chance_c2,
+            chance_empate,
+            diferenca_abs
+        ) = self.calcular_probabilidades(
+            forca_c1,
+            forca_c2
+        )
+
+        self.mostrar_analise(
+            forca_c1,
+            forca_c2,
+            chance_c1,
+            chance_c2,
+            chance_empate
+        )
+
+        (
+            vitorias_favorito,
+            vitorias_azarao,
+            empates
+        ) = self.definir_placares(
+            diferenca_abs
+        )
+
+        return self.sortear_resultado(
+            chance_c1,
+            chance_empate,
+            vitorias_favorito,
+            vitorias_azarao,
+            empates
+        )
+    
+    def marcar_gol(
+        self,
+        clube,
+        minuto,
+        estatisticas
+    ):
+
+        # escolhe quem marcou
+        artilheiro = self.escolher_artilheiro(
+            clube
+        )
+
+        if artilheiro is None:
+            return
+
+        # atualiza estatísticas do jogador
+        artilheiro.gols += 1
+        estatisticas[artilheiro]["gols"] += 1
+
+        # atualiza placar
+        if clube == self.clube1:
+            self.gols_c1 += 1
+        else:
+            self.gols_c2 += 1
+
+        # registra evento
+        self.adicionar_evento(
+            minuto,
+            "gol",
+            artilheiro
+        )
+
+        # assistência
+        self.distribuir_assistencia(
+            clube,
+            artilheiro,
+            estatisticas
+        )
+    
+    def escolher_artilheiro(
+        self,
+        clube
+    ):
 
         lista = []
 
@@ -106,33 +341,39 @@ class Partida:
 
             peso = jogador.peso_gol()
 
+            if jogador.posicao == "Goleiro":
+                peso = 0
+
             if peso > 0:
-                lista.extend([jogador] * peso)
+                lista.extend(
+                    [jogador] * peso
+                )
 
         if not lista:
-            return
+            return None
+
+        return random.choice(lista)
+    
+    def distribuir_gols(
+        self,
+        clube,
+        quantidade_gols,
+        estatisticas
+    ):
 
         for _ in range(quantidade_gols):
 
-            artilheiro = random.choice(lista)
-
-            artilheiro.gols += 1
-            estatisticas[artilheiro]["gols"] += 1
-            
-            minuto = random.randint(1,90)
-            
-            self.adicionar_evento(
-                minuto,
-                "gol",
-                artilheiro
+            minuto = random.randint(
+                1,
+                90
             )
 
-            self.distribuir_assistencia(
+            self.marcar_gol(
                 clube,
-                artilheiro,
+                minuto,
                 estatisticas
             )
-
+    
     def distribuir_assistencia(self, clube, artilheiro, estatisticas):
 
         lista = []
@@ -159,24 +400,267 @@ class Partida:
             assistente.assistencias += 1
             estatisticas[assistente]["assistencias"] += 1
             
-    
-            
-    def verificar_hat_tricks(
+    def distribuir_cartao(
         self,
-        estatisticas
+        clube,
+        minuto
     ):
 
-        for jogador in estatisticas:
+        jogadores_validos = [
+            j for j in clube.jogadores
+            if not j.expulso
+        ]
 
-            if estatisticas[jogador]["gols"] >= 3:
+        if not jogadores_validos:
+            return
 
-                jogador.hat_tricks += 1
+        jogador = random.choice(
+            jogadores_validos
+        )
 
+        # vermelho direto
+        if random.random() < 0.01:
+
+            jogador.vermelhos += 1
+            jogador.expulso = True
+
+            clube.penalidade_expulsao += 5
+
+            self.eventos.append({
+                "minuto": minuto,
+                "tipo": "expulsao",
+                "jogador": jogador
+            })
+
+            return
+
+        # amarelo
+        jogador.amarelos += 1
+        jogador.amarelos_partida += 1
+
+        self.eventos.append({
+            "minuto": minuto,
+            "tipo": "cartao_amarelo",
+            "jogador": jogador
+        })
+
+        # segundo amarelo
+        if (
+            jogador.amarelos_partida >= 2
+            and random.random() < 0.30
+        ):
+
+            jogador.vermelhos += 1
+            jogador.expulso = True
+
+            clube.penalidade_expulsao += 5
+
+            self.eventos.append({
+                "minuto": minuto,
+                "tipo": "expulsao",
+                "jogador": jogador
+            })
+    
+    def distribuir_cartoes(self, clube):
+
+        quantidade = random.choices(
+            [0,1,2,3,4],
+            weights=[55,30,12,3,1]
+        )[0]
+
+        for _ in range(quantidade):
+
+            minuto = random.randint(
+                1,
+                90
+            )
+
+            self.distribuir_cartao(
+                clube,
+                minuto
+            )
+    
+    def simular_penalti(self, clube, estatisticas):
+
+        if random.random() > 0.03:
+            return
+
+        cobrador = self.escolher_cobrador(clube)
+
+        minuto = random.randint(1, 90)
+
+        if random.random() < 0.80:
+
+            cobrador.gols += 1
+            cobrador.penaltis += 1
+
+            # ADICIONE ESTA LINHA
+            estatisticas[cobrador]["gols"] += 1
+
+            # Atualiza o placar
+            if clube == self.clube1:
+                self.gols_c1 += 1
+            else:
+                self.gols_c2 += 1
+
+            self.eventos.append({
+                "minuto": minuto,
+                "tipo": "penalti",
+                "jogador": cobrador,
+            })
+
+        else:
+
+            cobrador.penaltis_perdidos += 1
+
+            self.eventos.append({
+                "minuto": minuto,
+                "tipo": "penalti_perdido",
+                "jogador": cobrador,
+            })
+    
+    def escolher_cobrador(self, clube):
+
+        cobradores = [
+            j for j in clube.jogadores
+            if j.posicao != "Goleiro"
+            and not j.expulso
+        ]
+
+        pesos = []
+
+        for jogador in cobradores:
+
+            if jogador.posicao == "Atacante":
+                peso = jogador.overall * 4
+
+            elif jogador.posicao == "Meio-Campo":
+                peso = jogador.overall * 2
+
+            else:  # Defesa
+                peso = max(1, jogador.overall // 8)
+
+            pesos.append(peso)
+
+        return random.choices(
+            cobradores,
+            weights=pesos,
+            k=1
+        )[0]
+    
+    #Eventos
+    
+    def adicionar_evento(
+        self,
+        minuto,
+        tipo,
+        jogador
+    ):
+
+        simbolos = {
+            "gol": "⚽",
+            "assistencia": "🅰️",
+            "penalti": "⚽ (P)",
+            "penalti_perdido": "❌"
+        }
+
+        texto = f"{minuto}' {simbolos[tipo]} {jogador.nome}"
+
+        self.eventos.append({
+            "minuto": minuto,
+            "tipo": tipo,
+            "jogador": jogador,
+            "texto": texto
+        })
+    
+    def processar_eventos(self):
+
+        self.eventos.sort(
+            key=lambda e: e["minuto"]
+        )
+
+        expulsos = set()
+        eventos_validos = []
+
+        for evento in self.eventos:
+
+            jogador = evento.get("jogador", None)
+
+            if jogador and jogador in expulsos:
+                continue
+
+            eventos_validos.append(evento)
+
+            if evento.get("tipo") == "expulsao" and jogador:
+                expulsos.add(jogador)
+
+        self.eventos = eventos_validos
+    
+    def mostrar_eventos(self):
+
+        print("\nEVENTOS")
+
+        eventos = sorted(
+            self.eventos,
+            key=lambda e: e["minuto"]
+        )
+
+        for evento in eventos:
+
+            tipo = evento.get("tipo")
+
+            if tipo == "gol":
                 print(
-                    f"\n🎩 HAT-TRICK DE "
-                    f"{jogador.nome}!"
+                    f"{int(evento['minuto'])}' ⚽ "
+                    f"{evento['jogador'].nome}"
+                )
+
+            elif tipo == "cartao_amarelo":
+                print(
+                    f"{int(evento['minuto'])}' 🟨 "
+                    f"{evento['jogador'].nome}"
+                )
+
+            elif tipo == "expulsao":
+                print(
+                    f"{int(evento['minuto'])}' 🟥 "
+                    f"{evento['jogador'].nome}"
+                )
+
+            elif tipo == "penalti":
+                print(
+                    f"{int(evento['minuto'])}' ⚽ (P) "
+                    f"{evento['jogador'].nome}"
                 )
                 
+            elif tipo == "penalti_perdido":
+                print(
+                    f"{int(evento['minuto'])}' ❌ (P) "
+                    f"{evento['jogador'].nome}"
+                )
+
+            else:
+                print(
+                    evento.get(
+                        "texto",
+                        "Evento desconhecido"
+                    )
+                )
+    
+    #Estatisticas
+    
+    def criar_estatisticas(self):
+
+        estatisticas = {}
+
+        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+            estatisticas[jogador] = {
+                "gols": 0, 
+                "assistencias": 0
+            }
+
+        return estatisticas
+    
     def gerar_estatisticas_partida(self):
 
         jogadores = (
@@ -303,125 +787,23 @@ class Partida:
                     0,
                     1
                 )
-#resultado
+    
+    def verificar_hat_tricks(
+        self,
+        estatisticas
+    ):
 
-    def definir_resultado(self):
+        for jogador in estatisticas:
 
-        if self.gols_c1 > self.gols_c2:
-            self.resultado = f"{self.clube1.nome} venceu!"
+            if estatisticas[jogador]["gols"] >= 3:
 
-        elif self.gols_c2 > self.gols_c1:
-            self.resultado = f"{self.clube2.nome} venceu!"
+                jogador.hat_tricks += 1
 
-        else:
-            self.resultado = "Empate!"
-
-    def mostrar_resultado(self):
-
-        print(
-            f"{self.clube1.nome} "
-            f"{self.gols_c1} x "
-            f"{self.gols_c2} "
-            f"{self.clube2.nome}"
-        )
-
-        print(f"{self.resultado}\n")
-        
-    def processar_eventos(self):
-
-        self.eventos.sort(
-            key=lambda e: e["minuto"]
-        )
-
-        expulsos = set()
-        eventos_validos = []
-
-        for evento in self.eventos:
-
-            jogador = evento.get("jogador", None)
-
-            if jogador and jogador in expulsos:
-                continue
-
-            eventos_validos.append(evento)
-
-            if evento.get("tipo") == "expulsao" and jogador:
-                expulsos.add(jogador)
-
-        self.eventos = eventos_validos
-#campeonato
-
-    def atualizar_classificacao(self):
-
-        if self.gols_c1 > self.gols_c2:
-
-            self.clube1.pontos += 3
-            self.clube1.vitorias += 1
-            self.clube2.derrotas += 1
-
-            self.clube1.atualizar_forma("V")
-            self.clube2.atualizar_forma("D")
-
-        elif self.gols_c2 > self.gols_c1:
-
-            self.clube2.pontos += 3
-            self.clube2.vitorias += 1
-            self.clube1.derrotas += 1
-
-            self.clube2.atualizar_forma("V")
-            self.clube1.atualizar_forma("D")
-
-        else:
-
-            self.clube1.pontos += 1
-            self.clube2.pontos += 1
-
-            self.clube1.empates += 1
-            self.clube2.empates += 1
-
-            self.clube1.atualizar_forma("E")
-            self.clube2.atualizar_forma("E")
-            
-    def atualizar_estatisticas_clubes(self):
-
-        self.clube1.gols_marcados += self.gols_c1
-        self.clube1.gols_sofridos += self.gols_c2
-
-        self.clube2.gols_marcados += self.gols_c2
-        self.clube2.gols_sofridos += self.gols_c1   
-        
-    def atualizar_clean_sheet(self):
-
-        if self.gols_c2 == 0:
-            print(
-                f"CS -> {self.clube1.nome} "
-                f"(placar {self.gols_c1}x{self.gols_c2})"
-            )
-
-            for jogador in self.clube1.jogadores:
-                if jogador.posicao == "Goleiro":
-                    jogador.clean_sheets += 1
-                    print(
-                        f"   {jogador.nome}: "
-                        f"{jogador.clean_sheets}"
-                    )
-
-        if self.gols_c1 == 0:
-            print(
-                f"CS -> {self.clube2.nome} "
-                f"(placar {self.gols_c2}x{self.gols_c1})"
-            )
-
-            for jogador in self.clube2.jogadores:
-                if jogador.posicao == "Goleiro":
-                    jogador.clean_sheets += 1
-                    print(
-                        f"   {jogador.nome}: "
-                        f"{jogador.clean_sheets}"
-                    )
-
-#jogadores
-
+                print(
+                    f"\n🎩 HAT-TRICK DE "
+                    f"{jogador.nome}!"
+                )
+    
     def calcular_notas(self, estatisticas):
 
         melhor_jogador = None
@@ -482,7 +864,7 @@ class Partida:
 
             elif jogador.posicao == "Goleiro":
 
-                nota += jogador.defesas_partida * 0.18
+                nota += jogador.defesas_partida * 0.08
 
                 if clean_sheet:
                     nota += 0.60
@@ -565,57 +947,6 @@ class Partida:
         melhor_jogador.melhor_em_campo += 1
 
         return melhor_jogador, maior_nota
-
-    def mostrar_eventos(self):
-
-        print("\nEVENTOS")
-
-        eventos = sorted(
-            self.eventos,
-            key=lambda e: e["minuto"]
-        )
-
-        for evento in eventos:
-
-            tipo = evento.get("tipo")
-
-            if tipo == "gol":
-                print(
-                    f"{int(evento['minuto'])}' ⚽ "
-                    f"{evento['jogador'].nome}"
-                )
-
-            elif tipo == "cartao_amarelo":
-                print(
-                    f"{int(evento['minuto'])}' 🟨 "
-                    f"{evento['jogador'].nome}"
-                )
-
-            elif tipo == "expulsao":
-                print(
-                    f"{int(evento['minuto'])}' 🟥 "
-                    f"{evento['jogador'].nome}"
-                )
-
-            elif tipo == "penalti":
-                print(
-                    f"{int(evento['minuto'])}' ⚽ (P) "
-                    f"{evento['jogador'].nome}"
-                )
-                
-            elif tipo == "penalti_perdido":
-                print(
-                    f"{int(evento['minuto'])}' ❌ (P) "
-                    f"{evento['jogador'].nome}"
-                )
-
-            else:
-                print(
-                    evento.get(
-                        "texto",
-                        "Evento desconhecido"
-                    )
-                )
     
     def mostrar_melhor_em_campo(self, jogador, nota):
 
@@ -625,7 +956,9 @@ class Partida:
             f"{jogador.nome} " 
             f"({jogador.posicao}) " 
             f"- Nota {nota:.1f}\n")
-        
+    
+    #Resultado
+    
     def recalcular_placar(self):
 
         gols_c1 = 0
@@ -644,178 +977,101 @@ class Partida:
 
         self.gols_c1 = gols_c1
         self.gols_c2 = gols_c2
+    
+    def definir_resultado(self):
 
-#simulação
+        if self.gols_c1 > self.gols_c2:
+            self.resultado = f"{self.clube1.nome} venceu!"
 
-    def gerar_gols(self):
+        elif self.gols_c2 > self.gols_c1:
+            self.resultado = f"{self.clube2.nome} venceu!"
 
-        forca_c1, forca_c2 = self.calcular_forcas()
+        else:
+            self.resultado = "Empate!"
+    
+    def mostrar_resultado(self):
 
-        (
-            chance_c1,
-            chance_c2,
-            chance_empate,
-            diferenca_abs
-        ) = self.calcular_probabilidades(
-            forca_c1,
-            forca_c2
+        print(
+            f"{self.clube1.nome} "
+            f"{self.gols_c1} x "
+            f"{self.gols_c2} "
+            f"{self.clube2.nome}"
         )
 
-        self.mostrar_analise(
-            forca_c1,
-            forca_c2,
-            chance_c1,
-            chance_c2,
-            chance_empate
-        )
+        print(f"{self.resultado}\n")
+    
+    #Campeonato
+    
+    def atualizar_classificacao(self):
 
-        (
-            vitorias_favorito,
-            vitorias_azarao,
-            empates
-        ) = self.definir_placares(
-            diferenca_abs
-        )
+        if self.gols_c1 > self.gols_c2:
 
-        return self.sortear_resultado(
-            chance_c1,
-            chance_empate,
-            vitorias_favorito,
-            vitorias_azarao,
-            empates
-        )
-        
-    def simular_penalti(self, clube, estatisticas):
+            self.clube1.pontos += 3
+            self.clube1.vitorias += 1
+            self.clube2.derrotas += 1
 
-        if random.random() > 0.03:
-            return
+            self.clube1.atualizar_forma("V")
+            self.clube2.atualizar_forma("D")
 
-        cobrador = self.escolher_cobrador(clube)
+        elif self.gols_c2 > self.gols_c1:
 
-        minuto = random.randint(1, 90)
+            self.clube2.pontos += 3
+            self.clube2.vitorias += 1
+            self.clube1.derrotas += 1
 
-        if random.random() < 0.80:
-
-            cobrador.gols += 1
-            cobrador.penaltis += 1
-
-            # ADICIONE ESTA LINHA
-            estatisticas[cobrador]["gols"] += 1
-
-            # Atualiza o placar
-            if clube == self.clube1:
-                self.gols_c1 += 1
-            else:
-                self.gols_c2 += 1
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "penalti",
-                "jogador": cobrador,
-            })
+            self.clube2.atualizar_forma("V")
+            self.clube1.atualizar_forma("D")
 
         else:
 
-            cobrador.penaltis_perdidos += 1
+            self.clube1.pontos += 1
+            self.clube2.pontos += 1
 
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "penalti_perdido",
-                "jogador": cobrador,
-            })
+            self.clube1.empates += 1
+            self.clube2.empates += 1
+
+            self.clube1.atualizar_forma("E")
+            self.clube2.atualizar_forma("E")
     
-    def escolher_cobrador(self, clube):
+    def atualizar_estatisticas_clubes(self):
 
-        cobradores = [
-            j for j in clube.jogadores
-            if j.posicao != "Goleiro"
-            and not j.expulso
-        ]
+        self.clube1.gols_marcados += self.gols_c1
+        self.clube1.gols_sofridos += self.gols_c2
 
-        pesos = []
+        self.clube2.gols_marcados += self.gols_c2
+        self.clube2.gols_sofridos += self.gols_c1   
+    
+    def atualizar_clean_sheet(self):
 
-        for jogador in cobradores:
+        if self.gols_c2 == 0:
+            print(
+                f"CS -> {self.clube1.nome} "
+                f"(placar {self.gols_c1}x{self.gols_c2})"
+            )
 
-            if jogador.posicao == "Atacante":
-                peso = jogador.overall * 4
+            for jogador in self.clube1.jogadores:
+                if jogador.posicao == "Goleiro":
+                    jogador.clean_sheets += 1
+                    print(
+                        f"   {jogador.nome}: "
+                        f"{jogador.clean_sheets}"
+                    )
 
-            elif jogador.posicao == "Meio-Campo":
-                peso = jogador.overall * 2
+        if self.gols_c1 == 0:
+            print(
+                f"CS -> {self.clube2.nome} "
+                f"(placar {self.gols_c2}x{self.gols_c1})"
+            )
 
-            else:  # Defesa
-                peso = max(1, jogador.overall // 8)
-
-            pesos.append(peso)
-
-        return random.choices(
-            cobradores,
-            weights=pesos,
-            k=1
-        )[0]
-        
-    def distribuir_cartoes(self, clube):
-
-        quantidade = random.choices(
-            [0,1,2,3,4],
-            weights=[55,30,12,3,1]
-        )[0]
-
-        for _ in range(quantidade):
-
-            jogadores_validos = [
-                j for j in clube.jogadores
-                if not j.expulso
-            ]
-
-            if not jogadores_validos:
-                return
-
-            jogador = random.choice(jogadores_validos)
-
-            minuto = random.randint(1, 90)
-
-            # Vermelho direto
-            if random.random() < 0.01:
-
-                jogador.vermelhos += 1
-                jogador.expulso = True
-                
-                clube.penalidade_expulsao += 5
-
-                self.eventos.append({
-                    "minuto": minuto,
-                    "tipo": "expulsao",
-                    "jogador": jogador
-                })
-
-                continue 
-
-            # Amarelo
-            jogador.amarelos += 1
-            jogador.amarelos_partida += 1
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "cartao_amarelo",
-                "jogador": jogador
-            })
-
-            # Segundo amarelo
-            if (
-                jogador.amarelos_partida >= 2
-                and random.random() < 0.30
-            ):
-
-                jogador.vermelhos += 1
-                jogador.expulso = True
-
-                self.eventos.append({
-                    "minuto": minuto,
-                    "tipo": "expulsao",
-                    "jogador": jogador
-                })
-
-                continue
+            for jogador in self.clube2.jogadores:
+                if jogador.posicao == "Goleiro":
+                    jogador.clean_sheets += 1
+                    print(
+                        f"   {jogador.nome}: "
+                        f"{jogador.clean_sheets}"
+                    )
+    
+    #Engine
     
     def calcular_forcas(self):
 
@@ -850,16 +1106,16 @@ class Partida:
         chance_c2 = 1 - chance_c1
 
         if diferenca_abs <= 2:
-            chance_empate = 0.18
+            chance_empate = 0.20
 
         elif diferenca_abs <= 5:
-            chance_empate = 0.15
+            chance_empate = 0.18
 
         elif diferenca_abs <= 8:
-            chance_empate = 0.11
+            chance_empate = 0.12
 
         else:
-            chance_empate = 0.08
+            chance_empate = 0.10
 
         total = chance_c1 + chance_c2
 
@@ -877,36 +1133,7 @@ class Partida:
             chance_empate,
             diferenca_abs
         )
-        
-    def mostrar_analise(
-        self,
-        forca_c1,
-        forca_c2,
-        chance_c1,
-        chance_c2,
-        chance_empate
-    ):
-
-        print("\n--- ANÁLISE DA PARTIDA ---")
-
-        print(
-            f"{self.clube1.nome}: "
-            f"força {forca_c1:.1f} | "
-            f"chance {chance_c1:.1%}"
-        )
-
-        print(
-            f"{self.clube2.nome}: "
-            f"força {forca_c2:.1f} | "
-            f"chance {chance_c2:.1%}"
-        )
-
-        print(
-            f"Chance empate: {chance_empate:.1%}"
-        )
-
-        print("--------------------------")
-        
+    
     def definir_placares(
         self,
         diferenca_abs
@@ -1052,3 +1279,32 @@ class Partida:
             )
 
         return gols_c1, gols_c2
+    
+    def mostrar_analise(
+        self,
+        forca_c1,
+        forca_c2,
+        chance_c1,
+        chance_c2,
+        chance_empate
+    ):
+
+        print("\n--- ANÁLISE DA PARTIDA ---")
+
+        print(
+            f"{self.clube1.nome}: "
+            f"força {forca_c1:.1f} | "
+            f"chance {chance_c1:.1%}"
+        )
+
+        print(
+            f"{self.clube2.nome}: "
+            f"força {forca_c2:.1f} | "
+            f"chance {chance_c2:.1%}"
+        )
+
+        print(
+            f"Chance empate: {chance_empate:.1%}"
+        )
+
+        print("--------------------------")

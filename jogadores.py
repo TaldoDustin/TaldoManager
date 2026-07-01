@@ -83,7 +83,7 @@ class Jogador:
             return 0
 
         if self.posicao == "Meio-Campo":
-            return 5 + (self.overall // 15)
+            return 7 + (self.overall // 15)
 
         if self.posicao == "Atacante":
             return 12 + (self.overall // 15)

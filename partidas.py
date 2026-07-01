@@ -7,6 +7,12 @@ class Partida:
         self.gols_c1 = 0
         self.gols_c2 = 0
         self.eventos = []
+        self.posse_c1 = 50
+        self.posse_c2 = 50
+        self.finalizacoes_c1 = 0
+        self.finalizacoes_c2 = 0
+        self.finalizacoes_gol_c1 = 0
+        self.finalizacoes_gol_c2 = 0
         
     #Orquestração
         
@@ -15,10 +21,18 @@ class Partida:
         self.gols_c1 = 0
         self.gols_c2 = 0
 
+        self.finalizacoes_c1 = 0
+        self.finalizacoes_c2 = 0
+
+        self.finalizacoes_gol_c1 = 0
+        self.finalizacoes_gol_c2 = 0
+
         self.eventos = []
 
         self.clube1.penalidade_expulsao = 0
         self.clube2.penalidade_expulsao = 0
+
+        self.calcular_posse()
 
         for jogador in (
             self.clube1.jogadores +
@@ -31,18 +45,9 @@ class Partida:
         estatisticas
     ):
 
-        for minuto in range(1, 91):
+        for minuto in range(1,91):
 
-            self.simular_ataque(
-                minuto,
-                estatisticas
-            )
-
-            self.simular_cartao(
-                minuto
-            )
-
-            self.simular_penalti_minuto(
+            self.simular_minuto(
                 minuto,
                 estatisticas
             )
@@ -96,8 +101,6 @@ class Partida:
         )
 
         self.processar_eventos()
-
-        self.gerar_estatisticas_partida()
 
         self.verificar_hat_tricks(
             estatisticas
@@ -212,21 +215,53 @@ class Partida:
         )
 
         # houve finalização?
-        chance_finalizacao = 0.22
+        chance_finalizacao = 0.30
 
         if random.random() < chance_finalizacao:
 
-            # o goleiro defendeu?
+            if clube_atacando == self.clube1:
+                self.finalizacoes_c1 += 1
+            else:
+                self.finalizacoes_c2 += 1
+
+            artilheiro = self.escolher_artilheiro(
+                clube_atacando
+            )
+
+            if artilheiro is None:
+                return
+
+            artilheiro.chutes_partida += 1
+
+            chance_no_gol = 0.45
+
+            if random.random() > chance_no_gol:
+
+                self.adicionar_evento(
+                    minuto,
+                    "chute_fora",
+                    artilheiro
+                )
+
+                return
+
+            if clube_atacando == self.clube1:
+                self.finalizacoes_gol_c1 += 1
+            else:
+                self.finalizacoes_gol_c2 += 1
+
+            artilheiro.chutes_gol_partida += 1
+
             if self.goleiro_defendeu(
                 clube_defendendo
             ):
                 return
 
-            # foi gol
             self.marcar_gol(
                 clube_atacando,
                 minuto,
-                estatisticas
+                estatisticas,
+                artilheiro
             )
             
     def goleiro_defendeu(
@@ -308,14 +343,10 @@ class Partida:
         self,
         clube,
         minuto,
-        estatisticas
+        estatisticas,
+        artilheiro
     ):
-
-        # escolhe quem marcou
-        artilheiro = self.escolher_artilheiro(
-            clube
-        )
-
+        
         if artilheiro is None:
             return
 
@@ -577,10 +608,20 @@ class Partida:
             "gol": "⚽",
             "assistencia": "🅰️",
             "penalti": "⚽ (P)",
-            "penalti_perdido": "❌"
+            "penalti_perdido": "❌",
+            "chute_fora": "💨"
         }
 
-        texto = f"{minuto}' {simbolos[tipo]} {jogador.nome}"
+        simbolo = simbolos.get(
+            tipo,
+            "•"
+        )
+
+        texto = (
+            f"{minuto}' "
+            f"{simbolo} "
+            f"{jogador.nome}"
+        )
 
         self.eventos.append({
             "minuto": minuto,
@@ -676,133 +717,6 @@ class Partida:
             }
 
         return estatisticas
-    
-    def gerar_estatisticas_partida(self):
-
-        jogadores = (
-            self.clube1.jogadores +
-            self.clube2.jogadores
-        )
-
-        for jogador in jogadores:
-
-            if jogador.expulso:
-                continue
-
-            # ==========================
-            # ATACANTES
-            # ==========================
-            if jogador.posicao == "Atacante":
-
-                jogador.chutes_partida = random.randint(1, 7)
-
-                jogador.chutes_gol_partida = random.randint(
-                    0,
-                    jogador.chutes_partida
-                )
-
-                jogador.dribles_partida = random.randint(
-                    0,
-                    6
-                )
-
-                jogador.passes_chave_partida = random.randint(
-                    0,
-                    3
-                )
-
-                jogador.faltas_partida = random.randint(
-                    0,
-                    3
-                )
-
-            # ==========================
-            # MEIO-CAMPISTAS
-            # ==========================
-            elif jogador.posicao == "Meio-Campo":
-
-                jogador.chutes_partida = random.randint(
-                    0,
-                    4
-                )
-
-                jogador.chutes_gol_partida = random.randint(
-                    0,
-                    jogador.chutes_partida
-                )
-
-                jogador.passes_chave_partida = random.randint(
-                    0,
-                    5
-                )
-
-                jogador.dribles_partida = random.randint(
-                    0,
-                    4
-                )
-
-                jogador.interceptacoes_partida = random.randint(
-                    0,
-                    4
-                )
-
-                jogador.faltas_partida = random.randint(
-                    0,
-                    4
-                )
-
-            # ==========================
-            # DEFENSORES
-            # ==========================
-            elif jogador.posicao == "Defesa":
-
-                jogador.desarmes_partida = random.randint(
-                    1,
-                    8
-                )
-
-                jogador.interceptacoes_partida = random.randint(
-                    0,
-                    6
-                )
-
-                jogador.cortes_partida = random.randint(
-                    1,
-                    10
-                )
-
-                jogador.bloqueios_partida = random.randint(
-                    0,
-                    4
-                )
-
-                jogador.faltas_partida = random.randint(
-                    0,
-                    4
-                )
-
-            # ==========================
-            # GOLEIROS
-            # ==========================
-            elif jogador.posicao == "Goleiro":
-
-                gols_sofridos = (
-                    self.gols_c2
-                    if jogador in self.clube1.jogadores
-                    else self.gols_c1
-                )
-
-                jogador.gols_sofridos_partida = gols_sofridos
-
-                jogador.defesas_partida = random.randint(
-                    gols_sofridos,
-                    gols_sofridos + 5
-                )
-
-                jogador.faltas_partida = random.randint(
-                    0,
-                    1
-                )
     
     def verificar_hat_tricks(
         self,
@@ -1324,3 +1238,40 @@ class Partida:
         )
 
         print("--------------------------")
+        
+    def calcular_posse(self):
+
+        ataque1 = sum(
+            j.overall
+            for j in self.clube1.jogadores
+            if j.posicao == "Atacante"
+        )
+
+        meio1 = sum(
+            j.overall
+            for j in self.clube1.jogadores
+            if j.posicao == "Meio-Campo"
+        )
+
+        ataque2 = sum(
+            j.overall
+            for j in self.clube2.jogadores
+            if j.posicao == "Atacante"
+        )
+
+        meio2 = sum(
+            j.overall
+            for j in self.clube2.jogadores
+            if j.posicao == "Meio-Campo"
+        )
+
+        forca1 = ataque1 * 1.2 + meio1 * 1.6
+        forca2 = ataque2 * 1.2 + meio2 * 1.6
+
+        total = forca1 + forca2
+
+        self.posse_c1 = round(
+            (forca1 / total) * 100
+        )
+
+        self.posse_c2 = 100 - self.posse_c1

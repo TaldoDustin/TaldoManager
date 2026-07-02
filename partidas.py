@@ -147,55 +147,90 @@ class Partida:
             else self.clube1
         )
 
+        # quem finalizou?
+        artilheiro = self.escolher_artilheiro(
+            clube_atacando
+        )
+
+        if artilheiro is None:
+            return
+
         # houve finalização?
-        chance_finalizacao = 0.33
+        if not self.gerar_finalizacao(
+            clube_atacando,
+            artilheiro
+        ):
+            return
 
-        if random.random() < chance_finalizacao:
+        # foi no gol?
+        if not self.finalizacao_no_gol(
+            clube_atacando,
+            artilheiro
+        ):
 
-            if clube_atacando == self.clube1:
-                self.finalizacoes_c1 += 1
-            else:
-                self.finalizacoes_c2 += 1
-
-            artilheiro = self.escolher_artilheiro(
-                clube_atacando
-            )
-
-            if artilheiro is None:
-                return
-
-            artilheiro.chutes_partida += 1
-
-            chance_no_gol = 0.53
-
-            if random.random() > chance_no_gol:
-
-                self.adicionar_evento(
-                    minuto,
-                    "chute_fora",
-                    artilheiro
-                )
-
-                return
-
-            if clube_atacando == self.clube1:
-                self.finalizacoes_gol_c1 += 1
-            else:
-                self.finalizacoes_gol_c2 += 1
-
-            artilheiro.chutes_gol_partida += 1
-
-            if self.goleiro_defendeu(
-                clube_defendendo
-            ):
-                return
-
-            self.marcar_gol(
-                clube_atacando,
+            self.adicionar_evento(
                 minuto,
-                estatisticas,
+                "chute_fora",
                 artilheiro
             )
+
+            return
+
+        # goleiro defendeu?
+        if self.goleiro_defendeu(
+            clube_defendendo
+        ):
+            return
+
+        # gol
+        self.marcar_gol(
+            clube_atacando,
+            minuto,
+            estatisticas,
+            artilheiro
+        )
+    
+    def gerar_finalizacao(
+        self,
+        clube_atacando,
+        artilheiro
+    ):
+
+        chance_finalizacao = 0.22
+
+        if random.random() > chance_finalizacao:
+            return False
+
+        if clube_atacando == self.clube1:
+            self.finalizacoes_c1 += 1
+        else:
+            self.finalizacoes_c2 += 1
+
+        if artilheiro:
+            artilheiro.chutes_partida += 1
+
+        return True
+    
+    def finalizacao_no_gol(
+        self,
+        clube_atacando,
+        artilheiro
+    ):
+
+        chance_no_gol = 0.45
+
+        if random.random() > chance_no_gol:
+            return False
+
+        if clube_atacando == self.clube1:
+            self.finalizacoes_gol_c1 += 1
+        else:
+            self.finalizacoes_gol_c2 += 1
+
+        if artilheiro:
+            artilheiro.chutes_gol_partida += 1
+
+        return True
     
     def goleiro_defendeu(
         self,

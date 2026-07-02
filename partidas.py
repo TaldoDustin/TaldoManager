@@ -128,7 +128,7 @@ class Partida:
     ):
 
         # houve ataque?
-        if random.random() > 0.25:
+        if random.random() > 0.22:
             return
 
         # quem atacou?
@@ -146,10 +146,22 @@ class Partida:
             if clube_atacando == self.clube1
             else self.clube1
         )
+        
+        self.simular_acao_defensiva(
+            clube_defendendo
+        )
 
         # quem finalizou?
         artilheiro = self.escolher_artilheiro(
             clube_atacando
+        )
+        
+        self.gerar_drible(
+            artilheiro
+        )
+
+        self.gerar_passe_chave(
+            artilheiro
         )
 
         if artilheiro is None:
@@ -217,7 +229,7 @@ class Partida:
         artilheiro
     ):
 
-        chance_no_gol = 0.45
+        chance_no_gol = 0.50
 
         if random.random() > chance_no_gol:
             return False
@@ -336,6 +348,138 @@ class Partida:
                 "penalti_perdido",
                 cobrador
             )
+    
+    #Estatisticas Reais
+    
+    def gerar_drible(
+        self,
+        jogador
+    ):
+
+        if jogador.posicao == "Atacante":
+
+            if random.random() < 0.40:
+                jogador.dribles_partida += 1
+
+        elif jogador.posicao == "Meio-Campo":
+
+            if random.random() < 0.25:
+                jogador.dribles_partida += 1
+    
+    def gerar_passe_chave(
+        self,
+        jogador
+    ):
+
+        if jogador.posicao == "Meio-Campo":
+
+            if random.random() < 0.50:
+                jogador.passes_chave_partida += 1
+
+        elif jogador.posicao == "Atacante":
+
+            if random.random() < 0.20:
+                jogador.passes_chave_partida += 1
+    
+    #Ações Defensivas
+    
+    def simular_acao_defensiva(
+        self,
+        clube_defendendo
+    ):
+
+        defensores = [
+            j for j in clube_defendendo.jogadores
+            if (
+                j.posicao in [
+                    "Defesa",
+                    "Meio-Campo"
+                ]
+                and not j.expulso
+            )
+        ]
+
+        if not defensores:
+            return
+
+        defensor = random.choice(
+            defensores
+        )
+
+        self.gerar_desarme(
+            defensor
+        )
+
+        self.gerar_interceptacao(
+            defensor
+        )
+
+        self.gerar_corte(
+            defensor
+        )
+
+        self.gerar_falta(
+            defensor
+        )
+    
+    def gerar_desarme(
+        self,
+        jogador
+    ):
+
+        if jogador.posicao == "Defesa":
+
+            jogador.desarmes_partida += random.randint(
+                0,
+                2
+            )
+
+        elif jogador.posicao == "Meio-Campo":
+
+            jogador.desarmes_partida += random.randint(
+                0,
+                1
+            )
+    
+    def gerar_interceptacao(
+        self,
+        jogador
+    ):
+
+        if jogador.posicao == "Defesa":
+
+            jogador.interceptacoes_partida += random.randint(
+                0,
+                2
+            )
+
+        elif jogador.posicao == "Meio-Campo":
+
+            jogador.interceptacoes_partida += random.randint(
+                0,
+                1
+            )
+    
+    def gerar_corte(
+        self,
+        jogador
+    ):
+
+        if jogador.posicao == "Defesa":
+
+            jogador.cortes_partida += random.randint(
+                0,
+                3
+            )
+    
+    def gerar_falta(
+        self,
+        jogador
+    ):
+
+        if random.random() < 0.20:
+
+            jogador.faltas_partida += 1
     
     #Escolhas
     
@@ -463,6 +607,18 @@ class Partida:
 
         jogador = random.choice(
             jogadores_validos
+        )
+        
+        self.gerar_desarme(
+            jogador
+        )
+
+        self.gerar_interceptacao(
+            jogador
+        )
+
+        self.gerar_corte(
+            jogador
         )
 
         # vermelho direto

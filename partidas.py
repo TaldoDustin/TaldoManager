@@ -13,6 +13,9 @@ class Partida:
         self.finalizacoes_c2 = 0
         self.finalizacoes_gol_c1 = 0
         self.finalizacoes_gol_c2 = 0
+        self.substituicoes_c1 = 0
+        self.substituicoes_c2 = 0
+        self.max_substituicoes = 5
         
     #Orquestração
         
@@ -42,25 +45,21 @@ class Partida:
     
     def executar_simulacao(
         self,
-        estatisticas
     ):
 
         for minuto in range(1,91):
 
             self.simular_minuto(
                 minuto,
-                estatisticas
             )
     
     def simular_minuto(
         self,
-        minuto,
-        estatisticas
+        minuto
     ):
 
         self.simular_ataque(
             minuto,
-            estatisticas
         )
 
         self.simular_cartao(
@@ -69,7 +68,9 @@ class Partida:
 
         self.simular_penalti_minuto(
             minuto,
-            estatisticas
+        )
+        self.simular_substituicao(
+            minuto
         )
     
     def finalizar_partida(self):
@@ -92,25 +93,23 @@ class Partida:
 
         self.preparar_partida()
 
-        estatisticas = (
+        self.estatisticas = (
             self.criar_estatisticas()
-        )
+    )
 
         self.executar_simulacao(
-            estatisticas
         )
 
         self.processar_eventos()
 
         self.verificar_hat_tricks(
-            estatisticas
+            
         )
 
         self.finalizar_partida()
 
         melhor, nota = (
             self.calcular_notas(
-                estatisticas
             )
         )
 
@@ -124,11 +123,10 @@ class Partida:
     def simular_ataque(
         self,
         minuto,
-        estatisticas
     ):
 
         # houve ataque?
-        if random.random() > 0.22:
+        if random.random() > 0.28:
             return
 
         # quem atacou?
@@ -198,7 +196,6 @@ class Partida:
         self.marcar_gol(
             clube_atacando,
             minuto,
-            estatisticas,
             artilheiro
         )
     
@@ -208,7 +205,7 @@ class Partida:
         artilheiro
     ):
 
-        chance_finalizacao = 0.22
+        chance_finalizacao = 0.25
 
         if random.random() > chance_finalizacao:
             return False
@@ -261,7 +258,7 @@ class Partida:
             return False
 
         chance_defesa = (
-            0.18 +
+            0.14 +
             (goleiro.overall - 70) * 0.012
         )
 
@@ -276,7 +273,6 @@ class Partida:
         self,
         clube,
         minuto,
-        estatisticas,
         artilheiro
     ):
         
@@ -285,7 +281,7 @@ class Partida:
 
         # atualiza estatísticas do jogador
         artilheiro.gols += 1
-        estatisticas[artilheiro]["gols"] += 1
+        self.estatisticas[artilheiro]["gols"] += 1
 
         # atualiza placar
         if clube == self.clube1:
@@ -303,14 +299,12 @@ class Partida:
         # assistência
         self.distribuir_assistencia(
             clube,
-            artilheiro,
-            estatisticas
+            artilheiro
         )
     
     def simular_penalti_minuto(
         self,
-        minuto,
-        estatisticas
+        minuto
     ):
 
         # aproximadamente
@@ -332,7 +326,7 @@ class Partida:
             cobrador.gols += 1
             cobrador.penaltis += 1
 
-            estatisticas[cobrador]["gols"] += 1
+            self.estatisticas[cobrador]["gols"] += 1
 
             self.adicionar_evento(
                 minuto,
@@ -481,6 +475,118 @@ class Partida:
 
             jogador.faltas_partida += 1
     
+    #Substituições
+    
+    def simular_substituicao(
+        self,
+        minuto
+    ):
+
+        # normalmente após os 60 minutos
+        if minuto < 60:
+            return
+
+        if random.random() > 0.08:
+            return
+
+        clube = random.choice([
+            self.clube1,
+            self.clube2
+        ])
+
+        self.realizar_substituicao(
+            clube,
+            minuto
+        )
+    
+    def escolher_substituto(
+        self,
+        clube,
+        titular
+    ):
+
+        reservas = [
+            j for j in clube.reservas
+            if j.posicao == titular.posicao
+        ]
+
+        if not reservas:
+            return None
+
+        return random.choice(
+            reservas
+        )
+    
+    def realizar_substituicao(
+        self,
+        clube,
+        minuto
+    ):
+
+        if clube == self.clube1:
+
+            if self.substituicoes_c1 >= self.max_substituicoes:
+                return
+
+        else:
+
+            if self.substituicoes_c2 >= self.max_substituicoes:
+                return
+
+        titulares = [
+            j for j in clube.jogadores
+            if not j.expulso
+        ]
+
+        if not titulares:
+            return
+
+        saindo = random.choice(
+            titulares
+        )
+
+        entrando = self.escolher_substituto(
+            clube,
+            saindo
+        )
+
+        if entrando is None:
+            return
+
+        clube.jogadores.remove(
+            saindo
+        )
+
+        clube.jogadores.append(
+        entrando
+        )
+
+        clube.reservas.remove(
+            entrando
+        )   
+
+        clube.reservas.append(
+            saindo
+        )
+        
+        if entrando not in self.estatisticas:
+
+            self.estatisticas[entrando] = {
+                "gols": 0,
+                "assistencias": 0
+            }
+
+        if clube == self.clube1:
+            self.substituicoes_c1 += 1
+        else:
+            self.substituicoes_c2 += 1
+
+        self.adicionar_evento(
+            minuto,
+            "substituicao",
+            entrando
+        )
+    
     #Escolhas
     
     def escolher_artilheiro(
@@ -542,8 +648,7 @@ class Partida:
     def distribuir_assistencia(
         self,
         clube,
-        artilheiro,
-        estatisticas
+        artilheiro
     ):
 
         lista = []
@@ -568,7 +673,7 @@ class Partida:
             assistente = random.choice(lista)
 
             assistente.assistencias += 1
-            estatisticas[assistente]["assistencias"] += 1
+            self.estatisticas[assistente]["assistencias"] += 1
     
     #Cartões
     
@@ -682,6 +787,7 @@ class Partida:
             "cartao_amarelo": "🟨",
             "expulsao": "🟥",
             "defesa_goleiro": "🧤",
+            "substituicao": "🔄",
         }
 
         simbolo = simbolos.get(
@@ -757,12 +863,11 @@ class Partida:
     
     def verificar_hat_tricks(
         self,
-        estatisticas
     ):
 
-        for jogador in estatisticas:
+        for jogador in self.estatisticas:
 
-            if estatisticas[jogador]["gols"] >= 3:
+            if self.estatisticas[jogador]["gols"] >= 3:
 
                 jogador.hat_tricks += 1
 
@@ -771,17 +876,17 @@ class Partida:
                     f"{jogador.nome}!"
                 )
     
-    def calcular_notas(self, estatisticas):
+    def calcular_notas(self):
 
         melhor_jogador = None
         maior_nota = 0
 
-        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+        for jogador in self.estatisticas:
 
             nota = 6.0
 
-            gols = estatisticas[jogador]["gols"]
-            assistencias = estatisticas[jogador]["assistencias"]
+            gols = self.estatisticas[jogador]["gols"]
+            assistencias = self.estatisticas[jogador]["assistencias"]
 
             # ==========================
             # IDENTIFICA O TIME
@@ -814,7 +919,7 @@ class Partida:
 
                 nota += gols * 1.1
                 nota += assistencias * 1.0
-                nota += jogador.passes_chave_partida * 0.10
+                nota += jogador.passes_chave_partida * 0.07
                 nota += jogador.interceptacoes_partida * 0.04
                 nota += jogador.dribles_partida * 0.03
 
@@ -827,7 +932,7 @@ class Partida:
                 nota += jogador.cortes_partida * 0.02
 
                 if clean_sheet:
-                    nota += 0.25
+                    nota += 0.8
 
             elif jogador.posicao == "Goleiro":
 
@@ -900,11 +1005,11 @@ class Partida:
                 or (
                     nota == maior_nota
                     and (
-                        estatisticas[jogador]["gols"],
-                        estatisticas[jogador]["assistencias"]
+                        self.estatisticas[jogador]["gols"],
+                        self.estatisticas[jogador]["assistencias"]
                     ) > (
-                        estatisticas[melhor_jogador]["gols"],
-                        estatisticas[melhor_jogador]["assistencias"]
+                        self.estatisticas[melhor_jogador]["gols"],
+                        self.estatisticas[melhor_jogador]["assistencias"]
                     )
                 )
             ):

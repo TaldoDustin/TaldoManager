@@ -33,7 +33,9 @@ def carregar_clubes(jogadores):
         encoding="utf-8"
     ) as arquivo:
 
-        dados = json.load(arquivo)
+        dados = json.load(
+            arquivo
+        )
 
     clubes = []
 
@@ -46,12 +48,21 @@ def carregar_clubes(jogadores):
             c["torcedores"]
         )
 
-        for id_jogador in c["elenco"]:
+        for id_jogador in c["titulares"]:
+
             clube.contratar_jogador(
                 jogadores[id_jogador]
             )
 
-        clubes.append(clube)
+        for id_jogador in c["reservas"]:
+
+            clube.contratar_reserva(
+                jogadores[id_jogador]
+            )
+
+        clubes.append(
+            clube
+        )
 
     return clubes
 

@@ -12,6 +12,7 @@ class Clube:
         self.torcedores = torcedores
 
         self.jogadores = []
+        self.reservas = []
 
         self.pontos = 0
         self.gols_marcados = 0
@@ -60,7 +61,16 @@ class Clube:
         
     def contratar_jogador(self, jogador):
         self.jogadores.append(jogador)
-        
+    
+    def contratar_reserva(
+        self,
+        jogador
+    ):
+
+        self.reservas.append(
+            jogador
+        )
+    
     def calcular_forca(self):
 
         if not self.jogadores:
@@ -86,4 +96,59 @@ class Clube:
     
     def saldo_gols(self):
         return self.gols_marcados - self.gols_sofridos
+    
+    def organizar_elenco(self):
+
+        goleiros = [
+            j for j in self.jogadores
+            if j.posicao == "Goleiro"
+        ]
+
+        defensores = [
+            j for j in self.jogadores
+            if j.posicao == "Defesa"
+        ]
+
+        meias = [
+            j for j in self.jogadores
+            if j.posicao == "Meio-Campo"
+        ]
+
+        atacantes = [
+            j for j in self.jogadores
+            if j.posicao == "Atacante"
+        ]
+
+        titulares = (
+            goleiros[:1] +
+            defensores[:4] +
+            meias[:3] +
+            atacantes[:3]
+        )
+
+        reservas = [
+            j for j in self.jogadores
+            if j not in titulares
+        ]
+
+        self.jogadores = titulares
+        self.reservas = reservas
+    
+    def mostrar_elenco(self):
+
+        print("\n=== TITULARES ===")
+
+        for jogador in self.jogadores:
+            print(
+                jogador.nome,
+                jogador.posicao
+            )
+
+        print("\n=== RESERVAS ===")
+
+        for jogador in self.reservas:
+            print(
+                jogador.nome,
+                jogador.posicao
+            )
     

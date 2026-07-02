@@ -30,10 +30,12 @@ class Jogador:
         self.cortes_partida = 0
         self.bloqueios_partida = 0
         # Estatisticas Goleiro
+        self.defesas_partida = 0
         self.cortes_partida = 0
         self.bloqueios_partida = 0
         # Disciplina
         self.faltas_partida = 0
+        self.gols_sofridos_partida = 0
         # controle por partida
         self.amarelos_partida = 0
         self.expulso = False

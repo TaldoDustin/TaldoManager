@@ -130,17 +130,25 @@ for id_clube in range(NUM_CLUBES):
             10000,
             10000000
         ),
-        "elenco": []
+        "titulares": [],
+        "reservas": []
     }
 
-    formacao = (
+    titulares = (
         ["Goleiro"] * 1 +
         ["Defesa"] * 4 +
         ["Meio-Campo"] * 3 +
         ["Atacante"] * 3
     )
 
-    for posicao in formacao:
+    reservas = (
+        ["Goleiro"] * 1 +
+        ["Defesa"] * 2 +
+        ["Meio-Campo"] * 2 +
+        ["Atacante"] * 2
+    )
+
+    for posicao in titulares:
 
         jogador = {
             "id": id_jogador,
@@ -151,9 +159,34 @@ for id_clube in range(NUM_CLUBES):
         }
 
         jogadores.append(jogador)
-        clube["elenco"].append(id_jogador)
+        clube["titulares"].append(
+            id_jogador
+        )   
 
         id_jogador += 1
+
+    for posicao in reservas:
+
+        jogador = {
+            "id": id_jogador,
+            "nome": gerar_nome(),
+            "idade": gerar_idade(),
+            "posicao": posicao,
+            "overall": gerar_overall(
+                posicao
+            )
+        }
+
+        jogadores.append(
+            jogador
+        )
+
+        clube["reservas"].append(
+            id_jogador
+        )
+
+        id_jogador += 1
+
 
     clubes.append(clube)
 

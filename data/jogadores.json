@@ -1,94 +1,94 @@
 [
     {
         "id": 1,
-        "nome": "Noah Smith",
-        "idade": 17,
+        "nome": "Francesco Almeida",
+        "idade": 28,
         "posicao": "Goleiro",
-        "overall": 84
+        "overall": 80
     },
     {
         "id": 2,
-        "nome": "Francesco Fernandez",
-        "idade": 16,
+        "nome": "Thiago Gomes",
+        "idade": 18,
         "posicao": "Defesa",
-        "overall": 76
-    },
-    {
-        "id": 3,
-        "nome": "Pedro Walker",
-        "idade": 30,
-        "posicao": "Defesa",
-        "overall": 88
-    },
-    {
-        "id": 4,
-        "nome": "Pedro Araujo",
-        "idade": 25,
-        "posicao": "Defesa",
-        "overall": 74
-    },
-    {
-        "id": 5,
-        "nome": "Rafael Martins",
-        "idade": 24,
-        "posicao": "Defesa",
-        "overall": 72
-    },
-    {
-        "id": 6,
-        "nome": "Luca Rodriguez",
-        "idade": 22,
-        "posicao": "Meio-Campo",
-        "overall": 83
-    },
-    {
-        "id": 7,
-        "nome": "Francesco Lopez",
-        "idade": 30,
-        "posicao": "Meio-Campo",
-        "overall": 86
-    },
-    {
-        "id": 8,
-        "nome": "Louis Martins",
-        "idade": 22,
-        "posicao": "Meio-Campo",
         "overall": 89
     },
     {
-        "id": 9,
-        "nome": "Felipe Bianchi",
-        "idade": 22,
-        "posicao": "Atacante",
+        "id": 3,
+        "nome": "Pierre Araujo",
+        "idade": 18,
+        "posicao": "Defesa",
+        "overall": 78
+    },
+    {
+        "id": 4,
+        "nome": "Arthur Lima",
+        "idade": 20,
+        "posicao": "Defesa",
+        "overall": 81
+    },
+    {
+        "id": 5,
+        "nome": "Rodrigo Walker",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 79
+    },
+    {
+        "id": 6,
+        "nome": "Giovanni Martins",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 7,
+        "nome": "Pierre Rodriguez",
+        "idade": 17,
+        "posicao": "Meio-Campo",
+        "overall": 76
+    },
+    {
+        "id": 8,
+        "nome": "Miguel Taylor",
+        "idade": 18,
+        "posicao": "Meio-Campo",
         "overall": 83
     },
     {
+        "id": 9,
+        "nome": "Felipe Almeida",
+        "idade": 17,
+        "posicao": "Atacante",
+        "overall": 89
+    },
+    {
         "id": 10,
-        "nome": "Gabriel Costa",
-        "idade": 22,
+        "nome": "Alejandro Moretti",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 75
+    },
+    {
+        "id": 11,
+        "nome": "Rafael Mendes",
+        "idade": 26,
         "posicao": "Atacante",
         "overall": 78
     },
     {
-        "id": 11,
-        "nome": "Leonardo Mendes",
-        "idade": 28,
-        "posicao": "Atacante",
-        "overall": 83
-    },
-    {
         "id": 12,
-        "nome": "Pierre Brown",
-        "idade": 17,
+        "nome": "Rodrigo Lima",
+        "idade": 36,
         "posicao": "Goleiro",
         "overall": 81
     },
     {
         "id": 13,
-        "nome": "André Costa",
-        "idade": 16,
+        "nome": "Luca Martins",
+        "idade": 29,
         "posicao": "Defesa",
-        "overall": 88
+        "overall": 81
     },
     {
         "id": 14,
@@ -99,1444 +99,2424 @@
     },
     {
         "id": 15,
-        "nome": "Enzo Brown",
-        "idade": 29,
-        "posicao": "Defesa",
-        "overall": 76
+        "nome": "Alejandro Smith",
+        "idade": 19,
+        "posicao": "Meio-Campo",
+        "overall": 83
     },
     {
         "id": 16,
-        "nome": "Caio Gomes",
+        "nome": "Oliver Lopez",
         "idade": 21,
-        "posicao": "Defesa",
-        "overall": 81
+        "posicao": "Meio-Campo",
+        "overall": 83
     },
     {
         "id": 17,
-        "nome": "Gabriel Rossi",
-        "idade": 17,
+        "nome": "Rafael Smith",
+        "idade": 20,
+        "posicao": "Atacante",
+        "overall": 76
+    },
+    {
+        "id": 18,
+        "nome": "Pierre Rocha",
+        "idade": 24,
+        "posicao": "Atacante",
+        "overall": 89
+    },
+    {
+        "id": 19,
+        "nome": "Rodrigo Gomes",
+        "idade": 16,
+        "posicao": "Goleiro",
+        "overall": 75
+    },
+    {
+        "id": 20,
+        "nome": "Louis Taylor",
+        "idade": 20,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 21,
+        "nome": "Liam Araujo",
+        "idade": 37,
+        "posicao": "Defesa",
+        "overall": 72
+    },
+    {
+        "id": 22,
+        "nome": "André Santos",
+        "idade": 26,
+        "posicao": "Defesa",
+        "overall": 88
+    },
+    {
+        "id": 23,
+        "nome": "Enzo Martins",
+        "idade": 26,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 24,
+        "nome": "Louis Rossi",
+        "idade": 22,
         "posicao": "Meio-Campo",
         "overall": 77
     },
     {
-        "id": 18,
-        "nome": "Gabriel Barbosa",
-        "idade": 37,
-        "posicao": "Meio-Campo",
-        "overall": 86
-    },
-    {
-        "id": 19,
-        "nome": "Pierre Silva",
-        "idade": 35,
+        "id": 25,
+        "nome": "André Johnson",
+        "idade": 27,
         "posicao": "Meio-Campo",
         "overall": 83
     },
     {
-        "id": 20,
-        "nome": "Francesco Dubois",
-        "idade": 29,
-        "posicao": "Atacante",
-        "overall": 74
-    },
-    {
-        "id": 21,
-        "nome": "Juan Soares",
-        "idade": 26,
-        "posicao": "Atacante",
-        "overall": 80
-    },
-    {
-        "id": 22,
-        "nome": "Jack Silva",
-        "idade": 29,
-        "posicao": "Atacante",
-        "overall": 81
-    },
-    {
-        "id": 23,
-        "nome": "Miguel Araujo",
-        "idade": 25,
-        "posicao": "Goleiro",
-        "overall": 86
-    },
-    {
-        "id": 24,
-        "nome": "Harry Fernandez",
-        "idade": 36,
-        "posicao": "Defesa",
-        "overall": 76
-    },
-    {
-        "id": 25,
-        "nome": "Antoine Smith",
-        "idade": 29,
-        "posicao": "Defesa",
-        "overall": 84
-    },
-    {
         "id": 26,
-        "nome": "João Wilson",
-        "idade": 18,
-        "posicao": "Defesa",
-        "overall": 82
+        "nome": "Marco Walker",
+        "idade": 23,
+        "posicao": "Meio-Campo",
+        "overall": 89
     },
     {
         "id": 27,
-        "nome": "Oliver Wilson",
-        "idade": 21,
-        "posicao": "Defesa",
-        "overall": 87
+        "nome": "Pedro Walker",
+        "idade": 22,
+        "posicao": "Atacante",
+        "overall": 76
     },
     {
         "id": 28,
-        "nome": "André Oliveira",
-        "idade": 24,
-        "posicao": "Meio-Campo",
-        "overall": 93
+        "nome": "Pablo Rodriguez",
+        "idade": 22,
+        "posicao": "Atacante",
+        "overall": 83
     },
     {
         "id": 29,
-        "nome": "Miguel Rodriguez",
-        "idade": 23,
-        "posicao": "Meio-Campo",
-        "overall": 76
+        "nome": "Vinicius Barbosa",
+        "idade": 17,
+        "posicao": "Atacante",
+        "overall": 85
     },
     {
         "id": 30,
-        "nome": "Thiago Santos",
-        "idade": 21,
-        "posicao": "Meio-Campo",
-        "overall": 81
+        "nome": "Rafael Lopez",
+        "idade": 19,
+        "posicao": "Goleiro",
+        "overall": 82
     },
     {
         "id": 31,
-        "nome": "Carlos Fernandez",
-        "idade": 25,
-        "posicao": "Atacante",
-        "overall": 76
+        "nome": "Diego Dubois",
+        "idade": 24,
+        "posicao": "Defesa",
+        "overall": 73
     },
     {
         "id": 32,
-        "nome": "Carlos Rossi",
-        "idade": 32,
-        "posicao": "Atacante",
-        "overall": 72
+        "nome": "Matheus Araujo",
+        "idade": 24,
+        "posicao": "Defesa",
+        "overall": 73
     },
     {
         "id": 33,
-        "nome": "Marco Gomes",
-        "idade": 24,
-        "posicao": "Atacante",
-        "overall": 80
+        "nome": "Diego Santos",
+        "idade": 22,
+        "posicao": "Meio-Campo",
+        "overall": 76
     },
     {
         "id": 34,
-        "nome": "Francesco Oliveira",
-        "idade": 22,
-        "posicao": "Goleiro",
+        "nome": "Leonardo Santos",
+        "idade": 26,
+        "posicao": "Meio-Campo",
         "overall": 84
     },
     {
         "id": 35,
-        "nome": "Alejandro Costa",
-        "idade": 23,
-        "posicao": "Defesa",
-        "overall": 78
+        "nome": "Rodrigo Almeida",
+        "idade": 29,
+        "posicao": "Atacante",
+        "overall": 84
     },
     {
         "id": 36,
-        "nome": "Bruno Barbosa",
-        "idade": 22,
-        "posicao": "Defesa",
-        "overall": 83
+        "nome": "Antoine Oliveira",
+        "idade": 19,
+        "posicao": "Atacante",
+        "overall": 94
     },
     {
         "id": 37,
-        "nome": "Diego Rocha",
-        "idade": 20,
-        "posicao": "Defesa",
-        "overall": 83
+        "nome": "Pierre Walker",
+        "idade": 25,
+        "posicao": "Goleiro",
+        "overall": 81
     },
     {
         "id": 38,
-        "nome": "Thiago Costa",
-        "idade": 17,
+        "nome": "Marco Pereira",
+        "idade": 24,
         "posicao": "Defesa",
         "overall": 81
     },
     {
         "id": 39,
-        "nome": "Miguel Walker",
-        "idade": 37,
-        "posicao": "Meio-Campo",
-        "overall": 76
-    },
-    {
-        "id": 40,
-        "nome": "André Perez",
-        "idade": 19,
-        "posicao": "Meio-Campo",
-        "overall": 82
-    },
-    {
-        "id": 41,
-        "nome": "Thiago Johnson",
-        "idade": 26,
-        "posicao": "Meio-Campo",
+        "nome": "Gustavo Araujo",
+        "idade": 28,
+        "posicao": "Defesa",
         "overall": 72
     },
     {
-        "id": 42,
-        "nome": "André Lopez",
-        "idade": 35,
-        "posicao": "Atacante",
-        "overall": 87
-    },
-    {
-        "id": 43,
-        "nome": "Miguel Johnson",
-        "idade": 26,
-        "posicao": "Atacante",
+        "id": 40,
+        "nome": "Louis Barbosa",
+        "idade": 29,
+        "posicao": "Defesa",
         "overall": 83
     },
     {
+        "id": 41,
+        "nome": "Gabriel Souza",
+        "idade": 23,
+        "posicao": "Defesa",
+        "overall": 85
+    },
+    {
+        "id": 42,
+        "nome": "Noah Brown",
+        "idade": 31,
+        "posicao": "Meio-Campo",
+        "overall": 89
+    },
+    {
+        "id": 43,
+        "nome": "Felipe Oliveira",
+        "idade": 22,
+        "posicao": "Meio-Campo",
+        "overall": 84
+    },
+    {
         "id": 44,
-        "nome": "Leonardo Rodriguez",
-        "idade": 35,
-        "posicao": "Atacante",
+        "nome": "Bruno Silva",
+        "idade": 28,
+        "posicao": "Meio-Campo",
         "overall": 84
     },
     {
         "id": 45,
-        "nome": "Gustavo Johnson",
-        "idade": 16,
-        "posicao": "Goleiro",
-        "overall": 79
-    },
-    {
-        "id": 46,
-        "nome": "Rafael Costa",
-        "idade": 29,
-        "posicao": "Defesa",
-        "overall": 72
-    },
-    {
-        "id": 47,
-        "nome": "Gabriel Almeida",
-        "idade": 23,
-        "posicao": "Defesa",
-        "overall": 87
-    },
-    {
-        "id": 48,
-        "nome": "Lucas Smith",
-        "idade": 24,
-        "posicao": "Defesa",
-        "overall": 88
-    },
-    {
-        "id": 49,
-        "nome": "Arthur Martin",
-        "idade": 36,
-        "posicao": "Defesa",
-        "overall": 78
-    },
-    {
-        "id": 50,
-        "nome": "Louis Smith",
-        "idade": 30,
-        "posicao": "Meio-Campo",
-        "overall": 83
-    },
-    {
-        "id": 51,
-        "nome": "Enzo Walker",
-        "idade": 20,
-        "posicao": "Meio-Campo",
-        "overall": 89
-    },
-    {
-        "id": 52,
-        "nome": "Giovanni Rossi",
-        "idade": 26,
-        "posicao": "Meio-Campo",
-        "overall": 78
-    },
-    {
-        "id": 53,
-        "nome": "Harry Araujo",
-        "idade": 28,
+        "nome": "Noah Silva",
+        "idade": 21,
         "posicao": "Atacante",
-        "overall": 83
-    },
-    {
-        "id": 54,
-        "nome": "Arthur Costa",
-        "idade": 22,
-        "posicao": "Atacante",
-        "overall": 83
-    },
-    {
-        "id": 55,
-        "nome": "Arthur Ribeiro",
-        "idade": 23,
-        "posicao": "Atacante",
-        "overall": 81
-    },
-    {
-        "id": 56,
-        "nome": "Jack Souza",
-        "idade": 19,
-        "posicao": "Goleiro",
-        "overall": 88
-    },
-    {
-        "id": 57,
-        "nome": "Thiago Walker",
-        "idade": 20,
-        "posicao": "Defesa",
-        "overall": 87
-    },
-    {
-        "id": 58,
-        "nome": "Thiago Fernandez",
-        "idade": 26,
-        "posicao": "Defesa",
         "overall": 77
     },
     {
-        "id": 59,
-        "nome": "Oliver Pereira",
-        "idade": 28,
-        "posicao": "Defesa",
-        "overall": 83
+        "id": 46,
+        "nome": "Enzo Taylor",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 74
     },
     {
-        "id": 60,
-        "nome": "Rafael Moretti",
-        "idade": 28,
-        "posicao": "Defesa",
-        "overall": 88
+        "id": 47,
+        "nome": "Harry Garcia",
+        "idade": 20,
+        "posicao": "Atacante",
+        "overall": 80
     },
     {
-        "id": 61,
-        "nome": "Gabriel Mendes",
+        "id": 48,
+        "nome": "Matheus Santos",
+        "idade": 29,
+        "posicao": "Goleiro",
+        "overall": 76
+    },
+    {
+        "id": 49,
+        "nome": "Antoine Rossi",
         "idade": 26,
-        "posicao": "Meio-Campo",
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 50,
+        "nome": "Noah Costa",
+        "idade": 27,
+        "posicao": "Defesa",
         "overall": 81
     },
     {
-        "id": 62,
-        "nome": "Pablo Wilson",
-        "idade": 26,
+        "id": 51,
+        "nome": "Enzo Fernandez",
+        "idade": 27,
+        "posicao": "Meio-Campo",
+        "overall": 80
+    },
+    {
+        "id": 52,
+        "nome": "Francesco Mendes",
+        "idade": 27,
         "posicao": "Meio-Campo",
         "overall": 82
     },
     {
-        "id": 63,
-        "nome": "Leonardo Almeida",
-        "idade": 17,
-        "posicao": "Meio-Campo",
-        "overall": 80
-    },
-    {
-        "id": 64,
-        "nome": "Luca Dubois",
-        "idade": 24,
-        "posicao": "Atacante",
-        "overall": 86
-    },
-    {
-        "id": 65,
+        "id": 53,
         "nome": "Thiago Lima",
         "idade": 23,
         "posicao": "Atacante",
-        "overall": 78
+        "overall": 85
     },
     {
-        "id": 66,
-        "nome": "Antoine Wilson",
-        "idade": 36,
+        "id": 54,
+        "nome": "Giovanni Araujo",
+        "idade": 16,
         "posicao": "Atacante",
-        "overall": 72
+        "overall": 84
     },
     {
-        "id": 67,
-        "nome": "Matheus Wilson",
-        "idade": 26,
+        "id": 55,
+        "nome": "Pedro Garcia",
+        "idade": 21,
         "posicao": "Goleiro",
-        "overall": 83
+        "overall": 90
     },
     {
-        "id": 68,
-        "nome": "Noah Ferreira",
-        "idade": 32,
+        "id": 56,
+        "nome": "Miguel Mendes",
+        "idade": 20,
         "posicao": "Defesa",
-        "overall": 72
+        "overall": 84
     },
     {
-        "id": 69,
-        "nome": "Enzo Ribeiro",
-        "idade": 25,
-        "posicao": "Defesa",
-        "overall": 77
-    },
-    {
-        "id": 70,
-        "nome": "Jack Rocha",
-        "idade": 28,
-        "posicao": "Defesa",
-        "overall": 83
-    },
-    {
-        "id": 71,
-        "nome": "Antoine Rossi",
+        "id": 57,
+        "nome": "Vinicius Martin",
         "idade": 26,
         "posicao": "Defesa",
         "overall": 88
     },
     {
-        "id": 72,
-        "nome": "Liam Barbosa",
-        "idade": 18,
-        "posicao": "Meio-Campo",
-        "overall": 89
+        "id": 58,
+        "nome": "Alejandro Johnson",
+        "idade": 23,
+        "posicao": "Defesa",
+        "overall": 83
     },
     {
-        "id": 73,
-        "nome": "André Silva",
-        "idade": 29,
-        "posicao": "Meio-Campo",
-        "overall": 81
-    },
-    {
-        "id": 74,
-        "nome": "Diego Gomes",
-        "idade": 27,
-        "posicao": "Meio-Campo",
-        "overall": 84
-    },
-    {
-        "id": 75,
-        "nome": "Pierre Pereira",
-        "idade": 35,
-        "posicao": "Atacante",
-        "overall": 78
-    },
-    {
-        "id": 76,
-        "nome": "Francesco Brown",
-        "idade": 20,
-        "posicao": "Atacante",
-        "overall": 85
-    },
-    {
-        "id": 77,
-        "nome": "Diego Walker",
-        "idade": 30,
-        "posicao": "Atacante",
-        "overall": 80
-    },
-    {
-        "id": 78,
-        "nome": "Antoine Rodriguez",
-        "idade": 19,
-        "posicao": "Goleiro",
-        "overall": 70
-    },
-    {
-        "id": 79,
-        "nome": "Pierre Costa",
+        "id": 59,
+        "nome": "Rafael Costa",
         "idade": 16,
-        "posicao": "Defesa",
-        "overall": 84
-    },
-    {
-        "id": 80,
-        "nome": "Pablo Garcia",
-        "idade": 17,
-        "posicao": "Defesa",
-        "overall": 89
-    },
-    {
-        "id": 81,
-        "nome": "Luca Costa",
-        "idade": 26,
-        "posicao": "Defesa",
-        "overall": 80
-    },
-    {
-        "id": 82,
-        "nome": "Diego Rossi",
-        "idade": 27,
         "posicao": "Defesa",
         "overall": 72
     },
     {
-        "id": 83,
-        "nome": "Rodrigo Araujo",
+        "id": 60,
+        "nome": "Jack Martins",
+        "idade": 19,
+        "posicao": "Meio-Campo",
+        "overall": 80
+    },
+    {
+        "id": 61,
+        "nome": "Miguel Garcia",
+        "idade": 33,
+        "posicao": "Meio-Campo",
+        "overall": 72
+    },
+    {
+        "id": 62,
+        "nome": "Antoine Johnson",
+        "idade": 31,
+        "posicao": "Meio-Campo",
+        "overall": 87
+    },
+    {
+        "id": 63,
+        "nome": "Antoine Costa",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 84
+    },
+    {
+        "id": 64,
+        "nome": "Lucas Walker",
+        "idade": 31,
+        "posicao": "Atacante",
+        "overall": 94
+    },
+    {
+        "id": 65,
+        "nome": "Louis Almeida",
+        "idade": 17,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
+        "id": 66,
+        "nome": "Diego Araujo",
+        "idade": 37,
+        "posicao": "Goleiro",
+        "overall": 81
+    },
+    {
+        "id": 67,
+        "nome": "Carlos Oliveira",
+        "idade": 25,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 68,
+        "nome": "Thiago Smith",
+        "idade": 28,
+        "posicao": "Defesa",
+        "overall": 78
+    },
+    {
+        "id": 69,
+        "nome": "Harry Johnson",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 89
+    },
+    {
+        "id": 70,
+        "nome": "Gabriel Almeida",
+        "idade": 22,
+        "posicao": "Meio-Campo",
+        "overall": 77
+    },
+    {
+        "id": 71,
+        "nome": "Rodrigo Santos",
+        "idade": 24,
+        "posicao": "Atacante",
+        "overall": 84
+    },
+    {
+        "id": 72,
+        "nome": "Miguel Souza",
+        "idade": 24,
+        "posicao": "Atacante",
+        "overall": 93
+    },
+    {
+        "id": 73,
+        "nome": "Felipe Souza",
+        "idade": 29,
+        "posicao": "Goleiro",
+        "overall": 83
+    },
+    {
+        "id": 74,
+        "nome": "Oliver Perez",
+        "idade": 20,
+        "posicao": "Defesa",
+        "overall": 82
+    },
+    {
+        "id": 75,
+        "nome": "Thiago Oliveira",
+        "idade": 32,
+        "posicao": "Defesa",
+        "overall": 74
+    },
+    {
+        "id": 76,
+        "nome": "Gabriel Ferreira",
+        "idade": 33,
+        "posicao": "Defesa",
+        "overall": 82
+    },
+    {
+        "id": 77,
+        "nome": "Marco Almeida",
+        "idade": 16,
+        "posicao": "Defesa",
+        "overall": 83
+    },
+    {
+        "id": 78,
+        "nome": "João Perez",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 74
+    },
+    {
+        "id": 79,
+        "nome": "Diego Ribeiro",
         "idade": 17,
         "posicao": "Meio-Campo",
+        "overall": 80
+    },
+    {
+        "id": 80,
+        "nome": "Jack Moretti",
+        "idade": 21,
+        "posicao": "Meio-Campo",
+        "overall": 85
+    },
+    {
+        "id": 81,
+        "nome": "Jack Rodriguez",
+        "idade": 17,
+        "posicao": "Atacante",
+        "overall": 84
+    },
+    {
+        "id": 82,
+        "nome": "Liam Rodriguez",
+        "idade": 27,
+        "posicao": "Atacante",
+        "overall": 74
+    },
+    {
+        "id": 83,
+        "nome": "Harry Rodriguez",
+        "idade": 28,
+        "posicao": "Atacante",
         "overall": 81
     },
     {
         "id": 84,
-        "nome": "André Moretti",
-        "idade": 25,
+        "nome": "Lucas Gomes",
+        "idade": 21,
+        "posicao": "Goleiro",
+        "overall": 77
+    },
+    {
+        "id": 85,
+        "nome": "Pablo Araujo",
+        "idade": 23,
+        "posicao": "Defesa",
+        "overall": 85
+    },
+    {
+        "id": 86,
+        "nome": "Oliver Araujo",
+        "idade": 24,
+        "posicao": "Defesa",
+        "overall": 93
+    },
+    {
+        "id": 87,
+        "nome": "Carlos Moretti",
+        "idade": 18,
+        "posicao": "Meio-Campo",
+        "overall": 77
+    },
+    {
+        "id": 88,
+        "nome": "João Martins",
+        "idade": 23,
         "posicao": "Meio-Campo",
         "overall": 81
     },
     {
-        "id": 85,
-        "nome": "Gabriel Rocha",
-        "idade": 16,
-        "posicao": "Meio-Campo",
-        "overall": 93
-    },
-    {
-        "id": 86,
-        "nome": "Gabriel Martin",
-        "idade": 24,
-        "posicao": "Atacante",
-        "overall": 86
-    },
-    {
-        "id": 87,
-        "nome": "Marco Martins",
-        "idade": 19,
+        "id": 89,
+        "nome": "Miguel Bianchi",
+        "idade": 18,
         "posicao": "Atacante",
         "overall": 72
     },
     {
-        "id": 88,
-        "nome": "Diego Ribeiro",
-        "idade": 27,
-        "posicao": "Atacante",
-        "overall": 73
-    },
-    {
-        "id": 89,
-        "nome": "Harry Taylor",
-        "idade": 26,
-        "posicao": "Goleiro",
-        "overall": 75
-    },
-    {
         "id": 90,
-        "nome": "Liam Costa",
-        "idade": 29,
+        "nome": "João Silva",
+        "idade": 24,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
+        "id": 91,
+        "nome": "Pedro Taylor",
+        "idade": 22,
+        "posicao": "Goleiro",
+        "overall": 86
+    },
+    {
+        "id": 92,
+        "nome": "Pablo Johnson",
+        "idade": 36,
         "posicao": "Defesa",
         "overall": 84
     },
     {
-        "id": 91,
-        "nome": "Noah Ribeiro",
-        "idade": 21,
-        "posicao": "Defesa",
-        "overall": 87
-    },
-    {
-        "id": 92,
-        "nome": "André Rossi",
-        "idade": 18,
-        "posicao": "Defesa",
-        "overall": 81
-    },
-    {
         "id": 93,
-        "nome": "Miguel Rossi",
-        "idade": 23,
-        "posicao": "Defesa",
-        "overall": 89
-    },
-    {
-        "id": 94,
-        "nome": "Alejandro Taylor",
-        "idade": 17,
-        "posicao": "Meio-Campo",
-        "overall": 73
-    },
-    {
-        "id": 95,
-        "nome": "André Lima",
-        "idade": 21,
-        "posicao": "Meio-Campo",
-        "overall": 90
-    },
-    {
-        "id": 96,
-        "nome": "Juan Mendes",
-        "idade": 22,
-        "posicao": "Meio-Campo",
-        "overall": 80
-    },
-    {
-        "id": 97,
-        "nome": "Francesco Martin",
-        "idade": 26,
-        "posicao": "Atacante",
-        "overall": 76
-    },
-    {
-        "id": 98,
-        "nome": "Alejandro Johnson",
-        "idade": 32,
-        "posicao": "Atacante",
-        "overall": 85
-    },
-    {
-        "id": 99,
-        "nome": "Jack Bianchi",
-        "idade": 29,
-        "posicao": "Atacante",
-        "overall": 88
-    },
-    {
-        "id": 100,
-        "nome": "Miguel Smith",
-        "idade": 26,
-        "posicao": "Goleiro",
-        "overall": 88
-    },
-    {
-        "id": 101,
-        "nome": "Marco Rossi",
-        "idade": 26,
-        "posicao": "Defesa",
-        "overall": 85
-    },
-    {
-        "id": 102,
-        "nome": "Gabriel Martins",
+        "nome": "Diego Walker",
         "idade": 34,
         "posicao": "Defesa",
         "overall": 75
     },
     {
-        "id": 103,
-        "nome": "Pedro Santos",
-        "idade": 29,
+        "id": 94,
+        "nome": "Lucas Perez",
+        "idade": 34,
         "posicao": "Defesa",
+        "overall": 82
+    },
+    {
+        "id": 95,
+        "nome": "Gustavo Gomes",
+        "idade": 37,
+        "posicao": "Defesa",
+        "overall": 87
+    },
+    {
+        "id": 96,
+        "nome": "Pierre Garcia",
+        "idade": 26,
+        "posicao": "Meio-Campo",
         "overall": 78
     },
     {
-        "id": 104,
-        "nome": "Lucas Rossi",
+        "id": 97,
+        "nome": "Pierre Mendes",
+        "idade": 16,
+        "posicao": "Meio-Campo",
+        "overall": 73
+    },
+    {
+        "id": 98,
+        "nome": "Carlos Costa",
+        "idade": 23,
+        "posicao": "Meio-Campo",
+        "overall": 80
+    },
+    {
+        "id": 99,
+        "nome": "Matheus Johnson",
+        "idade": 21,
+        "posicao": "Atacante",
+        "overall": 76
+    },
+    {
+        "id": 100,
+        "nome": "Gabriel Perez",
+        "idade": 19,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 101,
+        "nome": "André Fernandez",
+        "idade": 24,
+        "posicao": "Atacante",
+        "overall": 88
+    },
+    {
+        "id": 102,
+        "nome": "Francesco Fernandez",
+        "idade": 29,
+        "posicao": "Goleiro",
+        "overall": 86
+    },
+    {
+        "id": 103,
+        "nome": "Miguel Costa",
         "idade": 18,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 104,
+        "nome": "Carlos Taylor",
+        "idade": 24,
         "posicao": "Defesa",
         "overall": 81
     },
     {
         "id": 105,
-        "nome": "Diego Garcia",
-        "idade": 26,
+        "nome": "Pedro Wilson",
+        "idade": 29,
         "posicao": "Meio-Campo",
-        "overall": 84
+        "overall": 81
     },
     {
         "id": 106,
-        "nome": "Pedro Dubois",
-        "idade": 25,
+        "nome": "João Brown",
+        "idade": 31,
         "posicao": "Meio-Campo",
-        "overall": 85
+        "overall": 88
     },
     {
         "id": 107,
-        "nome": "Juan Ferreira",
-        "idade": 17,
-        "posicao": "Meio-Campo",
-        "overall": 85
+        "nome": "Giovanni Moretti",
+        "idade": 23,
+        "posicao": "Atacante",
+        "overall": 86
     },
     {
         "id": 108,
-        "nome": "Francesco Pereira",
-        "idade": 22,
+        "nome": "Vinicius Wilson",
+        "idade": 18,
         "posicao": "Atacante",
-        "overall": 92
+        "overall": 83
     },
     {
         "id": 109,
-        "nome": "Arthur Dubois",
-        "idade": 26,
-        "posicao": "Atacante",
-        "overall": 78
+        "nome": "Miguel Almeida",
+        "idade": 22,
+        "posicao": "Goleiro",
+        "overall": 84
     },
     {
         "id": 110,
-        "nome": "Arthur Wilson",
+        "nome": "Gabriel Costa",
         "idade": 25,
-        "posicao": "Atacante",
+        "posicao": "Defesa",
         "overall": 81
     },
     {
         "id": 111,
-        "nome": "Bruno Rossi",
-        "idade": 29,
-        "posicao": "Goleiro",
-        "overall": 79
+        "nome": "Matheus Silva",
+        "idade": 25,
+        "posicao": "Defesa",
+        "overall": 83
     },
     {
         "id": 112,
-        "nome": "Luca Rocha",
-        "idade": 22,
+        "nome": "Marco Santos",
+        "idade": 21,
         "posicao": "Defesa",
-        "overall": 80
+        "overall": 88
     },
     {
         "id": 113,
-        "nome": "Giovanni Ribeiro",
-        "idade": 17,
+        "nome": "Lucas Johnson",
+        "idade": 36,
         "posicao": "Defesa",
         "overall": 79
     },
     {
         "id": 114,
-        "nome": "Miguel Moretti",
-        "idade": 19,
-        "posicao": "Defesa",
-        "overall": 86
+        "nome": "Antoine Martin",
+        "idade": 27,
+        "posicao": "Meio-Campo",
+        "overall": 81
     },
     {
         "id": 115,
-        "nome": "Miguel Pereira",
-        "idade": 19,
-        "posicao": "Defesa",
-        "overall": 84
-    },
-    {
-        "id": 116,
-        "nome": "Louis Santos",
-        "idade": 25,
-        "posicao": "Meio-Campo",
-        "overall": 94
-    },
-    {
-        "id": 117,
-        "nome": "Alejandro Gomes",
-        "idade": 17,
+        "nome": "Caio Oliveira",
+        "idade": 21,
         "posicao": "Meio-Campo",
         "overall": 72
     },
     {
-        "id": 118,
-        "nome": "Matheus Pereira",
-        "idade": 23,
+        "id": 116,
+        "nome": "Alejandro Martins",
+        "idade": 25,
         "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 117,
+        "nome": "Carlos Souza",
+        "idade": 20,
+        "posicao": "Atacante",
+        "overall": 75
+    },
+    {
+        "id": 118,
+        "nome": "Leonardo Lima",
+        "idade": 16,
+        "posicao": "Atacante",
         "overall": 80
     },
     {
         "id": 119,
-        "nome": "Vinicius Wilson",
-        "idade": 17,
+        "nome": "André Gomes",
+        "idade": 19,
         "posicao": "Atacante",
-        "overall": 77
+        "overall": 82
     },
     {
         "id": 120,
-        "nome": "Diego Lima",
-        "idade": 36,
-        "posicao": "Atacante",
-        "overall": 87
+        "nome": "Felipe Ferreira",
+        "idade": 33,
+        "posicao": "Goleiro",
+        "overall": 84
     },
     {
         "id": 121,
-        "nome": "Thiago Taylor",
-        "idade": 26,
-        "posicao": "Atacante",
-        "overall": 84
+        "nome": "Felipe Martin",
+        "idade": 18,
+        "posicao": "Defesa",
+        "overall": 83
     },
     {
         "id": 122,
-        "nome": "Gustavo Moretti",
-        "idade": 25,
-        "posicao": "Goleiro",
-        "overall": 81
+        "nome": "Alejandro Barbosa",
+        "idade": 21,
+        "posicao": "Defesa",
+        "overall": 83
     },
     {
         "id": 123,
-        "nome": "Louis Gomes",
-        "idade": 27,
-        "posicao": "Defesa",
-        "overall": 74
+        "nome": "André Souza",
+        "idade": 30,
+        "posicao": "Meio-Campo",
+        "overall": 73
     },
     {
         "id": 124,
-        "nome": "Pablo Ferreira",
+        "nome": "Carlos Dubois",
+        "idade": 19,
+        "posicao": "Meio-Campo",
+        "overall": 77
+    },
+    {
+        "id": 125,
+        "nome": "Louis Garcia",
+        "idade": 22,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
+        "id": 126,
+        "nome": "Lucas Dubois",
+        "idade": 17,
+        "posicao": "Atacante",
+        "overall": 75
+    },
+    {
+        "id": 127,
+        "nome": "Juan Wilson",
+        "idade": 19,
+        "posicao": "Goleiro",
+        "overall": 83
+    },
+    {
+        "id": 128,
+        "nome": "Francesco Smith",
         "idade": 26,
         "posicao": "Defesa",
         "overall": 84
     },
     {
-        "id": 125,
-        "nome": "Jack Ribeiro",
-        "idade": 28,
-        "posicao": "Defesa",
-        "overall": 86
-    },
-    {
-        "id": 126,
-        "nome": "Noah Pereira",
-        "idade": 24,
-        "posicao": "Defesa",
-        "overall": 88
-    },
-    {
-        "id": 127,
-        "nome": "Antoine Walker",
-        "idade": 28,
-        "posicao": "Meio-Campo",
-        "overall": 84
-    },
-    {
-        "id": 128,
-        "nome": "Vinicius Garcia",
-        "idade": 20,
-        "posicao": "Meio-Campo",
-        "overall": 83
-    },
-    {
         "id": 129,
-        "nome": "Miguel Gomes",
+        "nome": "Jack Wilson",
         "idade": 19,
-        "posicao": "Meio-Campo",
-        "overall": 83
-    },
-    {
-        "id": 130,
-        "nome": "Miguel Costa",
-        "idade": 17,
-        "posicao": "Atacante",
-        "overall": 91
-    },
-    {
-        "id": 131,
-        "nome": "Luca Silva",
-        "idade": 36,
-        "posicao": "Atacante",
-        "overall": 78
-    },
-    {
-        "id": 132,
-        "nome": "Oliver Moretti",
-        "idade": 20,
-        "posicao": "Atacante",
-        "overall": 77
-    },
-    {
-        "id": 133,
-        "nome": "Luca Gomes",
-        "idade": 25,
-        "posicao": "Goleiro",
-        "overall": 87
-    },
-    {
-        "id": 134,
-        "nome": "Rafael Taylor",
-        "idade": 32,
-        "posicao": "Defesa",
-        "overall": 81
-    },
-    {
-        "id": 135,
-        "nome": "Diego Brown",
-        "idade": 17,
         "posicao": "Defesa",
         "overall": 80
     },
     {
-        "id": 136,
-        "nome": "Miguel Mendes",
-        "idade": 20,
+        "id": 130,
+        "nome": "Oliver Ribeiro",
+        "idade": 23,
         "posicao": "Defesa",
+        "overall": 74
+    },
+    {
+        "id": 131,
+        "nome": "Marco Mendes",
+        "idade": 22,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 132,
+        "nome": "Felipe Silva",
+        "idade": 16,
+        "posicao": "Meio-Campo",
+        "overall": 74
+    },
+    {
+        "id": 133,
+        "nome": "Louis Gomes",
+        "idade": 26,
+        "posicao": "Meio-Campo",
+        "overall": 78
+    },
+    {
+        "id": 134,
+        "nome": "Noah Rossi",
+        "idade": 35,
+        "posicao": "Meio-Campo",
+        "overall": 82
+    },
+    {
+        "id": 135,
+        "nome": "Louis Fernandez",
+        "idade": 19,
+        "posicao": "Atacante",
+        "overall": 82
+    },
+    {
+        "id": 136,
+        "nome": "Lucas Moretti",
+        "idade": 26,
+        "posicao": "Atacante",
         "overall": 81
     },
     {
         "id": 137,
-        "nome": "Pedro Ferreira",
-        "idade": 23,
-        "posicao": "Defesa",
-        "overall": 72
+        "nome": "Matheus Martins",
+        "idade": 27,
+        "posicao": "Atacante",
+        "overall": 82
     },
     {
         "id": 138,
-        "nome": "Miguel Lopez",
-        "idade": 26,
-        "posicao": "Meio-Campo",
-        "overall": 83
+        "nome": "Felipe Dubois",
+        "idade": 23,
+        "posicao": "Goleiro",
+        "overall": 79
     },
     {
         "id": 139,
-        "nome": "Alejandro Garcia",
-        "idade": 28,
-        "posicao": "Meio-Campo",
-        "overall": 80
+        "nome": "André Silva",
+        "idade": 22,
+        "posicao": "Defesa",
+        "overall": 76
     },
     {
         "id": 140,
-        "nome": "Jack Lima",
-        "idade": 22,
-        "posicao": "Meio-Campo",
+        "nome": "Pablo Barbosa",
+        "idade": 29,
+        "posicao": "Defesa",
         "overall": 82
     },
     {
         "id": 141,
-        "nome": "Liam Rodriguez",
-        "idade": 24,
-        "posicao": "Atacante",
-        "overall": 78
+        "nome": "Alejandro Costa",
+        "idade": 26,
+        "posicao": "Meio-Campo",
+        "overall": 82
     },
     {
         "id": 142,
-        "nome": "Caio Johnson",
-        "idade": 19,
-        "posicao": "Atacante",
-        "overall": 82
+        "nome": "Gustavo Almeida",
+        "idade": 24,
+        "posicao": "Meio-Campo",
+        "overall": 75
     },
     {
         "id": 143,
-        "nome": "João Rocha",
-        "idade": 20,
+        "nome": "Matheus Barbosa",
+        "idade": 31,
         "posicao": "Atacante",
-        "overall": 82
+        "overall": 77
     },
     {
         "id": 144,
-        "nome": "Thiago Gomes",
-        "idade": 20,
-        "posicao": "Goleiro",
-        "overall": 92
+        "nome": "Pablo Brown",
+        "idade": 34,
+        "posicao": "Atacante",
+        "overall": 84
     },
     {
         "id": 145,
-        "nome": "Noah Walker",
+        "nome": "Giovanni Taylor",
         "idade": 23,
-        "posicao": "Defesa",
-        "overall": 80
+        "posicao": "Goleiro",
+        "overall": 72
     },
     {
         "id": 146,
-        "nome": "Leonardo Souza",
-        "idade": 23,
+        "nome": "Miguel Brown",
+        "idade": 33,
         "posicao": "Defesa",
-        "overall": 78
+        "overall": 81
     },
     {
         "id": 147,
-        "nome": "Pablo Oliveira",
-        "idade": 26,
+        "nome": "Arthur Taylor",
+        "idade": 35,
         "posicao": "Defesa",
-        "overall": 74
+        "overall": 87
     },
     {
         "id": 148,
-        "nome": "Lucas Bianchi",
-        "idade": 37,
+        "nome": "Antoine Bianchi",
+        "idade": 27,
         "posicao": "Defesa",
         "overall": 80
     },
     {
         "id": 149,
-        "nome": "Thiago Dubois",
-        "idade": 28,
-        "posicao": "Meio-Campo",
-        "overall": 83
-    },
-    {
-        "id": 150,
-        "nome": "Arthur Johnson",
-        "idade": 17,
-        "posicao": "Meio-Campo",
-        "overall": 78
-    },
-    {
-        "id": 151,
-        "nome": "João Araujo",
+        "nome": "Jack Lopez",
         "idade": 31,
-        "posicao": "Meio-Campo",
-        "overall": 84
-    },
-    {
-        "id": 152,
-        "nome": "Juan Pereira",
-        "idade": 18,
-        "posicao": "Atacante",
-        "overall": 95
-    },
-    {
-        "id": 153,
-        "nome": "Pedro Lima",
-        "idade": 31,
-        "posicao": "Atacante",
-        "overall": 83
-    },
-    {
-        "id": 154,
-        "nome": "André Santos",
-        "idade": 16,
-        "posicao": "Atacante",
-        "overall": 80
-    },
-    {
-        "id": 155,
-        "nome": "Gabriel Fernandez",
-        "idade": 29,
-        "posicao": "Goleiro",
-        "overall": 70
-    },
-    {
-        "id": 156,
-        "nome": "Harry Martin",
-        "idade": 24,
-        "posicao": "Defesa",
-        "overall": 82
-    },
-    {
-        "id": 157,
-        "nome": "Pierre Dubois",
-        "idade": 29,
-        "posicao": "Defesa",
-        "overall": 84
-    },
-    {
-        "id": 158,
-        "nome": "Thiago Almeida",
-        "idade": 29,
         "posicao": "Defesa",
         "overall": 72
     },
     {
-        "id": 159,
-        "nome": "Luca Johnson",
+        "id": 150,
+        "nome": "Pedro Ribeiro",
+        "idade": 22,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 151,
+        "nome": "Antoine Martins",
         "idade": 27,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 152,
+        "nome": "Gabriel Martin",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 74
+    },
+    {
+        "id": 153,
+        "nome": "Vinicius Gomes",
+        "idade": 28,
+        "posicao": "Atacante",
+        "overall": 84
+    },
+    {
+        "id": 154,
+        "nome": "Gabriel Ribeiro",
+        "idade": 24,
+        "posicao": "Atacante",
+        "overall": 72
+    },
+    {
+        "id": 155,
+        "nome": "Lucas Brown",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
+        "id": 156,
+        "nome": "Bruno Fernandez",
+        "idade": 28,
+        "posicao": "Goleiro",
+        "overall": 88
+    },
+    {
+        "id": 157,
+        "nome": "Noah Martin",
+        "idade": 20,
         "posicao": "Defesa",
-        "overall": 92
+        "overall": 80
+    },
+    {
+        "id": 158,
+        "nome": "André Araujo",
+        "idade": 29,
+        "posicao": "Defesa",
+        "overall": 82
+    },
+    {
+        "id": 159,
+        "nome": "Miguel Oliveira",
+        "idade": 16,
+        "posicao": "Meio-Campo",
+        "overall": 89
     },
     {
         "id": 160,
-        "nome": "Rodrigo Moretti",
-        "idade": 32,
+        "nome": "Pablo Smith",
+        "idade": 18,
         "posicao": "Meio-Campo",
-        "overall": 94
+        "overall": 90
     },
     {
         "id": 161,
-        "nome": "Caio Walker",
-        "idade": 31,
-        "posicao": "Meio-Campo",
+        "nome": "Jack Gomes",
+        "idade": 28,
+        "posicao": "Atacante",
         "overall": 80
     },
     {
         "id": 162,
-        "nome": "Louis Bianchi",
-        "idade": 21,
-        "posicao": "Meio-Campo",
-        "overall": 80
-    },
-    {
-        "id": 163,
-        "nome": "André Garcia",
-        "idade": 26,
-        "posicao": "Atacante",
-        "overall": 83
-    },
-    {
-        "id": 164,
-        "nome": "Juan Martins",
+        "nome": "Leonardo Walker",
         "idade": 27,
-        "posicao": "Atacante",
-        "overall": 79
-    },
-    {
-        "id": 165,
-        "nome": "Pablo Johnson",
-        "idade": 17,
         "posicao": "Atacante",
         "overall": 82
     },
     {
-        "id": 166,
-        "nome": "Gabriel Bianchi",
-        "idade": 35,
+        "id": 163,
+        "nome": "Lucas Lima",
+        "idade": 20,
         "posicao": "Goleiro",
         "overall": 72
     },
     {
+        "id": 164,
+        "nome": "Arthur Souza",
+        "idade": 25,
+        "posicao": "Defesa",
+        "overall": 86
+    },
+    {
+        "id": 165,
+        "nome": "Louis Moretti",
+        "idade": 28,
+        "posicao": "Defesa",
+        "overall": 85
+    },
+    {
+        "id": 166,
+        "nome": "Matheus Rodriguez",
+        "idade": 28,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
         "id": 167,
-        "nome": "Lucas Ferreira",
-        "idade": 19,
+        "nome": "Diego Barbosa",
+        "idade": 27,
         "posicao": "Defesa",
         "overall": 76
     },
     {
         "id": 168,
-        "nome": "Juan Fernandez",
-        "idade": 24,
-        "posicao": "Defesa",
-        "overall": 74
+        "nome": "Giovanni Almeida",
+        "idade": 27,
+        "posicao": "Meio-Campo",
+        "overall": 87
     },
     {
         "id": 169,
-        "nome": "Matheus Garcia",
-        "idade": 22,
-        "posicao": "Defesa",
-        "overall": 85
+        "nome": "Lucas Bianchi",
+        "idade": 30,
+        "posicao": "Meio-Campo",
+        "overall": 88
     },
     {
         "id": 170,
-        "nome": "Louis Pereira",
-        "idade": 33,
-        "posicao": "Defesa",
-        "overall": 85
-    },
-    {
-        "id": 171,
-        "nome": "Pierre Mendes",
-        "idade": 32,
+        "nome": "Rafael Walker",
+        "idade": 21,
         "posicao": "Meio-Campo",
-        "overall": 81
-    },
-    {
-        "id": 172,
-        "nome": "Pedro Taylor",
-        "idade": 36,
-        "posicao": "Meio-Campo",
-        "overall": 77
-    },
-    {
-        "id": 173,
-        "nome": "Giovanni Johnson",
-        "idade": 22,
-        "posicao": "Meio-Campo",
-        "overall": 76
-    },
-    {
-        "id": 174,
-        "nome": "Diego Almeida",
-        "idade": 28,
-        "posicao": "Atacante",
-        "overall": 81
-    },
-    {
-        "id": 175,
-        "nome": "Marco Perez",
-        "idade": 17,
-        "posicao": "Atacante",
-        "overall": 75
-    },
-    {
-        "id": 176,
-        "nome": "João Silva",
-        "idade": 16,
-        "posicao": "Atacante",
         "overall": 83
     },
     {
-        "id": 177,
-        "nome": "Gabriel Rodriguez",
-        "idade": 34,
-        "posicao": "Goleiro",
-        "overall": 85
-    },
-    {
-        "id": 178,
-        "nome": "Liam Perez",
-        "idade": 33,
-        "posicao": "Defesa",
-        "overall": 82
-    },
-    {
-        "id": 179,
-        "nome": "Marco Rodriguez",
+        "id": 171,
+        "nome": "Louis Souza",
         "idade": 16,
-        "posicao": "Defesa",
+        "posicao": "Atacante",
         "overall": 74
     },
     {
-        "id": 180,
-        "nome": "Juan Rossi",
-        "idade": 27,
-        "posicao": "Defesa",
-        "overall": 74
+        "id": 172,
+        "nome": "Pablo Perez",
+        "idade": 28,
+        "posicao": "Atacante",
+        "overall": 84
     },
     {
-        "id": 181,
-        "nome": "Leonardo Brown",
-        "idade": 21,
-        "posicao": "Defesa",
-        "overall": 75
-    },
-    {
-        "id": 182,
-        "nome": "Marco Wilson",
-        "idade": 16,
-        "posicao": "Meio-Campo",
-        "overall": 80
-    },
-    {
-        "id": 183,
-        "nome": "Matheus Martins",
-        "idade": 20,
-        "posicao": "Meio-Campo",
-        "overall": 75
-    },
-    {
-        "id": 184,
-        "nome": "Carlos Martin",
-        "idade": 21,
-        "posicao": "Meio-Campo",
-        "overall": 76
-    },
-    {
-        "id": 185,
-        "nome": "Rodrigo Brown",
-        "idade": 23,
+        "id": 173,
+        "nome": "Rafael Martins",
+        "idade": 29,
         "posicao": "Atacante",
         "overall": 79
     },
     {
-        "id": 186,
-        "nome": "Juan Johnson",
-        "idade": 29,
-        "posicao": "Atacante",
-        "overall": 85
-    },
-    {
-        "id": 187,
-        "nome": "Pablo Rossi",
-        "idade": 26,
-        "posicao": "Atacante",
-        "overall": 77
-    },
-    {
-        "id": 188,
-        "nome": "Enzo Lopez",
-        "idade": 31,
+        "id": 174,
+        "nome": "Rafael Brown",
+        "idade": 27,
         "posicao": "Goleiro",
         "overall": 82
     },
     {
-        "id": 189,
-        "nome": "Pablo Martin",
-        "idade": 37,
-        "posicao": "Defesa",
-        "overall": 72
-    },
-    {
-        "id": 190,
-        "nome": "Alejandro Rodriguez",
-        "idade": 18,
-        "posicao": "Defesa",
-        "overall": 86
-    },
-    {
-        "id": 191,
-        "nome": "Felipe Oliveira",
-        "idade": 23,
-        "posicao": "Defesa",
-        "overall": 87
-    },
-    {
-        "id": 192,
-        "nome": "Antoine Brown",
-        "idade": 20,
-        "posicao": "Defesa",
-        "overall": 80
-    },
-    {
-        "id": 193,
-        "nome": "Liam Wilson",
-        "idade": 28,
-        "posicao": "Meio-Campo",
-        "overall": 86
-    },
-    {
-        "id": 194,
-        "nome": "Caio Pereira",
-        "idade": 33,
-        "posicao": "Meio-Campo",
-        "overall": 87
-    },
-    {
-        "id": 195,
-        "nome": "Enzo Ferreira",
-        "idade": 27,
-        "posicao": "Meio-Campo",
-        "overall": 72
-    },
-    {
-        "id": 196,
-        "nome": "Oliver Dubois",
-        "idade": 23,
-        "posicao": "Atacante",
-        "overall": 78
-    },
-    {
-        "id": 197,
-        "nome": "Louis Walker",
-        "idade": 26,
-        "posicao": "Atacante",
-        "overall": 75
-    },
-    {
-        "id": 198,
-        "nome": "Alejandro Brown",
-        "idade": 22,
-        "posicao": "Atacante",
-        "overall": 86
-    },
-    {
-        "id": 199,
-        "nome": "Jack Perez",
-        "idade": 22,
-        "posicao": "Goleiro",
-        "overall": 81
-    },
-    {
-        "id": 200,
-        "nome": "Alejandro Almeida",
-        "idade": 18,
-        "posicao": "Defesa",
-        "overall": 83
-    },
-    {
-        "id": 201,
-        "nome": "Miguel Oliveira",
-        "idade": 18,
+        "id": 175,
+        "nome": "Giovanni Ferreira",
+        "idade": 36,
         "posicao": "Defesa",
         "overall": 84
     },
     {
-        "id": 202,
-        "nome": "Pedro Mendes",
+        "id": 176,
+        "nome": "Diego Bianchi",
+        "idade": 33,
+        "posicao": "Defesa",
+        "overall": 73
+    },
+    {
+        "id": 177,
+        "nome": "Gabriel Fernandez",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 84
+    },
+    {
+        "id": 178,
+        "nome": "Pierre Brown",
+        "idade": 27,
+        "posicao": "Meio-Campo",
+        "overall": 92
+    },
+    {
+        "id": 179,
+        "nome": "Alejandro Ribeiro",
+        "idade": 21,
+        "posicao": "Atacante",
+        "overall": 73
+    },
+    {
+        "id": 180,
+        "nome": "Leonardo Bianchi",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 86
+    },
+    {
+        "id": 181,
+        "nome": "Miguel Perez",
+        "idade": 23,
+        "posicao": "Goleiro",
+        "overall": 76
+    },
+    {
+        "id": 182,
+        "nome": "Jack Almeida",
+        "idade": 29,
+        "posicao": "Defesa",
+        "overall": 83
+    },
+    {
+        "id": 183,
+        "nome": "Miguel Rossi",
+        "idade": 29,
+        "posicao": "Defesa",
+        "overall": 73
+    },
+    {
+        "id": 184,
+        "nome": "Luca Gomes",
+        "idade": 16,
+        "posicao": "Defesa",
+        "overall": 95
+    },
+    {
+        "id": 185,
+        "nome": "Pablo Oliveira",
+        "idade": 24,
+        "posicao": "Defesa",
+        "overall": 81
+    },
+    {
+        "id": 186,
+        "nome": "Felipe Mendes",
+        "idade": 29,
+        "posicao": "Meio-Campo",
+        "overall": 84
+    },
+    {
+        "id": 187,
+        "nome": "Lucas Wilson",
+        "idade": 27,
+        "posicao": "Meio-Campo",
+        "overall": 84
+    },
+    {
+        "id": 188,
+        "nome": "Lucas Ribeiro",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 90
+    },
+    {
+        "id": 189,
+        "nome": "Rafael Wilson",
+        "idade": 18,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 190,
+        "nome": "Pierre Johnson",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 73
+    },
+    {
+        "id": 191,
+        "nome": "Pedro Barbosa",
+        "idade": 33,
+        "posicao": "Atacante",
+        "overall": 82
+    },
+    {
+        "id": 192,
+        "nome": "Louis Rodriguez",
         "idade": 36,
+        "posicao": "Goleiro",
+        "overall": 70
+    },
+    {
+        "id": 193,
+        "nome": "Luca Perez",
+        "idade": 26,
+        "posicao": "Defesa",
+        "overall": 88
+    },
+    {
+        "id": 194,
+        "nome": "Jack Silva",
+        "idade": 29,
+        "posicao": "Defesa",
+        "overall": 86
+    },
+    {
+        "id": 195,
+        "nome": "Leonardo Wilson",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 196,
+        "nome": "Miguel Dubois",
+        "idade": 22,
+        "posicao": "Meio-Campo",
+        "overall": 90
+    },
+    {
+        "id": 197,
+        "nome": "Luca Souza",
+        "idade": 29,
+        "posicao": "Atacante",
+        "overall": 78
+    },
+    {
+        "id": 198,
+        "nome": "Vinicius Oliveira",
+        "idade": 32,
+        "posicao": "Atacante",
+        "overall": 75
+    },
+    {
+        "id": 199,
+        "nome": "Francesco Barbosa",
+        "idade": 31,
+        "posicao": "Goleiro",
+        "overall": 79
+    },
+    {
+        "id": 200,
+        "nome": "Lucas Silva",
+        "idade": 23,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 201,
+        "nome": "Gustavo Brown",
+        "idade": 31,
+        "posicao": "Defesa",
+        "overall": 83
+    },
+    {
+        "id": 202,
+        "nome": "Juan Costa",
+        "idade": 29,
         "posicao": "Defesa",
         "overall": 83
     },
     {
         "id": 203,
-        "nome": "Arthur Taylor",
-        "idade": 24,
+        "nome": "Jack Smith",
+        "idade": 25,
         "posicao": "Defesa",
-        "overall": 80
+        "overall": 72
     },
     {
         "id": 204,
-        "nome": "Oliver Brown",
-        "idade": 28,
+        "nome": "Leonardo Taylor",
+        "idade": 21,
         "posicao": "Meio-Campo",
-        "overall": 86
+        "overall": 76
     },
     {
         "id": 205,
-        "nome": "Leonardo Araujo",
-        "idade": 28,
+        "nome": "Luca Mendes",
+        "idade": 33,
         "posicao": "Meio-Campo",
-        "overall": 78
+        "overall": 82
     },
     {
         "id": 206,
-        "nome": "Carlos Ribeiro",
-        "idade": 35,
+        "nome": "Vinicius Perez",
+        "idade": 17,
         "posicao": "Meio-Campo",
-        "overall": 86
+        "overall": 80
     },
     {
         "id": 207,
-        "nome": "Harry Oliveira",
-        "idade": 28,
+        "nome": "Bruno Mendes",
+        "idade": 26,
         "posicao": "Atacante",
-        "overall": 88
+        "overall": 73
     },
     {
         "id": 208,
-        "nome": "Rodrigo Martins",
-        "idade": 21,
-        "posicao": "Atacante",
-        "overall": 88
-    },
-    {
-        "id": 209,
-        "nome": "Thiago Smith",
-        "idade": 19,
+        "nome": "Giovanni Smith",
+        "idade": 29,
         "posicao": "Atacante",
         "overall": 80
     },
     {
+        "id": 209,
+        "nome": "Diego Wilson",
+        "idade": 24,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
         "id": 210,
-        "nome": "Lucas Ribeiro",
-        "idade": 29,
+        "nome": "Enzo Oliveira",
+        "idade": 24,
         "posicao": "Goleiro",
-        "overall": 82
+        "overall": 81
     },
     {
         "id": 211,
-        "nome": "Francesco Walker",
-        "idade": 26,
+        "nome": "Rodrigo Araujo",
+        "idade": 29,
         "posicao": "Defesa",
         "overall": 84
     },
     {
         "id": 212,
-        "nome": "Miguel Santos",
-        "idade": 23,
+        "nome": "Felipe Costa",
+        "idade": 16,
         "posicao": "Defesa",
         "overall": 83
     },
     {
         "id": 213,
-        "nome": "Enzo Barbosa",
-        "idade": 22,
-        "posicao": "Defesa",
-        "overall": 80
+        "nome": "Juan Silva",
+        "idade": 16,
+        "posicao": "Meio-Campo",
+        "overall": 88
     },
     {
         "id": 214,
-        "nome": "Luca Pereira",
+        "nome": "Jack Costa",
+        "idade": 34,
+        "posicao": "Meio-Campo",
+        "overall": 90
+    },
+    {
+        "id": 215,
+        "nome": "Miguel Smith",
+        "idade": 20,
+        "posicao": "Atacante",
+        "overall": 78
+    },
+    {
+        "id": 216,
+        "nome": "Rodrigo Brown",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 81
+    },
+    {
+        "id": 217,
+        "nome": "Rodrigo Garcia",
+        "idade": 22,
+        "posicao": "Goleiro",
+        "overall": 80
+    },
+    {
+        "id": 218,
+        "nome": "André Smith",
+        "idade": 23,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 219,
+        "nome": "Diego Lopez",
+        "idade": 16,
+        "posicao": "Defesa",
+        "overall": 76
+    },
+    {
+        "id": 220,
+        "nome": "Vinicius Smith",
+        "idade": 19,
+        "posicao": "Defesa",
+        "overall": 88
+    },
+    {
+        "id": 221,
+        "nome": "Rodrigo Taylor",
+        "idade": 23,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 222,
+        "nome": "Pablo Silva",
+        "idade": 28,
+        "posicao": "Meio-Campo",
+        "overall": 76
+    },
+    {
+        "id": 223,
+        "nome": "Enzo Costa",
         "idade": 27,
+        "posicao": "Meio-Campo",
+        "overall": 80
+    },
+    {
+        "id": 224,
+        "nome": "Leonardo Mendes",
+        "idade": 22,
+        "posicao": "Meio-Campo",
+        "overall": 89
+    },
+    {
+        "id": 225,
+        "nome": "Luca Walker",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
+        "id": 226,
+        "nome": "Jack Brown",
+        "idade": 16,
+        "posicao": "Atacante",
+        "overall": 88
+    },
+    {
+        "id": 227,
+        "nome": "João Ferreira",
+        "idade": 16,
+        "posicao": "Atacante",
+        "overall": 83
+    },
+    {
+        "id": 228,
+        "nome": "Juan Mendes",
+        "idade": 16,
+        "posicao": "Goleiro",
+        "overall": 78
+    },
+    {
+        "id": 229,
+        "nome": "Diego Pereira",
+        "idade": 28,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 230,
+        "nome": "André Lopez",
+        "idade": 16,
+        "posicao": "Defesa",
+        "overall": 81
+    },
+    {
+        "id": 231,
+        "nome": "Noah Araujo",
+        "idade": 36,
+        "posicao": "Meio-Campo",
+        "overall": 84
+    },
+    {
+        "id": 232,
+        "nome": "João Araujo",
+        "idade": 21,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 233,
+        "nome": "Enzo Bianchi",
+        "idade": 29,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
+        "id": 234,
+        "nome": "Caio Wilson",
+        "idade": 29,
+        "posicao": "Atacante",
+        "overall": 77
+    },
+    {
+        "id": 235,
+        "nome": "Luca Johnson",
+        "idade": 19,
+        "posicao": "Goleiro",
+        "overall": 83
+    },
+    {
+        "id": 236,
+        "nome": "Leonardo Brown",
+        "idade": 24,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 237,
+        "nome": "Diego Rocha",
+        "idade": 35,
         "posicao": "Defesa",
         "overall": 73
     },
     {
-        "id": 215,
-        "nome": "Marco Rocha",
-        "idade": 16,
-        "posicao": "Meio-Campo",
-        "overall": 80
-    },
-    {
-        "id": 216,
-        "nome": "Vinicius Brown",
-        "idade": 21,
-        "posicao": "Meio-Campo",
-        "overall": 80
-    },
-    {
-        "id": 217,
-        "nome": "Louis Rocha",
-        "idade": 33,
-        "posicao": "Meio-Campo",
-        "overall": 86
-    },
-    {
-        "id": 218,
-        "nome": "Pedro Lopez",
+        "id": 238,
+        "nome": "Leonardo Dubois",
         "idade": 27,
+        "posicao": "Defesa",
+        "overall": 77
+    },
+    {
+        "id": 239,
+        "nome": "Luca Rodriguez",
+        "idade": 34,
+        "posicao": "Defesa",
+        "overall": 75
+    },
+    {
+        "id": 240,
+        "nome": "Noah Pereira",
+        "idade": 17,
+        "posicao": "Meio-Campo",
+        "overall": 90
+    },
+    {
+        "id": 241,
+        "nome": "Pierre Pereira",
+        "idade": 35,
+        "posicao": "Meio-Campo",
+        "overall": 83
+    },
+    {
+        "id": 242,
+        "nome": "Pablo Lima",
+        "idade": 26,
+        "posicao": "Meio-Campo",
+        "overall": 73
+    },
+    {
+        "id": 243,
+        "nome": "Antoine Walker",
+        "idade": 26,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 244,
+        "nome": "Francesco Perez",
+        "idade": 16,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 245,
+        "nome": "Liam Souza",
+        "idade": 29,
+        "posicao": "Atacante",
+        "overall": 83
+    },
+    {
+        "id": 246,
+        "nome": "João Gomes",
+        "idade": 26,
+        "posicao": "Goleiro",
+        "overall": 91
+    },
+    {
+        "id": 247,
+        "nome": "Arthur Smith",
+        "idade": 21,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 248,
+        "nome": "João Ribeiro",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 78
+    },
+    {
+        "id": 249,
+        "nome": "Harry Mendes",
+        "idade": 23,
+        "posicao": "Meio-Campo",
+        "overall": 82
+    },
+    {
+        "id": 250,
+        "nome": "Jack Garcia",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 89
+    },
+    {
+        "id": 251,
+        "nome": "Giovanni Lopez",
+        "idade": 23,
+        "posicao": "Atacante",
+        "overall": 81
+    },
+    {
+        "id": 252,
+        "nome": "Rodrigo Perez",
+        "idade": 24,
         "posicao": "Atacante",
         "overall": 87
     },
     {
-        "id": 219,
-        "nome": "Antoine Martins",
+        "id": 253,
+        "nome": "Rodrigo Rossi",
+        "idade": 25,
+        "posicao": "Goleiro",
+        "overall": 83
+    },
+    {
+        "id": 254,
+        "nome": "Pablo Fernandez",
+        "idade": 24,
+        "posicao": "Defesa",
+        "overall": 85
+    },
+    {
+        "id": 255,
+        "nome": "Caio Pereira",
         "idade": 17,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 256,
+        "nome": "Louis Pereira",
+        "idade": 18,
+        "posicao": "Defesa",
+        "overall": 85
+    },
+    {
+        "id": 257,
+        "nome": "Luca Moretti",
+        "idade": 20,
+        "posicao": "Defesa",
+        "overall": 77
+    },
+    {
+        "id": 258,
+        "nome": "Liam Rossi",
+        "idade": 18,
+        "posicao": "Meio-Campo",
+        "overall": 93
+    },
+    {
+        "id": 259,
+        "nome": "Louis Martins",
+        "idade": 18,
+        "posicao": "Meio-Campo",
+        "overall": 84
+    },
+    {
+        "id": 260,
+        "nome": "Diego Johnson",
+        "idade": 36,
+        "posicao": "Meio-Campo",
+        "overall": 83
+    },
+    {
+        "id": 261,
+        "nome": "André Dubois",
+        "idade": 32,
+        "posicao": "Atacante",
+        "overall": 84
+    },
+    {
+        "id": 262,
+        "nome": "Antoine Silva",
+        "idade": 34,
+        "posicao": "Atacante",
+        "overall": 76
+    },
+    {
+        "id": 263,
+        "nome": "Jack Fernandez",
+        "idade": 19,
+        "posicao": "Atacante",
+        "overall": 84
+    },
+    {
+        "id": 264,
+        "nome": "Arthur Perez",
+        "idade": 33,
+        "posicao": "Goleiro",
+        "overall": 80
+    },
+    {
+        "id": 265,
+        "nome": "Gustavo Ribeiro",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 266,
+        "nome": "Gabriel Santos",
+        "idade": 25,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 267,
+        "nome": "Lucas Garcia",
+        "idade": 27,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 268,
+        "nome": "André Barbosa",
+        "idade": 28,
+        "posicao": "Meio-Campo",
+        "overall": 91
+    },
+    {
+        "id": 269,
+        "nome": "Liam Walker",
+        "idade": 21,
         "posicao": "Atacante",
         "overall": 86
     },
     {
-        "id": 220,
-        "nome": "João Martin",
+        "id": 270,
+        "nome": "Francesco Walker",
+        "idade": 27,
+        "posicao": "Atacante",
+        "overall": 85
+    },
+    {
+        "id": 271,
+        "nome": "Thiago Martins",
+        "idade": 36,
+        "posicao": "Goleiro",
+        "overall": 86
+    },
+    {
+        "id": 272,
+        "nome": "Juan Almeida",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 273,
+        "nome": "Luca Lopez",
+        "idade": 22,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 274,
+        "nome": "Gustavo Moretti",
+        "idade": 18,
+        "posicao": "Defesa",
+        "overall": 86
+    },
+    {
+        "id": 275,
+        "nome": "Lucas Pereira",
+        "idade": 23,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 276,
+        "nome": "Miguel Silva",
+        "idade": 24,
+        "posicao": "Meio-Campo",
+        "overall": 82
+    },
+    {
+        "id": 277,
+        "nome": "Felipe Garcia",
+        "idade": 19,
+        "posicao": "Meio-Campo",
+        "overall": 72
+    },
+    {
+        "id": 278,
+        "nome": "Felipe Taylor",
+        "idade": 28,
+        "posicao": "Meio-Campo",
+        "overall": 84
+    },
+    {
+        "id": 279,
+        "nome": "Matheus Martin",
+        "idade": 16,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 280,
+        "nome": "Rodrigo Martins",
+        "idade": 31,
+        "posicao": "Atacante",
+        "overall": 81
+    },
+    {
+        "id": 281,
+        "nome": "Pierre Martins",
+        "idade": 34,
+        "posicao": "Atacante",
+        "overall": 83
+    },
+    {
+        "id": 282,
+        "nome": "Harry Moretti",
+        "idade": 28,
+        "posicao": "Goleiro",
+        "overall": 72
+    },
+    {
+        "id": 283,
+        "nome": "Diego Almeida",
+        "idade": 29,
+        "posicao": "Defesa",
+        "overall": 73
+    },
+    {
+        "id": 284,
+        "nome": "Leonardo Johnson",
+        "idade": 23,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 285,
+        "nome": "Bruno Santos",
+        "idade": 29,
+        "posicao": "Meio-Campo",
+        "overall": 89
+    },
+    {
+        "id": 286,
+        "nome": "Francesco Ferreira",
+        "idade": 31,
+        "posicao": "Meio-Campo",
+        "overall": 77
+    },
+    {
+        "id": 287,
+        "nome": "Miguel Rodriguez",
+        "idade": 28,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 288,
+        "nome": "Antoine Araujo",
+        "idade": 20,
+        "posicao": "Atacante",
+        "overall": 83
+    },
+    {
+        "id": 289,
+        "nome": "Carlos Rodriguez",
+        "idade": 25,
+        "posicao": "Goleiro",
+        "overall": 87
+    },
+    {
+        "id": 290,
+        "nome": "Vinicius Almeida",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 87
+    },
+    {
+        "id": 291,
+        "nome": "Giovanni Pereira",
+        "idade": 30,
+        "posicao": "Defesa",
+        "overall": 88
+    },
+    {
+        "id": 292,
+        "nome": "Harry Santos",
+        "idade": 26,
+        "posicao": "Defesa",
+        "overall": 78
+    },
+    {
+        "id": 293,
+        "nome": "Matheus Wilson",
+        "idade": 28,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 294,
+        "nome": "Matheus Gomes",
+        "idade": 26,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 295,
+        "nome": "Caio Silva",
+        "idade": 34,
+        "posicao": "Meio-Campo",
+        "overall": 84
+    },
+    {
+        "id": 296,
+        "nome": "Rodrigo Wilson",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 88
+    },
+    {
+        "id": 297,
+        "nome": "Jack Barbosa",
+        "idade": 37,
+        "posicao": "Atacante",
+        "overall": 73
+    },
+    {
+        "id": 298,
+        "nome": "Thiago Taylor",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 84
+    },
+    {
+        "id": 299,
+        "nome": "Gabriel Rossi",
+        "idade": 27,
+        "posicao": "Atacante",
+        "overall": 84
+    },
+    {
+        "id": 300,
+        "nome": "Oliver Martins",
+        "idade": 28,
+        "posicao": "Goleiro",
+        "overall": 80
+    },
+    {
+        "id": 301,
+        "nome": "Rodrigo Martin",
+        "idade": 16,
+        "posicao": "Defesa",
+        "overall": 87
+    },
+    {
+        "id": 302,
+        "nome": "Rodrigo Fernandez",
+        "idade": 28,
+        "posicao": "Defesa",
+        "overall": 79
+    },
+    {
+        "id": 303,
+        "nome": "Juan Moretti",
+        "idade": 18,
+        "posicao": "Meio-Campo",
+        "overall": 72
+    },
+    {
+        "id": 304,
+        "nome": "Harry Perez",
+        "idade": 23,
+        "posicao": "Meio-Campo",
+        "overall": 83
+    },
+    {
+        "id": 305,
+        "nome": "Noah Garcia",
+        "idade": 28,
+        "posicao": "Atacante",
+        "overall": 76
+    },
+    {
+        "id": 306,
+        "nome": "Thiago Moretti",
+        "idade": 20,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 307,
+        "nome": "Pierre Fernandez",
+        "idade": 25,
+        "posicao": "Goleiro",
+        "overall": 79
+    },
+    {
+        "id": 308,
+        "nome": "Marco Barbosa",
+        "idade": 25,
+        "posicao": "Defesa",
+        "overall": 86
+    },
+    {
+        "id": 309,
+        "nome": "Liam Johnson",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 83
+    },
+    {
+        "id": 310,
+        "nome": "Lucas Smith",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 311,
+        "nome": "Bruno Brown",
+        "idade": 36,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 312,
+        "nome": "Enzo Lima",
+        "idade": 24,
+        "posicao": "Meio-Campo",
+        "overall": 87
+    },
+    {
+        "id": 313,
+        "nome": "Giovanni Ribeiro",
+        "idade": 28,
+        "posicao": "Meio-Campo",
+        "overall": 83
+    },
+    {
+        "id": 314,
+        "nome": "Pierre Barbosa",
+        "idade": 25,
+        "posicao": "Meio-Campo",
+        "overall": 73
+    },
+    {
+        "id": 315,
+        "nome": "Gustavo Bianchi",
+        "idade": 37,
+        "posicao": "Atacante",
+        "overall": 83
+    },
+    {
+        "id": 316,
+        "nome": "Caio Martin",
+        "idade": 29,
+        "posicao": "Atacante",
+        "overall": 83
+    },
+    {
+        "id": 317,
+        "nome": "Felipe Ribeiro",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 81
+    },
+    {
+        "id": 318,
+        "nome": "Juan Lopez",
+        "idade": 18,
+        "posicao": "Goleiro",
+        "overall": 80
+    },
+    {
+        "id": 319,
+        "nome": "Pierre Ribeiro",
+        "idade": 29,
+        "posicao": "Defesa",
+        "overall": 72
+    },
+    {
+        "id": 320,
+        "nome": "André Taylor",
+        "idade": 16,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 321,
+        "nome": "André Rodriguez",
+        "idade": 23,
+        "posicao": "Meio-Campo",
+        "overall": 85
+    },
+    {
+        "id": 322,
+        "nome": "Pedro Moretti",
+        "idade": 33,
+        "posicao": "Meio-Campo",
+        "overall": 83
+    },
+    {
+        "id": 323,
+        "nome": "Luca Smith",
+        "idade": 29,
+        "posicao": "Atacante",
+        "overall": 76
+    },
+    {
+        "id": 324,
+        "nome": "Rodrigo Silva",
         "idade": 24,
         "posicao": "Atacante",
+        "overall": 82
+    },
+    {
+        "id": 325,
+        "nome": "Alejandro Bianchi",
+        "idade": 17,
+        "posicao": "Goleiro",
+        "overall": 82
+    },
+    {
+        "id": 326,
+        "nome": "Leonardo Martin",
+        "idade": 18,
+        "posicao": "Defesa",
+        "overall": 73
+    },
+    {
+        "id": 327,
+        "nome": "Felipe Santos",
+        "idade": 19,
+        "posicao": "Defesa",
+        "overall": 87
+    },
+    {
+        "id": 328,
+        "nome": "Pedro Brown",
+        "idade": 24,
+        "posicao": "Defesa",
+        "overall": 77
+    },
+    {
+        "id": 329,
+        "nome": "André Walker",
+        "idade": 28,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 330,
+        "nome": "Rodrigo Barbosa",
+        "idade": 18,
+        "posicao": "Meio-Campo",
+        "overall": 80
+    },
+    {
+        "id": 331,
+        "nome": "Oliver Moretti",
+        "idade": 31,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 332,
+        "nome": "Arthur Garcia",
+        "idade": 24,
+        "posicao": "Meio-Campo",
         "overall": 90
+    },
+    {
+        "id": 333,
+        "nome": "Caio Walker",
+        "idade": 27,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 334,
+        "nome": "João Pereira",
+        "idade": 26,
+        "posicao": "Atacante",
+        "overall": 79
+    },
+    {
+        "id": 335,
+        "nome": "Rafael Souza",
+        "idade": 19,
+        "posicao": "Atacante",
+        "overall": 89
+    },
+    {
+        "id": 336,
+        "nome": "Jack Perez",
+        "idade": 24,
+        "posicao": "Goleiro",
+        "overall": 84
+    },
+    {
+        "id": 337,
+        "nome": "Enzo Rocha",
+        "idade": 27,
+        "posicao": "Defesa",
+        "overall": 72
+    },
+    {
+        "id": 338,
+        "nome": "Francesco Rocha",
+        "idade": 21,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 339,
+        "nome": "Gabriel Mendes",
+        "idade": 19,
+        "posicao": "Meio-Campo",
+        "overall": 95
+    },
+    {
+        "id": 340,
+        "nome": "Harry Smith",
+        "idade": 26,
+        "posicao": "Meio-Campo",
+        "overall": 76
+    },
+    {
+        "id": 341,
+        "nome": "Vinicius Santos",
+        "idade": 24,
+        "posicao": "Atacante",
+        "overall": 83
+    },
+    {
+        "id": 342,
+        "nome": "Diego Rodriguez",
+        "idade": 32,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 343,
+        "nome": "Diego Ferreira",
+        "idade": 17,
+        "posicao": "Goleiro",
+        "overall": 87
+    },
+    {
+        "id": 344,
+        "nome": "Carlos Mendes",
+        "idade": 21,
+        "posicao": "Defesa",
+        "overall": 89
+    },
+    {
+        "id": 345,
+        "nome": "Antoine Brown",
+        "idade": 35,
+        "posicao": "Defesa",
+        "overall": 84
+    },
+    {
+        "id": 346,
+        "nome": "Carlos Silva",
+        "idade": 28,
+        "posicao": "Defesa",
+        "overall": 82
+    },
+    {
+        "id": 347,
+        "nome": "Caio Ferreira",
+        "idade": 17,
+        "posicao": "Defesa",
+        "overall": 79
+    },
+    {
+        "id": 348,
+        "nome": "Harry Lima",
+        "idade": 24,
+        "posicao": "Meio-Campo",
+        "overall": 74
+    },
+    {
+        "id": 349,
+        "nome": "Thiago Bianchi",
+        "idade": 19,
+        "posicao": "Meio-Campo",
+        "overall": 87
+    },
+    {
+        "id": 350,
+        "nome": "Oliver Ferreira",
+        "idade": 29,
+        "posicao": "Meio-Campo",
+        "overall": 81
+    },
+    {
+        "id": 351,
+        "nome": "Arthur Costa",
+        "idade": 18,
+        "posicao": "Atacante",
+        "overall": 83
+    },
+    {
+        "id": 352,
+        "nome": "Louis Silva",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 80
+    },
+    {
+        "id": 353,
+        "nome": "Diego Oliveira",
+        "idade": 26,
+        "posicao": "Atacante",
+        "overall": 81
+    },
+    {
+        "id": 354,
+        "nome": "Juan Bianchi",
+        "idade": 32,
+        "posicao": "Goleiro",
+        "overall": 78
+    },
+    {
+        "id": 355,
+        "nome": "Gustavo Wilson",
+        "idade": 26,
+        "posicao": "Defesa",
+        "overall": 80
+    },
+    {
+        "id": 356,
+        "nome": "Louis Santos",
+        "idade": 24,
+        "posicao": "Defesa",
+        "overall": 83
+    },
+    {
+        "id": 357,
+        "nome": "Arthur Johnson",
+        "idade": 34,
+        "posicao": "Meio-Campo",
+        "overall": 88
+    },
+    {
+        "id": 358,
+        "nome": "Bruno Rocha",
+        "idade": 29,
+        "posicao": "Meio-Campo",
+        "overall": 83
+    },
+    {
+        "id": 359,
+        "nome": "Noah Bianchi",
+        "idade": 25,
+        "posicao": "Atacante",
+        "overall": 79
+    },
+    {
+        "id": 360,
+        "nome": "Jack Walker",
+        "idade": 31,
+        "posicao": "Atacante",
+        "overall": 86
     }
 ]

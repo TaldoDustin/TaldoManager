@@ -265,7 +265,42 @@ class Partida:
         minuto,
         estatisticas
     ):
-        pass
+
+        # aproximadamente
+        # 0.3 penaltis por partida
+        if random.random() > 0.003:
+            return
+
+        clube = random.choice([
+            self.clube1,
+            self.clube2
+        ])
+
+        cobrador = self.escolher_cobrador(
+            clube
+        )
+
+        if random.random() < 0.80:
+
+            cobrador.gols += 1
+            cobrador.penaltis += 1
+
+            estatisticas[cobrador]["gols"] += 1
+
+            self.adicionar_evento(
+                minuto,
+                "penalti",
+                cobrador
+            )
+        else:
+
+            cobrador.penaltis_perdidos += 1
+
+            self.adicionar_evento(
+                minuto,
+                "penalti_perdido",
+                cobrador
+            )
     
     #Escolhas
     
@@ -325,7 +360,12 @@ class Partida:
             k=1
         )[0]
     
-    def distribuir_assistencia(self, clube, artilheiro, estatisticas):
+    def distribuir_assistencia(
+        self,
+        clube,
+        artilheiro,
+        estatisticas
+    ):
 
         lista = []
 
@@ -353,16 +393,6 @@ class Partida:
     
     #Cartões
     
-    def simular_cartoes(self):
-
-        self.distribuir_cartoes(
-            self.clube1
-        )
-
-        self.distribuir_cartoes(
-            self.clube2
-        )
-    
     def simular_cartao(
         self,
         minuto
@@ -382,6 +412,67 @@ class Partida:
             minuto
         )
     
+    def distribuir_cartao(
+        self,
+        clube,
+        minuto
+    ):
+
+        jogadores_validos = [
+            j for j in clube.jogadores
+            if not j.expulso
+        ]
+
+        if not jogadores_validos:
+            return
+
+        jogador = random.choice(
+            jogadores_validos
+        )
+
+        # vermelho direto
+        if random.random() < 0.01:
+
+            jogador.vermelhos += 1
+            jogador.expulso = True
+
+            clube.penalidade_expulsao += 5
+
+            self.adicionar_evento(
+                minuto,
+                "expulsao",
+                jogador
+            )
+
+            return
+
+        # amarelo
+        jogador.amarelos += 1
+        jogador.amarelos_partida += 1
+
+        self.adicionar_evento(
+            minuto,
+            "cartao_amarelo",
+            jogador
+        )
+
+        # segundo amarelo
+        if (
+            jogador.amarelos_partida >= 2
+            and random.random() < 0.30
+        ):
+
+            jogador.vermelhos += 1
+            jogador.expulso = True
+
+            clube.penalidade_expulsao += 5
+
+            self.adicionar_evento(
+                minuto,
+                "expulsao",
+                jogador
+            )
+    
     #Eventos
     
     def adicionar_evento(
@@ -395,8 +486,11 @@ class Partida:
             "gol": "⚽",
             "assistencia": "🅰️",
             "penalti": "⚽ (P)",
-            "penalti_perdido": "❌",
-            "chute_fora": "💨"
+            "penalti_perdido": "❌ (P)",
+            "chute_fora": "💨",
+            "cartao_amarelo": "🟨",
+            "expulsao": "🟥",
+            "defesa_goleiro": "🧤",
         }
 
         simbolo = simbolos.get(
@@ -791,146 +885,4 @@ class Partida:
         )
 
         self.posse_c2 = 100 - self.posse_c1
-    
-    
-    #REMOVER FUTURAMENTE
-    
-    def distribuir_gols(
-        self,
-        clube,
-        quantidade_gols,
-        estatisticas
-    ):
-
-        for _ in range(quantidade_gols):
-
-            minuto = random.randint(
-                1,
-                90
-            )
-
-            self.marcar_gol(
-                clube,
-                minuto,
-                estatisticas
-            )
-    
-    def distribuir_cartoes(self, clube):
-
-        quantidade = random.choices(
-            [0,1,2,3,4],
-            weights=[55,30,12,3,1]
-        )[0]
-
-        for _ in range(quantidade):
-
-            minuto = random.randint(
-                1,
-                90
-            )
-
-            self.distribuir_cartao(
-                clube,
-                minuto
-            )
-            
-    def simular_penalti(self, clube, estatisticas):
-
-        if random.random() > 0.03:
-            return
-
-        cobrador = self.escolher_cobrador(clube)
-
-        minuto = random.randint(1, 90)
-
-        if random.random() < 0.80:
-
-            cobrador.gols += 1
-            cobrador.penaltis += 1
-
-            # ADICIONE ESTA LINHA
-            estatisticas[cobrador]["gols"] += 1
-
-            # Atualiza o placar
-            if clube == self.clube1:
-                self.gols_c1 += 1
-            else:
-                self.gols_c2 += 1
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "penalti",
-                "jogador": cobrador,
-            })
-
-        else:
-
-            cobrador.penaltis_perdidos += 1
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "penalti_perdido",
-                "jogador": cobrador,
-            })
-            
-    def distribuir_cartao(
-        self,
-        clube,
-        minuto
-    ):
-
-        jogadores_validos = [
-            j for j in clube.jogadores
-            if not j.expulso
-        ]
-
-        if not jogadores_validos:
-            return
-
-        jogador = random.choice(
-            jogadores_validos
-        )
-
-        # vermelho direto
-        if random.random() < 0.01:
-
-            jogador.vermelhos += 1
-            jogador.expulso = True
-
-            clube.penalidade_expulsao += 5
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "expulsao",
-                "jogador": jogador
-            })
-
-            return
-
-        # amarelo
-        jogador.amarelos += 1
-        jogador.amarelos_partida += 1
-
-        self.eventos.append({
-            "minuto": minuto,
-            "tipo": "cartao_amarelo",
-            "jogador": jogador
-        })
-
-        # segundo amarelo
-        if (
-            jogador.amarelos_partida >= 2
-            and random.random() < 0.30
-        ):
-
-            jogador.vermelhos += 1
-            jogador.expulso = True
-
-            clube.penalidade_expulsao += 5
-
-            self.eventos.append({
-                "minuto": minuto,
-                "tipo": "expulsao",
-                "jogador": jogador
-            })        
     

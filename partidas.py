@@ -1,4 +1,6 @@
 import random
+
+import jogadores
 class Partida:
     def __init__(self, clube1, clube2):
         self.clube1 = clube1
@@ -72,6 +74,7 @@ class Partida:
         self.simular_substituicao(
             minuto
         )
+        self.atualizar_fadiga()
     
     def finalizar_partida(self):
 
@@ -91,6 +94,16 @@ class Partida:
     
     def simular_partida(self):
 
+        for jogador in (
+            self.clube1.jogadores +
+            self.clube1.reservas +
+            self.clube2.jogadores +
+            self.clube2.reservas
+        ):
+
+            jogador.energia = 100
+            jogador.condicao = "Normal"
+        
         self.preparar_partida()
 
         self.estatisticas = (
@@ -475,6 +488,19 @@ class Partida:
 
             jogador.faltas_partida += 1
     
+    #Fadiga
+    
+    def atualizar_fadiga(self):
+
+        jogadores = (
+            self.clube1.jogadores +
+            self.clube2.jogadores
+        )
+
+        for jogador in jogadores:
+
+            jogador.reduzir_energia()
+    
     #Substituições
     
     def simular_substituicao(
@@ -541,9 +567,11 @@ class Partida:
         if not titulares:
             return
 
-        saindo = random.choice(
-            titulares
+        titulares.sort(
+            key=lambda j: j.energia
         )
+
+        saindo = titulares[0]
 
         entrando = self.escolher_substituto(
             clube,

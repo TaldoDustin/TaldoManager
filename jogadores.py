@@ -1,5 +1,8 @@
 
 
+import random
+
+
 class Jogador:
     def __init__(self, nome, idade, posicao, overall):
         self.nome = nome
@@ -39,6 +42,9 @@ class Jogador:
         # controle por partida
         self.amarelos_partida = 0
         self.expulso = False
+        self.energia = 100
+        self.condicao = "Normal"
+        
         
     def resetar_estatisticas_partida(self):
 
@@ -131,4 +137,30 @@ class Jogador:
             f"Melhor Nota: {round(self.melhor_nota,2)}\n"
             f"Pior Nota: {round(self.pior_nota,2)}\n"
         )
-        
+    
+    def reduzir_energia(self):
+
+        if self.expulso:
+            return
+
+        gasto = random.randint(
+            1,
+            3
+        )
+
+        if self.posicao == "Meio-Campo":
+            gasto += 1
+
+        self.energia = max(
+            0,
+            self.energia - gasto
+        )
+
+        if self.energia <= 20:
+            self.condicao = "Exausto"
+
+        elif self.energia <= 40:
+            self.condicao = "Cansado"
+
+        else:
+            self.condicao = "Normal"

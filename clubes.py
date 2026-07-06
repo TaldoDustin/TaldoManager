@@ -12,7 +12,9 @@ class Clube:
         self.torcedores = torcedores
 
         self.jogadores = []
+        self.titulares = []
         self.reservas = []
+        self.formacao = "4-3-3"
 
         self.pontos = 0
         self.gols_marcados = 0
@@ -73,6 +75,21 @@ class Clube:
     
     def calcular_forca(self):
 
+        for jogador in ativos:
+
+            modificador = 1
+
+            if jogador.condicao == "Cansado":
+                modificador = 0.90
+
+            elif jogador.condicao == "Exausto":
+                modificador = 0.75
+
+            total += (
+                jogador.overall
+                * modificador
+            )
+
         if not self.jogadores:
             return 0
 
@@ -93,6 +110,73 @@ class Clube:
         return (
             total / len(ativos)
         ) - self.penalidade_expulsao
+        
+    def escalar_time(self):
+
+        disponiveis = [
+            j for j in self.jogadores
+            if not j.expulso
+        ]
+
+        goleiros = sorted(
+            [
+                j for j in disponiveis
+                if j.posicao == "Goleiro"
+            ],
+            key=lambda x: (
+                x.overall,
+                x.energia
+            ),
+            reverse=True
+        )
+
+        defensores = sorted(
+            [
+                j for j in disponiveis
+                if j.posicao == "Defesa"
+            ],
+            key=lambda x: (
+                x.overall,
+                x.energia
+            ),
+            reverse=True
+        )
+
+        meias = sorted(
+            [
+                j for j in disponiveis
+                if j.posicao == "Meio-Campo"
+            ],
+            key=lambda x: (
+                x.overall,
+                x.energia
+            ),
+            reverse=True
+        )
+
+        atacantes = sorted(
+            [
+                j for j in disponiveis
+                if j.posicao == "Atacante"
+            ],
+            key=lambda x: (
+                x.overall,
+                x.energia
+            ),
+            reverse=True
+        )
+
+        self.titulares = (
+            goleiros[:1]
+            + defensores[:4]
+            + meias[:3]
+            + atacantes[:3]
+        )
+
+        self.reservas = [
+            j for j in disponiveis
+            if j not in self.titulares
+        ]
     
     def saldo_gols(self):
         return self.gols_marcados - self.gols_sofridos

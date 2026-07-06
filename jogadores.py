@@ -84,6 +84,7 @@ class Jogador:
         )    
     
     def peso_gol(self):
+
         if self.posicao == "Goleiro":
             return 0
 
@@ -91,10 +92,21 @@ class Jogador:
             return 0
 
         if self.posicao == "Meio-Campo":
-            return 7 + (self.overall // 15)
+            peso = 7 + (self.overall // 15)
 
-        if self.posicao == "Atacante":
-            return 12 + (self.overall // 15)
+        elif self.posicao == "Atacante":
+            peso = 12 + (self.overall // 15)
+
+        else:
+            peso = 0
+
+        if self.condicao == "Cansado":
+            peso *= 0.90
+
+        elif self.condicao == "Exausto":
+            peso *= 0.70
+
+        return int(peso)
     
     def peso_assistencia(self):
 
@@ -107,7 +119,18 @@ class Jogador:
             "Defesa": 2
         }
 
-        return base[self.posicao] + (self.overall // 8)
+        peso = (
+            base[self.posicao]
+            + (self.overall // 8)
+        )
+
+        if self.condicao == "Cansado":
+            peso *= 0.90
+
+        elif self.condicao == "Exausto":
+            peso *= 0.70
+
+        return int(peso)
     
     def nota_media(self):
         if self.partidas == 0:
@@ -143,10 +166,10 @@ class Jogador:
         if self.expulso:
             return
 
-        gasto = random.randint(
-            1,
-            3
-        )
+        if random.random() > 0.25:
+            return
+
+        gasto = 1
 
         if self.posicao == "Meio-Campo":
             gasto += 1
@@ -156,10 +179,14 @@ class Jogador:
             self.energia - gasto
         )
 
-        if self.energia <= 20:
+        self.atualizar_condicao()
+    
+    def atualizar_condicao(self):
+
+        if self.energia <= 30:
             self.condicao = "Exausto"
 
-        elif self.energia <= 40:
+        elif self.energia <= 60:
             self.condicao = "Cansado"
 
         else:

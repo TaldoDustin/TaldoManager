@@ -40,8 +40,8 @@ class Partida:
         self.calcular_posse()
 
         for jogador in (
-            self.clube1.jogadores +
-            self.clube2.jogadores
+            self.clube1.titulares +
+            self.clube2.titulares
         ):
             jogador.resetar_estatisticas_partida()
     
@@ -74,7 +74,8 @@ class Partida:
         self.simular_substituicao(
             minuto
         )
-        self.atualizar_fadiga()
+        if minuto in [15, 30, 45, 60, 75, 90]:
+            self.atualizar_fadiga()
     
     def finalizar_partida(self):
 
@@ -93,16 +94,9 @@ class Partida:
         self.atualizar_clean_sheet()
     
     def simular_partida(self):
-
-        for jogador in (
-            self.clube1.jogadores +
-            self.clube1.reservas +
-            self.clube2.jogadores +
-            self.clube2.reservas
-        ):
-
-            jogador.energia = 100
-            jogador.condicao = "Normal"
+        
+        self.clube1.escalar_time()
+        self.clube2.escalar_time()
         
         self.preparar_partida()
 
@@ -129,6 +123,30 @@ class Partida:
         self.mostrar_melhor_em_campo(
             melhor,
             nota
+        )
+        
+        print("\n=== FADIGA ANTES DA RECUPERAÇÃO ===")
+
+        for jogador in self.clube1.titulares[:3]:
+            print(
+                jogador.nome,
+                jogador.energia,
+                jogador.condicao
+            )
+
+        for jogador in self.clube2.titulares[:3]:
+            print(
+                jogador.nome,
+                jogador.energia,
+                jogador.condicao
+            )
+
+        self.recuperar_energia(
+            self.clube1
+        )
+
+        self.recuperar_energia(
+            self.clube2
         )
     
     #Engine
@@ -493,13 +511,47 @@ class Partida:
     def atualizar_fadiga(self):
 
         jogadores = (
-            self.clube1.jogadores +
-            self.clube2.jogadores
+            self.clube1.titulares +
+            self.clube2.titulares
         )
 
         for jogador in jogadores:
-
             jogador.reduzir_energia()
+    
+    def recuperar_energia(
+        self,
+        clube
+    ):
+
+        # titulares
+        for jogador in clube.jogadores:
+
+            jogador.energia += random.randint(
+                5,
+                10
+            )
+
+            jogador.energia = min(
+                100,
+                jogador.energia
+            )
+
+            jogador.atualizar_condicao()
+
+        # reservas
+        for jogador in clube.reservas:
+
+            jogador.energia += random.randint(
+                15,
+                25
+            )
+
+            jogador.energia = min(
+                100,
+                jogador.energia
+            )
+
+            jogador.atualizar_condicao()
     
     #Substituições
     
@@ -881,7 +933,7 @@ class Partida:
 
         estatisticas = {}
 
-        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+        for jogador in self.clube1.titulares + self.clube2.titulares:
             estatisticas[jogador] = {
                 "gols": 0, 
                 "assistencias": 0
@@ -920,7 +972,7 @@ class Partida:
             # IDENTIFICA O TIME
             # ==========================
 
-            time1 = jogador in self.clube1.jogadores
+            time1 = jogador in self.clube1.titulares
 
             if time1:
                 gols_pro = self.gols_c1
@@ -1070,7 +1122,7 @@ class Partida:
 
                 jogador = evento["jogador"]
 
-                if jogador in self.clube1.jogadores:
+                if jogador in self.clube1.titulares:
                     gols_c1 += 1
                 else:
                     gols_c2 += 1
@@ -1149,7 +1201,7 @@ class Partida:
                 f"(placar {self.gols_c1}x{self.gols_c2})"
             )
 
-            for jogador in self.clube1.jogadores:
+            for jogador in self.clube1.titulares:
                 if jogador.posicao == "Goleiro":
                     jogador.clean_sheets += 1
                     print(
@@ -1177,25 +1229,25 @@ class Partida:
 
         ataque1 = sum(
             j.overall
-            for j in self.clube1.jogadores
+            for j in self.clube1.titulares
             if j.posicao == "Atacante"
         )
 
         meio1 = sum(
             j.overall
-            for j in self.clube1.jogadores
+            for j in self.clube1.titulares
             if j.posicao == "Meio-Campo"
         )
 
         ataque2 = sum(
             j.overall
-            for j in self.clube2.jogadores
+            for j in self.clube2.titulares
             if j.posicao == "Atacante"
         )
 
         meio2 = sum(
             j.overall
-            for j in self.clube2.jogadores
+            for j in self.clube2.titulares
             if j.posicao == "Meio-Campo"
         )
 

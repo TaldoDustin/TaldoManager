@@ -19,3 +19,11 @@ campeonato.melhores_notas()
 campeonato.assistencias()
 campeonato.clean_sheets()
 campeonato.mvp_campeonato()
+
+clube = campeonato.clubes[0]
+
+print(
+    len(clube.jogadores),
+    len(clube.titulares),
+    len(clube.reservas)
+)

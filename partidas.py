@@ -98,6 +98,28 @@ class Partida:
         self.clube1.escalar_time()
         self.clube2.escalar_time()
         
+        print("\n=== ESCALAÇÃO ===")
+        print(self.clube1.nome)
+
+        for j in self.clube1.titulares:
+            print(
+                j.nome,
+                j.overall,
+                j.energia,
+                j.score_escalacao()
+            )
+
+        print("\nReservas")
+
+        for j in self.clube1.reservas:
+            print(
+                j.nome,
+                j.overall,
+                j.energia,
+                j.score_escalacao()
+            )
+        
+        
         self.preparar_partida()
 
         self.estatisticas = (
@@ -931,16 +953,25 @@ class Partida:
     
     def criar_estatisticas(self):
 
-        estatisticas = {}
+        self.estatisticas = {}
 
-        for jogador in self.clube1.titulares + self.clube2.titulares:
-            estatisticas[jogador] = {
-                "gols": 0, 
-                "assistencias": 0
+        for jogador in (
+            self.clube1.titulares +
+            self.clube2.titulares +
+            self.clube1.reservas +
+            self.clube2.reservas
+        ):
+
+            self.estatisticas[jogador] = {
+                "gols":0,
+                "assistencias":0,
+                "passes":0,
+                "desarmes":0,
+                "nota":6.0
             }
 
-        return estatisticas
-    
+        return self.estatisticas
+
     def verificar_hat_tricks(
         self,
     ):

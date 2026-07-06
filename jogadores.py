@@ -139,7 +139,23 @@ class Jogador:
         return round(
             self.soma_nota / self.partidas, 2
         )
-        
+    
+    def score_escalacao(self):
+
+        score = self.overall
+
+        # bônus por energia
+        score += self.energia * 0.15
+
+        # penalidade por condição
+        if self.condicao == "Cansado":
+            score -= 5
+
+        elif self.condicao == "Exausto":
+            score -= 15
+
+        return score
+    
     def mostrar_estatisticas(self):
 
         print("\n=== ESTATÍSTICAS ===")
@@ -163,21 +179,16 @@ class Jogador:
     
     def reduzir_energia(self):
 
-        if self.expulso:
-            return
+        gasto = random.randint(3,6)
 
-        if random.random() > 0.25:
-            return
+        if self.posicao == "Atacante":
+            gasto += 3
 
-        gasto = 1
+        elif self.posicao == "Meio-Campo":
+            gasto += 5
 
-        if self.posicao == "Meio-Campo":
-            gasto += 1
-
-        self.energia = max(
-            0,
-            self.energia - gasto
-        )
+        elif self.posicao == "Defesa":
+            gasto += 2
 
         self.atualizar_condicao()
     

@@ -62,18 +62,27 @@ class Clube:
         print(f"Força: {self.calcular_forca():.0f}")
         
     def contratar_jogador(self, jogador):
-        self.jogadores.append(jogador)
-    
-    def contratar_reserva(
-        self,
-        jogador
-    ):
 
-        self.reservas.append(
+        self.jogadores.append(
             jogador
         )
     
+    def contratar_reserva(self, jogador):
+
+        self.jogadores.append(jogador)
+        self.reservas.append(jogador)
+    
     def calcular_forca(self):
+
+        ativos = [
+            j for j in self.titulares
+            if not j.expulso
+        ]
+
+        if not ativos:
+            return 0
+
+        total = 0
 
         for jogador in ativos:
 
@@ -89,23 +98,6 @@ class Clube:
                 jogador.overall
                 * modificador
             )
-
-        if not self.jogadores:
-            return 0
-
-        total = sum(
-            jogador.overall
-            for jogador in self.jogadores
-            if not jogador.expulso
-        )
-
-        ativos = [
-            j for j in self.jogadores
-            if not j.expulso
-        ]
-
-        if not ativos:
-            return 0
 
         return (
             total / len(ativos)
@@ -123,10 +115,7 @@ class Clube:
                 j for j in disponiveis
                 if j.posicao == "Goleiro"
             ],
-            key=lambda x: (
-                x.overall,
-                x.energia
-            ),
+            key=lambda j: j.score_escalacao(),
             reverse=True
         )
 
@@ -135,34 +124,25 @@ class Clube:
                 j for j in disponiveis
                 if j.posicao == "Defesa"
             ],
-            key=lambda x: (
-                x.overall,
-                x.energia
-            ),
+            key=lambda j: j.score_escalacao(),
             reverse=True
         )
-
+        
         meias = sorted(
             [
                 j for j in disponiveis
                 if j.posicao == "Meio-Campo"
             ],
-            key=lambda x: (
-                x.overall,
-                x.energia
-            ),
+            key=lambda j: j.score_escalacao(),
             reverse=True
         )
-
+        
         atacantes = sorted(
             [
                 j for j in disponiveis
                 if j.posicao == "Atacante"
             ],
-            key=lambda x: (
-                x.overall,
-                x.energia
-            ),
+            key=lambda j: j.score_escalacao(),
             reverse=True
         )
 
@@ -180,43 +160,6 @@ class Clube:
     
     def saldo_gols(self):
         return self.gols_marcados - self.gols_sofridos
-    
-    def organizar_elenco(self):
-
-        goleiros = [
-            j for j in self.jogadores
-            if j.posicao == "Goleiro"
-        ]
-
-        defensores = [
-            j for j in self.jogadores
-            if j.posicao == "Defesa"
-        ]
-
-        meias = [
-            j for j in self.jogadores
-            if j.posicao == "Meio-Campo"
-        ]
-
-        atacantes = [
-            j for j in self.jogadores
-            if j.posicao == "Atacante"
-        ]
-
-        titulares = (
-            goleiros[:1] +
-            defensores[:4] +
-            meias[:3] +
-            atacantes[:3]
-        )
-
-        reservas = [
-            j for j in self.jogadores
-            if j not in titulares
-        ]
-
-        self.jogadores = titulares
-        self.reservas = reservas
     
     def mostrar_elenco(self):
 

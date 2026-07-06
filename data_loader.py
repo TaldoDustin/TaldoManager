@@ -63,6 +63,17 @@ def carregar_clubes(jogadores):
         clubes.append(
             clube
         )
+        
+        # TESTE
+        print(
+            clube.nome,
+            len(clube.jogadores),
+            len(clube.titulares),
+            len(clube.reservas)
+        )
+
+        clubes.append(clube)
+
 
     return clubes
 

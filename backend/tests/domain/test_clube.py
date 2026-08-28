@@ -1,0 +1,140 @@
+from app.domain.clube import Clube
+from app.domain.jogador import Jogador
+
+
+def test_criar_clube():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000,
+        50000
+    )
+
+    assert clube.nome == "FC Taldo"
+    assert clube.pais == "Brasil"
+    assert clube.dinheiro == 1000000
+    assert clube.torcedores == 50000
+
+
+def test_contratar_jogador():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000
+    )
+
+    jogador = Jogador(
+        "Louis Silva",
+        25,
+        "Atacante",
+        85
+    )
+
+    clube.contratar_jogador(jogador)
+
+    assert jogador in clube.jogadores
+    assert len(clube.jogadores) == 1
+    assert jogador not in clube.titulares
+    assert jogador not in clube.reservas
+    
+def test_contratar_reserva():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000
+    )
+
+    jogador = Jogador(
+        "Carlos Silva",
+        22,
+        "Meio-Campo",
+        80
+    )
+
+    clube.contratar_reserva(jogador)
+
+    assert jogador in clube.jogadores
+    assert jogador in clube.reservas
+    assert jogador not in clube.titulares
+    assert len(clube.jogadores) == 1
+    assert len(clube.reservas) == 1
+    
+def test_escalar_time():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000
+    )
+
+    jogadores = [
+        Jogador("Goleiro", 25, "Goleiro", 80),
+        Jogador("Defesa 1", 25, "Defesa", 80),
+        Jogador("Defesa 2", 25, "Defesa", 80),
+        Jogador("Defesa 3", 25, "Defesa", 80),
+        Jogador("Defesa 4", 25, "Defesa", 80),
+        Jogador("Defesa 5", 25, "Defesa", 70),
+        Jogador("Meia 1", 25, "Meio-Campo", 80),
+        Jogador("Meia 2", 25, "Meio-Campo", 80),
+        Jogador("Meia 3", 25, "Meio-Campo", 80),
+        Jogador("Meia 4", 25, "Meio-Campo", 70),
+        Jogador("Atacante 1", 25, "Atacante", 80),
+        Jogador("Atacante 2", 25, "Atacante", 80),
+        Jogador("Atacante 3", 25, "Atacante", 80),
+        Jogador("Atacante 4", 25, "Atacante", 70),
+    ]
+
+    for jogador in jogadores:
+        clube.contratar_jogador(jogador)
+
+    clube.escalar_time()
+
+    assert len(clube.titulares) == 11
+    assert len(clube.reservas) == 3
+
+    assert sum(j.posicao == "Goleiro" for j in clube.titulares) == 1
+    assert sum(j.posicao == "Defesa" for j in clube.titulares) == 4
+    assert sum(j.posicao == "Meio-Campo" for j in clube.titulares) == 3
+    assert sum(j.posicao == "Atacante" for j in clube.titulares) == 3
+    
+def test_escalar_time_escolhe_melhores_jogadores():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000
+    )
+
+    jogadores = [
+        Jogador("Goleiro Fraco", 25, "Goleiro", 60),
+        Jogador("Goleiro Forte", 25, "Goleiro", 90),
+
+        Jogador("Defesa 1", 25, "Defesa", 90),
+        Jogador("Defesa 2", 25, "Defesa", 85),
+        Jogador("Defesa 3", 25, "Defesa", 80),
+        Jogador("Defesa 4", 25, "Defesa", 75),
+        Jogador("Defesa Reserva", 25, "Defesa", 60),
+
+        Jogador("Meia 1", 25, "Meio-Campo", 90),
+        Jogador("Meia 2", 25, "Meio-Campo", 85),
+        Jogador("Meia 3", 25, "Meio-Campo", 80),
+        Jogador("Meia Reserva", 25, "Meio-Campo", 60),
+
+        Jogador("Atacante 1", 25, "Atacante", 90),
+        Jogador("Atacante 2", 25, "Atacante", 85),
+        Jogador("Atacante 3", 25, "Atacante", 80),
+        Jogador("Atacante Reserva", 25, "Atacante", 60),
+    ]
+
+    for jogador in jogadores:
+        clube.contratar_jogador(jogador)
+
+    clube.escalar_time()
+
+    assert jogadores[1] in clube.titulares
+
+    assert jogadores[6] not in clube.titulares
+    assert jogadores[6] in clube.reservas
+
+    assert jogadores[8] in clube.titulares
+
+    assert jogadores[10] not in clube.titulares
+    assert jogadores[10] in clube.reservas

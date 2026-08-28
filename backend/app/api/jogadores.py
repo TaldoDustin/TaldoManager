@@ -1,0 +1,204 @@
+
+
+import random
+
+
+class Jogador:
+    def __init__(self, nome, idade, posicao, overall):
+        self.nome = nome
+        self.idade = idade
+        self.posicao = posicao
+        self.overall = overall
+        self.gols = 0
+        self.assistencias = 0
+        self.partidas = 0
+        self.soma_nota = 0.0
+        self.melhor_nota = 0.0
+        self.pior_nota = 10.0
+        self.melhor_em_campo = 0
+        self.clean_sheets = 0
+        self.hat_tricks = 0
+        self.penaltis = 0
+        self.penaltis_perdidos = 0
+        self.amarelos = 0
+        self.vermelhos = 0
+        # Estatisticas ofensivas 
+        self.chutes_partida = 0
+        self.chutes_gol_partida = 0
+        self.passes_chave_partida = 0
+        self.dribles_partida = 0
+        # Estatisticas defensivas 
+        self.desarmes_partida = 0
+        self.interceptacoes_partida = 0
+        self.cortes_partida = 0
+        self.bloqueios_partida = 0
+        # Estatisticas Goleiro
+        self.defesas_partida = 0
+        self.cortes_partida = 0
+        self.bloqueios_partida = 0
+        # Disciplina
+        self.faltas_partida = 0
+        self.gols_sofridos_partida = 0
+        # controle por partida
+        self.amarelos_partida = 0
+        self.expulso = False
+        self.energia = 100
+        self.condicao = "Normal"
+        
+        
+    def resetar_estatisticas_partida(self):
+
+        self.chutes_partida = 0
+        self.chutes_gol_partida = 0
+        self.passes_chave_partida = 0
+        self.dribles_partida = 0
+
+        self.desarmes_partida = 0
+        self.interceptacoes_partida = 0
+        self.cortes_partida = 0
+        self.bloqueios_partida = 0
+
+        self.defesas_partida = 0
+        self.gols_sofridos_partida = 0
+
+        self.faltas_partida = 0
+
+        self.amarelos_partida = 0
+        self.expulso = False
+        
+    def mostrar(self):
+        print(
+            f"Nome: {self.nome}, "
+            f"Idade: {self.idade}, "
+            f"Posição: {self.posicao}, "
+            f"Overall: {self.overall}"
+        )
+        
+    def mostrar_nota(self):
+        print(
+            f"Nome: {self.nome}, "
+            f"Posição: {self.posicao}, "
+            f"Nota Média: {self.soma_nota}, "
+            f"Melhor Nota: {self.melhor_nota}, "
+            f"Pior Nota: {self.pior_nota}"
+        )    
+    
+    def peso_gol(self):
+
+        if self.posicao == "Goleiro":
+            return 0
+
+        if self.posicao == "Defesa":
+            return 0
+
+        if self.posicao == "Meio-Campo":
+            peso = 7 + (self.overall // 15)
+
+        elif self.posicao == "Atacante":
+            peso = 12 + (self.overall // 15)
+
+        else:
+            peso = 0
+
+        if self.condicao == "Cansado":
+            peso *= 0.90
+
+        elif self.condicao == "Exausto":
+            peso *= 0.70
+
+        return int(peso)
+    
+    def peso_assistencia(self):
+
+        if self.posicao == "Goleiro":
+            return 1
+
+        base = {
+            "Atacante": 7,
+            "Meio-Campo": 13,
+            "Defesa": 2
+        }
+
+        peso = (
+            base[self.posicao]
+            + (self.overall // 8)
+        )
+
+        if self.condicao == "Cansado":
+            peso *= 0.90
+
+        elif self.condicao == "Exausto":
+            peso *= 0.70
+
+        return int(peso)
+    
+    def nota_media(self):
+        if self.partidas == 0:
+            return 0.0
+        
+        return round(
+            self.soma_nota / self.partidas, 2
+        )
+    
+    def score_escalacao(self):
+
+        score = self.overall
+
+        # bônus por energia
+        score += self.energia * 0.15
+
+        # penalidade por condição
+        if self.condicao == "Cansado":
+            score -= 5
+
+        elif self.condicao == "Exausto":
+            score -= 15
+
+        return score
+    
+    def mostrar_estatisticas(self):
+
+        print("\n=== ESTATÍSTICAS ===")
+
+        print(
+            f"Nome: {self.nome}\n"
+            f"Posição: {self.posicao}\n"
+            f"Overall: {self.overall}\n"
+            f"Jogos: {self.partidas}\n"
+            f"Gols: {self.gols}\n"
+            f"Assistências: {self.assistencias}\n"
+            f"Melhores em campo: {self.melhor_em_campo}\n"
+            f"Hat-tricks: {self.hat_tricks}\n"
+            f"Pênaltis: {self.penaltis}\n"
+            f"Pênaltis perdidos: {self.penaltis_perdidos}\n"
+            f"Clean Sheets: {self.clean_sheets}\n"
+            f"Nota Média: {self.nota_media()}\n"
+            f"Melhor Nota: {round(self.melhor_nota,2)}\n"
+            f"Pior Nota: {round(self.pior_nota,2)}\n"
+        )
+    
+    def reduzir_energia(self):
+
+        gasto = random.randint(3,6)
+
+        if self.posicao == "Atacante":
+            gasto += 3
+
+        elif self.posicao == "Meio-Campo":
+            gasto += 5
+
+        elif self.posicao == "Defesa":
+            gasto += 2
+
+        self.atualizar_condicao()
+    
+    def atualizar_condicao(self):
+
+        if self.energia <= 30:
+            self.condicao = "Exausto"
+
+        elif self.energia <= 60:
+            self.condicao = "Cansado"
+
+        else:
+            self.condicao = "Normal"

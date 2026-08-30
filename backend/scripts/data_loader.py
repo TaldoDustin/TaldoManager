@@ -1,13 +1,17 @@
 import json
+from pathlib import Path
 
 from app.domain.jogador import Jogador
 from app.domain.clube import Clube
 from app.domain.campeonato import Campeonato
 
+SEEDS_DIR = Path(__file__).resolve().parent.parent / "data" / "seeds"
+
+
 def carregar_jogadores():
 
     with open(
-        "data/seeds/jogadores.json",
+        SEEDS_DIR / "jogadores.json",
         encoding="utf-8"
     ) as arquivo:
 
@@ -26,10 +30,11 @@ def carregar_jogadores():
 
     return jogadores
 
+
 def carregar_clubes(jogadores):
 
     with open(
-        "data/seeds/clubes.json",
+        SEEDS_DIR / "clubes.json",
         encoding="utf-8"
     ) as arquivo:
 
@@ -64,15 +69,8 @@ def carregar_clubes(jogadores):
             clube
         )
 
-        print(
-            clube.nome,
-            len(clube.jogadores),
-            len(clube.titulares),
-            len(clube.reservas)
-        )
-
-
     return clubes
+
 
 def carregar_campeonato():
 

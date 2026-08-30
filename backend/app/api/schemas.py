@@ -1,0 +1,67 @@
+"""Schemas Pydantic da API.
+
+Servem para: (1) validar/serializar a resposta, (2) gerar a documentacao
+automatica em /docs. Os campos batem com o dict devolvido por
+`simular_temporada`.
+"""
+
+from pydantic import BaseModel
+
+
+class ClubeClassificacao(BaseModel):
+    posicao: int
+    clube: str
+    pais: str
+    pontos: int
+    jogos: int
+    vitorias: int
+    empates: int
+    derrotas: int
+    gols_marcados: int
+    gols_sofridos: int
+    saldo_gols: int
+    forma: list[str]
+
+
+class JogadorStats(BaseModel):
+    nome: str
+    clube: str
+    posicao: str
+    overall: int
+    idade: int
+    partidas: int
+    gols: int
+    assistencias: int
+    nota_media: float
+    melhor_nota: float
+    pior_nota: float
+    melhor_em_campo: int
+    hat_tricks: int
+    clean_sheets: int
+    amarelos: int
+    vermelhos: int
+
+
+class Recorde(BaseModel):
+    valor: int
+    partida: str
+
+
+class SimulacaoResponse(BaseModel):
+    campeonato: str
+    seed: int | None
+    rodadas: int
+    campeao: str | None
+    classificacao: list[ClubeClassificacao]
+    artilharia: list[JogadorStats]
+    assistencias: list[JogadorStats]
+    melhores_notas: list[JogadorStats]
+    clean_sheets: list[JogadorStats]
+    hat_tricks: list[JogadorStats]
+    mvp: JogadorStats | None
+    historico: list[str]
+    recordes: dict[str, Recorde]
+
+
+class HealthResponse(BaseModel):
+    status: str

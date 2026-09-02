@@ -2,14 +2,16 @@
 
 
 def criar(conn, seed, campeao, rodadas, criada_em,
-          clube_usuario=None, tatica=None):
+          clube_usuario=None, tatica=None, formacao=None, xi_preferido=None):
     cur = conn.execute(
         """
         INSERT INTO simulacao
-            (seed, criada_em, campeao, rodadas, clube_usuario, tatica)
-        VALUES (?, ?, ?, ?, ?, ?)
+            (seed, criada_em, campeao, rodadas,
+             clube_usuario, tatica, formacao, xi_preferido)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """,
-        (seed, criada_em, campeao, rodadas, clube_usuario, tatica),
+        (seed, criada_em, campeao, rodadas,
+         clube_usuario, tatica, formacao, xi_preferido),
     )
     return cur.lastrowid
 

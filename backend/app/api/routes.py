@@ -3,10 +3,12 @@
 from fastapi import APIRouter, HTTPException, Query, Response
 
 from app.api.schemas import (
+    ClubeComElenco,
     ClubeDetalhe,
     ClubeSeed,
     HealthResponse,
     JogadorDetalhe,
+    NovaSimulacao,
     PartidaDetalhe,
     SimulacaoCriada,
     SimulacaoResponse,
@@ -28,17 +30,8 @@ _CLUBE_DESC = (
 _TATICA_DESC = "Postura do clube dirigido (ignorada sem 'clube')."
 
 
-def _simular(salvar, seed, clube, tatica):
-    """Chama o serviço traduzindo ValueError -> 400."""
-    fn = (
-        simulacao_service.salvar_temporada
-        if salvar
-        else simulacao_service.simular_temporada
-    )
-    try:
-        return fn(seed=seed, clube_usuario=clube, tatica=tatica)
-    except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e)) from e
+def _erro_de_valor(e):
+    return HTTPException(status_code=400, detail=str(e))
 
 
 @router.get("/health", response_model=HealthResponse, tags=["infra"])
@@ -52,14 +45,29 @@ def listar_clubes():
     return simulacao_service.listar_clubes()
 
 
+@router.get("/clubes/{nome}", response_model=ClubeComElenco, tags=["infra"])
+def obter_clube_do_seed(nome: str):
+    """Elenco e formações disponíveis — para montar a escalação."""
+    clube = simulacao_service.elenco_do_clube(nome)
+    if clube is None:
+        raise HTTPException(status_code=404, detail="Clube não encontrado")
+    return clube
+
+
 @router.get("/simulacao", response_model=SimulacaoResponse, tags=["simulacao"])
 def simulacao_rapida(
     seed: int | None = Query(default=None, description=_SEED_DESC),
     clube: str | None = Query(default=None, description=_CLUBE_DESC),
     tatica: Tatica = Query(default="equilibrado", description=_TATICA_DESC),
+    formacao: str | None = Query(default=None),
 ):
     """Roda uma temporada e devolve o resultado sem salvar (modo rápido)."""
-    return _simular(False, seed, clube, tatica)
+    try:
+        return simulacao_service.simular_temporada(
+            seed=seed, clube_usuario=clube, tatica=tatica, formacao=formacao
+        )
+    except ValueError as e:
+        raise _erro_de_valor(e) from e
 
 
 @router.get("/simulacoes", response_model=list[SimulacaoResumo], tags=["simulacoes"])
@@ -74,13 +82,24 @@ def listar_simulacoes():
     status_code=201,
     tags=["simulacoes"],
 )
-def criar_simulacao(
-    seed: int | None = Query(default=None, description=_SEED_DESC),
-    clube: str | None = Query(default=None, description=_CLUBE_DESC),
-    tatica: Tatica = Query(default="equilibrado", description=_TATICA_DESC),
-):
-    """Roda uma temporada, salva no banco e devolve o id."""
-    return {"id": _simular(True, seed, clube, tatica)}
+def criar_simulacao(cfg: NovaSimulacao | None = None):
+    """Roda uma temporada, salva no banco e devolve o id.
+
+    Corpo JSON opcional: `seed`, `clube`, `tatica`, `formacao`, `xi`
+    (nomes do XI titular preferido). Sem corpo, roda uma temporada neutra.
+    """
+    cfg = cfg or NovaSimulacao()
+    try:
+        sim_id = simulacao_service.salvar_temporada(
+            seed=cfg.seed,
+            clube_usuario=cfg.clube,
+            tatica=cfg.tatica,
+            formacao=cfg.formacao,
+            xi_preferido=cfg.xi,
+        )
+    except ValueError as e:
+        raise _erro_de_valor(e) from e
+    return {"id": sim_id}
 
 
 @router.get(

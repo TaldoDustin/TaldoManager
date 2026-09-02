@@ -41,7 +41,12 @@ def init_db(conn=None):
 # colunas adicionadas depois do schema inicial — o SQLite não tem
 # "ALTER TABLE ... ADD COLUMN IF NOT EXISTS", então a gente checa antes
 _COLUNAS_NOVAS = {
-    "simulacao": (("clube_usuario", "TEXT"), ("tatica", "TEXT")),
+    "simulacao": (
+        ("clube_usuario", "TEXT"),
+        ("tatica", "TEXT"),
+        ("formacao", "TEXT"),
+        ("xi_preferido", "TEXT"),
+    ),
 }
 
 

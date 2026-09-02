@@ -71,6 +71,8 @@ class SimulacaoResponse(BaseModel):
     campeao: str | None
     clube_usuario: str | None = None    # clube dirigido pelo usuário
     tatica: Tatica | None = None
+    formacao: str | None = None
+    xi_preferido: list[str] | None = None
     classificacao: list[ClubeClassificacao]
     artilharia: list[JogadorStats]
     assistencias: list[JogadorStats]
@@ -97,15 +99,39 @@ class SimulacaoResumo(BaseModel):
     rodadas: int
     clube_usuario: str | None = None
     tatica: Tatica | None = None
+    formacao: str | None = None
 
 
 class SimulacaoCriada(BaseModel):
     id: int
 
 
+class NovaSimulacao(BaseModel):
+    """Corpo do POST /simulacoes. Tudo opcional — sem `clube`, roda uma
+    temporada neutra."""
+    seed: int | None = None
+    clube: str | None = None
+    tatica: Tatica = "equilibrado"
+    formacao: str | None = None
+    xi: list[str] | None = None        # nomes do XI titular preferido
+
+
 class ClubeSeed(BaseModel):
     nome: str
     pais: str
+
+
+class ElencoJogador(BaseModel):
+    nome: str
+    posicao: str
+    overall: int
+
+
+class ClubeComElenco(BaseModel):
+    nome: str
+    pais: str
+    formacoes: list[str]
+    elenco: list[ElencoJogador]
 
 
 class ClubeInfo(BaseModel):

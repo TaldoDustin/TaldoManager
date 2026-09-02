@@ -163,6 +163,71 @@ def test_listar_clubes_traz_os_20_do_seed():
     assert "Taldo City" in {c["nome"] for c in clubes}
 
 
+# --- formação + XI preferido ---
+
+def _xi_de(nome):
+    el = simulacao_service.elenco_do_clube(nome)["elenco"]
+    por = lambda p: [j["nome"] for j in el if j["posicao"] == p]
+    return por("Goleiro")[:1] + por("Defesa")[:4] + por("Meio-Campo")[:3] + por("Atacante")[:3]
+
+
+def test_elenco_do_clube():
+    el = simulacao_service.elenco_do_clube("Taldo City")
+    assert el["nome"] == "Taldo City"
+    assert len(el["elenco"]) == 18
+    assert "4-4-2" in el["formacoes"]
+    assert {"nome", "posicao", "overall"} == set(el["elenco"][0])
+    assert simulacao_service.elenco_do_clube("Não Existe") is None
+
+
+def test_formacao_e_xi_fazem_round_trip():
+    xi = _xi_de("Taldo City")
+    sid = simulacao_service.salvar_temporada(
+        seed=7, clube_usuario="Taldo City", formacao="4-4-2", xi_preferido=xi
+    )
+    v = simulacao_service.carregar_temporada(sid)
+
+    assert v["formacao"] == "4-4-2"
+    assert v["xi_preferido"] == xi
+
+    resumo = next(
+        s for s in simulacao_service.listar_simulacoes() if s["id"] == sid
+    )
+    assert resumo["formacao"] == "4-4-2"
+
+
+def test_formacao_e_xi_sem_clube_sao_ignorados():
+    sid = simulacao_service.salvar_temporada(
+        seed=7, formacao="4-4-2", xi_preferido=_xi_de("Taldo City")
+    )
+    v = simulacao_service.carregar_temporada(sid)
+    assert v["formacao"] is None
+    assert v["xi_preferido"] is None
+
+
+def test_formacao_ou_xi_invalidos_dao_erro():
+    with pytest.raises(ValueError):
+        simular_temporada(seed=1, clube_usuario="Taldo City", formacao="9-0-0")
+    with pytest.raises(ValueError):
+        simular_temporada(
+            seed=1, clube_usuario="Taldo City", xi_preferido=["Zé Ninguém"]
+        )
+    with pytest.raises(ValueError):
+        simular_temporada(
+            seed=1,
+            clube_usuario="Taldo City",
+            xi_preferido=_xi_de("Taldo City") + ["um a mais"] * 3,
+        )
+
+
+def test_xi_preferido_com_jogador_de_outro_clube_da_erro():
+    xi_alheio = _xi_de("Real Taldo")
+    with pytest.raises(ValueError):
+        simular_temporada(
+            seed=1, clube_usuario="Taldo City", xi_preferido=xi_alheio
+        )
+
+
 def test_detalhe_clube():
     sid = simulacao_service.salvar_temporada(seed=42)
     campeao_id = simulacao_service.carregar_temporada(sid)["classificacao"][0]["id"]

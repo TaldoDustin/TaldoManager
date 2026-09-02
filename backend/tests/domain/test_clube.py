@@ -280,3 +280,61 @@ def test_tatica_desconhecida_cai_no_neutro():
 
     assert clube.mod_ataque() == 1.0
     assert clube.mod_defesa() == 1.0
+
+
+# ---------------------------------------------------------------------------
+# Formação + XI preferido na escalação
+# ---------------------------------------------------------------------------
+
+def _elenco(nome="FC Taldo"):
+    """2 GK, 6 DEF, 6 MEI, 4 ATA — como no seed."""
+    clube = Clube(nome, "Brasil", 1_000_000)
+    for posicao, qtd in (("Goleiro", 2), ("Defesa", 6), ("Meio-Campo", 6), ("Atacante", 4)):
+        for i in range(qtd):
+            clube.contratar_jogador(Jogador(f"{posicao} {i}", 25, posicao, 75))
+    return clube
+
+
+def test_formacao_muda_a_contagem_de_titulares():
+    clube = _elenco()
+    clube.formacao = "4-4-2"
+    clube.escalar_time()
+
+    por_pos = lambda p: sum(1 for j in clube.titulares if j.posicao == p)
+    assert por_pos("Goleiro") == 1
+    assert por_pos("Defesa") == 4
+    assert por_pos("Meio-Campo") == 4
+    assert por_pos("Atacante") == 2
+    assert len(clube.titulares) == 11
+
+
+def test_formacao_5_3_2():
+    clube = _elenco()
+    clube.formacao = "5-3-2"
+    clube.escalar_time()
+
+    por_pos = lambda p: sum(1 for j in clube.titulares if j.posicao == p)
+    assert (por_pos("Defesa"), por_pos("Meio-Campo"), por_pos("Atacante")) == (5, 3, 2)
+
+
+def test_formacao_desconhecida_cai_no_4_3_3():
+    clube = _elenco()
+    clube.formacao = "sei-la"
+    clube.escalar_time()
+
+    por_pos = lambda p: sum(1 for j in clube.titulares if j.posicao == p)
+    assert (por_pos("Defesa"), por_pos("Meio-Campo"), por_pos("Atacante")) == (4, 3, 3)
+
+
+def test_xi_preferido_coloca_um_jogador_pior_como_titular():
+    clube = _elenco()
+    # todos OVR 75; rebaixo um atacante e marco como preferido
+    fraco = next(j for j in clube.jogadores if j.posicao == "Atacante")
+    fraco.overall = 67
+
+    clube.escalar_time()
+    assert fraco not in clube.titulares      # sem preferência, não entra
+
+    clube.xi_preferido = {fraco}
+    clube.escalar_time()
+    assert fraco in clube.titulares           # com preferência (bônus), joga

@@ -9,7 +9,9 @@ CREATE TABLE IF NOT EXISTS simulacao (
     campeao        TEXT NOT NULL,
     rodadas        INTEGER NOT NULL,
     clube_usuario  TEXT,              -- clube "dirigido" pelo usuário (ou NULL)
-    tatica         TEXT               -- tática desse clube (ou NULL)
+    tatica         TEXT,              -- tática desse clube (ou NULL)
+    formacao       TEXT,              -- formação desse clube (ou NULL)
+    xi_preferido   TEXT               -- JSON com os nomes do XI titular (ou NULL)
 );
 
 CREATE TABLE IF NOT EXISTS clube (

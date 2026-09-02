@@ -40,7 +40,7 @@ def test_listar_clubes():
 
 
 def test_criar_simulacao_com_clube_e_tatica():
-    criada = client.post("/simulacoes?seed=7&clube=Taldo City&tatica=ofensivo")
+    criada = client.post("/simulacoes", json={"seed": 7, "clube": "Taldo City", "tatica": "ofensivo"})
     assert criada.status_code == 201
     sid = criada.json()["id"]
 
@@ -53,7 +53,7 @@ def test_criar_simulacao_com_clube_e_tatica():
 
 
 def test_clube_inexistente_da_400():
-    resp = client.post("/simulacoes?clube=Inexistente FC")
+    resp = client.post("/simulacoes", json={"clube": "Inexistente FC"})
     assert resp.status_code == 400
 
 
@@ -62,12 +62,48 @@ def test_tatica_invalida_da_422():
     assert resp.status_code == 422
 
 
+# --- formação + XI preferido ---
+
+def test_elenco_de_um_clube_do_seed():
+    resp = client.get("/clubes/Taldo City")
+    assert resp.status_code == 200
+    corpo = resp.json()
+    assert len(corpo["elenco"]) == 18
+    assert "4-3-3" in corpo["formacoes"]
+
+    assert client.get("/clubes/Nao Existe").status_code == 404
+
+
+def test_criar_simulacao_com_formacao_e_xi():
+    el = client.get("/clubes/Taldo City").json()["elenco"]
+    por = lambda p: [j["nome"] for j in el if j["posicao"] == p]
+    xi = por("Goleiro")[:1] + por("Defesa")[:4] + por("Meio-Campo")[:4] + por("Atacante")[:2]
+
+    criada = client.post("/simulacoes", json={
+        "seed": 7, "clube": "Taldo City", "formacao": "4-4-2", "xi": xi,
+    })
+    assert criada.status_code == 201
+    corpo = client.get(f"/simulacoes/{criada.json()['id']}").json()
+    assert corpo["formacao"] == "4-4-2"
+    assert corpo["xi_preferido"] == xi
+
+
+def test_post_simulacoes_sem_corpo_funciona():
+    resp = client.post("/simulacoes")
+    assert resp.status_code == 201
+
+
+def test_formacao_invalida_da_400():
+    resp = client.post("/simulacoes", json={"clube": "Taldo City", "formacao": "9-0-0"})
+    assert resp.status_code == 400
+
+
 # --- simulações persistidas ---
 
 def test_fluxo_criar_listar_obter_apagar():
     assert client.get("/simulacoes").json() == []
 
-    criada = client.post("/simulacoes?seed=42")
+    criada = client.post("/simulacoes", json={"seed": 42})
     assert criada.status_code == 201
     sid = criada.json()["id"]
 
@@ -92,7 +128,7 @@ def test_obter_simulacao_inexistente_404():
 
 
 def test_detalhe_do_clube():
-    sid = client.post("/simulacoes?seed=42").json()["id"]
+    sid = client.post("/simulacoes", json={"seed": 42}).json()["id"]
     campeao = client.get(f"/simulacoes/{sid}").json()["classificacao"][0]
     cid = campeao["id"]
 
@@ -110,7 +146,7 @@ def test_detalhe_do_clube():
 # --- navegação por partida / jogador (fase 2b) ---
 
 def test_detalhe_de_partida_e_game_log():
-    sid = client.post("/simulacoes?seed=42").json()["id"]
+    sid = client.post("/simulacoes", json={"seed": 42}).json()["id"]
     campeao = client.get(f"/simulacoes/{sid}").json()["classificacao"][0]["id"]
     clube = client.get(f"/simulacoes/{sid}/clubes/{campeao}").json()
 

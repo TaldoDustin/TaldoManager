@@ -81,6 +81,15 @@ def test_score_escalacao_exausto():
 
     assert jogador.score_escalacao() == 69.5
 
+
+def test_score_escalacao_preferido_ganha_bonus():
+    jogador = Jogador("Teste", 25, "Atacante", 80)
+    jogador.energia = 100
+    jogador.condicao = "Normal"
+
+    base = jogador.score_escalacao()
+    assert jogador.score_escalacao(preferido=True) == base + 12
+
 def test_peso_gol_goleiro_e_defesa():
     goleiro = Jogador("Goleiro", 25, "Goleiro", 80)
     defesa = Jogador("Defesa", 25, "Defesa", 80)

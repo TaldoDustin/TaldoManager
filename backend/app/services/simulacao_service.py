@@ -10,6 +10,7 @@ A visão (classificação, rankings, recordes, ...) é sempre montada por
 """
 
 import io
+import json
 import random
 from contextlib import redirect_stdout
 from datetime import datetime, timezone
@@ -31,7 +32,34 @@ NOME_CAMPEONATO = "Taldo"
 # rodar a simulação
 # ---------------------------------------------------------------------------
 
-def _rodar(seed, clube_usuario=None, tatica="equilibrado"):
+def _configurar_clube(clube, tatica, formacao, xi_preferido):
+    """Aplica as escolhas do técnico no clube. Levanta ValueError se algo
+    não bate com o elenco / opções válidas."""
+
+    if tatica not in Clube.TATICAS:
+        raise ValueError(f"Tática inválida: {tatica!r}")
+    clube.tatica = tatica
+
+    if formacao is not None:
+        if formacao not in Clube.FORMACOES:
+            raise ValueError(f"Formação inválida: {formacao!r}")
+        clube.formacao = formacao
+
+    if xi_preferido:
+        nomes = list(dict.fromkeys(xi_preferido))   # sem duplicatas, na ordem
+        if len(nomes) > 11:
+            raise ValueError("O XI titular tem no máximo 11 jogadores")
+        do_elenco = {j.nome: j for j in clube.jogadores}
+        fora = [n for n in nomes if n not in do_elenco]
+        if fora:
+            raise ValueError(
+                f"Não são do elenco de {clube.nome}: {fora}"
+            )
+        clube.xi_preferido = {do_elenco[n] for n in nomes}
+
+
+def _rodar(seed, clube_usuario=None, tatica="equilibrado",
+           formacao=None, xi_preferido=None):
     if seed is not None:
         random.seed(seed)
     else:
@@ -45,9 +73,7 @@ def _rodar(seed, clube_usuario=None, tatica="equilibrado"):
         )
         if alvo is None:
             raise ValueError(f"Clube desconhecido: {clube_usuario!r}")
-        if tatica not in Clube.TATICAS:
-            raise ValueError(f"Tática inválida: {tatica!r}")
-        alvo.tatica = tatica
+        _configurar_clube(alvo, tatica, formacao, xi_preferido)
 
     with redirect_stdout(io.StringIO()):
         while campeonato.rodada <= len(campeonato.calendario):
@@ -82,7 +108,8 @@ def _serializar_jogador(jogador, clube_nome):
     }
 
 
-def _serializar(campeonato, seed, clube_usuario=None, tatica=None):
+def _serializar(campeonato, seed, clube_usuario=None, tatica=None,
+                formacao=None, xi_preferido=None):
     classificacao = campeonato.classificacao()
     posicao = {c.nome: i for i, c in enumerate(classificacao, start=1)}
 
@@ -113,6 +140,8 @@ def _serializar(campeonato, seed, clube_usuario=None, tatica=None):
         "rodadas": len(campeonato.calendario),
         "clube_usuario": clube_usuario,
         "tatica": tatica,
+        "formacao": formacao,
+        "xi_preferido": xi_preferido,
         "clubes": clubes,
         "jogadores": jogadores,
         "partidas": list(campeonato.partidas_jogadas),
@@ -243,6 +272,8 @@ def _montar_visao(cru):
         "campeao": cru["campeao"],
         "clube_usuario": cru.get("clube_usuario"),
         "tatica": cru.get("tatica"),
+        "formacao": cru.get("formacao"),
+        "xi_preferido": cru.get("xi_preferido"),
         "classificacao": classificacao,
         "artilharia": ranking(
             lambda j: (j["gols"], j["assistencias"]),
@@ -280,21 +311,33 @@ def _montar_visao(cru):
 # API pública do serviço
 # ---------------------------------------------------------------------------
 
-def _visao_crua(seed, clube_usuario, tatica):
-    """Roda e serializa. `tatica` só vale quando há um `clube_usuario`."""
-    tatica_efetiva = tatica if clube_usuario else None
-    campeonato = _rodar(seed, clube_usuario, tatica)
-    return _serializar(campeonato, seed, clube_usuario, tatica_efetiva)
+def _visao_crua(seed, clube_usuario, tatica, formacao, xi_preferido):
+    """Roda e serializa. As escolhas do técnico (tática/formação/XI) só
+    valem quando há um `clube_usuario`."""
+    if clube_usuario:
+        tatica_ef, formacao_ef = tatica, formacao
+        xi_ef = list(xi_preferido) if xi_preferido else None
+    else:
+        tatica_ef = formacao_ef = xi_ef = None
+
+    campeonato = _rodar(seed, clube_usuario, tatica, formacao, xi_preferido)
+    return _serializar(
+        campeonato, seed, clube_usuario, tatica_ef, formacao_ef, xi_ef
+    )
 
 
-def simular_temporada(seed=None, clube_usuario=None, tatica="equilibrado"):
+def simular_temporada(seed=None, clube_usuario=None, tatica="equilibrado",
+                      formacao=None, xi_preferido=None):
     """Roda a temporada e devolve a visão. Não persiste nada."""
-    return _montar_visao(_visao_crua(seed, clube_usuario, tatica))
+    return _montar_visao(
+        _visao_crua(seed, clube_usuario, tatica, formacao, xi_preferido)
+    )
 
 
-def salvar_temporada(seed=None, clube_usuario=None, tatica="equilibrado"):
+def salvar_temporada(seed=None, clube_usuario=None, tatica="equilibrado",
+                     formacao=None, xi_preferido=None):
     """Roda a temporada, grava no banco e devolve o id da simulação."""
-    cru = _visao_crua(seed, clube_usuario, tatica)
+    cru = _visao_crua(seed, clube_usuario, tatica, formacao, xi_preferido)
 
     conn = conectar()
     try:
@@ -307,6 +350,12 @@ def salvar_temporada(seed=None, clube_usuario=None, tatica="equilibrado"):
                 criada_em=datetime.now(timezone.utc).isoformat(),
                 clube_usuario=cru["clube_usuario"],
                 tatica=cru["tatica"],
+                formacao=cru["formacao"],
+                xi_preferido=(
+                    json.dumps(cru["xi_preferido"], ensure_ascii=False)
+                    if cru["xi_preferido"]
+                    else None
+                ),
             )
             mapa = clube_repo.inserir(conn, sim_id, cru["clubes"])
             mapa_jog = jogador_repo.inserir(conn, sim_id, mapa, cru["jogadores"])
@@ -334,6 +383,23 @@ def listar_clubes():
     """Os clubes do seed (para o usuário escolher qual dirigir)."""
     campeonato = carregar_campeonato()
     return [{"nome": c.nome, "pais": c.pais} for c in campeonato.clubes]
+
+
+def elenco_do_clube(nome):
+    """Clube do seed + elenco (para montar a escalação). None se não existir."""
+    campeonato = carregar_campeonato()
+    clube = next((c for c in campeonato.clubes if c.nome == nome), None)
+    if clube is None:
+        return None
+    return {
+        "nome": clube.nome,
+        "pais": clube.pais,
+        "formacoes": list(clube.FORMACOES),
+        "elenco": [
+            {"nome": j.nome, "posicao": j.posicao, "overall": j.overall}
+            for j in clube.jogadores
+        ],
+    }
 
 
 def apagar_simulacao(simulacao_id):
@@ -376,12 +442,16 @@ def _cru_do_banco(conn, simulacao_id):
         for r in partida_repo.listar_por_simulacao(conn, simulacao_id)
     ]
 
+    xi = sim["xi_preferido"]
+
     return {
         "seed": sim["seed"],
         "campeao": sim["campeao"],
         "rodadas": sim["rodadas"],
         "clube_usuario": sim["clube_usuario"],
         "tatica": sim["tatica"],
+        "formacao": sim["formacao"],
+        "xi_preferido": json.loads(xi) if xi else None,
         "clubes": clubes,
         "jogadores": jogadores,
         "partidas": partidas,

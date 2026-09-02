@@ -46,10 +46,12 @@ Abra `http://localhost:5500` no navegador e clique em **Nova temporada**.
 - **Seu clube + tática** — antes de "Nova temporada", escolha um clube e uma
   postura (ofensivo/equilibrado/defensivo). Só esse clube usa a tática; ele
   fica destacado na classificação e no gráfico, com um resumo do desempenho.
+- **Escalação** — com um clube escolhido, o painel "Escalação" deixa montar a
+  formação e o XI titular por posição. Slot em *automático* = o motor decide;
+  o XI é a preferência (cansados cedem lugar a reservas ao longo da temporada).
 
 O botão **← Voltar** desfaz a última navegação.
 
 ## Próximos passos
 
-1. Montar a escalação / formação antes de simular.
-2. Simular rodada a rodada.
+1. Simular rodada a rodada.

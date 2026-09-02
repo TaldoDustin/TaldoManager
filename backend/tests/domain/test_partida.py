@@ -424,6 +424,37 @@ def _placar_da_temporada(seed, tatica_casa):
     return gp, gc
 
 
+def test_xi_preferido_joga_muito_mas_o_rodizio_sobrevive():
+    random.seed(7)
+    casa = _clube_completo("Casa")
+    fora = _clube_completo("Fora")
+
+    # XI preferido = 11 jogadores fixos da Casa (o 1º de cada posição)
+    def primeiros(posicao, n):
+        return [j for j in casa.jogadores if j.posicao == posicao][:n]
+
+    xi = (
+        primeiros("Goleiro", 1)
+        + primeiros("Defesa", 4)
+        + primeiros("Meio-Campo", 3)
+        + primeiros("Atacante", 3)
+    )
+    casa.xi_preferido = set(xi)
+
+    for _ in range(38):
+        Partida(casa, fora).simular_partida()
+        Partida(fora, casa).simular_partida()
+
+    de_linha = [j for j in xi if j.posicao != "Goleiro"]
+    # os preferidos são presença constante...
+    assert all(j.partidas >= 55 for j in de_linha)   # de 76 jogos
+    # ...mas ninguém de linha joga tudo — a fadiga ainda força rodízio
+    assert any(j.partidas < 76 for j in de_linha)
+    # e algum reserva foi acionado
+    reservas = [j for j in casa.jogadores if j not in xi]
+    assert any(j.partidas > 0 for j in reservas)
+
+
 def test_ofensivo_faz_mais_gols_pro_e_contra_que_defensivo():
     seeds = range(6)
     ofe = [_placar_da_temporada(s, "ofensivo") for s in seeds]

@@ -144,7 +144,7 @@ class Jogador:
             self.soma_nota / self.partidas, 2
         )
     
-    def score_escalacao(self):
+    def score_escalacao(self, preferido=False):
 
         score = self.overall
 
@@ -157,6 +157,12 @@ class Jogador:
 
         elif self.condicao == "Exausto":
             score -= 15
+
+        # o XI escolhido pelo técnico é a preferência: o bônus segura um
+        # titular "Cansado", mas não um "Exausto" com reserva à altura. Fixar
+        # os 11 e nunca rodar acumula fadiga e custa alguns pontos na tabela.
+        if preferido:
+            score += 12
 
         return score
     

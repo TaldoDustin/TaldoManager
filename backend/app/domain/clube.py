@@ -12,6 +12,18 @@ class Clube:
         "defensivo":    (0.85, 1.20),
     }
 
+    # {formação: (defensores, meias, atacantes)} — o goleiro é sempre 1
+    FORMACOES = {
+        "4-4-2": (4, 4, 2),
+        "4-3-3": (4, 3, 3),
+        "4-5-1": (4, 5, 1),
+        "4-2-4": (4, 2, 4),
+        "3-5-2": (3, 5, 2),
+        "3-4-3": (3, 4, 3),
+        "5-3-2": (5, 3, 2),
+        "5-4-1": (5, 4, 1),
+    }
+
     def __init__(
         self,
         nome,
@@ -29,6 +41,7 @@ class Clube:
         self.reservas = []
         self.formacao = "4-3-3"
         self.tatica = "equilibrado"
+        self.xi_preferido = set()   # Jogadores que o técnico prefere como titulares
 
         self.pontos = 0
         self.gols_marcados = 0
@@ -132,47 +145,26 @@ class Clube:
             if not j.expulso
         ]
 
-        goleiros = sorted(
-            [
-                j for j in disponiveis
-                if j.posicao == "Goleiro"
-            ],
-            key=lambda j: j.score_escalacao(),
-            reverse=True
-        )
+        n_def, n_mei, n_ata = self.FORMACOES.get(self.formacao, (4, 3, 3))
 
-        defensores = sorted(
-            [
+        def melhores(posicao, quantos):
+            elegiveis = [
                 j for j in disponiveis
-                if j.posicao == "Defesa"
-            ],
-            key=lambda j: j.score_escalacao(),
-            reverse=True
-        )
-        
-        meias = sorted(
-            [
-                j for j in disponiveis
-                if j.posicao == "Meio-Campo"
-            ],
-            key=lambda j: j.score_escalacao(),
-            reverse=True
-        )
-        
-        atacantes = sorted(
-            [
-                j for j in disponiveis
-                if j.posicao == "Atacante"
-            ],
-            key=lambda j: j.score_escalacao(),
-            reverse=True
-        )
+                if j.posicao == posicao
+            ]
+            elegiveis.sort(
+                key=lambda j: j.score_escalacao(
+                    preferido=j in self.xi_preferido
+                ),
+                reverse=True,
+            )
+            return elegiveis[:quantos]
 
         self.titulares = (
-            goleiros[:1]
-            + defensores[:4]
-            + meias[:3]
-            + atacantes[:3]
+            melhores("Goleiro", 1)
+            + melhores("Defesa", n_def)
+            + melhores("Meio-Campo", n_mei)
+            + melhores("Atacante", n_ata)
         )
 
         self.reservas = [

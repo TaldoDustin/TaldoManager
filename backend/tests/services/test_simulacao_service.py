@@ -39,6 +39,23 @@ def test_seed_torna_a_simulacao_reproduzivel():
     assert a["artilharia"] == b["artilharia"]
 
 
+def test_evolucao_de_pontos_fecha_com_a_classificacao():
+    r = simular_temporada(seed=1)
+    ev = r["evolucao"]
+
+    assert ev["rodadas"] == list(range(1, 39))
+    assert len(ev["series"]) == 20
+
+    # a série vem na ordem da tabela e o último ponto == pontos finais
+    for serie, clube in zip(ev["series"], r["classificacao"]):
+        assert serie["clube"] == clube["clube"]
+        assert len(serie["pontos"]) == 38
+        assert serie["pontos"][-1] == clube["pontos"]
+        # acumulado é monotônico e cada rodada rende 0..3
+        difs = [b - a for a, b in zip(serie["pontos"], serie["pontos"][1:])]
+        assert all(0 <= d <= 3 for d in difs)
+
+
 def test_rankings_respeitam_os_filtros():
     r = simular_temporada(seed=1)
 
@@ -63,6 +80,7 @@ def test_salvar_e_carregar_devolve_a_mesma_visao():
             v["campeao"],
             v["recordes"],
             v["historico"],
+            [(s["clube"], s["pontos"]) for s in v["evolucao"]["series"]],
         )
 
     assert resumo(salva) == resumo(fresca)

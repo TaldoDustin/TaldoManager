@@ -143,9 +143,41 @@ def _recordes(partidas):
     return {"maior_goleada": maior_goleada, "mais_gols_jogo": mais_gols}
 
 
+def _evolucao_pontos(partidas, clubes_ordenados):
+    """Pontos acumulados de cada clube ao fim de cada rodada (para o gráfico
+    da corrida pelo título). `clubes_ordenados` já vem na ordem da tabela."""
+
+    rodadas = sorted({p["rodada"] for p in partidas})
+
+    ganho = {c["nome"]: dict.fromkeys(rodadas, 0) for c in clubes_ordenados}
+
+    for p in partidas:
+        gm, gv = p["gols_mandante"], p["gols_visitante"]
+        if gm > gv:
+            ganho[p["mandante"]][p["rodada"]] += 3
+        elif gv > gm:
+            ganho[p["visitante"]][p["rodada"]] += 3
+        else:
+            ganho[p["mandante"]][p["rodada"]] += 1
+            ganho[p["visitante"]][p["rodada"]] += 1
+
+    series = []
+    for c in clubes_ordenados:
+        acumulado = 0
+        pontos = []
+        for r in rodadas:
+            acumulado += ganho[c["nome"]][r]
+            pontos.append(acumulado)
+        series.append({"clube": c["nome"], "id": c.get("id"), "pontos": pontos})
+
+    return {"rodadas": rodadas, "series": series}
+
+
 def _montar_visao(cru):
     partidas = cru["partidas"]
     forma = _forma_por_clube(partidas)
+
+    clubes_ordenados = sorted(cru["clubes"], key=lambda c: c["posicao_final"])
 
     classificacao = [
         {
@@ -163,7 +195,7 @@ def _montar_visao(cru):
             "saldo_gols": c["gols_marcados"] - c["gols_sofridos"],
             "forma": forma.get(c["nome"], []),
         }
-        for c in sorted(cru["clubes"], key=lambda c: c["posicao_final"])
+        for c in clubes_ordenados
     ]
 
     jogadores = cru["jogadores"]
@@ -225,6 +257,7 @@ def _montar_visao(cru):
         "mvp": mvp_lista[0] if mvp_lista else None,
         "historico": historico,
         "recordes": _recordes(partidas),
+        "evolucao": _evolucao_pontos(partidas, clubes_ordenados),
     }
 
 

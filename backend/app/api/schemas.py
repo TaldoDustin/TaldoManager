@@ -49,6 +49,17 @@ class Recorde(BaseModel):
     partida: str
 
 
+class EvolucaoSerie(BaseModel):
+    clube: str
+    id: int | None = None            # presente só nas simulações salvas
+    pontos: list[int]                # acumulado ao fim de cada rodada
+
+
+class Evolucao(BaseModel):
+    rodadas: list[int]
+    series: list[EvolucaoSerie]      # na ordem da classificação final
+
+
 class SimulacaoResponse(BaseModel):
     campeonato: str
     seed: int | None
@@ -63,6 +74,7 @@ class SimulacaoResponse(BaseModel):
     mvp: JogadorStats | None
     historico: list[str]
     recordes: dict[str, Recorde]
+    evolucao: Evolucao
 
 
 class HealthResponse(BaseModel):

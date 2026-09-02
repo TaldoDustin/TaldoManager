@@ -143,6 +143,7 @@ Já dá pra:
   as duas escalações com nota).
 * Abrir a **página de um jogador** (ficha + game log: nota, gols e
   assistências partida a partida).
+* Ver o **gráfico de pontos por rodada** (corrida pelo título, aba Evolução).
 
 Antes disso: mando de campo + força no placar, fadiga/rodízio de elenco,
 banco de reservas e substituições, e a correção do vermelho que bania o
@@ -276,9 +277,10 @@ jogador da temporada.
 * [x] Interface Web (`frontend/index.html`)
 * [x] Dashboard do campeonato (classificação, rankings, recordes)
 * [x] Painel de jogadores (página de jogador + game log)
+* [x] Gráfico de pontos por rodada (aba Evolução)
 * [ ] Dashboard financeiro
 * [ ] Mercado de transferências
-* [ ] Estatísticas avançadas (gráficos por rodada, etc.)
+* [ ] Estatísticas avançadas (chutes no gol, escanteios, faltas)
 
 ---
 

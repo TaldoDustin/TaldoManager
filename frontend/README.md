@@ -41,9 +41,11 @@ Abra `http://localhost:5500` no navegador e clique em **Nova temporada**.
   linha do tempo (gols, cartões, substituições) e as duas escalações com nota.
 - **Página do jogador** — clique no nome em qualquer tabela: ficha + game log
   (nota, gols e assistências partida a partida).
+- **Aba Evolução** — gráfico (SVG puro) dos pontos acumulados por rodada dos
+  20 clubes; clique num clube na legenda para destacá-lo.
 
 O botão **← Voltar** desfaz a última navegação.
 
 ## Próximos passos
 
-1. Gráfico da evolução da pontuação por rodada.
+1. Estatísticas avançadas (chutes no gol, escanteios, faltas agregadas).

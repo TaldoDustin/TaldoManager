@@ -22,24 +22,24 @@ cd frontend
 python -m http.server 5500
 ```
 
-Abra `http://localhost:5500` no navegador e clique em **Simular temporada**.
+Abra `http://localhost:5500` no navegador e clique em **Nova temporada**.
 
 > Dá pra abrir o `index.html` direto (dois cliques), mas servir via
 > `http.server` evita problemas de CORS/caminho e é mais parecido com produção.
 
-## O que dá pra ver
+## O que dá pra fazer
 
-- Campeão e MVP da temporada
-- Classificação completa (com forma recente)
-- Artilharia, assistências, melhores notas, clean sheets, hat-tricks
-- Histórico de todas as partidas
-- Recordes do campeonato
+- **Nova temporada** — roda e **salva** a simulação (SQLite). O campo *Seed*
+  deixa reproduzível: mesmo seed → mesmo resultado.
+- **Lista de simulações salvas** — troca entre temporadas já rodadas; **Apagar**
+  remove a selecionada.
+- **Visão da temporada** — campeão, MVP, classificação (com forma), artilharia,
+  assistências, notas, clean sheets, hat-tricks, histórico, recordes.
+- **Página do clube** — clique no nome de um clube na classificação: elenco
+  completo + tabela das 38 partidas (mando, placar, resultado).
 
-O campo **Seed** deixa a simulação reproduzível: mesmo seed → mesmo resultado.
+## Próximos passos (fase 2b)
 
-## Próximos passos sugeridos
-
-1. Separar o JS em `app.js` e adicionar um seletor de clube (ver elenco).
-2. Um gráfico simples da evolução da pontuação por rodada.
-3. Quando quiser aprender componentes/estado: migrar para Vite + React
-   reaproveitando os mesmos endpoints.
+1. Página do jogador com o game log (nota partida a partida).
+2. Página da partida com a linha do tempo (gols, cartões, substituições).
+3. Gráfico da evolução da pontuação por rodada.

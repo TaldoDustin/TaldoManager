@@ -9,6 +9,7 @@ from pydantic import BaseModel
 
 
 class ClubeClassificacao(BaseModel):
+    id: int | None = None        # presente só nas simulações salvas
     posicao: int
     clube: str
     pais: str
@@ -24,6 +25,7 @@ class ClubeClassificacao(BaseModel):
 
 
 class JogadorStats(BaseModel):
+    id: int | None = None        # presente só nas simulações salvas
     nome: str
     clube: str
     posicao: str
@@ -65,3 +67,47 @@ class SimulacaoResponse(BaseModel):
 
 class HealthResponse(BaseModel):
     status: str
+
+
+# --- simulações persistidas ---
+
+class SimulacaoResumo(BaseModel):
+    id: int
+    seed: int | None
+    criada_em: str
+    campeao: str
+    rodadas: int
+
+
+class SimulacaoCriada(BaseModel):
+    id: int
+
+
+class ClubeInfo(BaseModel):
+    id: int
+    nome: str
+    pais: str
+    posicao_final: int
+    pontos: int
+    jogos: int
+    vitorias: int
+    empates: int
+    derrotas: int
+    gols_marcados: int
+    gols_sofridos: int
+    saldo_gols: int
+
+
+class JogoResumo(BaseModel):
+    rodada: int
+    adversario: str
+    mando: str
+    gols_pro: int
+    gols_contra: int
+    resultado: str
+
+
+class ClubeDetalhe(BaseModel):
+    clube: ClubeInfo
+    elenco: list[JogadorStats]
+    jogos: list[JogoResumo]

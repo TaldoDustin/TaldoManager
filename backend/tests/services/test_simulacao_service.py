@@ -1,3 +1,5 @@
+import pytest
+
 from app.services import simulacao_service
 from app.services.simulacao_service import simular_temporada
 
@@ -114,6 +116,51 @@ def test_listar_e_apagar_simulacoes():
 
 def test_carregar_simulacao_inexistente():
     assert simulacao_service.carregar_temporada(999) is None
+
+
+# --- clube do usuário + tática ---
+
+def test_temporada_neutra_nao_tem_clube_nem_tatica():
+    v = simular_temporada(seed=1)
+    assert v["clube_usuario"] is None
+    assert v["tatica"] is None
+
+
+def test_salvar_com_clube_e_tatica_faz_round_trip():
+    sid = simulacao_service.salvar_temporada(
+        seed=7, clube_usuario="Taldo City", tatica="ofensivo"
+    )
+    v = simulacao_service.carregar_temporada(sid)
+
+    assert v["clube_usuario"] == "Taldo City"
+    assert v["tatica"] == "ofensivo"
+
+    resumo = next(
+        s for s in simulacao_service.listar_simulacoes() if s["id"] == sid
+    )
+    assert resumo["clube_usuario"] == "Taldo City"
+    assert resumo["tatica"] == "ofensivo"
+
+
+def test_tatica_sem_clube_e_ignorada():
+    sid = simulacao_service.salvar_temporada(seed=7, tatica="ofensivo")
+    v = simulacao_service.carregar_temporada(sid)
+    assert v["clube_usuario"] is None
+    assert v["tatica"] is None
+
+
+def test_clube_ou_tatica_invalidos_dao_erro():
+    with pytest.raises(ValueError):
+        simular_temporada(seed=1, clube_usuario="Inexistente FC")
+    with pytest.raises(ValueError):
+        simular_temporada(seed=1, clube_usuario="Taldo City", tatica="maluco")
+
+
+def test_listar_clubes_traz_os_20_do_seed():
+    clubes = simulacao_service.listar_clubes()
+    assert len(clubes) == 20
+    assert all({"nome", "pais"} == set(c) for c in clubes)
+    assert "Taldo City" in {c["nome"] for c in clubes}
 
 
 def test_detalhe_clube():

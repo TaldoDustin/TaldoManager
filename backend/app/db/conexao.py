@@ -24,14 +24,34 @@ def conectar():
 
 
 def init_db(conn=None):
-    """Cria as tabelas se não existirem. Idempotente."""
+    """Cria as tabelas se não existirem e aplica as migrações. Idempotente."""
 
     proprio = conn is None
     conn = conn or conectar()
 
     try:
         conn.executescript(_SCHEMA.read_text(encoding="utf-8"))
+        _migrar(conn)
         conn.commit()
     finally:
         if proprio:
             conn.close()
+
+
+# colunas adicionadas depois do schema inicial — o SQLite não tem
+# "ALTER TABLE ... ADD COLUMN IF NOT EXISTS", então a gente checa antes
+_COLUNAS_NOVAS = {
+    "simulacao": (("clube_usuario", "TEXT"), ("tatica", "TEXT")),
+}
+
+
+def _migrar(conn):
+    for tabela, colunas in _COLUNAS_NOVAS.items():
+        existentes = {
+            r["name"] for r in conn.execute(f"PRAGMA table_info({tabela})")
+        }
+        for nome, tipo in colunas:
+            if nome not in existentes:
+                conn.execute(
+                    f"ALTER TABLE {tabela} ADD COLUMN {nome} {tipo}"
+                )

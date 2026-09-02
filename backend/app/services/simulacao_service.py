@@ -15,6 +15,7 @@ from contextlib import redirect_stdout
 from datetime import datetime, timezone
 
 from app.db.conexao import conectar
+from app.domain.clube import Clube
 from app.repositories import atuacao_repository as atuacao_repo
 from app.repositories import clube_repository as clube_repo
 from app.repositories import jogador_repository as jogador_repo
@@ -30,13 +31,23 @@ NOME_CAMPEONATO = "Taldo"
 # rodar a simulação
 # ---------------------------------------------------------------------------
 
-def _rodar(seed):
+def _rodar(seed, clube_usuario=None, tatica="equilibrado"):
     if seed is not None:
         random.seed(seed)
     else:
         random.seed()
 
     campeonato = carregar_campeonato()
+
+    if clube_usuario is not None:
+        alvo = next(
+            (c for c in campeonato.clubes if c.nome == clube_usuario), None
+        )
+        if alvo is None:
+            raise ValueError(f"Clube desconhecido: {clube_usuario!r}")
+        if tatica not in Clube.TATICAS:
+            raise ValueError(f"Tática inválida: {tatica!r}")
+        alvo.tatica = tatica
 
     with redirect_stdout(io.StringIO()):
         while campeonato.rodada <= len(campeonato.calendario):
@@ -71,7 +82,7 @@ def _serializar_jogador(jogador, clube_nome):
     }
 
 
-def _serializar(campeonato, seed):
+def _serializar(campeonato, seed, clube_usuario=None, tatica=None):
     classificacao = campeonato.classificacao()
     posicao = {c.nome: i for i, c in enumerate(classificacao, start=1)}
 
@@ -100,6 +111,8 @@ def _serializar(campeonato, seed):
         "seed": seed,
         "campeao": classificacao[0].nome,
         "rodadas": len(campeonato.calendario),
+        "clube_usuario": clube_usuario,
+        "tatica": tatica,
         "clubes": clubes,
         "jogadores": jogadores,
         "partidas": list(campeonato.partidas_jogadas),
@@ -228,6 +241,8 @@ def _montar_visao(cru):
         "seed": cru["seed"],
         "rodadas": cru["rodadas"],
         "campeao": cru["campeao"],
+        "clube_usuario": cru.get("clube_usuario"),
+        "tatica": cru.get("tatica"),
         "classificacao": classificacao,
         "artilharia": ranking(
             lambda j: (j["gols"], j["assistencias"]),
@@ -265,14 +280,21 @@ def _montar_visao(cru):
 # API pública do serviço
 # ---------------------------------------------------------------------------
 
-def simular_temporada(seed=None):
+def _visao_crua(seed, clube_usuario, tatica):
+    """Roda e serializa. `tatica` só vale quando há um `clube_usuario`."""
+    tatica_efetiva = tatica if clube_usuario else None
+    campeonato = _rodar(seed, clube_usuario, tatica)
+    return _serializar(campeonato, seed, clube_usuario, tatica_efetiva)
+
+
+def simular_temporada(seed=None, clube_usuario=None, tatica="equilibrado"):
     """Roda a temporada e devolve a visão. Não persiste nada."""
-    return _montar_visao(_serializar(_rodar(seed), seed))
+    return _montar_visao(_visao_crua(seed, clube_usuario, tatica))
 
 
-def salvar_temporada(seed=None):
+def salvar_temporada(seed=None, clube_usuario=None, tatica="equilibrado"):
     """Roda a temporada, grava no banco e devolve o id da simulação."""
-    cru = _serializar(_rodar(seed), seed)
+    cru = _visao_crua(seed, clube_usuario, tatica)
 
     conn = conectar()
     try:
@@ -283,6 +305,8 @@ def salvar_temporada(seed=None):
                 campeao=cru["campeao"],
                 rodadas=cru["rodadas"],
                 criada_em=datetime.now(timezone.utc).isoformat(),
+                clube_usuario=cru["clube_usuario"],
+                tatica=cru["tatica"],
             )
             mapa = clube_repo.inserir(conn, sim_id, cru["clubes"])
             mapa_jog = jogador_repo.inserir(conn, sim_id, mapa, cru["jogadores"])
@@ -304,6 +328,12 @@ def listar_simulacoes():
         return [dict(r) for r in simulacao_repo.listar(conn)]
     finally:
         conn.close()
+
+
+def listar_clubes():
+    """Os clubes do seed (para o usuário escolher qual dirigir)."""
+    campeonato = carregar_campeonato()
+    return [{"nome": c.nome, "pais": c.pais} for c in campeonato.clubes]
 
 
 def apagar_simulacao(simulacao_id):
@@ -350,6 +380,8 @@ def _cru_do_banco(conn, simulacao_id):
         "seed": sim["seed"],
         "campeao": sim["campeao"],
         "rodadas": sim["rodadas"],
+        "clube_usuario": sim["clube_usuario"],
+        "tatica": sim["tatica"],
         "clubes": clubes,
         "jogadores": jogadores,
         "partidas": partidas,

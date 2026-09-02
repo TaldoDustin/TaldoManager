@@ -43,9 +43,13 @@ Abra `http://localhost:5500` no navegador e clique em **Nova temporada**.
   (nota, gols e assistências partida a partida).
 - **Aba Evolução** — gráfico (SVG puro) dos pontos acumulados por rodada dos
   20 clubes; clique num clube na legenda para destacá-lo.
+- **Seu clube + tática** — antes de "Nova temporada", escolha um clube e uma
+  postura (ofensivo/equilibrado/defensivo). Só esse clube usa a tática; ele
+  fica destacado na classificação e no gráfico, com um resumo do desempenho.
 
 O botão **← Voltar** desfaz a última navegação.
 
 ## Próximos passos
 
-1. Estatísticas avançadas (chutes no gol, escanteios, faltas agregadas).
+1. Montar a escalação / formação antes de simular.
+2. Simular rodada a rodada.

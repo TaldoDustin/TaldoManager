@@ -1,4 +1,17 @@
 class Clube:
+
+    # postura tática escolhida pelo técnico (afeta os pesos da engine)
+    TATICAS = ("ofensivo", "equilibrado", "defensivo")
+
+    # {tática: (mod_ataque, mod_defesa)} — ataque > 1 cria mais; defesa > 1
+    # concede menos. Ofensivo troca solidez por perigo (mais gols dos dois
+    # lados); defensivo o inverso.
+    _MODS = {
+        "ofensivo":     (1.30, 0.82),
+        "equilibrado":  (1.00, 1.00),
+        "defensivo":    (0.85, 1.20),
+    }
+
     def __init__(
         self,
         nome,
@@ -15,6 +28,7 @@ class Clube:
         self.titulares = []
         self.reservas = []
         self.formacao = "4-3-3"
+        self.tatica = "equilibrado"
 
         self.pontos = 0
         self.gols_marcados = 0
@@ -48,6 +62,14 @@ class Clube:
                 bonus -= 0.5
 
         return bonus
+
+    def mod_ataque(self):
+        """Multiplicador da chance de gol do clube quando ataca."""
+        return self._MODS.get(self.tatica, (1.0, 1.0))[0]
+
+    def mod_defesa(self):
+        """> 1 quando o clube concede menos; < 1 quando concede mais."""
+        return self._MODS.get(self.tatica, (1.0, 1.0))[1]
     
     def mostrar(self):
         print(f"\nClube: {self.nome}")

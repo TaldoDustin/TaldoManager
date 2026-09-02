@@ -1,13 +1,15 @@
 """Acesso à tabela `simulacao`."""
 
 
-def criar(conn, seed, campeao, rodadas, criada_em):
+def criar(conn, seed, campeao, rodadas, criada_em,
+          clube_usuario=None, tatica=None):
     cur = conn.execute(
         """
-        INSERT INTO simulacao (seed, criada_em, campeao, rodadas)
-        VALUES (?, ?, ?, ?)
+        INSERT INTO simulacao
+            (seed, criada_em, campeao, rodadas, clube_usuario, tatica)
+        VALUES (?, ?, ?, ?, ?, ?)
         """,
-        (seed, criada_em, campeao, rodadas),
+        (seed, criada_em, campeao, rodadas, clube_usuario, tatica),
     )
     return cur.lastrowid
 

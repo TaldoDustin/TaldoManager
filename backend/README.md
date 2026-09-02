@@ -55,11 +55,16 @@ Mais: `detalhe_clube`, `detalhe_partida` (timeline + escalações com nota) e
 
 ## Endpoints
 
+Os endpoints que rodam uma temporada aceitam `clube=` (clube dirigido pelo
+usuário) e `tatica=` (`ofensivo` / `equilibrado` / `defensivo`, só vale com
+`clube`). A tática ajusta os pesos da engine apenas desse clube.
+
 | Método | Rota | O quê |
 |---|---|---|
-| `GET` | `/simulacao?seed=` | roda sem salvar (modo rápido) |
+| `GET` | `/clubes` | os 20 clubes do seed (para escolher qual dirigir) |
+| `GET` | `/simulacao?seed=&clube=&tatica=` | roda sem salvar (modo rápido) |
 | `GET` | `/simulacoes` | lista as salvas |
-| `POST` | `/simulacoes?seed=` | roda e salva |
+| `POST` | `/simulacoes?seed=&clube=&tatica=` | roda e salva |
 | `GET` | `/simulacoes/{id}` | classificação, rankings, recordes |
 | `DELETE` | `/simulacoes/{id}` | apaga (cascata) |
 | `GET` | `/simulacoes/{id}/clubes/{clube_id}` | elenco + 38 jogos |

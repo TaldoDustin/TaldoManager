@@ -244,3 +244,39 @@ def test_duas_expulsoes_acumulam_penalidade():
     forca = clube.calcular_forca()
 
     assert forca == 70
+
+
+# ---------------------------------------------------------------------------
+# Tática (postura do técnico)
+# ---------------------------------------------------------------------------
+
+def test_tatica_padrao_e_equilibrada_e_neutra():
+    clube = Clube("FC Taldo", "Brasil", 1000000)
+
+    assert clube.tatica == "equilibrado"
+    assert clube.mod_ataque() == 1.0
+    assert clube.mod_defesa() == 1.0
+
+
+def test_ofensivo_cria_mais_e_concede_mais():
+    clube = Clube("FC Taldo", "Brasil", 1000000)
+    clube.tatica = "ofensivo"
+
+    assert clube.mod_ataque() > 1.0     # cria mais
+    assert clube.mod_defesa() < 1.0     # concede mais
+
+
+def test_defensivo_cria_menos_e_concede_menos():
+    clube = Clube("FC Taldo", "Brasil", 1000000)
+    clube.tatica = "defensivo"
+
+    assert clube.mod_ataque() < 1.0
+    assert clube.mod_defesa() > 1.0
+
+
+def test_tatica_desconhecida_cai_no_neutro():
+    clube = Clube("FC Taldo", "Brasil", 1000000)
+    clube.tatica = "loucura"
+
+    assert clube.mod_ataque() == 1.0
+    assert clube.mod_defesa() == 1.0

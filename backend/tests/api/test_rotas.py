@@ -29,6 +29,39 @@ def test_simulacao_sem_seed_funciona():
     assert resp.json()["seed"] is None
 
 
+# --- clube do usuário + tática ---
+
+def test_listar_clubes():
+    resp = client.get("/clubes")
+    assert resp.status_code == 200
+    clubes = resp.json()
+    assert len(clubes) == 20
+    assert {"nome", "pais"} == set(clubes[0])
+
+
+def test_criar_simulacao_com_clube_e_tatica():
+    criada = client.post("/simulacoes?seed=7&clube=Taldo City&tatica=ofensivo")
+    assert criada.status_code == 201
+    sid = criada.json()["id"]
+
+    corpo = client.get(f"/simulacoes/{sid}").json()
+    assert corpo["clube_usuario"] == "Taldo City"
+    assert corpo["tatica"] == "ofensivo"
+
+    resumo = client.get("/simulacoes").json()[0]
+    assert resumo["clube_usuario"] == "Taldo City"
+
+
+def test_clube_inexistente_da_400():
+    resp = client.post("/simulacoes?clube=Inexistente FC")
+    assert resp.status_code == 400
+
+
+def test_tatica_invalida_da_422():
+    resp = client.get("/simulacao?clube=Taldo City&tatica=maluco")
+    assert resp.status_code == 422
+
+
 # --- simulações persistidas ---
 
 def test_fluxo_criar_listar_obter_apagar():

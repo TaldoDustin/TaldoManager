@@ -103,7 +103,14 @@ class Partida:
         self.atualizar_clean_sheet()
     
     def simular_partida(self):
-        
+
+        # o cartão vermelho tira o jogador só do resto DESTA partida; ainda
+        # não há suspensão automática, então todo mundo volta a ficar
+        # disponível antes da próxima escalação (senão `escalar_time` filtra
+        # o expulso para sempre e o elenco vai encolhendo a cada vermelho)
+        for jogador in self.clube1.jogadores + self.clube2.jogadores:
+            jogador.expulso = False
+
         self.clube1.escalar_time()
         self.clube2.escalar_time()
         

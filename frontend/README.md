@@ -47,4 +47,3 @@ O botão **← Voltar** desfaz a última navegação.
 ## Próximos passos
 
 1. Gráfico da evolução da pontuação por rodada.
-2. Filtrar chutes para fora da linha do tempo (hoje aparecem todos).

@@ -409,8 +409,10 @@
         <article><header><strong>Finalizações</strong></header>
           ${p.finalizacoes_mandante} &nbsp;—&nbsp; ${p.finalizacoes_visitante}</article>`;
 
-      $("partida-timeline").innerHTML = d.eventos.length
-        ? `<ul class="timeline">${d.eventos.map(linhaEvento).join("")}</ul>`
+      // chute pra fora conta nas finalizações, mas polui a timeline
+      const lances = d.eventos.filter((e) => e.tipo !== "chute_fora");
+      $("partida-timeline").innerHTML = lances.length
+        ? `<ul class="timeline">${lances.map(linhaEvento).join("")}</ul>`
         : `<p class="vazio">Sem lances registrados.</p>`;
       ligarLinks($("partida-timeline"));
 

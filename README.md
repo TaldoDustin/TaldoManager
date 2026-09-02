@@ -129,7 +129,7 @@ Este projeto tem como objetivo estudar:
 O projeto passou do script único para **backend + frontend**:
 
 * **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
-  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 85 testes.
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 100 testes.
 * **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
 
 Já dá pra:
@@ -144,6 +144,9 @@ Já dá pra:
 * Abrir a **página de um jogador** (ficha + game log: nota, gols e
   assistências partida a partida).
 * Ver o **gráfico de pontos por rodada** (corrida pelo título, aba Evolução).
+* **Escolher um clube e uma tática** (ofensivo/equilibrado/defensivo) antes de
+  simular — a tática mexe nos pesos da engine só desse clube. Ofensivo faz
+  mais gols pró e contra; defensivo, menos dos dois lados.
 
 ![Gráfico de pontos acumulados por rodada dos 20 clubes](screenshots/evolucao.png)
 
@@ -280,6 +283,9 @@ jogador da temporada.
 * [x] Dashboard do campeonato (classificação, rankings, recordes)
 * [x] Painel de jogadores (página de jogador + game log)
 * [x] Gráfico de pontos por rodada (aba Evolução)
+* [x] Interação: escolher clube + tática antes de simular
+* [ ] Interação: montar a escalação / formação
+* [ ] Interação: simular rodada a rodada
 * [ ] Dashboard financeiro
 * [ ] Mercado de transferências
 * [ ] Estatísticas avançadas (chutes no gol, escanteios, faltas)

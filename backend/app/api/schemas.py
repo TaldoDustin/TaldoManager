@@ -5,7 +5,11 @@ automatica em /docs. Os campos batem com o dict devolvido por
 `simular_temporada`.
 """
 
+from typing import Literal
+
 from pydantic import BaseModel
+
+Tatica = Literal["ofensivo", "equilibrado", "defensivo"]
 
 
 class ClubeClassificacao(BaseModel):
@@ -65,6 +69,8 @@ class SimulacaoResponse(BaseModel):
     seed: int | None
     rodadas: int
     campeao: str | None
+    clube_usuario: str | None = None    # clube dirigido pelo usuário
+    tatica: Tatica | None = None
     classificacao: list[ClubeClassificacao]
     artilharia: list[JogadorStats]
     assistencias: list[JogadorStats]
@@ -89,10 +95,17 @@ class SimulacaoResumo(BaseModel):
     criada_em: str
     campeao: str
     rodadas: int
+    clube_usuario: str | None = None
+    tatica: Tatica | None = None
 
 
 class SimulacaoCriada(BaseModel):
     id: int
+
+
+class ClubeSeed(BaseModel):
+    nome: str
+    pais: str
 
 
 class ClubeInfo(BaseModel):

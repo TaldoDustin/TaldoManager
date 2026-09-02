@@ -3,11 +3,13 @@
 -- snapshot daquela temporada, não referências ao catálogo da seed.
 
 CREATE TABLE IF NOT EXISTS simulacao (
-    id         INTEGER PRIMARY KEY,
-    seed       INTEGER,               -- NULL quando a temporada foi aleatória
-    criada_em  TEXT NOT NULL,         -- ISO 8601 (UTC)
-    campeao    TEXT NOT NULL,
-    rodadas    INTEGER NOT NULL
+    id             INTEGER PRIMARY KEY,
+    seed           INTEGER,           -- NULL quando a temporada foi aleatória
+    criada_em      TEXT NOT NULL,     -- ISO 8601 (UTC)
+    campeao        TEXT NOT NULL,
+    rodadas        INTEGER NOT NULL,
+    clube_usuario  TEXT,              -- clube "dirigido" pelo usuário (ou NULL)
+    tatica         TEXT               -- tática desse clube (ou NULL)
 );
 
 CREATE TABLE IF NOT EXISTS clube (

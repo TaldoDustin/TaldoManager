@@ -13,6 +13,10 @@
     .controles { display: flex; gap: .75rem; align-items: end; flex-wrap: wrap; }
     .controles label { margin: 0; }
     .controles input { width: 8rem; }
+    .controles select { margin: 0; }
+    tr.eu td { background: color-mix(in srgb, var(--pico-primary) 16%, transparent); font-weight: 600; }
+    .grafico polyline.eu { stroke-width: 3.2; }
+    .grafico.tem-selecao polyline.eu:not(.sel) { opacity: .1; }
     .saves { display: flex; gap: .5rem; align-items: center; margin: 1rem 0; flex-wrap: wrap; }
     .saves select { margin: 0; min-width: 22rem; }
     .saves button { width: auto; margin: 0; }
@@ -65,6 +69,20 @@
       Seed (opcional)
       <input id="seed" type="number" placeholder="aleatório" />
     </label>
+    <label>
+      Seu clube
+      <select id="meu-clube" style="width: 12rem">
+        <option value="">— nenhum —</option>
+      </select>
+    </label>
+    <label>
+      Tática
+      <select id="tatica" style="width: 9rem" disabled>
+        <option value="equilibrado">Equilibrado</option>
+        <option value="ofensivo">Ofensivo</option>
+        <option value="defensivo">Defensivo</option>
+      </select>
+    </label>
     <button id="nova">Nova temporada</button>
   </div>
 
@@ -90,6 +108,7 @@
         <small id="mvp-info"></small>
       </article>
     </div>
+    <p id="meu-resumo" hidden></p>
     <nav class="abas" id="abas"></nav>
     <div id="painel"></div>
   </section>
@@ -198,7 +217,7 @@
       return valor ?? "";
     }
 
-    function tabela(lista, colunas) {
+    function tabela(lista, colunas, classeDaLinha) {
       if (!lista || lista.length === 0) {
         return `<p class="vazio">Nenhum registro.</p>`;
       }
@@ -206,15 +225,16 @@
         .map(([k, rot]) => `<th class="${ehNumero(lista[0][k]) ? "num" : ""}">${rot}</th>`)
         .join("");
       const linhas = lista
-        .map(
-          (item) =>
-            `<tr>${colunas
-              .map(
-                ([k]) =>
-                  `<td class="${ehNumero(item[k]) ? "num" : ""}">${celula(item[k], item, k)}</td>`
-              )
-              .join("")}</tr>`
-        )
+        .map((item) => {
+          const cls = classeDaLinha ? classeDaLinha(item) : "";
+          const tds = colunas
+            .map(
+              ([k]) =>
+                `<td class="${ehNumero(item[k]) ? "num" : ""}">${celula(item[k], item, k)}</td>`
+            )
+            .join("");
+          return `<tr class="${cls}">${tds}</tr>`;
+        })
         .join("");
       return `<figure><table><thead><tr>${head}</tr></thead><tbody>${linhas}</tbody></table></figure>`;
     }
@@ -306,19 +326,23 @@
       }
       grade += `<text x="${x(maxR)}" y="${H - padB + 16}" class="eixo" text-anchor="middle">${maxR}</text>`;
 
+      const meu = temporada.clube_usuario;
+
       const linhas = ev.series
         .map((s, i) => {
           const pts = s.pontos
             .map((p, k) => `${x(rodadas[k]).toFixed(1)},${y(p).toFixed(1)}`)
             .join(" ");
-          return `<polyline points="${pts}" fill="none" stroke="${corClube(i)}" stroke-width="1.4" data-clube="${s.clube}"/>`;
+          const cls = s.clube === meu ? ' class="eu"' : "";
+          return `<polyline${cls} points="${pts}" fill="none" stroke="${corClube(i)}" stroke-width="1.4" data-clube="${s.clube}"/>`;
         })
         .join("");
 
       const legenda = ev.series
         .map((s, i) => {
           const total = s.pontos[s.pontos.length - 1];
-          return `<button data-clube="${s.clube}"><span class="bolinha" style="background:${corClube(i)}"></span>${s.clube} <strong>${total}</strong></button>`;
+          const marca = s.clube === meu ? " 🎮" : "";
+          return `<button data-clube="${s.clube}"><span class="bolinha" style="background:${corClube(i)}"></span>${s.clube}${marca} <strong>${total}</strong></button>`;
         })
         .join("");
 
@@ -372,7 +396,11 @@
         ligarEvolucao(painel);
         return;
       }
-      painel.innerHTML = tabela(temporada[abaAtual], COLUNAS[abaAtual]);
+      const marcarEu =
+        abaAtual === "classificacao" && temporada.clube_usuario
+          ? (c) => (c.clube === temporada.clube_usuario ? "eu" : "")
+          : undefined;
+      painel.innerHTML = tabela(temporada[abaAtual], COLUNAS[abaAtual], marcarEu);
       ligarLinks(painel);
     }
 
@@ -404,6 +432,17 @@
       $("mvp-info").textContent = mvp
         ? `${mvp.clube} · ${mvp.posicao} · nota média ${mvp.nota_media} · ${mvp.melhor_em_campo}x melhor em campo`
         : "";
+
+      const meu = temporada.clube_usuario;
+      const resumo = $("meu-resumo");
+      resumo.hidden = !meu;
+      if (meu) {
+        const c = temporada.classificacao.find((x) => x.clube === meu);
+        resumo.innerHTML =
+          `🎮 Você dirigiu <strong>${meu}</strong> (tática ${temporada.tatica}) — ` +
+          `terminou em <strong>${c.posicao}º</strong> com ${c.pontos} pts, ` +
+          `${c.gols_marcados} gols pró e ${c.gols_sofridos} sofridos.`;
+      }
 
       renderAbas();
       renderPainel();
@@ -591,8 +630,22 @@
 
     function rotuloSim(s) {
       const data = new Date(s.criada_em).toLocaleString("pt-BR");
-      return `#${s.id} · ${s.campeao} · seed ${s.seed ?? "aleatório"} · ${data}`;
+      const eu = s.clube_usuario ? ` · 🎮 ${s.clube_usuario} (${s.tatica})` : "";
+      return `#${s.id} · ${s.campeao} · seed ${s.seed ?? "aleatório"}${eu} · ${data}`;
     }
+
+    async function carregarClubes() {
+      const clubes = await pedir("/clubes");
+      if (!clubes) return;
+      $("meu-clube").insertAdjacentHTML(
+        "beforeend",
+        clubes.map((c) => `<option value="${c.nome}">${c.nome}</option>`).join("")
+      );
+    }
+
+    $("meu-clube").addEventListener("change", (e) => {
+      $("tatica").disabled = !e.target.value;
+    });
 
     async function carregarLista(selecionar) {
       const sims = await pedir("/simulacoes");
@@ -626,12 +679,17 @@
 
     async function novaTemporada() {
       limparAviso();
+      const params = new URLSearchParams();
       const seed = $("seed").value.trim();
+      if (seed) params.set("seed", seed);
+      const meuClube = $("meu-clube").value;
+      if (meuClube) {
+        params.set("clube", meuClube);
+        params.set("tatica", $("tatica").value);
+      }
+      const qs = params.toString();
       ocupado(true, "Simulando temporada (38 rodadas, 380 partidas)…");
-      const criada = await pedir(
-        `/simulacoes${seed ? `?seed=${encodeURIComponent(seed)}` : ""}`,
-        { method: "POST" }
-      );
+      const criada = await pedir(`/simulacoes${qs ? `?${qs}` : ""}`, { method: "POST" });
       ocupado(false);
       if (!criada) return;
       await carregarLista(criada.id);
@@ -651,6 +709,7 @@
       if (e.target.value) abrirSimulacao(e.target.value);
     });
 
+    carregarClubes();
     carregarLista();
   </script>
 </body>

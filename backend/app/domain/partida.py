@@ -1404,15 +1404,22 @@ class Partida:
 
     def fator_ataque(self, clube_atacando):
         """Multiplicador da chance de gol: > 1 quando o ataque é mais forte
-        que a defesa adversária, < 1 quando é mais fraco. Centrado em 1."""
+        que a defesa adversária, < 1 quando é mais fraco. Centrado em 1.
+
+        A tática entra aqui: o clube ofensivo cria mais (mod_ataque) e o
+        adversário defensivo concede menos (mod_defesa)."""
+
+        adversario = self.adversario(clube_atacando)
 
         ataque = self.forca_em_campo(clube_atacando)
-        defesa = self.forca_em_campo(self.adversario(clube_atacando))
+        defesa = self.forca_em_campo(adversario)
 
         if defesa <= 0:
             return 1.55
 
         fator = (ataque / defesa) ** 3
+        fator *= clube_atacando.mod_ataque()
+        fator /= adversario.mod_defesa()
 
         return max(0.7, min(1.55, fator))
 

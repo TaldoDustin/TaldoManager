@@ -384,6 +384,62 @@ def test_mando_de_campo_melhora_o_aproveitamento_em_casa():
 
 
 # ---------------------------------------------------------------------------
+# Tática: entra em fator_ataque e muda o volume de gols dos dois lados
+# ---------------------------------------------------------------------------
+
+def test_fator_ataque_responde_a_tatica():
+    casa = _clube_completo("Casa", overall=80)
+    fora = _clube_completo("Fora", overall=80)
+    partida = Partida(casa, fora)
+    casa.escalar_time()
+    fora.escalar_time()
+
+    base = partida.fator_ataque(casa)
+
+    casa.tatica = "ofensivo"
+    assert partida.fator_ataque(casa) > base       # ataca com mais perigo
+
+    casa.tatica = "defensivo"
+    assert partida.fator_ataque(casa) < base
+
+    # defender contra um time defensivo rende menos
+    casa.tatica = "equilibrado"
+    fora.tatica = "defensivo"
+    assert partida.fator_ataque(casa) < base
+
+
+def _placar_da_temporada(seed, tatica_casa):
+    random.seed(seed)
+    casa = _clube_completo("Casa", overall=80)
+    fora = _clube_completo("Fora", overall=80)
+    casa.tatica = tatica_casa
+
+    gp = gc = 0
+    for i in range(38):
+        mandante, visitante = (casa, fora) if i % 2 == 0 else (fora, casa)
+        p = Partida(mandante, visitante)
+        p.simular_partida()
+        gp += p.gols_c1 if mandante is casa else p.gols_c2
+        gc += p.gols_c1 if visitante is casa else p.gols_c2
+    return gp, gc
+
+
+def test_ofensivo_faz_mais_gols_pro_e_contra_que_defensivo():
+    seeds = range(6)
+    ofe = [_placar_da_temporada(s, "ofensivo") for s in seeds]
+    defe = [_placar_da_temporada(s, "defensivo") for s in seeds]
+
+    gp_ofe = sum(g[0] for g in ofe)
+    gp_def = sum(g[0] for g in defe)
+    gc_ofe = sum(g[1] for g in ofe)
+    gc_def = sum(g[1] for g in defe)
+
+    # ofensivo: mais gols marcados E mais sofridos (troca solidez por perigo)
+    assert gp_ofe > gp_def
+    assert gc_ofe > gc_def
+
+
+# ---------------------------------------------------------------------------
 # peso_gol + fórmula de nota: artilharia concentrada e notas menos comprimidas
 # ---------------------------------------------------------------------------
 

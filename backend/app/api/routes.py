@@ -4,12 +4,14 @@ from fastapi import APIRouter, HTTPException, Query, Response
 
 from app.api.schemas import (
     ClubeDetalhe,
+    ClubeSeed,
     HealthResponse,
     JogadorDetalhe,
     PartidaDetalhe,
     SimulacaoCriada,
     SimulacaoResponse,
     SimulacaoResumo,
+    Tatica,
 )
 from app.services import simulacao_service
 
@@ -19,6 +21,24 @@ _SEED_DESC = (
     "Semente aleatoria. Com o mesmo seed a simulacao e reproduzivel; "
     "sem seed cada chamada roda uma temporada nova."
 )
+_CLUBE_DESC = (
+    "Nome do clube que o usuario 'dirige'. So esse clube usa a tatica "
+    "escolhida; os outros seguem neutros. Omitir = temporada neutra."
+)
+_TATICA_DESC = "Postura do clube dirigido (ignorada sem 'clube')."
+
+
+def _simular(salvar, seed, clube, tatica):
+    """Chama o serviço traduzindo ValueError -> 400."""
+    fn = (
+        simulacao_service.salvar_temporada
+        if salvar
+        else simulacao_service.simular_temporada
+    )
+    try:
+        return fn(seed=seed, clube_usuario=clube, tatica=tatica)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e)) from e
 
 
 @router.get("/health", response_model=HealthResponse, tags=["infra"])
@@ -26,10 +46,20 @@ def health():
     return {"status": "ok"}
 
 
+@router.get("/clubes", response_model=list[ClubeSeed], tags=["infra"])
+def listar_clubes():
+    """Os clubes do seed — para o usuário escolher qual dirigir."""
+    return simulacao_service.listar_clubes()
+
+
 @router.get("/simulacao", response_model=SimulacaoResponse, tags=["simulacao"])
-def simulacao_rapida(seed: int | None = Query(default=None, description=_SEED_DESC)):
+def simulacao_rapida(
+    seed: int | None = Query(default=None, description=_SEED_DESC),
+    clube: str | None = Query(default=None, description=_CLUBE_DESC),
+    tatica: Tatica = Query(default="equilibrado", description=_TATICA_DESC),
+):
     """Roda uma temporada e devolve o resultado sem salvar (modo rápido)."""
-    return simulacao_service.simular_temporada(seed=seed)
+    return _simular(False, seed, clube, tatica)
 
 
 @router.get("/simulacoes", response_model=list[SimulacaoResumo], tags=["simulacoes"])
@@ -44,9 +74,13 @@ def listar_simulacoes():
     status_code=201,
     tags=["simulacoes"],
 )
-def criar_simulacao(seed: int | None = Query(default=None, description=_SEED_DESC)):
+def criar_simulacao(
+    seed: int | None = Query(default=None, description=_SEED_DESC),
+    clube: str | None = Query(default=None, description=_CLUBE_DESC),
+    tatica: Tatica = Query(default="equilibrado", description=_TATICA_DESC),
+):
     """Roda uma temporada, salva no banco e devolve o id."""
-    return {"id": simulacao_service.salvar_temporada(seed=seed)}
+    return {"id": _simular(True, seed, clube, tatica)}
 
 
 @router.get(

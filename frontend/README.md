@@ -37,9 +37,14 @@ Abra `http://localhost:5500` no navegador e clique em **Nova temporada**.
   assistências, notas, clean sheets, hat-tricks, histórico, recordes.
 - **Página do clube** — clique no nome de um clube na classificação: elenco
   completo + tabela das 38 partidas (mando, placar, resultado).
+- **Página da partida** — clique no placar de um jogo: posse, finalizações,
+  linha do tempo (gols, cartões, substituições) e as duas escalações com nota.
+- **Página do jogador** — clique no nome em qualquer tabela: ficha + game log
+  (nota, gols e assistências partida a partida).
 
-## Próximos passos (fase 2b)
+O botão **← Voltar** desfaz a última navegação.
 
-1. Página do jogador com o game log (nota partida a partida).
-2. Página da partida com a linha do tempo (gols, cartões, substituições).
-3. Gráfico da evolução da pontuação por rodada.
+## Próximos passos
+
+1. Gráfico da evolução da pontuação por rodada.
+2. Filtrar chutes para fora da linha do tempo (hoje aparecem todos).

@@ -84,6 +84,8 @@ class Campeonato:
             "posse_mandante": partida.posse_c1,
             "finalizacoes_mandante": partida.finalizacoes_c1,
             "finalizacoes_visitante": partida.finalizacoes_c2,
+            "eventos": partida.resumo_eventos(),
+            "atuacoes": partida.resumo_escalacao(),
         })
             
     def classificacao(self):

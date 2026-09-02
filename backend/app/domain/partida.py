@@ -22,6 +22,10 @@ class Partida:
         self.substituicoes_c1 = 0
         self.substituicoes_c2 = 0
         self.max_substituicoes = 5
+        # {"minuto", "sai", "entra"} de cada troca, para o snapshot da escalação
+        self.substituicoes_log = []
+        # XI inicial de cada lado (capturado em criar_estatisticas)
+        self.titulares_iniciais = set()
         
     #Orquestração
         
@@ -37,6 +41,7 @@ class Partida:
         self.finalizacoes_gol_c2 = 0
 
         self.eventos = []
+        self.substituicoes_log = []
 
         self.clube1.penalidade_expulsao = 0
         self.clube2.penalidade_expulsao = 0
@@ -680,6 +685,12 @@ class Partida:
         clube.reservas.remove(entrando)
         clube.reservas.append(saindo)
 
+        self.substituicoes_log.append({
+            "minuto": minuto,
+            "sai": saindo,
+            "entra": entrando,
+        })
+
         if entrando not in self.estatisticas:
 
             self.estatisticas[entrando] = {
@@ -968,6 +979,12 @@ class Partida:
 
         self.estatisticas = {}
 
+        # quem começou jogando (para o snapshot da escalação; um titular pode
+        # sair e voltar quando o substituto entra por outro companheiro)
+        self.titulares_iniciais = set(
+            self.clube1.titulares + self.clube2.titulares
+        )
+
         # so quem comeca jogando. Reservas entram no dict apenas se forem
         # acionados em realizar_substituicao (senao contariam jogo e nota
         # sem terem entrado em campo).
@@ -1112,6 +1129,9 @@ class Partida:
 
             nota = max(0, min(10, nota))
 
+            # guarda a nota da partida (o snapshot em `atuacao` usa isto)
+            self.estatisticas[jogador]["nota"] = round(nota, 2)
+
             jogador.soma_nota += nota
             jogador.partidas += 1
 
@@ -1155,9 +1175,102 @@ class Partida:
         print("\n⭐ MELHOR EM CAMPO")
 
         print(
-            f"{jogador.nome} " 
-            f"({jogador.posicao}) " 
+            f"{jogador.nome} "
+            f"({jogador.posicao}) "
             f"- Nota {nota:.1f}\n")
+
+    #Snapshot para persistência / navegação
+
+    def _clube_do(self, jogador):
+        """Clube do jogador pelo elenco fixo da temporada, não pela escalação
+        (o autor de um gol pode já ter sido substituído)."""
+
+        return (
+            self.clube1
+            if jogador in self.clube1.jogadores
+            else self.clube2
+        )
+
+    def resumo_eventos(self):
+        """Timeline da partida como lista de dicts, em ordem cronológica.
+        Chamar depois de `processar_eventos`."""
+
+        sai_de = {
+            s["entra"]: s["sai"].nome
+            for s in self.substituicoes_log
+        }
+
+        linhas = []
+
+        for evento in sorted(
+            self.eventos,
+            key=lambda e: e["minuto"]
+        ):
+
+            jogador = evento.get("jogador")
+
+            clube = (
+                self._clube_do(jogador)
+                if jogador is not None
+                else None
+            )
+
+            detalhe = None
+
+            if (
+                evento["tipo"] == "substituicao"
+                and jogador in sai_de
+            ):
+                detalhe = f"sai {sai_de[jogador]}"
+
+            linhas.append({
+                "minuto": evento["minuto"],
+                "tipo": evento["tipo"],
+                "jogador": jogador.nome if jogador is not None else None,
+                "clube": clube.nome if clube is not None else None,
+                "detalhe": detalhe,
+            })
+
+        return linhas
+
+    def resumo_escalacao(self):
+        """Uma linha por jogador que entrou em campo: se foi titular, quando
+        entrou/saiu, contribuição e nota. Chamar depois de `calcular_notas`."""
+
+        # percorre as trocas em ordem: um titular pode sair e voltar (quando
+        # o substituto entra no lugar de outro companheiro), então a última
+        # troca é que vale.
+        entrou_min = {}
+        saiu_min = {}
+
+        for troca in self.substituicoes_log:
+            sai, entra, minuto = troca["sai"], troca["entra"], troca["minuto"]
+
+            saiu_min[sai] = minuto
+
+            saiu_min.pop(entra, None)  # voltou a campo
+            if entra not in self.titulares_iniciais:
+                entrou_min[entra] = minuto
+
+        atuacoes = []
+
+        for jogador, stats in self.estatisticas.items():
+
+            titular = jogador in self.titulares_iniciais
+
+            atuacoes.append({
+                "jogador": jogador.nome,
+                "clube": self._clube_do(jogador).nome,
+                "posicao": jogador.posicao,
+                "titular": titular,
+                "entrou_min": None if titular else entrou_min.get(jogador),
+                "saiu_min": saiu_min.get(jogador),
+                "gols": stats["gols"],
+                "assistencias": stats["assistencias"],
+                "nota": stats["nota"],
+            })
+
+        return atuacoes
     
     #Resultado
     

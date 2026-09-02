@@ -99,6 +99,7 @@ class ClubeInfo(BaseModel):
 
 
 class JogoResumo(BaseModel):
+    partida_id: int
     rodada: int
     adversario: str
     mando: str
@@ -111,3 +112,91 @@ class ClubeDetalhe(BaseModel):
     clube: ClubeInfo
     elenco: list[JogadorStats]
     jogos: list[JogoResumo]
+
+
+# --- detalhe de partida (fase 2b) ---
+
+class LanceOut(BaseModel):
+    minuto: int
+    tipo: str
+    jogador: str | None = None
+    jogador_id: int | None = None
+    clube: str | None = None
+    detalhe: str | None = None
+
+
+class AtuacaoOut(BaseModel):
+    jogador_id: int
+    jogador: str
+    posicao: str
+    titular: bool
+    entrou_min: int | None = None
+    saiu_min: int | None = None
+    gols: int
+    assistencias: int
+    nota: float
+
+
+class LadoPartida(BaseModel):
+    id: int
+    nome: str
+
+
+class PartidaInfo(BaseModel):
+    id: int
+    rodada: int
+    mandante: LadoPartida
+    visitante: LadoPartida
+    gols_mandante: int
+    gols_visitante: int
+    posse_mandante: int
+    posse_visitante: int
+    finalizacoes_mandante: int
+    finalizacoes_visitante: int
+
+
+class PartidaDetalhe(BaseModel):
+    partida: PartidaInfo
+    eventos: list[LanceOut]
+    escalacao_mandante: list[AtuacaoOut]
+    escalacao_visitante: list[AtuacaoOut]
+
+
+# --- game log de jogador (fase 2b) ---
+
+class JogoLog(BaseModel):
+    partida_id: int
+    rodada: int
+    adversario: str
+    mando: str
+    gols_pro: int
+    gols_contra: int
+    resultado: str
+    titular: bool
+    entrou_min: int | None = None
+    saiu_min: int | None = None
+    gols: int
+    assistencias: int
+    nota: float
+
+
+class JogadorInfo(BaseModel):
+    id: int
+    nome: str
+    clube: str
+    clube_id: int
+    posicao: str
+    overall: int
+    idade: int
+    partidas: int
+    gols: int
+    assistencias: int
+    nota_media: float
+    melhor_nota: float
+    pior_nota: float
+    melhor_em_campo: int
+
+
+class JogadorDetalhe(BaseModel):
+    jogador: JogadorInfo
+    jogos: list[JogoLog]

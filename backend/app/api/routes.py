@@ -5,6 +5,8 @@ from fastapi import APIRouter, HTTPException, Query, Response
 from app.api.schemas import (
     ClubeDetalhe,
     HealthResponse,
+    JogadorDetalhe,
+    PartidaDetalhe,
     SimulacaoCriada,
     SimulacaoResponse,
     SimulacaoResumo,
@@ -77,4 +79,30 @@ def obter_clube(simulacao_id: int, clube_id: int):
     detalhe = simulacao_service.detalhe_clube(simulacao_id, clube_id)
     if detalhe is None:
         raise HTTPException(status_code=404, detail="Clube não encontrado")
+    return detalhe
+
+
+@router.get(
+    "/simulacoes/{simulacao_id}/partidas/{partida_id}",
+    response_model=PartidaDetalhe,
+    tags=["simulacoes"],
+)
+def obter_partida(simulacao_id: int, partida_id: int):
+    """Placar, estatísticas, timeline e escalações de uma partida."""
+    detalhe = simulacao_service.detalhe_partida(simulacao_id, partida_id)
+    if detalhe is None:
+        raise HTTPException(status_code=404, detail="Partida não encontrada")
+    return detalhe
+
+
+@router.get(
+    "/simulacoes/{simulacao_id}/jogadores/{jogador_id}",
+    response_model=JogadorDetalhe,
+    tags=["simulacoes"],
+)
+def obter_jogador(simulacao_id: int, jogador_id: int):
+    """Ficha do jogador e o game log (nota partida a partida)."""
+    detalhe = simulacao_service.game_log_jogador(simulacao_id, jogador_id)
+    if detalhe is None:
+        raise HTTPException(status_code=404, detail="Jogador não encontrado")
     return detalhe

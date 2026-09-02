@@ -8,18 +8,22 @@ CAMPOS = (
 
 
 def inserir(conn, simulacao_id, mapa_clubes, jogadores):
-    """`jogadores` são dicts com os CAMPOS + a chave "clube" (nome do clube)."""
+    """`jogadores` são dicts com os CAMPOS + a chave "clube" (nome do clube).
 
-    conn.executemany(
-        f"""
-        INSERT INTO jogador (simulacao_id, clube_id, {", ".join(CAMPOS)})
-        VALUES (?, ?, {", ".join("?" * len(CAMPOS))})
-        """,
-        [
-            (simulacao_id, mapa_clubes[j["clube"]], *(j[c] for c in CAMPOS))
-            for j in jogadores
-        ],
-    )
+    Devolve um mapa {(clube, nome): id} para ligar lances e atuações."""
+
+    mapa = {}
+    for j in jogadores:
+        cur = conn.execute(
+            f"""
+            INSERT INTO jogador (simulacao_id, clube_id, {", ".join(CAMPOS)})
+            VALUES (?, ?, {", ".join("?" * len(CAMPOS))})
+            """,
+            (simulacao_id, mapa_clubes[j["clube"]], *(j[c] for c in CAMPOS)),
+        )
+        mapa[(j["clube"], j["nome"])] = cur.lastrowid
+
+    return mapa
 
 
 # traz o nome do clube junto (a visão e o frontend usam "clube")

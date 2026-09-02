@@ -414,3 +414,73 @@ def test_a_maioria_dos_jogadores_fica_perto_de_6():
     ]
     # 6.0 continua sendo "jogou, sem se destacar"
     assert 5.8 < statistics.median(notas) < 7.0
+
+
+# ---------------------------------------------------------------------------
+# Fase 2b: snapshot da partida (timeline + escalação com nota)
+# ---------------------------------------------------------------------------
+
+def test_calcular_notas_grava_a_nota_de_cada_jogador():
+    random.seed(40)
+    casa = _clube_completo("Casa")
+    fora = _clube_completo("Fora")
+
+    partida = Partida(casa, fora)
+    partida.simular_partida()
+
+    # antes a nota ficava só em jogador.soma_nota; agora tem que estar no dict
+    notas = [s["nota"] for s in partida.estatisticas.values()]
+    assert all(0 <= n <= 10 for n in notas)
+    assert any(n != 6.0 for n in notas)
+
+
+def test_resumo_escalacao_cobre_quem_jogou_e_bate_o_placar():
+    random.seed(41)
+    casa = _clube_completo("Casa")
+    fora = _clube_completo("Fora")
+
+    partida = Partida(casa, fora)
+    partida.simular_partida()
+
+    atuacoes = partida.resumo_escalacao()
+
+    # uma linha por jogador em campo (>= 22, mais os substitutos)
+    assert len(atuacoes) == len(partida.estatisticas)
+    assert len(atuacoes) >= 22
+
+    # exatamente 11 titulares por lado
+    for clube in (casa, fora):
+        titulares = [
+            a for a in atuacoes if a["clube"] == clube.nome and a["titular"]
+        ]
+        assert len(titulares) == 11
+
+    # a soma de gols das atuações reproduz o placar
+    gols_casa = sum(a["gols"] for a in atuacoes if a["clube"] == "Casa")
+    gols_fora = sum(a["gols"] for a in atuacoes if a["clube"] == "Fora")
+    assert (gols_casa, gols_fora) == (partida.gols_c1, partida.gols_c2)
+
+    # substituto tem entrou_min preenchido e não é titular
+    for a in atuacoes:
+        if a["entrou_min"] is not None:
+            assert a["titular"] is False
+
+
+def test_resumo_eventos_em_ordem_e_com_clube():
+    random.seed(42)
+    casa = _clube_completo("Casa")
+    fora = _clube_completo("Fora")
+
+    partida = Partida(casa, fora)
+    partida.simular_partida()
+
+    eventos = partida.resumo_eventos()
+    minutos = [e["minuto"] for e in eventos]
+    assert minutos == sorted(minutos)
+
+    gols = [e for e in eventos if e["tipo"] in ("gol", "penalti")]
+    assert len(gols) == partida.gols_c1 + partida.gols_c2
+    for e in eventos:
+        assert e["clube"] in ("Casa", "Fora")
+        if e["tipo"] == "substituicao":
+            assert e["detalhe"] and e["detalhe"].startswith("sai ")

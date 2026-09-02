@@ -7,24 +7,29 @@ CAMPOS = (
 
 
 def inserir(conn, simulacao_id, mapa_clubes, partidas):
-    """`partidas` são dicts com os CAMPOS + "mandante"/"visitante" (nomes)."""
+    """`partidas` são dicts com os CAMPOS + "mandante"/"visitante" (nomes).
 
-    conn.executemany(
-        f"""
-        INSERT INTO partida
-            (simulacao_id, mandante_id, visitante_id, {", ".join(CAMPOS)})
-        VALUES (?, ?, ?, {", ".join("?" * len(CAMPOS))})
-        """,
-        [
+    Devolve a lista de ids gerados, na mesma ordem de `partidas`, para ligar
+    lances e atuações."""
+
+    ids = []
+    for p in partidas:
+        cur = conn.execute(
+            f"""
+            INSERT INTO partida
+                (simulacao_id, mandante_id, visitante_id, {", ".join(CAMPOS)})
+            VALUES (?, ?, ?, {", ".join("?" * len(CAMPOS))})
+            """,
             (
                 simulacao_id,
                 mapa_clubes[p["mandante"]],
                 mapa_clubes[p["visitante"]],
                 *(p[c] for c in CAMPOS),
-            )
-            for p in partidas
-        ],
-    )
+            ),
+        )
+        ids.append(cur.lastrowid)
+
+    return ids
 
 
 def _com_nomes(conn, where, params):

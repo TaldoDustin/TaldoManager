@@ -181,3 +181,6 @@ cython_debug/
 .cursorindexingignore
 # banco local (gerado; schema em app/db/schema.sql)
 backend/data/database/*.db
+
+# artefatos de teste de browser (playwright MCP)
+.playwright-mcp/

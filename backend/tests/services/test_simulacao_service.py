@@ -118,3 +118,59 @@ def test_detalhe_clube_de_outra_simulacao_da_none():
     clube_id = simulacao_service.carregar_temporada(sid)["classificacao"][0]["id"]
 
     assert simulacao_service.detalhe_clube(999, clube_id) is None
+
+
+# --- navegação por partida / jogador (fase 2b) ---
+
+def _sid_e_clube_campeao(seed=42):
+    sid = simulacao_service.salvar_temporada(seed=seed)
+    campeao = simulacao_service.carregar_temporada(sid)["classificacao"][0]["id"]
+    return sid, campeao
+
+
+def test_detalhe_partida_traz_timeline_e_escalacoes():
+    sid, campeao = _sid_e_clube_campeao()
+    jogo = simulacao_service.detalhe_clube(sid, campeao)["jogos"][0]
+
+    det = simulacao_service.detalhe_partida(sid, jogo["partida_id"])
+
+    p = det["partida"]
+    assert p["gols_mandante"] + p["gols_visitante"] >= 0
+    assert p["posse_mandante"] + p["posse_visitante"] == 100
+
+    # 11 titulares por lado, mais eventuais substitutos
+    for lado in ("escalacao_mandante", "escalacao_visitante"):
+        assert sum(1 for a in det[lado] if a["titular"]) == 11
+        assert all(0 <= a["nota"] <= 10 for a in det[lado])
+
+    # gols dos eventos batem com o placar
+    gols_evento = sum(1 for e in det["eventos"] if e["tipo"] in ("gol", "penalti"))
+    assert gols_evento == p["gols_mandante"] + p["gols_visitante"]
+
+
+def test_detalhe_partida_de_outra_simulacao_da_none():
+    sid, campeao = _sid_e_clube_campeao(seed=1)
+    pid = simulacao_service.detalhe_clube(sid, campeao)["jogos"][0]["partida_id"]
+
+    assert simulacao_service.detalhe_partida(999, pid) is None
+
+
+def test_game_log_do_jogador_bate_com_a_ficha():
+    sid, campeao = _sid_e_clube_campeao()
+    elenco = simulacao_service.detalhe_clube(sid, campeao)["elenco"]
+    craque = max(elenco, key=lambda j: j["partidas"])
+
+    log = simulacao_service.game_log_jogador(sid, craque["id"])
+
+    assert log["jogador"]["nome"] == craque["nome"]
+    assert len(log["jogos"]) == craque["partidas"]
+    assert sum(j["gols"] for j in log["jogos"]) == craque["gols"]
+    assert sum(j["assistencias"] for j in log["jogos"]) == craque["assistencias"]
+
+    media = sum(j["nota"] for j in log["jogos"]) / len(log["jogos"])
+    assert round(media, 1) == round(craque["nota_media"], 1)
+
+
+def test_game_log_de_jogador_inexistente_da_none():
+    sid, _ = _sid_e_clube_campeao(seed=1)
+    assert simulacao_service.game_log_jogador(sid, 99999) is None

@@ -72,3 +72,28 @@ def test_detalhe_do_clube():
     assert len(corpo["jogos"]) == 38
 
     assert client.get(f"/simulacoes/{sid}/clubes/9999").status_code == 404
+
+
+# --- navegação por partida / jogador (fase 2b) ---
+
+def test_detalhe_de_partida_e_game_log():
+    sid = client.post("/simulacoes?seed=42").json()["id"]
+    campeao = client.get(f"/simulacoes/{sid}").json()["classificacao"][0]["id"]
+    clube = client.get(f"/simulacoes/{sid}/clubes/{campeao}").json()
+
+    pid = clube["jogos"][0]["partida_id"]
+    partida = client.get(f"/simulacoes/{sid}/partidas/{pid}")
+    assert partida.status_code == 200
+    corpo = partida.json()
+    assert sum(1 for a in corpo["escalacao_mandante"] if a["titular"]) == 11
+    assert isinstance(corpo["eventos"], list)
+
+    jid = clube["elenco"][0]["id"]
+    jogador = client.get(f"/simulacoes/{sid}/jogadores/{jid}")
+    assert jogador.status_code == 200
+    log = jogador.json()
+    assert log["jogador"]["id"] == jid
+    assert len(log["jogos"]) == log["jogador"]["partidas"]
+
+    assert client.get(f"/simulacoes/{sid}/partidas/999999").status_code == 404
+    assert client.get(f"/simulacoes/{sid}/jogadores/999999").status_code == 404

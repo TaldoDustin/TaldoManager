@@ -15,8 +15,10 @@ from contextlib import redirect_stdout
 from datetime import datetime, timezone
 
 from app.db.conexao import conectar
+from app.repositories import atuacao_repository as atuacao_repo
 from app.repositories import clube_repository as clube_repo
 from app.repositories import jogador_repository as jogador_repo
+from app.repositories import lance_repository as lance_repo
 from app.repositories import partida_repository as partida_repo
 from app.repositories import simulacao_repository as simulacao_repo
 from scripts.data_loader import carregar_campeonato
@@ -250,8 +252,14 @@ def salvar_temporada(seed=None):
                 criada_em=datetime.now(timezone.utc).isoformat(),
             )
             mapa = clube_repo.inserir(conn, sim_id, cru["clubes"])
-            jogador_repo.inserir(conn, sim_id, mapa, cru["jogadores"])
-            partida_repo.inserir(conn, sim_id, mapa, cru["partidas"])
+            mapa_jog = jogador_repo.inserir(conn, sim_id, mapa, cru["jogadores"])
+            partida_ids = partida_repo.inserir(conn, sim_id, mapa, cru["partidas"])
+            lance_repo.inserir(
+                conn, partida_ids, mapa, mapa_jog, cru["partidas"]
+            )
+            atuacao_repo.inserir(
+                conn, partida_ids, mapa, mapa_jog, cru["partidas"]
+            )
         return sim_id
     finally:
         conn.close()
@@ -292,6 +300,7 @@ def _cru_do_banco(conn, simulacao_id):
 
     partidas = [
         {
+            "id": r["id"],
             "rodada": r["rodada"],
             "mandante": r["mandante_nome"],
             "visitante": r["visitante_nome"],
@@ -343,6 +352,7 @@ def detalhe_clube(simulacao_id, clube_id):
             pro = p["gols_mandante"] if em_casa else p["gols_visitante"]
             contra = p["gols_visitante"] if em_casa else p["gols_mandante"]
             jogos.append({
+                "partida_id": p["id"],
                 "rodada": p["rodada"],
                 "adversario": p["visitante_nome"] if em_casa else p["mandante_nome"],
                 "mando": "casa" if em_casa else "fora",
@@ -355,5 +365,129 @@ def detalhe_clube(simulacao_id, clube_id):
         c["saldo_gols"] = c["gols_marcados"] - c["gols_sofridos"]
 
         return {"clube": c, "elenco": elenco, "jogos": jogos}
+    finally:
+        conn.close()
+
+
+# ---------------------------------------------------------------------------
+# navegação por partida / jogador (fase 2b)
+# ---------------------------------------------------------------------------
+
+def _atuacao_visao(r):
+    return {
+        "jogador_id": r["jogador_id"],
+        "jogador": r["jogador_nome"],
+        "posicao": r["jogador_posicao"],
+        "titular": bool(r["titular"]),
+        "entrou_min": r["entrou_min"],
+        "saiu_min": r["saiu_min"],
+        "gols": r["gols"],
+        "assistencias": r["assistencias"],
+        "nota": r["nota"],
+    }
+
+
+def detalhe_partida(simulacao_id, partida_id):
+    """Placar, estatísticas, timeline e as duas escalações (com nota) de uma
+    partida. None se a partida não for da simulação."""
+
+    conn = conectar()
+    try:
+        p = partida_repo.buscar(conn, partida_id)
+        if p is None or p["simulacao_id"] != simulacao_id:
+            return None
+
+        eventos = [
+            {
+                "minuto": r["minuto"],
+                "tipo": r["tipo"],
+                "jogador": r["jogador_nome"],
+                "jogador_id": r["jogador_id"],
+                "clube": r["clube_nome"],
+                "detalhe": r["detalhe"],
+            }
+            for r in lance_repo.listar_por_partida(conn, partida_id)
+        ]
+
+        atuacoes = atuacao_repo.listar_por_partida(conn, partida_id)
+        mandante = [
+            _atuacao_visao(r) for r in atuacoes if r["clube_id"] == p["mandante_id"]
+        ]
+        visitante = [
+            _atuacao_visao(r) for r in atuacoes if r["clube_id"] == p["visitante_id"]
+        ]
+
+        partida = {
+            "id": p["id"],
+            "rodada": p["rodada"],
+            "mandante": {"id": p["mandante_id"], "nome": p["mandante_nome"]},
+            "visitante": {"id": p["visitante_id"], "nome": p["visitante_nome"]},
+            "gols_mandante": p["gols_mandante"],
+            "gols_visitante": p["gols_visitante"],
+            "posse_mandante": p["posse_mandante"],
+            "posse_visitante": 100 - p["posse_mandante"],
+            "finalizacoes_mandante": p["finalizacoes_mandante"],
+            "finalizacoes_visitante": p["finalizacoes_visitante"],
+        }
+
+        return {
+            "partida": partida,
+            "eventos": eventos,
+            "escalacao_mandante": mandante,
+            "escalacao_visitante": visitante,
+        }
+    finally:
+        conn.close()
+
+
+def game_log_jogador(simulacao_id, jogador_id):
+    """Ficha do jogador + uma linha por partida disputada (nota, contribuição,
+    contexto). None se o jogador não for da simulação."""
+
+    conn = conectar()
+    try:
+        j = jogador_repo.buscar(conn, jogador_id)
+        if j is None or j["simulacao_id"] != simulacao_id:
+            return None
+
+        jogos = []
+        for r in atuacao_repo.listar_por_jogador(conn, jogador_id):
+            em_casa = r["mandante_id"] == j["clube_id"]
+            pro = r["gols_mandante"] if em_casa else r["gols_visitante"]
+            contra = r["gols_visitante"] if em_casa else r["gols_mandante"]
+            jogos.append({
+                "partida_id": r["partida_id"],
+                "rodada": r["rodada"],
+                "adversario": r["visitante_nome"] if em_casa else r["mandante_nome"],
+                "mando": "casa" if em_casa else "fora",
+                "gols_pro": pro,
+                "gols_contra": contra,
+                "resultado": "V" if pro > contra else "D" if pro < contra else "E",
+                "titular": bool(r["titular"]),
+                "entrou_min": r["entrou_min"],
+                "saiu_min": r["saiu_min"],
+                "gols": r["gols"],
+                "assistencias": r["assistencias"],
+                "nota": r["nota"],
+            })
+
+        jogador = {
+            "id": j["id"],
+            "nome": j["nome"],
+            "clube": j["clube"],
+            "clube_id": j["clube_id"],
+            "posicao": j["posicao"],
+            "overall": j["overall"],
+            "idade": j["idade"],
+            "partidas": j["partidas"],
+            "gols": j["gols"],
+            "assistencias": j["assistencias"],
+            "nota_media": j["nota_media"],
+            "melhor_nota": j["melhor_nota"],
+            "pior_nota": j["pior_nota"],
+            "melhor_em_campo": j["melhor_em_campo"],
+        }
+
+        return {"jogador": jogador, "jogos": jogos}
     finally:
         conn.close()

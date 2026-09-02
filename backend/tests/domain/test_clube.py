@@ -138,3 +138,109 @@ def test_escalar_time_escolhe_melhores_jogadores():
 
     assert jogadores[10] not in clube.titulares
     assert jogadores[10] in clube.reservas
+    
+def test_jogador_expulso_nao_entra_na_forca_do_clube():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000
+    )
+
+    jogador1 = Jogador(
+        "Jogador 1",
+        25,
+        "Atacante",
+        90
+    )
+
+    jogador2 = Jogador(
+        "Jogador 2",
+        25,
+        "Atacante",
+        60
+    )
+
+    jogador1.expulso = True
+
+    clube.contratar_jogador(jogador1)
+    clube.contratar_jogador(jogador2)
+
+    clube.titulares = [jogador1, jogador2]
+
+    forca = clube.calcular_forca()
+
+    assert forca == 60
+    
+def test_jogador_expulso_nao_contribui_para_forca():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000
+    )
+
+    jogador_ativo = Jogador(
+        "Jogador Ativo",
+        25,
+        "Atacante",
+        80
+    )
+
+    jogador_expulso = Jogador(
+        "Jogador Expulso",
+        25,
+        "Atacante",
+        80
+    )
+
+    jogador_expulso.expulso = True
+
+    clube.titulares = [
+        jogador_ativo,
+        jogador_expulso
+    ]
+
+    forca = clube.calcular_forca()
+
+    assert forca == 80
+    
+def test_expulsao_aplica_penalidade_na_forca():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000
+    )
+
+    jogador = Jogador(
+        "Jogador",
+        25,
+        "Atacante",
+        80
+    )
+
+    clube.titulares = [jogador]
+    clube.penalidade_expulsao = 5
+
+    forca = clube.calcular_forca()
+
+    assert forca == 75
+    
+def test_duas_expulsoes_acumulam_penalidade():
+    clube = Clube(
+        "FC Taldo",
+        "Brasil",
+        1000000
+    )
+
+    jogador = Jogador(
+        "Jogador",
+        25,
+        "Atacante",
+        80
+    )
+
+    clube.titulares = [jogador]
+    clube.penalidade_expulsao = 10
+
+    forca = clube.calcular_forca()
+
+    assert forca == 70

@@ -92,13 +92,17 @@ class Jogador:
             return 0
 
         if self.posicao == "Meio-Campo":
-            peso = 7 + (self.overall // 15)
+            base = 3
 
         elif self.posicao == "Atacante":
-            peso = 12 + (self.overall // 15)
+            base = 10
 
         else:
-            peso = 0
+            return 0
+
+        # o overall vira o fator dominante: um atacante 88 finaliza muito
+        # mais que um de 72, para existir uma disputa de artilharia
+        peso = base + (max(50, self.overall) - 50) ** 1.7 / 22
 
         if self.condicao == "Cansado":
             peso *= 0.90
@@ -189,6 +193,8 @@ class Jogador:
 
         elif self.posicao == "Defesa":
             gasto += 2
+
+        self.energia = max(0, self.energia - gasto)
 
         self.atualizar_condicao()
     

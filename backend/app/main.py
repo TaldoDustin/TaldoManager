@@ -1,29 +1,44 @@
-import sys
+"""Ponto de entrada da API (FastAPI).
 
-if hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8")
+Uso (a partir da pasta backend/):
+    uvicorn app.main:app --reload
 
-from scripts.data_loader import carregar_campeonato
+Docs interativas:  http://localhost:8000/docs
+"""
 
-campeonato = carregar_campeonato()
+from contextlib import asynccontextmanager
 
-print("=== TALDO MANAGER ===")
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-while campeonato.rodada <= len(campeonato.calendario):
-    campeonato.jogar_rodada()
+from app.api.routes import router
+from app.db.conexao import init_db
 
-campeonato.mostrar_classificacao()
-campeonato.mostrar_historico()
-campeonato.mostrar_artilharia()
-campeonato.melhores_notas()
-campeonato.assistencias()
-campeonato.clean_sheets()
-campeonato.mvp_campeonato()
 
-clube = campeonato.clubes[0]
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db()
+    yield
 
-print(
-    len(clube.jogadores),
-    len(clube.titulares),
-    len(clube.reservas)
+
+app = FastAPI(
+    title="Taldo Manager API",
+    description="API para simular temporadas e navegar nos resultados.",
+    version="0.2.0",
+    lifespan=lifespan,
 )
+
+# Libera o frontend (index.html aberto localmente ou servido em outra porta).
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(router)
+
+
+@app.get("/", tags=["infra"])
+def raiz():
+    return {"api": "Taldo Manager", "docs": "/docs"}

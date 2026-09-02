@@ -2,9 +2,9 @@
     {
         "id": 1,
         "nome": "FC Taldo",
-        "pais": "Alemanha",
-        "dinheiro": 4900623,
-        "torcedores": 7422750,
+        "pais": "Inglaterra",
+        "dinheiro": 17639221,
+        "torcedores": 12491152,
         "titulares": [
             1,
             2,
@@ -31,9 +31,9 @@
     {
         "id": 2,
         "nome": "Real Taldo",
-        "pais": "Inglaterra",
-        "dinheiro": 6432772,
-        "torcedores": 2377558,
+        "pais": "França",
+        "dinheiro": 33100827,
+        "torcedores": 1630963,
         "titulares": [
             19,
             20,
@@ -60,9 +60,9 @@
     {
         "id": 3,
         "nome": "Taldo United",
-        "pais": "Alemanha",
-        "dinheiro": 25038612,
-        "torcedores": 6645835,
+        "pais": "Inglaterra",
+        "dinheiro": 9416911,
+        "torcedores": 3427432,
         "titulares": [
             37,
             38,
@@ -89,9 +89,9 @@
     {
         "id": 4,
         "nome": "Taldo City",
-        "pais": "Inglaterra",
-        "dinheiro": 30914863,
-        "torcedores": 3143765,
+        "pais": "Itália",
+        "dinheiro": 33951572,
+        "torcedores": 4556062,
         "titulares": [
             55,
             56,
@@ -118,9 +118,9 @@
     {
         "id": 5,
         "nome": "Atlético Taldo",
-        "pais": "França",
-        "dinheiro": 14269573,
-        "torcedores": 1425619,
+        "pais": "Alemanha",
+        "dinheiro": 18854812,
+        "torcedores": 2683315,
         "titulares": [
             73,
             74,
@@ -147,9 +147,9 @@
     {
         "id": 6,
         "nome": "Sport Taldo",
-        "pais": "Espanha",
-        "dinheiro": 29918849,
-        "torcedores": 6121776,
+        "pais": "Brasil",
+        "dinheiro": 23740210,
+        "torcedores": 7098838,
         "titulares": [
             91,
             92,
@@ -176,9 +176,9 @@
     {
         "id": 7,
         "nome": "Taldo Internacional",
-        "pais": "Argentina",
-        "dinheiro": 38328766,
-        "torcedores": 7351763,
+        "pais": "França",
+        "dinheiro": 21933531,
+        "torcedores": 7356261,
         "titulares": [
             109,
             110,
@@ -205,9 +205,9 @@
     {
         "id": 8,
         "nome": "Taldo Rangers",
-        "pais": "Inglaterra",
-        "dinheiro": 48533279,
-        "torcedores": 8839192,
+        "pais": "Espanha",
+        "dinheiro": 4851560,
+        "torcedores": 2410720,
         "titulares": [
             127,
             128,
@@ -234,9 +234,9 @@
     {
         "id": 9,
         "nome": "Taldo Athletic",
-        "pais": "Itália",
-        "dinheiro": 31777840,
-        "torcedores": 453564,
+        "pais": "Brasil",
+        "dinheiro": 8151604,
+        "torcedores": 1987669,
         "titulares": [
             145,
             146,
@@ -263,9 +263,9 @@
     {
         "id": 10,
         "nome": "EC Taldo",
-        "pais": "Portugal",
-        "dinheiro": 1824647,
-        "torcedores": 8020151,
+        "pais": "Itália",
+        "dinheiro": 12216586,
+        "torcedores": 6314330,
         "titulares": [
             163,
             164,
@@ -292,9 +292,9 @@
     {
         "id": 11,
         "nome": "Taldo Nacional",
-        "pais": "França",
-        "dinheiro": 8556044,
-        "torcedores": 2019915,
+        "pais": "Brasil",
+        "dinheiro": 18794271,
+        "torcedores": 4759426,
         "titulares": [
             181,
             182,
@@ -321,9 +321,9 @@
     {
         "id": 12,
         "nome": "Taldo Stars",
-        "pais": "Inglaterra",
-        "dinheiro": 33913171,
-        "torcedores": 1822950,
+        "pais": "Espanha",
+        "dinheiro": 5907001,
+        "torcedores": 2668577,
         "titulares": [
             199,
             200,
@@ -350,9 +350,9 @@
     {
         "id": 13,
         "nome": "Taldo Sporting",
-        "pais": "Espanha",
-        "dinheiro": 39627322,
-        "torcedores": 2697767,
+        "pais": "Itália",
+        "dinheiro": 13256117,
+        "torcedores": 2802489,
         "titulares": [
             217,
             218,
@@ -379,9 +379,9 @@
     {
         "id": 14,
         "nome": "Taldo Galaxy",
-        "pais": "Itália",
-        "dinheiro": 34147720,
-        "torcedores": 7540541,
+        "pais": "Portugal",
+        "dinheiro": 28153717,
+        "torcedores": 11440013,
         "titulares": [
             235,
             236,
@@ -408,9 +408,9 @@
     {
         "id": 15,
         "nome": "Taldo Royals",
-        "pais": "Portugal",
-        "dinheiro": 16155605,
-        "torcedores": 5495915,
+        "pais": "Espanha",
+        "dinheiro": 4754269,
+        "torcedores": 210655,
         "titulares": [
             253,
             254,
@@ -437,9 +437,9 @@
     {
         "id": 16,
         "nome": "Taldo Warriors",
-        "pais": "Brasil",
-        "dinheiro": 38288093,
-        "torcedores": 1561390,
+        "pais": "Inglaterra",
+        "dinheiro": 15624389,
+        "torcedores": 5103744,
         "titulares": [
             271,
             272,
@@ -466,9 +466,9 @@
     {
         "id": 17,
         "nome": "Taldo Legends",
-        "pais": "França",
-        "dinheiro": 18544616,
-        "torcedores": 3697044,
+        "pais": "Inglaterra",
+        "dinheiro": 17092311,
+        "torcedores": 1333586,
         "titulares": [
             289,
             290,
@@ -495,9 +495,9 @@
     {
         "id": 18,
         "nome": "Taldo Dragons",
-        "pais": "Espanha",
-        "dinheiro": 12779670,
-        "torcedores": 6446497,
+        "pais": "Portugal",
+        "dinheiro": 2282653,
+        "torcedores": 761113,
         "titulares": [
             307,
             308,
@@ -524,9 +524,9 @@
     {
         "id": 19,
         "nome": "Taldo Empire",
-        "pais": "Portugal",
-        "dinheiro": 8652478,
-        "torcedores": 72874,
+        "pais": "Espanha",
+        "dinheiro": 10232517,
+        "torcedores": 5214673,
         "titulares": [
             325,
             326,
@@ -553,9 +553,9 @@
     {
         "id": 20,
         "nome": "Taldo FC",
-        "pais": "França",
-        "dinheiro": 33034164,
-        "torcedores": 4981869,
+        "pais": "Argentina",
+        "dinheiro": 3097735,
+        "torcedores": 568972,
         "titulares": [
             343,
             344,

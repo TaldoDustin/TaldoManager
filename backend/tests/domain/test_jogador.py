@@ -1,3 +1,5 @@
+import random
+
 from app.domain.jogador import Jogador
 
 
@@ -87,43 +89,33 @@ def test_peso_gol_goleiro_e_defesa():
     assert defesa.peso_gol() == 0
 
 
-def test_peso_gol_meio_campo():
-    jogador = Jogador(
-        "Meia",
-        25,
-        "Meio-Campo",
-        90
-    )
+def test_peso_gol_atacante_maior_que_meio_campo():
+    meia = Jogador("Meia", 25, "Meio-Campo", 90)
+    atacante = Jogador("Atacante", 25, "Atacante", 90)
 
-    assert jogador.peso_gol() == 13
+    assert atacante.peso_gol() > meia.peso_gol()
 
 
-def test_peso_gol_atacante():
-    jogador = Jogador(
-        "Atacante",
-        25,
-        "Atacante",
-        90
-    )
+def test_peso_gol_escala_forte_com_o_overall():
+    fraco = Jogador("Fraco", 25, "Atacante", 72)
+    forte = Jogador("Forte", 25, "Atacante", 88)
 
-    assert jogador.peso_gol() == 18
+    # um atacante muito melhor finaliza bem mais (base para a artilharia)
+    assert forte.peso_gol() >= fraco.peso_gol() * 1.6
 
 
 def test_peso_gol_considera_condicao():
-    jogador = Jogador(
-        "Atacante",
-        25,
-        "Atacante",
-        90
-    )
+    jogador = Jogador("Atacante", 25, "Atacante", 90)
+
+    normal = jogador.peso_gol()
 
     jogador.condicao = "Cansado"
-
-    assert jogador.peso_gol() == 16
+    cansado = jogador.peso_gol()
 
     jogador.condicao = "Exausto"
+    exausto = jogador.peso_gol()
 
-    assert jogador.peso_gol() == 12
+    assert exausto < cansado < normal
 
 def test_peso_assistencia_goleiro():
     jogador = Jogador(
@@ -162,6 +154,37 @@ def test_peso_assistencia_considera_condicao():
 
     assert jogador.peso_assistencia() == 16
     
+def test_reduzir_energia_realmente_desconta():
+    random.seed(0)
+    jogador = Jogador("Teste", 25, "Meio-Campo", 80)
+
+    antes = jogador.energia
+    jogador.reduzir_energia()
+
+    assert jogador.energia < antes
+
+
+def test_reduzir_energia_nunca_fica_negativa():
+    jogador = Jogador("Teste", 25, "Atacante", 80)
+    jogador.energia = 2
+
+    for _ in range(10):
+        jogador.reduzir_energia()
+
+    assert jogador.energia == 0
+    assert jogador.condicao == "Exausto"
+
+
+def test_reduzir_energia_atualiza_condicao():
+    jogador = Jogador("Teste", 25, "Defesa", 80)
+    jogador.energia = 62
+
+    jogador.reduzir_energia()
+
+    assert jogador.energia < 62
+    assert jogador.condicao == "Cansado"
+
+
 def test_resetar_estatisticas_partida():
     jogador = Jogador(
         "Teste",

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taldo Manager — Resultados</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"
+  />
+  <style>
+    body { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    .controles { display: flex; gap: .75rem; align-items: end; flex-wrap: wrap; }
+    .controles label { margin: 0; }
+    .controles input { width: 8rem; }
+    .saves { display: flex; gap: .5rem; align-items: center; margin: 1rem 0; flex-wrap: wrap; }
+    .saves select { margin: 0; min-width: 22rem; }
+    .saves button { width: auto; margin: 0; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    .cards article { margin: 0; }
+    .abas { display: flex; flex-wrap: wrap; gap: .25rem; border-bottom: 1px solid var(--pico-muted-border-color); margin-bottom: 1rem; }
+    .abas button { width: auto; margin: 0; border-radius: 6px 6px 0 0; background: transparent; border: none; color: var(--pico-muted-color); padding: .5rem .9rem; }
+    .abas button.ativa { color: var(--pico-primary); border-bottom: 2px solid var(--pico-primary); }
+    table { font-size: .9rem; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .forma span { font-weight: 700; }
+    .V { color: #43a047; } .D { color: #e53935; } .E { color: #fdd835; }
+    a.clube, a.jogador, a.partida { cursor: pointer; }
+    .voltar { width: auto; margin: 0 0 1rem; }
+    #erro { color: #e53935; }
+    .vazio { color: var(--pico-muted-color); font-style: italic; }
+    .timeline { list-style: none; padding: 0; }
+    .timeline li { padding: .3rem 0; border-bottom: 1px solid var(--pico-muted-border-color); }
+    .timeline li strong { display: inline-block; width: 2.5rem; text-align: right; margin-right: .5rem; }
+    .colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 700px) { .colunas { grid-template-columns: 1fr; } }
+    @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } .saves select { min-width: 0; flex: 1; } }
+    .grafico { overflow-x: auto; }
+    .grafico svg { display: block; width: 100%; min-width: 620px; height: auto; }
+    .grafico .grade { stroke: var(--pico-muted-border-color); stroke-width: 1; }
+    .grafico .eixo { fill: var(--pico-muted-color); font-size: 11px; }
+    .grafico polyline { transition: opacity .12s, stroke-width .12s; }
+    .grafico.tem-selecao polyline:not(.sel) { opacity: .1; }
+    .grafico.tem-selecao polyline.sel { stroke-width: 3; }
+    .grafico-legenda { display: flex; flex-wrap: wrap; gap: .35rem .5rem; margin-top: .8rem; }
+    .grafico-legenda button { width: auto; margin: 0; padding: .12rem .55rem; font-size: .78rem;
+      background: transparent; border: 1px solid var(--pico-muted-border-color); border-radius: 999px;
+      color: var(--pico-color); display: inline-flex; align-items: center; gap: .35rem; }
+    .grafico-legenda button.sel { border-color: var(--pico-primary); color: var(--pico-primary); }
+    .grafico-legenda .bolinha { width: .7rem; height: .7rem; border-radius: 50%; flex: none; }
+  </style>
+</head>
+<body>
+  <hgroup>
+    <h1>⚽ Taldo Manager</h1>
+    <p>Simule temporadas e navegue nos resultados.</p>
+  </hgroup>
+
+  <div class="controles">
+    <label>
+      API
+      <input id="api" type="text" value="http://localhost:8000" style="width: 15rem" />
+    </label>
+    <label>
+      Seed (opcional)
+      <input id="seed" type="number" placeholder="aleatório" />
+    </label>
+    <button id="nova">Nova temporada</button>
+  </div>
+
+  <div class="saves">
+    <select id="lista"></select>
+    <button id="apagar" class="secondary outline">Apagar</button>
+  </div>
+
+  <p id="status" aria-busy="false"></p>
+  <p id="erro"></p>
+
+  <!-- visão temporada -->
+  <section id="temporada" hidden>
+    <div class="cards">
+      <article>
+        <header><strong>🏆 Campeão</strong></header>
+        <h3 id="campeao" style="margin: 0"></h3>
+        <small id="campeao-info"></small>
+      </article>
+      <article>
+        <header><strong>⭐ MVP do campeonato</strong></header>
+        <h3 id="mvp" style="margin: 0"></h3>
+        <small id="mvp-info"></small>
+      </article>
+    </div>
+    <nav class="abas" id="abas"></nav>
+    <div id="painel"></div>
+  </section>
+
+  <!-- visão clube -->
+  <section id="clube" hidden>
+    <button class="voltar secondary" data-voltar>← Voltar</button>
+    <hgroup>
+      <h2 id="clube-nome"></h2>
+      <p id="clube-info"></p>
+    </hgroup>
+    <h4>Jogos</h4>
+    <div id="clube-jogos"></div>
+    <h4>Elenco</h4>
+    <div id="clube-elenco"></div>
+  </section>
+
+  <!-- visão partida -->
+  <section id="partida" hidden>
+    <button class="voltar secondary" data-voltar>← Voltar</button>
+    <hgroup>
+      <h2 id="partida-placar"></h2>
+      <p id="partida-info"></p>
+    </hgroup>
+    <div class="cards" id="partida-stats"></div>
+    <h4>Lances</h4>
+    <div id="partida-timeline"></div>
+    <div class="colunas">
+      <div><h4 id="esc-mandante-titulo"></h4><div id="esc-mandante"></div></div>
+      <div><h4 id="esc-visitante-titulo"></h4><div id="esc-visitante"></div></div>
+    </div>
+  </section>
+
+  <!-- visão jogador -->
+  <section id="jogador" hidden>
+    <button class="voltar secondary" data-voltar>← Voltar</button>
+    <hgroup>
+      <h2 id="jogador-nome"></h2>
+      <p id="jogador-info"></p>
+    </hgroup>
+    <h4>Game log</h4>
+    <div id="jogador-log"></div>
+  </section>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const api = () => $("api").value.replace(/\/$/, "");
+
+    let temporada = null;   // payload da simulação aberta
+    let simId = null;
+    let abaAtual = "classificacao";
+    let clubeAtualId = null;
+    let partidaAtualId = null;
+    let jogadorAtualId = null;
+    const pilhaVoltar = [];   // thunks para o botão "← Voltar"
+
+    const SECOES = ["temporada", "clube", "partida", "jogador"];
+
+    function esconderTudo() {
+      SECOES.forEach((id) => ($(id).hidden = true));
+    }
+
+    function secaoVisivel() {
+      return SECOES.find((id) => !$(id).hidden);
+    }
+
+    // thunk que reabre exatamente a tela visível agora
+    function thunkAtual() {
+      switch (secaoVisivel()) {
+        case "clube": return () => abrirClube(clubeAtualId);
+        case "partida": return () => abrirPartida(partidaAtualId);
+        case "jogador": return () => abrirJogador(jogadorAtualId);
+        default: return () => mostrarTemporada();
+      }
+    }
+
+    function navegarPara(fn) {
+      pilhaVoltar.push(thunkAtual());
+      fn();
+    }
+
+    function voltarUm() {
+      const fn = pilhaVoltar.pop();
+      (fn || mostrarTemporada)();
+    }
+
+    // ---------- helpers de tabela ----------
+
+    const ehNumero = (v) => typeof v === "number";
+
+    function celula(valor, item, coluna) {
+      if (Array.isArray(valor)) {
+        return `<span class="forma">${valor
+          .map((r) => `<span class="${r}">${r}</span>`)
+          .join(" ")}</span>`;
+      }
+      if (coluna === "clube" && item && item.id != null) {
+        return `<a class="clube" data-clube="${item.id}">${valor}</a>`;
+      }
+      if (coluna === "nome" && item && item.id != null) {
+        return `<a class="jogador" data-jogador="${item.id}">${valor}</a>`;
+      }
+      if (coluna === "placar" && item && item.partida_id != null) {
+        return `<a class="partida" data-partida="${item.partida_id}">${valor}</a>`;
+      }
+      return valor ?? "";
+    }
+
+    function tabela(lista, colunas) {
+      if (!lista || lista.length === 0) {
+        return `<p class="vazio">Nenhum registro.</p>`;
+      }
+      const head = colunas
+        .map(([k, rot]) => `<th class="${ehNumero(lista[0][k]) ? "num" : ""}">${rot}</th>`)
+        .join("");
+      const linhas = lista
+        .map(
+          (item) =>
+            `<tr>${colunas
+              .map(
+                ([k]) =>
+                  `<td class="${ehNumero(item[k]) ? "num" : ""}">${celula(item[k], item, k)}</td>`
+              )
+              .join("")}</tr>`
+        )
+        .join("");
+      return `<figure><table><thead><tr>${head}</tr></thead><tbody>${linhas}</tbody></table></figure>`;
+    }
+
+    // liga os links de navegação (clube / jogador / partida) dentro de um container
+    function ligarLinks(container) {
+      container.querySelectorAll("a.clube").forEach((a) =>
+        a.addEventListener("click", () =>
+          navegarPara(() => abrirClube(a.dataset.clube))
+        )
+      );
+      container.querySelectorAll("a.jogador").forEach((a) =>
+        a.addEventListener("click", () =>
+          navegarPara(() => abrirJogador(a.dataset.jogador))
+        )
+      );
+      container.querySelectorAll("a.partida").forEach((a) =>
+        a.addEventListener("click", () =>
+          navegarPara(() => abrirPartida(a.dataset.partida))
+        )
+      );
+    }
+
+    // ---------- visão temporada ----------
+
+    const COLUNAS = {
+      classificacao: [
+        ["posicao", "#"], ["clube", "Clube"], ["pontos", "P"], ["jogos", "J"],
+        ["vitorias", "V"], ["empates", "E"], ["derrotas", "D"],
+        ["gols_marcados", "GP"], ["gols_sofridos", "GC"], ["saldo_gols", "SG"],
+        ["forma", "Forma"],
+      ],
+      artilharia: [
+        ["nome", "Jogador"], ["clube", "Clube"], ["gols", "Gols"],
+        ["assistencias", "Assist."], ["nota_media", "Nota"],
+      ],
+      assistencias: [
+        ["nome", "Jogador"], ["clube", "Clube"], ["assistencias", "Assist."],
+        ["gols", "Gols"], ["nota_media", "Nota"],
+      ],
+      melhores_notas: [
+        ["nome", "Jogador"], ["clube", "Clube"], ["posicao", "Posição"],
+        ["nota_media", "Média"], ["melhor_nota", "Melhor nota"], ["partidas", "Jogos"],
+      ],
+      clean_sheets: [
+        ["nome", "Goleiro"], ["clube", "Clube"], ["clean_sheets", "CS"],
+        ["nota_media", "Nota"],
+      ],
+      hat_tricks: [
+        ["nome", "Jogador"], ["clube", "Clube"], ["hat_tricks", "Hat-tricks"],
+        ["gols", "Gols"],
+      ],
+    };
+
+    const ABAS = [
+      ["classificacao", "Classificação"], ["evolucao", "Evolução"],
+      ["artilharia", "Artilharia"], ["assistencias", "Assistências"],
+      ["melhores_notas", "Notas"], ["clean_sheets", "Clean Sheets"],
+      ["hat_tricks", "Hat-tricks"], ["historico", "Histórico"],
+      ["recordes", "Recordes"],
+    ];
+
+    // ---------- gráfico de pontos por rodada ----------
+
+    function corClube(i) {
+      return `hsl(${Math.round((i * 360) / 20)}, 62%, ${i % 2 ? 62 : 46}%)`;
+    }
+
+    function renderEvolucao() {
+      const ev = temporada.evolucao;
+      if (!ev || !ev.series.length) return `<p class="vazio">Sem dados.</p>`;
+
+      const W = 900, H = 460, padL = 34, padR = 12, padT = 12, padB = 26;
+      const rodadas = ev.rodadas;
+      const maxR = rodadas[rodadas.length - 1];
+      const maxP = Math.max(...ev.series.map((s) => s.pontos[s.pontos.length - 1]));
+      const topo = Math.max(10, Math.ceil(maxP / 10) * 10);
+
+      const x = (r) => padL + ((r - 1) / (maxR - 1)) * (W - padL - padR);
+      const y = (p) => H - padB - (p / topo) * (H - padT - padB);
+
+      let grade = "";
+      for (let p = 0; p <= topo; p += 10) {
+        grade += `<line x1="${padL}" y1="${y(p)}" x2="${W - padR}" y2="${y(p)}" class="grade"/>`;
+        grade += `<text x="${padL - 6}" y="${y(p) + 3}" class="eixo" text-anchor="end">${p}</text>`;
+      }
+      for (let r = 1; r < maxR; r += 5) {
+        grade += `<text x="${x(r)}" y="${H - padB + 16}" class="eixo" text-anchor="middle">${r}</text>`;
+      }
+      grade += `<text x="${x(maxR)}" y="${H - padB + 16}" class="eixo" text-anchor="middle">${maxR}</text>`;
+
+      const linhas = ev.series
+        .map((s, i) => {
+          const pts = s.pontos
+            .map((p, k) => `${x(rodadas[k]).toFixed(1)},${y(p).toFixed(1)}`)
+            .join(" ");
+          return `<polyline points="${pts}" fill="none" stroke="${corClube(i)}" stroke-width="1.4" data-clube="${s.clube}"/>`;
+        })
+        .join("");
+
+      const legenda = ev.series
+        .map((s, i) => {
+          const total = s.pontos[s.pontos.length - 1];
+          return `<button data-clube="${s.clube}"><span class="bolinha" style="background:${corClube(i)}"></span>${s.clube} <strong>${total}</strong></button>`;
+        })
+        .join("");
+
+      return `
+        <div class="grafico">
+          <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Pontos acumulados por rodada">
+            ${grade}${linhas}
+          </svg>
+          <div class="grafico-legenda">
+            <button data-clube="" class="limpar">Todos</button>${legenda}
+          </div>
+        </div>`;
+    }
+
+    function ligarEvolucao(container) {
+      const grafico = container.querySelector(".grafico");
+      if (!grafico) return;
+      const botoes = container.querySelectorAll(".grafico-legenda button");
+      botoes.forEach((b) =>
+        b.addEventListener("click", () => {
+          const alvo = b.dataset.clube;
+          const ativar = alvo && !b.classList.contains("sel");
+          botoes.forEach((x) => x.classList.remove("sel"));
+          grafico.querySelectorAll("polyline").forEach((pl) =>
+            pl.classList.toggle("sel", ativar && pl.dataset.clube === alvo)
+          );
+          grafico.classList.toggle("tem-selecao", !!ativar);
+          if (ativar) b.classList.add("sel");
+        })
+      );
+    }
+
+    function renderPainel() {
+      const painel = $("painel");
+      if (abaAtual === "historico") {
+        painel.innerHTML = `<figure><table><tbody>${temporada.historico
+          .map((l) => `<tr><td>${l}</td></tr>`)
+          .join("")}</tbody></table></figure>`;
+        return;
+      }
+      if (abaAtual === "recordes") {
+        const r = temporada.recordes;
+        painel.innerHTML = `<ul>
+          <li><strong>Maior goleada:</strong> ${r.maior_goleada.partida} (${r.maior_goleada.valor} de diferença)</li>
+          <li><strong>Mais gols numa partida:</strong> ${r.mais_gols_jogo.partida} (${r.mais_gols_jogo.valor} gols)</li>
+        </ul>`;
+        return;
+      }
+      if (abaAtual === "evolucao") {
+        painel.innerHTML = renderEvolucao();
+        ligarEvolucao(painel);
+        return;
+      }
+      painel.innerHTML = tabela(temporada[abaAtual], COLUNAS[abaAtual]);
+      ligarLinks(painel);
+    }
+
+    function renderAbas() {
+      $("abas").innerHTML = ABAS.map(
+        ([k, rot]) =>
+          `<button data-aba="${k}" class="${k === abaAtual ? "ativa" : ""}">${rot}</button>`
+      ).join("");
+      $("abas").querySelectorAll("button").forEach((b) =>
+        b.addEventListener("click", () => {
+          abaAtual = b.dataset.aba;
+          renderAbas();
+          renderPainel();
+        })
+      );
+    }
+
+    function mostrarTemporada() {
+      esconderTudo();
+      $("temporada").hidden = false;
+
+      const campeao = temporada.classificacao[0];
+      $("campeao").textContent = temporada.campeao;
+      $("campeao-info").textContent =
+        `${campeao.pontos} pts · ${campeao.vitorias}V ${campeao.empates}E ${campeao.derrotas}D · saldo ${campeao.saldo_gols}`;
+
+      const mvp = temporada.mvp;
+      $("mvp").textContent = mvp ? mvp.nome : "—";
+      $("mvp-info").textContent = mvp
+        ? `${mvp.clube} · ${mvp.posicao} · nota média ${mvp.nota_media} · ${mvp.melhor_em_campo}x melhor em campo`
+        : "";
+
+      renderAbas();
+      renderPainel();
+    }
+
+    // ---------- visão clube ----------
+
+    const COLS_JOGOS = [
+      ["rodada", "R"], ["adversario", "Adversário"], ["mando", "Local"],
+      ["placar", "Placar"], ["resultado", "Res."],
+    ];
+    const COLS_ELENCO = [
+      ["nome", "Jogador"], ["posicao", "Posição"], ["overall", "OVR"],
+      ["partidas", "Jogos"], ["gols", "Gols"], ["assistencias", "Assist."],
+      ["nota_media", "Nota"], ["melhor_em_campo", "MVPs"],
+    ];
+
+    async function abrirClube(clubeId) {
+      limparAviso();
+      const c = await pedir(`/simulacoes/${simId}/clubes/${clubeId}`);
+      if (!c) return;
+
+      clubeAtualId = Number(clubeId);
+      esconderTudo();
+      $("clube").hidden = false;
+
+      const cl = c.clube;
+      $("clube-nome").textContent = cl.nome;
+      $("clube-info").textContent =
+        `${cl.posicao_final}º lugar · ${cl.pontos} pts · ${cl.vitorias}V ${cl.empates}E ${cl.derrotas}D · ` +
+        `${cl.gols_marcados}-${cl.gols_sofridos} (saldo ${cl.saldo_gols})`;
+
+      const jogos = c.jogos.map((j) => ({
+        ...j,
+        mando: j.mando === "casa" ? "Casa" : "Fora",
+        placar: `${j.gols_pro} x ${j.gols_contra}`,
+      }));
+      $("clube-jogos").innerHTML = tabela(jogos, COLS_JOGOS);
+      $("clube-elenco").innerHTML = tabela(c.elenco, COLS_ELENCO);
+      ligarLinks($("clube-jogos"));
+      ligarLinks($("clube-elenco"));
+    }
+
+    // ---------- visão partida ----------
+
+    const ICONE_EVENTO = {
+      gol: "⚽", penalti: "⚽ (P)", penalti_perdido: "❌ (P)", chute_fora: "💨",
+      cartao_amarelo: "🟨", expulsao: "🟥", substituicao: "🔄",
+    };
+
+    const COLS_ESCALACAO = [
+      ["nome", "Jogador"], ["posicao", "Pos."], ["entrou", "Entrou"],
+      ["saiu", "Saiu"], ["gols", "G"], ["assistencias", "A"], ["nota", "Nota"],
+    ];
+
+    function linhaEvento(e) {
+      const icone = ICONE_EVENTO[e.tipo] || "•";
+      const quem =
+        e.jogador_id != null
+          ? `<a class="jogador" data-jogador="${e.jogador_id}">${e.jogador}</a>`
+          : e.jogador || "";
+      const detalhe = e.detalhe ? ` <small>(${e.detalhe})</small>` : "";
+      return `<li><strong>${e.minuto}'</strong> ${icone} ${quem} <small class="vazio">${e.clube || ""}</small>${detalhe}</li>`;
+    }
+
+    function prepararEscalacao(lista) {
+      return lista.map((a) => ({
+        id: a.jogador_id,
+        nome: a.jogador,
+        posicao: a.posicao,
+        entrou: a.titular ? "Titular" : `${a.entrou_min}'`,
+        saiu: a.saiu_min != null ? `${a.saiu_min}'` : "—",
+        gols: a.gols,
+        assistencias: a.assistencias,
+        nota: a.nota,
+      }));
+    }
+
+    async function abrirPartida(partidaId) {
+      limparAviso();
+      const d = await pedir(`/simulacoes/${simId}/partidas/${partidaId}`);
+      if (!d) return;
+
+      partidaAtualId = Number(partidaId);
+      esconderTudo();
+      $("partida").hidden = false;
+
+      const p = d.partida;
+      $("partida-placar").textContent =
+        `${p.mandante.nome} ${p.gols_mandante} x ${p.gols_visitante} ${p.visitante.nome}`;
+      $("partida-info").textContent = `Rodada ${p.rodada}`;
+
+      $("partida-stats").innerHTML = `
+        <article><header><strong>Posse de bola</strong></header>
+          ${p.posse_mandante}% &nbsp;—&nbsp; ${p.posse_visitante}%</article>
+        <article><header><strong>Finalizações</strong></header>
+          ${p.finalizacoes_mandante} &nbsp;—&nbsp; ${p.finalizacoes_visitante}</article>`;
+
+      // chute pra fora conta nas finalizações, mas polui a timeline
+      const lances = d.eventos.filter((e) => e.tipo !== "chute_fora");
+      $("partida-timeline").innerHTML = lances.length
+        ? `<ul class="timeline">${lances.map(linhaEvento).join("")}</ul>`
+        : `<p class="vazio">Sem lances registrados.</p>`;
+      ligarLinks($("partida-timeline"));
+
+      $("esc-mandante-titulo").textContent = p.mandante.nome;
+      $("esc-visitante-titulo").textContent = p.visitante.nome;
+      $("esc-mandante").innerHTML =
+        tabela(prepararEscalacao(d.escalacao_mandante), COLS_ESCALACAO);
+      $("esc-visitante").innerHTML =
+        tabela(prepararEscalacao(d.escalacao_visitante), COLS_ESCALACAO);
+      ligarLinks($("esc-mandante"));
+      ligarLinks($("esc-visitante"));
+    }
+
+    // ---------- visão jogador ----------
+
+    const COLS_GAMELOG = [
+      ["rodada", "R"], ["adversario", "Adversário"], ["mando", "Local"],
+      ["placar", "Placar"], ["resultado", "Res."], ["atuacao", "Atuação"],
+      ["gols", "G"], ["assistencias", "A"], ["nota", "Nota"],
+    ];
+
+    async function abrirJogador(jogadorId) {
+      limparAviso();
+      const d = await pedir(`/simulacoes/${simId}/jogadores/${jogadorId}`);
+      if (!d) return;
+
+      jogadorAtualId = Number(jogadorId);
+      esconderTudo();
+      $("jogador").hidden = false;
+
+      const j = d.jogador;
+      $("jogador-nome").textContent = j.nome;
+      $("jogador-info").textContent =
+        `${j.clube} · ${j.posicao} · OVR ${j.overall} · ${j.idade} anos · ` +
+        `${j.partidas}J ${j.gols}G ${j.assistencias}A · nota média ${j.nota_media} · ` +
+        `melhor ${j.melhor_nota} · ${j.melhor_em_campo}x melhor em campo`;
+
+      const linhas = d.jogos.map((g) => ({
+        partida_id: g.partida_id,
+        rodada: g.rodada,
+        adversario: g.adversario,
+        mando: g.mando === "casa" ? "Casa" : "Fora",
+        placar: `${g.gols_pro} x ${g.gols_contra}`,
+        resultado: g.resultado,
+        atuacao: g.titular ? "Titular" : `entrou ${g.entrou_min}'`,
+        gols: g.gols,
+        assistencias: g.assistencias,
+        nota: g.nota,
+      }));
+      $("jogador-log").innerHTML = linhas.length
+        ? tabela(linhas, COLS_GAMELOG)
+        : `<p class="vazio">Não entrou em campo nesta temporada.</p>`;
+      ligarLinks($("jogador-log"));
+    }
+
+    document
+      .querySelectorAll("[data-voltar]")
+      .forEach((b) => b.addEventListener("click", voltarUm));
+
+    // ---------- rede ----------
+
+    function limparAviso() { $("erro").textContent = ""; }
+
+    function ocupado(ligado, texto = "") {
+      $("status").setAttribute("aria-busy", ligado ? "true" : "false");
+      $("status").textContent = texto;
+      $("nova").disabled = ligado;
+    }
+
+    async function pedir(caminho, opcoes) {
+      try {
+        const resp = await fetch(api() + caminho, opcoes);
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        return resp.status === 204 ? true : await resp.json();
+      } catch (e) {
+        $("erro").textContent =
+          `Falha em ${caminho} — ${e.message}. A API está rodando? (uvicorn app.main:app --reload)`;
+        return null;
+      }
+    }
+
+    // ---------- simulações salvas ----------
+
+    function rotuloSim(s) {
+      const data = new Date(s.criada_em).toLocaleString("pt-BR");
+      return `#${s.id} · ${s.campeao} · seed ${s.seed ?? "aleatório"} · ${data}`;
+    }
+
+    async function carregarLista(selecionar) {
+      const sims = await pedir("/simulacoes");
+      if (!sims) return;
+
+      $("lista").innerHTML = sims.length
+        ? sims.map((s) => `<option value="${s.id}">${rotuloSim(s)}</option>`).join("")
+        : `<option value="">— nenhuma simulação salva —</option>`;
+      $("apagar").disabled = sims.length === 0;
+
+      if (sims.length) {
+        const alvo = selecionar ?? sims[0].id;
+        $("lista").value = alvo;
+        await abrirSimulacao(alvo);
+      } else {
+        $("temporada").hidden = true;
+        $("clube").hidden = true;
+      }
+    }
+
+    async function abrirSimulacao(id) {
+      limparAviso();
+      const dados = await pedir(`/simulacoes/${id}`);
+      if (!dados) return;
+      temporada = dados;
+      simId = Number(id);
+      abaAtual = "classificacao";
+      pilhaVoltar.length = 0;
+      mostrarTemporada();
+    }
+
+    async function novaTemporada() {
+      limparAviso();
+      const seed = $("seed").value.trim();
+      ocupado(true, "Simulando temporada (38 rodadas, 380 partidas)…");
+      const criada = await pedir(
+        `/simulacoes${seed ? `?seed=${encodeURIComponent(seed)}` : ""}`,
+        { method: "POST" }
+      );
+      ocupado(false);
+      if (!criada) return;
+      await carregarLista(criada.id);
+    }
+
+    async function apagarSelecionada() {
+      const id = $("lista").value;
+      if (!id) return;
+      limparAviso();
+      const ok = await pedir(`/simulacoes/${id}`, { method: "DELETE" });
+      if (ok) await carregarLista();
+    }
+
+    $("nova").addEventListener("click", novaTemporada);
+    $("apagar").addEventListener("click", apagarSelecionada);
+    $("lista").addEventListener("change", (e) => {
+      if (e.target.value) abrirSimulacao(e.target.value);
+    });
+
+    carregarLista();
+  </script>
+</body>
+</html>

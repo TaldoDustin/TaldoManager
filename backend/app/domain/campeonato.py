@@ -1,5 +1,5 @@
-import random
 from .partida import Partida
+
 
 class Campeonato:
     def __init__(self, nome, clubes):
@@ -7,6 +7,7 @@ class Campeonato:
         self.clubes = clubes
         self.rodada = 1
         self.historico = []
+        self.partidas_jogadas = []
         self.calendario = self.gerar_calendario()
         self.recordes = {
             "maior_goleada": {
@@ -72,6 +73,20 @@ class Campeonato:
             f"{partida.gols_c2} "
             f"{clube2.nome}"
         )
+
+        # registro estruturado, para persistir / navegar depois
+        self.partidas_jogadas.append({
+            "rodada": self.rodada,
+            "mandante": clube1.nome,
+            "visitante": clube2.nome,
+            "gols_mandante": partida.gols_c1,
+            "gols_visitante": partida.gols_c2,
+            "posse_mandante": partida.posse_c1,
+            "finalizacoes_mandante": partida.finalizacoes_c1,
+            "finalizacoes_visitante": partida.finalizacoes_c2,
+            "eventos": partida.resumo_eventos(),
+            "atuacoes": partida.resumo_escalacao(),
+        })
             
     def classificacao(self):
 

@@ -99,9 +99,11 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 
 * Python 3
 * Programação Orientada a Objetos (POO)
-* JSON
-* Git
-* GitHub
+* FastAPI + Pydantic
+* SQLite (`sqlite3` puro, sem ORM)
+* HTML + JavaScript puro (frontend sem build)
+* JSON (seed)
+* Git / GitHub
 
 ---
 
@@ -115,12 +117,41 @@ Este projeto tem como objetivo estudar:
 * Estruturação de projetos
 * Simulação de sistemas
 * Git e GitHub
-* Banco de Dados
-* Flask
+* Banco de Dados (SQLite)
+* APIs web (FastAPI)
 
 ---
 
 # 🗺️ Roadmap
+
+## 📌 Status atual (2026-09-01)
+
+O projeto passou do script único para **backend + frontend**:
+
+* **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 85 testes.
+* **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
+
+Já dá pra:
+
+* Simular uma temporada (38 rodadas) com seed reproduzível.
+* **Salvar** cada temporada no SQLite e navegar entre elas.
+* Ver classificação (com forma), artilharia, assistências, notas, clean
+  sheets, hat-tricks, histórico e recordes.
+* Abrir a **página de um clube** (elenco + tabela das 38 partidas).
+* Abrir a **página de uma partida** (posse, finalizações, linha do tempo,
+  as duas escalações com nota).
+* Abrir a **página de um jogador** (ficha + game log: nota, gols e
+  assistências partida a partida).
+* Ver o **gráfico de pontos por rodada** (corrida pelo título, aba Evolução).
+
+![Gráfico de pontos acumulados por rodada dos 20 clubes](screenshots/evolucao.png)
+
+Antes disso: mando de campo + força no placar, fadiga/rodízio de elenco,
+banco de reservas e substituições, e a correção do vermelho que bania o
+jogador da temporada.
+
+---
 
 ## ✅ Versão Atual (v0.5) — Concluída
 
@@ -180,30 +211,30 @@ Este projeto tem como objetivo estudar:
 
 ## Eventos Avançados
 
-* [ ] Expulsão afetando força do time
+* [x] Expulsão afetando força do time (`penalidade_expulsao`)
+* [x] Substituições (banco de reservas + rodízio por fadiga)
+* [x] Defesas difíceis (`goleiro_defendeu`)
 * [ ] Suspensão automática por vermelho
 * [ ] Suspensão por acúmulo de amarelos
 * [ ] Lesões
 * [ ] Pênaltis defendidos
-* [ ] Defesas difíceis
 * [ ] Acréscimos
-* [ ] Substituições
 
 ## Estatísticas da Partida
 
-* [ ] Posse de bola
-* [ ] Finalizações
-* [ ] Chutes no gol
+* [x] Posse de bola
+* [x] Finalizações
+* [ ] Chutes no gol (rastreado no engine, falta persistir/exibir)
 * [ ] Escanteios
-* [ ] Faltas
+* [ ] Faltas (rastreado no engine, falta agregar)
 
 ## Estatísticas Gerais
 
-* [ ] Histórico individual dos jogadores
-* [ ] Estatísticas por temporada
+* [x] Histórico individual dos jogadores (game log por jogador)
+* [x] Estatísticas por temporada (cada simulação salva é um snapshot)
+* [x] Ranking de melhores em campo (MVP do campeonato)
 * [ ] Ranking de cartões
 * [ ] Ranking de pênaltis
-* [ ] Ranking de melhores em campo
 
 ---
 
@@ -233,24 +264,25 @@ Este projeto tem como objetivo estudar:
 
 ---
 
-# 💾 Persistência (v0.9)
+# 💾 Persistência (v0.9) — em andamento
 
-* [ ] SQLite
-* [ ] Sistema de Save
-* [ ] Carregar Save
+* [x] SQLite (puro, sem ORM; schema em `backend/app/db/schema.sql`)
+* [x] Sistema de Save (salvar temporada simulada)
+* [x] Carregar Save (listar / abrir / apagar simulações)
 * [ ] Autosave
 
 ---
 
-# 🌐 Web (v1.0)
+# 🌐 Web (v1.0) — em andamento
 
-* [ ] API Flask
-* [ ] Interface Web
-* [ ] Dashboard do campeonato
+* [x] API (FastAPI, não Flask)
+* [x] Interface Web (`frontend/index.html`)
+* [x] Dashboard do campeonato (classificação, rankings, recordes)
+* [x] Painel de jogadores (página de jogador + game log)
+* [x] Gráfico de pontos por rodada (aba Evolução)
 * [ ] Dashboard financeiro
-* [ ] Painel de jogadores
 * [ ] Mercado de transferências
-* [ ] Estatísticas avançadas
+* [ ] Estatísticas avançadas (chutes no gol, escanteios, faltas)
 
 ---
 
@@ -259,18 +291,33 @@ Este projeto tem como objetivo estudar:
 ```text
 TaldoManager/
 │
-├── data/
-│   ├── jogadores.json
-│   ├── clubes.json
-│   └── loader.py
+├── backend/
+│   ├── app/
+│   │   ├── api/            # rotas + schemas Pydantic (FastAPI)
+│   │   ├── core/           # config
+│   │   ├── db/             # schema.sql + conexão SQLite
+│   │   ├── domain/         # Jogador, Clube, Partida, Campeonato (engine)
+│   │   ├── repositories/   # acesso a cada tabela
+│   │   ├── services/       # simulacao_service (orquestra tudo)
+│   │   └── main.py         # app FastAPI
+│   ├── data/               # seed JSON + banco local (gerado)
+│   ├── scripts/            # data_loader
+│   └── tests/              # 84 testes (domain, db, repositories, services, api)
 │
-├── jogadores.py
-├── clubes.py
-├── partidas.py
-├── campeonatos.py
-├── main.py
+├── frontend/
+│   └── index.html          # SPA em JS puro, consome a API
 │
 └── README.md
+```
+
+Rodar:
+
+```bash
+# terminal 1 — API
+cd backend && pip install -r requirements.txt && uvicorn app.main:app --reload
+
+# terminal 2 — frontend
+cd frontend && python -m http.server 5500
 ```
 
 ---
@@ -296,11 +343,12 @@ TaldoManager/
 Transformar o Taldo Manager em um simulador completo de campeonatos com:
 
 * ✅ Estatísticas completas
-* ⏳ Eventos avançados
+* ✅ Sistema de Save (temporadas salvas em SQLite)
+* ✅ Interface web para navegar nos resultados
+* ⏳ Eventos avançados (suspensões, lesões, acréscimos)
 * ⏳ Mercado de transferências
 * ⏳ Evolução dos jogadores
-* ⏳ Temporadas contínuas
-* ⏳ Sistema de Save
+* ⏳ Temporadas contínuas (modo carreira)
 
 ---
 

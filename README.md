@@ -129,7 +129,7 @@ Este projeto tem como objetivo estudar:
 O projeto passou do script único para **backend + frontend**:
 
 * **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
-  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 84 testes.
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 85 testes.
 * **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
 
 Já dá pra:
@@ -144,6 +144,8 @@ Já dá pra:
 * Abrir a **página de um jogador** (ficha + game log: nota, gols e
   assistências partida a partida).
 * Ver o **gráfico de pontos por rodada** (corrida pelo título, aba Evolução).
+
+![Gráfico de pontos acumulados por rodada dos 20 clubes](screenshots/evolucao.png)
 
 Antes disso: mando de campo + força no placar, fadiga/rodízio de elenco,
 banco de reservas e substituições, e a correção do vermelho que bania o

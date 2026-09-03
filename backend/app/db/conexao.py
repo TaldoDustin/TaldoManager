@@ -50,6 +50,11 @@ _COLUNAS_NOVAS = {
         ("rodada_atual", "INTEGER"),
         ("estado_json", "TEXT"),
     ),
+    "jogador": (
+        ("penaltis", "INTEGER NOT NULL DEFAULT 0"),
+        ("penaltis_perdidos", "INTEGER NOT NULL DEFAULT 0"),
+        ("faltas", "INTEGER NOT NULL DEFAULT 0"),
+    ),
 }
 
 

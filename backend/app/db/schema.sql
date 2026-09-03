@@ -50,7 +50,10 @@ CREATE TABLE IF NOT EXISTS jogador (
     clean_sheets    INTEGER NOT NULL,
     hat_tricks      INTEGER NOT NULL,
     amarelos        INTEGER NOT NULL,
-    vermelhos       INTEGER NOT NULL
+    vermelhos       INTEGER NOT NULL,
+    penaltis        INTEGER NOT NULL DEFAULT 0,
+    penaltis_perdidos INTEGER NOT NULL DEFAULT 0,
+    faltas          INTEGER NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS partida (

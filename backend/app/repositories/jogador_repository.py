@@ -4,6 +4,7 @@ CAMPOS = (
     "nome", "posicao", "idade", "overall", "partidas", "gols", "assistencias",
     "nota_media", "melhor_nota", "pior_nota", "melhor_em_campo",
     "clean_sheets", "hat_tricks", "amarelos", "vermelhos",
+    "penaltis", "penaltis_perdidos", "faltas",
 )
 
 

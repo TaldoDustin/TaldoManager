@@ -21,7 +21,7 @@ import random
 _JOGADOR_CAMPOS = (
     "gols", "assistencias", "partidas", "soma_nota", "melhor_nota",
     "pior_nota", "melhor_em_campo", "clean_sheets", "hat_tricks",
-    "penaltis", "penaltis_perdidos", "amarelos", "vermelhos",
+    "penaltis", "penaltis_perdidos", "faltas", "amarelos", "vermelhos",
     "energia", "condicao",
     "jogos_suspensao", "amarelos_ciclo",
 )

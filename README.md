@@ -80,6 +80,8 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 * ✅ MVP do campeonato
 * ✅ Ranking de Clean Sheets
 * ✅ Ranking de Hat-tricks
+* ✅ Ranking de disciplina (cartões + faltas)
+* ✅ Ranking de pênaltis (convertidos / perdidos)
 * ✅ Recordes do campeonato
 
 ---
@@ -129,7 +131,7 @@ Este projeto tem como objetivo estudar:
 O projeto passou do script único para **backend + frontend**:
 
 * **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
-  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 141 testes.
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 144 testes.
 * **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
 
 Já dá pra:
@@ -240,15 +242,15 @@ jogador da temporada.
 * [x] Finalizações
 * [ ] Chutes no gol (rastreado no engine, falta persistir/exibir)
 * [ ] Escanteios
-* [ ] Faltas (rastreado no engine, falta agregar)
+* [x] Faltas (total por jogador — coluna no ranking de disciplina)
 
 ## Estatísticas Gerais
 
 * [x] Histórico individual dos jogadores (game log por jogador)
 * [x] Estatísticas por temporada (cada simulação salva é um snapshot)
 * [x] Ranking de melhores em campo (MVP do campeonato)
-* [ ] Ranking de cartões
-* [ ] Ranking de pênaltis
+* [x] Ranking de cartões (aba Disciplina: 🟥, 🟨, faltas)
+* [x] Ranking de pênaltis (convertidos / perdidos)
 
 ---
 
@@ -319,7 +321,7 @@ TaldoManager/
 │   │   └── main.py         # app FastAPI
 │   ├── data/               # seed JSON + banco local (gerado)
 │   ├── scripts/            # data_loader
-│   └── tests/              # 141 testes (domain, db, repositories, services, api)
+│   └── tests/              # 144 testes (domain, db, repositories, services, api)
 │
 ├── frontend/
 │   └── index.html          # SPA em JS puro, consome a API

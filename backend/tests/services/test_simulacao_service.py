@@ -66,6 +66,39 @@ def test_rankings_respeitam_os_filtros():
     assert all(j["posicao"] == "Goleiro" for j in r["clean_sheets"])
 
 
+def test_ranking_de_disciplina_e_penaltis():
+    r = simular_temporada(seed=1)
+
+    # disciplina: todo mundo tem pelo menos um cartão, e vem ordenado por
+    # (vermelhos, amarelos, faltas)
+    disc = r["disciplina"]
+    assert disc, "uma temporada inteira sem cartões?"
+    assert all(j["vermelhos"] or j["amarelos"] for j in disc)
+    chaves = [(j["vermelhos"], j["amarelos"], j["faltas"]) for j in disc]
+    assert chaves == sorted(chaves, reverse=True)
+
+    # pênaltis: todo mundo bateu pelo menos um
+    pen = r["penaltis"]
+    assert all(j["penaltis"] or j["penaltis_perdidos"] for j in pen)
+    assert sum(j["penaltis"] + j["penaltis_perdidos"] for j in pen) > 0
+
+
+def test_disciplina_e_penaltis_fazem_round_trip():
+    sid = simulacao_service.salvar_temporada(seed=42)
+    salva = simulacao_service.carregar_temporada(sid)
+    fresca = simular_temporada(seed=42)
+
+    def chave(v):
+        return (
+            [(j["nome"], j["vermelhos"], j["amarelos"], j["faltas"])
+             for j in v["disciplina"]],
+            [(j["nome"], j["penaltis"], j["penaltis_perdidos"])
+             for j in v["penaltis"]],
+        )
+
+    assert chave(salva) == chave(fresca)
+
+
 # --- persistência ---
 
 def test_salvar_e_carregar_devolve_a_mesma_visao():

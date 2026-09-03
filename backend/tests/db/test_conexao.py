@@ -71,3 +71,42 @@ def test_migracao_adiciona_colunas_de_temporada_em_andamento(tmp_path, monkeypat
         assert linha["rodada_atual"] is None
     finally:
         conn.close()
+
+
+def test_migracao_adiciona_colunas_de_disciplina_ao_jogador(tmp_path, monkeypatch):
+    import sqlite3
+
+    caminho = tmp_path / "antigo_jogador.db"
+    monkeypatch.setenv("TALDO_DB", str(caminho))
+
+    velho = sqlite3.connect(caminho)
+    velho.executescript(
+        """
+        CREATE TABLE simulacao (id INTEGER PRIMARY KEY, seed INTEGER,
+            criada_em TEXT NOT NULL, campeao TEXT NOT NULL, rodadas INTEGER NOT NULL);
+        CREATE TABLE clube (id INTEGER PRIMARY KEY, simulacao_id INTEGER,
+            nome TEXT, pais TEXT, posicao_final INTEGER, pontos INTEGER, jogos INTEGER,
+            vitorias INTEGER, empates INTEGER, derrotas INTEGER,
+            gols_marcados INTEGER, gols_sofridos INTEGER);
+        CREATE TABLE jogador (id INTEGER PRIMARY KEY, simulacao_id INTEGER,
+            clube_id INTEGER, nome TEXT, posicao TEXT, idade INTEGER, overall INTEGER,
+            partidas INTEGER, gols INTEGER, assistencias INTEGER, nota_media REAL,
+            melhor_nota REAL, pior_nota REAL, melhor_em_campo INTEGER,
+            clean_sheets INTEGER, hat_tricks INTEGER, amarelos INTEGER, vermelhos INTEGER);
+        INSERT INTO jogador (nome, amarelos, vermelhos) VALUES ('Velho', 4, 1);
+        """
+    )
+    velho.commit()
+    velho.close()
+
+    init_db()
+
+    conn = conectar()
+    try:
+        colunas = {r["name"] for r in conn.execute("PRAGMA table_info(jogador)")}
+        assert {"penaltis", "penaltis_perdidos", "faltas"} <= colunas
+        linha = conn.execute("SELECT * FROM jogador WHERE nome = 'Velho'").fetchone()
+        assert linha["faltas"] == 0
+        assert linha["penaltis"] == 0
+    finally:
+        conn.close()

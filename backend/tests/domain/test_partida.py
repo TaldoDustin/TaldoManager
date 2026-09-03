@@ -600,3 +600,47 @@ def test_resumo_eventos_em_ordem_e_com_clube():
         assert e["clube"] in ("Casa", "Fora")
         if e["tipo"] == "substituicao":
             assert e["detalhe"] and e["detalhe"].startswith("sai ")
+
+
+# ---------------------------------------------------------------------------
+# Acréscimos e pênaltis defendidos (v0.6)
+# ---------------------------------------------------------------------------
+
+def test_acrescimos_estendem_a_partida():
+    random.seed(1)
+    casa = _clube_completo("Casa")
+    fora = _clube_completo("Fora")
+
+    minuto_maximo = 0
+    for _ in range(20):
+        p = Partida(casa, fora)
+        p.simular_partida()
+        assert 1 <= p.acrescimos <= 5
+        if p.eventos:
+            minuto_maximo = max(minuto_maximo, max(e["minuto"] for e in p.eventos))
+
+    assert minuto_maximo > 90    # algo aconteceu nos acréscimos
+
+
+def test_penalti_tem_tres_desfechos_e_as_contas_batem():
+    import contextlib
+    import io
+
+    from scripts.data_loader import carregar_campeonato
+
+    random.seed(3)
+    camp = carregar_campeonato()
+    with contextlib.redirect_stdout(io.StringIO()):
+        while camp.rodada <= len(camp.calendario):
+            camp.jogar_rodada()
+
+    eventos = [e for p in camp.partidas_jogadas for e in p["eventos"]]
+    convertidos = sum(1 for e in eventos if e["tipo"] == "penalti")
+    perdidos = sum(1 for e in eventos if e["tipo"] == "penalti_perdido")
+    defendidos = sum(1 for e in eventos if e["tipo"] == "penalti_defendido")
+
+    assert defendidos > 0, "uma temporada sem nenhum pênalti defendido?"
+
+    jogadores = [j for c in camp.clubes for j in c.jogadores]
+    assert sum(j.penaltis for j in jogadores) == convertidos
+    assert sum(j.penaltis_perdidos for j in jogadores) == perdidos + defendidos

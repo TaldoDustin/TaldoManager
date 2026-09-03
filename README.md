@@ -61,8 +61,10 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 * ✅ Cartões amarelos
 * ✅ Cartões vermelhos
 * ✅ Segundo amarelo
+* ✅ Pênaltis defendidos
 * ✅ Suspensões automáticas (vermelho + acúmulo de amarelos)
 * ✅ Lesões (jogador fora por N rodadas)
+* ✅ Acréscimos
 * ✅ Eventos cronológicos
 * ✅ Ordenação por minuto
 
@@ -133,7 +135,7 @@ Este projeto tem como objetivo estudar:
 O projeto passou do script único para **backend + frontend**:
 
 * **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
-  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 149 testes.
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 151 testes.
 * **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
 
 Já dá pra:
@@ -167,6 +169,8 @@ Já dá pra:
   aparecem em "Fora desta rodada".
 * **Rankings de disciplina e pênaltis** — abas novas: 🟥/🟨/faltas por
   jogador e aproveitamento de pênalti.
+* **Pênaltis defendidos e acréscimos** — o goleiro pode pegar o pênalti
+  (🧤), e cada jogo tem 1–5 min de acréscimo (eventos "90+N'").
 
 ![Gráfico de pontos acumulados por rodada dos 20 clubes](screenshots/evolucao.png)
 
@@ -240,8 +244,8 @@ jogador da temporada.
 * [x] Suspensão automática por vermelho (perde o jogo seguinte)
 * [x] Suspensão por acúmulo de amarelos (a cada 5 no campeonato)
 * [x] Lesões (evento na partida + jogador fora por 1–12 rodadas)
-* [ ] Pênaltis defendidos
-* [ ] Acréscimos
+* [x] Pênaltis defendidos (goleiro pega; ~14% das cobranças)
+* [x] Acréscimos (1–5 min; eventos aparecem como "90+N'")
 
 ## Estatísticas da Partida
 
@@ -328,7 +332,7 @@ TaldoManager/
 │   │   └── main.py         # app FastAPI
 │   ├── data/               # seed JSON + banco local (gerado)
 │   ├── scripts/            # data_loader
-│   └── tests/              # 149 testes (domain, db, repositories, services, api)
+│   └── tests/              # 151 testes (domain, db, repositories, services, api)
 │
 ├── frontend/
 │   └── index.html          # SPA em JS puro, consome a API

@@ -128,13 +128,15 @@ def test_avancar_persiste_partidas_para_as_paginas_de_navegacao():
     assert simulacao_service.detalhe_partida(sid, pid) is not None
 
 
-def test_proxima_rodada_expoe_situacao_de_suspensao():
+def test_proxima_rodada_expoe_situacao_de_suspensao_e_lesao():
     sid = temporada_service.iniciar(seed=2, clube_usuario=_um_clube())
     pr = temporada_service.proxima_rodada(sid)
-    assert {"suspenso", "jogos_suspensao", "amarelos_ciclo"} <= set(
-        pr["elenco"][0]
-    )
-    assert all(j["suspenso"] is False for j in pr["elenco"])   # rodada 1
+    assert {
+        "suspenso", "jogos_suspensao", "amarelos_ciclo",
+        "lesionado", "rodadas_lesao",
+    } <= set(pr["elenco"][0])
+    assert all(j["suspenso"] is False for j in pr["elenco"])     # rodada 1
+    assert all(j["lesionado"] is False for j in pr["elenco"])
 
 
 def test_suspensao_sobrevive_ao_snapshot():

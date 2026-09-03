@@ -52,10 +52,19 @@ class Jogador:
         # suspensão (persiste entre partidas, ao contrário de `expulso`)
         self.jogos_suspensao = 0   # jogos que ainda vai cumprir de fora
         self.amarelos_ciclo = 0    # amarelos rumo à próxima suspensão
+        self.rodadas_lesao = 0     # rodadas que ainda fica fora por lesão
 
     @property
     def suspenso(self):
         return self.jogos_suspensao > 0
+
+    @property
+    def lesionado(self):
+        return self.rodadas_lesao > 0
+
+    @property
+    def disponivel(self):
+        return not (self.expulso or self.suspenso or self.lesionado)
 
     def registrar_amarelo(self):
         """Amarelo 'limpo' (não virou vermelho): conta para o acúmulo do

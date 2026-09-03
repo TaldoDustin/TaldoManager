@@ -168,6 +168,8 @@ def proxima_rodada(simulacao_id):
                     "suspenso": j.suspenso,
                     "jogos_suspensao": j.jogos_suspensao,
                     "amarelos_ciclo": j.amarelos_ciclo,
+                    "lesionado": j.lesionado,
+                    "rodadas_lesao": j.rodadas_lesao,
                 }
                 for j in alvo.jogadores
             ],

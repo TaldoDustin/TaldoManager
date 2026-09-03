@@ -112,9 +112,9 @@ class Partida:
         self.clube1.escalar_time()
         self.clube2.escalar_time()
 
-        # o suspenso fica fora desta partida (escalar_time já o filtrou) e
-        # cumpre um jogo da pena por ela ter acontecido
-        self._cumprir_suspensoes()
+        # suspenso/lesionado já ficaram de fora em escalar_time; a partida
+        # ter acontecido faz a pena e a recuperação andarem uma rodada
+        self._avancar_pendencias()
         
         print("\n=== ESCALAÇÃO ===")
         print(self.clube1.nome)
@@ -189,7 +189,9 @@ class Partida:
         self.recuperar_energia(
             self.clube2
         )
-    
+
+        self.sortear_lesoes()
+
     #Engine
     
     def simular_ataque(
@@ -813,13 +815,43 @@ class Partida:
     
     #Cartões
     
-    def _cumprir_suspensoes(self):
-        """Cada partida que o clube joga desconta um jogo da suspensão dos
-        seus jogadores suspensos (que já ficaram de fora em `escalar_time`)."""
+    def _avancar_pendencias(self):
+        """A partida ter acontecido faz suspensão e lesão andarem uma rodada
+        para os dois clubes (os afetados já ficaram de fora em escalar_time)."""
         for clube in (self.clube1, self.clube2):
             for jogador in clube.jogadores:
                 if jogador.jogos_suspensao > 0:
                     jogador.jogos_suspensao -= 1
+                if jogador.rodadas_lesao > 0:
+                    jogador.rodadas_lesao -= 1
+
+    # ~1 lesão a cada ~11 partidas de um clube
+    CHANCE_LESAO = 0.09
+
+    def _gravidade_lesao(self):
+        r = random.random()
+        if r < 0.60:
+            return random.randint(1, 2)      # pancada / entorse
+        if r < 0.90:
+            return random.randint(3, 5)      # estiramento
+        return random.randint(6, 12)         # lesão séria
+
+    def sortear_lesoes(self):
+        """Depois do apito: cada clube pode perder um titular por lesão nas
+        próximas rodadas. Adiciona um evento `lesao` na linha do tempo."""
+        for clube in (self.clube1, self.clube2):
+            if random.random() > self.CHANCE_LESAO:
+                continue
+
+            em_campo = [j for j in clube.titulares if not j.lesionado]
+            if not em_campo:
+                continue
+
+            vitima = random.choice(em_campo)
+            vitima.rodadas_lesao = self._gravidade_lesao()
+            self.adicionar_evento(
+                random.randint(10, 90), "lesao", vitima
+            )
 
     def simular_cartao(
         self,
@@ -940,6 +972,7 @@ class Partida:
             "expulsao": "🟥",
             "defesa_goleiro": "🧤",
             "substituicao": "🔄",
+            "lesao": "🚑",
         }
 
         simbolo = simbolos.get(

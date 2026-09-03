@@ -23,7 +23,7 @@ _JOGADOR_CAMPOS = (
     "pior_nota", "melhor_em_campo", "clean_sheets", "hat_tricks",
     "penaltis", "penaltis_perdidos", "faltas", "amarelos", "vermelhos",
     "energia", "condicao",
-    "jogos_suspensao", "amarelos_ciclo",
+    "jogos_suspensao", "amarelos_ciclo", "rodadas_lesao",
 )
 
 # campos acumulados de Clube (penalidade_expulsao é zerada a cada jogo)

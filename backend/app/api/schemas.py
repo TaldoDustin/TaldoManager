@@ -149,6 +149,8 @@ class ElencoSituacao(BaseModel):
     suspenso: bool = False
     jogos_suspensao: int = 0
     amarelos_ciclo: int = 0
+    lesionado: bool = False
+    rodadas_lesao: int = 0
 
 
 class ProximaRodada(BaseModel):

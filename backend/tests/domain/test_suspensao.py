@@ -95,3 +95,25 @@ def test_temporada_inteira_respeita_as_suspensoes():
     assert all(
         j.amarelos_ciclo < Jogador.AMARELOS_PARA_SUSPENSAO for j in jogadores
     )
+
+
+def test_cartoes_saem_de_faltas_e_goleiro_quase_nao_leva():
+    random.seed(3)
+    camp = carregar_campeonato()
+    with contextlib.redirect_stdout(io.StringIO()):
+        while camp.rodada <= len(camp.calendario):
+            camp.jogar_rodada()
+
+    jogadores = [j for c in camp.clubes for j in c.jogadores]
+
+    # todo cartão veio de uma falta -> ninguém tem mais cartões que faltas
+    for j in jogadores:
+        assert j.amarelos + j.vermelhos <= j.faltas
+
+    # goleiro praticamente não leva cartão (não comete as faltas do jogo)
+    gols = [j for j in jogadores if j.posicao == "Goleiro"]
+    assert sum(j.amarelos + j.vermelhos for j in gols) == 0
+
+    # números de campeonato plausíveis
+    amarelos = sum(j.amarelos for j in jogadores)
+    assert 700 < amarelos < 1800          # ~2-4 por jogo em 380 jogos

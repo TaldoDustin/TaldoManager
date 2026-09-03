@@ -126,7 +126,9 @@ def test_expulsao_nao_bane_o_jogador_das_proximas_partidas():
 
     apareceu = 0
     for _ in range(10):
-        zagueiro.rodadas_lesao = 0   # isola o teste do sorteio de lesão
+        # isola o teste: lesão e suspensão são mecânicas à parte
+        zagueiro.rodadas_lesao = 0
+        zagueiro.jogos_suspensao = 0
         Partida(casa, fora).simular_partida()
         if zagueiro in casa.titulares or zagueiro in casa.reservas:
             apareceu += 1
@@ -660,9 +662,11 @@ def test_chutes_no_gol_e_escanteios_sao_contados():
         # chutes no gol nunca passam do total de finalizações
         assert p.finalizacoes_gol_c1 <= p.finalizacoes_c1
         assert p.finalizacoes_gol_c2 <= p.finalizacoes_c2
-        # gols nunca passam dos chutes no gol
-        assert p.gols_c1 <= p.finalizacoes_gol_c1
-        assert p.gols_c2 <= p.finalizacoes_gol_c2
+        # gols de bola rolando saem de um chute no gol (pênalti não conta aqui)
+        penaltis = sum(1 for e in p.eventos if e["tipo"] == "penalti")
+        assert p.gols_c1 + p.gols_c2 <= (
+            p.finalizacoes_gol_c1 + p.finalizacoes_gol_c2 + penaltis
+        )
 
         assert p.escanteios_c1 >= 0 and p.escanteios_c2 >= 0
         total_escanteios += p.escanteios_c1 + p.escanteios_c2

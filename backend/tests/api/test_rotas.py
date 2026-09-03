@@ -166,3 +166,67 @@ def test_detalhe_de_partida_e_game_log():
 
     assert client.get(f"/simulacoes/{sid}/partidas/999999").status_code == 404
     assert client.get(f"/simulacoes/{sid}/jogadores/999999").status_code == 404
+
+
+# --- temporada rodada a rodada ---
+
+def _clube_qualquer():
+    return client.get("/clubes").json()[0]["nome"]
+
+
+def test_criar_temporada_rodada_a_rodada_exige_clube():
+    resp = client.post("/simulacoes", json={"seed": 1, "modo": "rodada_a_rodada"})
+    assert resp.status_code == 400
+
+
+def test_fluxo_rodada_a_rodada():
+    clube = _clube_qualquer()
+    criada = client.post(
+        "/simulacoes",
+        json={"seed": 8, "clube": clube, "tatica": "ofensivo",
+              "modo": "rodada_a_rodada"},
+    )
+    assert criada.status_code == 201
+    sid = criada.json()["id"]
+
+    resumo = client.get("/simulacoes").json()[0]
+    assert resumo["estado"] == "em_andamento"
+    assert resumo["rodada_atual"] == 1
+
+    pr = client.get(f"/simulacoes/{sid}/rodadas/proxima")
+    assert pr.status_code == 200
+    corpo = pr.json()
+    assert corpo["rodada"] == 1
+    assert corpo["clube_usuario"] == clube
+    assert len(corpo["confrontos"]) == 10
+
+    jogou = client.post(f"/simulacoes/{sid}/rodadas", json={"tatica": "defensivo"})
+    assert jogou.status_code == 200
+    r = jogou.json()
+    assert r["rodada_jogada"] == 1
+    assert r["concluida"] is False
+    assert len(r["resultados"]) == 10
+    assert r["tatica"] == "defensivo"
+
+
+def test_rodada_a_rodada_ate_o_fim_via_api():
+    clube = _clube_qualquer()
+    sid = client.post(
+        "/simulacoes",
+        json={"seed": 9, "clube": clube, "modo": "rodada_a_rodada"},
+    ).json()["id"]
+
+    while not client.get(f"/simulacoes/{sid}/rodadas/proxima").json()["concluida"]:
+        assert client.post(f"/simulacoes/{sid}/rodadas").status_code == 200
+
+    final = client.get(f"/simulacoes/{sid}").json()
+    assert final["estado"] == "concluida"
+    assert final["campeao"] == final["classificacao"][0]["clube"]
+
+    # não dá pra avançar depois de concluída
+    assert client.post(f"/simulacoes/{sid}/rodadas").status_code == 409
+
+
+def test_proxima_rodada_de_simulacao_inexistente_404():
+    assert client.get("/simulacoes/99999/rodadas/proxima").status_code == 404
+    assert client.post("/simulacoes/99999/rodadas").status_code == 404

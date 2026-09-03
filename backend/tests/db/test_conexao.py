@@ -38,3 +38,36 @@ def test_linhas_vem_como_dict():
         assert linha["seed"] == 1
     finally:
         conn.close()
+
+
+def test_migracao_adiciona_colunas_de_temporada_em_andamento(tmp_path, monkeypatch):
+    import sqlite3
+
+    caminho = tmp_path / "antigo.db"
+    monkeypatch.setenv("TALDO_DB", str(caminho))
+
+    # simula um banco antigo: tabela simulacao sem as colunas novas
+    velho = sqlite3.connect(caminho)
+    velho.execute(
+        "CREATE TABLE simulacao (id INTEGER PRIMARY KEY, seed INTEGER, "
+        "criada_em TEXT NOT NULL, campeao TEXT NOT NULL, rodadas INTEGER NOT NULL)"
+    )
+    velho.execute(
+        "INSERT INTO simulacao (seed, criada_em, campeao, rodadas) "
+        "VALUES (1, '2026-01-01', 'FC Taldo', 38)"
+    )
+    velho.commit()
+    velho.close()
+
+    init_db()
+
+    conn = conectar()
+    try:
+        colunas = {r["name"] for r in conn.execute("PRAGMA table_info(simulacao)")}
+        assert {"estado", "rodada_atual", "estado_json"} <= colunas
+
+        linha = conn.execute("SELECT * FROM simulacao WHERE id = 1").fetchone()
+        assert linha["estado"] == "concluida"
+        assert linha["rodada_atual"] is None
+    finally:
+        conn.close()

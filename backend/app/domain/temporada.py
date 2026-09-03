@@ -1,0 +1,83 @@
+"""Estado vivo de uma temporada, para simular rodada a rodada.
+
+Um `Campeonato` depois de N rodadas fica totalmente descrito por:
+
+- o número da próxima rodada;
+- as stats acumuladas de cada clube (pontos, gols, V/E/D, forma) e as
+  escolhas do técnico (tática, formação, XI preferido);
+- as stats acumuladas de cada jogador, incluindo energia/condição;
+- o estado do gerador de números aleatórios, para a corrente continuar
+  de onde parou.
+
+Recordes, histórico e a lista de partidas NÃO entram no snapshot: o serviço
+os recalcula a partir das tabelas `partida`/`lance`/`atuacao`. O calendário
+é regenerado de forma determinística por `carregar_campeonato()` e casado
+por nome de clube.
+"""
+
+import random
+
+# campos acumulados de Jogador (os *_partida são zerados a cada jogo)
+_JOGADOR_CAMPOS = (
+    "gols", "assistencias", "partidas", "soma_nota", "melhor_nota",
+    "pior_nota", "melhor_em_campo", "clean_sheets", "hat_tricks",
+    "penaltis", "penaltis_perdidos", "amarelos", "vermelhos",
+    "energia", "condicao",
+)
+
+# campos acumulados de Clube (penalidade_expulsao é zerada a cada jogo)
+_CLUBE_CAMPOS = (
+    "pontos", "gols_marcados", "gols_sofridos",
+    "vitorias", "empates", "derrotas",
+)
+
+
+def snapshot_estado(campeonato):
+    """Serializa o estado vivo do campeonato para um dict JSON-serializável."""
+
+    rng = random.getstate()   # (versao, tupla de 625 ints, gauss_next)
+
+    clubes = {}
+    for clube in campeonato.clubes:
+        dados = {c: getattr(clube, c) for c in _CLUBE_CAMPOS}
+        dados["forma"] = list(clube.forma)
+        dados["tatica"] = clube.tatica
+        dados["formacao"] = clube.formacao
+        dados["xi_preferido"] = sorted(j.nome for j in clube.xi_preferido)
+        dados["jogadores"] = {
+            j.nome: {c: getattr(j, c) for c in _JOGADOR_CAMPOS}
+            for j in clube.jogadores
+        }
+        clubes[clube.nome] = dados
+
+    return {
+        "rodada": campeonato.rodada,
+        "rng": [rng[0], list(rng[1]), rng[2]],
+        "clubes": clubes,
+    }
+
+
+def restaurar_estado(campeonato, blob):
+    """Aplica um snapshot num campeonato recém-carregado do seed."""
+
+    campeonato.rodada = blob["rodada"]
+
+    versao, estado, gauss_next = blob["rng"]
+    random.setstate((versao, tuple(estado), gauss_next))
+
+    for clube in campeonato.clubes:
+        dados = blob["clubes"][clube.nome]
+        for c in _CLUBE_CAMPOS:
+            setattr(clube, c, dados[c])
+        clube.forma = list(dados["forma"])
+        clube.tatica = dados["tatica"]
+        clube.formacao = dados["formacao"]
+
+        por_nome = {j.nome: j for j in clube.jogadores}
+        clube.xi_preferido = {
+            por_nome[n] for n in dados["xi_preferido"] if n in por_nome
+        }
+        for nome, campos in dados["jogadores"].items():
+            jogador = por_nome[nome]
+            for c in _JOGADOR_CAMPOS:
+                setattr(jogador, c, campos[c])

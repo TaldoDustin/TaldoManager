@@ -61,17 +61,22 @@ As escolhas do técnico (só valem com um `clube`): `tatica`
 clube; o XI é uma preferência — cansados cedem lugar a reservas.
 
 `GET /simulacao` usa query params; `POST /simulacoes` usa um **corpo JSON**
-(`{seed, clube, tatica, formacao, xi}`, tudo opcional).
+(`{seed, clube, tatica, formacao, xi, modo}`, tudo opcional). `modo` é
+`"completa"` (padrão) ou `"rodada_a_rodada"` — este cria um save "em
+andamento" (parado antes da rodada 1, exige `clube`) que se avança uma
+rodada por vez.
 
 | Método | Rota | O quê |
 |---|---|---|
 | `GET` | `/clubes` | os 20 clubes do seed |
 | `GET` | `/clubes/{nome}` | elenco + formações (para montar a escalação) |
 | `GET` | `/simulacao?seed=&clube=&tatica=&formacao=` | roda sem salvar (modo rápido) |
-| `GET` | `/simulacoes` | lista as salvas |
-| `POST` | `/simulacoes` (corpo JSON) | roda e salva |
+| `GET` | `/simulacoes` | lista as salvas (com `estado`/`rodada_atual`) |
+| `POST` | `/simulacoes` (corpo JSON) | roda e salva, ou inicia rodada a rodada |
 | `GET` | `/simulacoes/{id}` | classificação, rankings, recordes |
 | `DELETE` | `/simulacoes/{id}` | apaga (cascata) |
+| `GET` | `/simulacoes/{id}/rodadas/proxima` | confrontos da próxima rodada + elenco dirigido |
+| `POST` | `/simulacoes/{id}/rodadas` (corpo JSON) | joga a próxima rodada (`{tatica, formacao, xi}` opcionais) |
 | `GET` | `/simulacoes/{id}/clubes/{clube_id}` | elenco + 38 jogos |
 | `GET` | `/simulacoes/{id}/partidas/{partida_id}` | placar, stats, timeline, escalações |
 | `GET` | `/simulacoes/{id}/jogadores/{jogador_id}` | ficha + game log |

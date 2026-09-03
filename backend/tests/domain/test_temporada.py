@@ -1,0 +1,70 @@
+import random
+
+from app.domain.temporada import restaurar_estado, snapshot_estado
+from scripts.data_loader import carregar_campeonato
+
+
+def _campeonato_apos(n_rodadas, seed=7):
+    random.seed(seed)
+    camp = carregar_campeonato()
+    for _ in range(n_rodadas):
+        camp.jogar_rodada()
+    return camp
+
+
+def test_snapshot_e_json_serializavel():
+    import json
+
+    camp = _campeonato_apos(3)
+    blob = snapshot_estado(camp)
+    # não levanta
+    json.dumps(blob)
+    assert blob["rodada"] == 4
+    assert len(blob["clubes"]) == 20
+
+
+def test_restaurar_reconstroi_stats_de_clube_e_jogador():
+    camp = _campeonato_apos(5)
+    blob = snapshot_estado(camp)
+
+    alvo = camp.clubes[0]
+    pontos, gp, energia = (
+        alvo.pontos,
+        alvo.gols_marcados,
+        camp.clubes[0].jogadores[0].energia,
+    )
+
+    novo = carregar_campeonato()
+    restaurar_estado(novo, blob)
+
+    igual = next(c for c in novo.clubes if c.nome == alvo.nome)
+    assert igual.pontos == pontos
+    assert igual.gols_marcados == gp
+    assert igual.forma == alvo.forma
+    assert novo.rodada == 6
+    assert igual.jogadores[0].energia == energia
+
+
+def test_ciclo_snapshot_restaura_continua_a_corrente_do_rng():
+    # rodar 10 rodadas direto
+    referencia = _campeonato_apos(10, seed=123)
+    tabela_ref = [
+        (c.nome, c.pontos, c.gols_marcados) for c in referencia.classificacao()
+    ]
+
+    # rodar 4, snapshot, restaurar num campeonato novo, rodar +6
+    random.seed(123)
+    parcial = carregar_campeonato()
+    for _ in range(4):
+        parcial.jogar_rodada()
+    blob = snapshot_estado(parcial)
+
+    retomado = carregar_campeonato()
+    restaurar_estado(retomado, blob)
+    for _ in range(6):
+        retomado.jogar_rodada()
+
+    tabela_ret = [
+        (c.nome, c.pontos, c.gols_marcados) for c in retomado.classificacao()
+    ]
+    assert tabela_ret == tabela_ref

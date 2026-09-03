@@ -24,6 +24,33 @@ def inserir(conn, simulacao_id, clubes):
     return mapa
 
 
+def atualizar(conn, simulacao_id, clubes):
+    """Regrava as stats acumuladas dos clubes de uma temporada em andamento.
+    Faz UPDATE por (simulacao_id, nome) — não dá pra apagar e reinserir porque
+    as partidas já jogadas apontam pra `clube.id` com ON DELETE CASCADE."""
+
+    for clube in clubes:
+        conn.execute(
+            f"""
+            UPDATE clube
+               SET {", ".join(f"{c} = ?" for c in CAMPOS if c != "nome")}
+             WHERE simulacao_id = ? AND nome = ?
+            """,
+            (
+                *(clube[c] for c in CAMPOS if c != "nome"),
+                simulacao_id,
+                clube["nome"],
+            ),
+        )
+
+    return {
+        r["nome"]: r["id"]
+        for r in conn.execute(
+            "SELECT id, nome FROM clube WHERE simulacao_id = ?", (simulacao_id,)
+        )
+    }
+
+
 def listar_por_simulacao(conn, simulacao_id):
     return conn.execute(
         "SELECT * FROM clube WHERE simulacao_id = ? ORDER BY posicao_final",

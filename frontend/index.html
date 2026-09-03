@@ -35,7 +35,7 @@
     .vazio { color: var(--pico-muted-color); font-style: italic; }
     .timeline { list-style: none; padding: 0; }
     .timeline li { padding: .3rem 0; border-bottom: 1px solid var(--pico-muted-border-color); }
-    .timeline li strong { display: inline-block; width: 2.5rem; text-align: right; margin-right: .5rem; }
+    .timeline li strong { display: inline-block; width: 3.4rem; text-align: right; margin-right: .5rem; white-space: nowrap; }
     .colunas { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     @media (max-width: 700px) { .colunas { grid-template-columns: 1fr; } }
     @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } .saves select { min-width: 0; flex: 1; } }
@@ -796,9 +796,13 @@
     // ---------- visão partida ----------
 
     const ICONE_EVENTO = {
-      gol: "⚽", penalti: "⚽ (P)", penalti_perdido: "❌ (P)", chute_fora: "💨",
+      gol: "⚽", penalti: "⚽ (P)", penalti_perdido: "❌ (P)",
+      penalti_defendido: "🧤 (P)", chute_fora: "💨",
       cartao_amarelo: "🟨", expulsao: "🟥", substituicao: "🔄", lesao: "🚑",
     };
+
+    // minuto 93 -> "90+3"
+    const minutoFmt = (m) => (m > 90 ? `90+${m - 90}` : `${m}`);
 
     const COLS_ESCALACAO = [
       ["nome", "Jogador"], ["posicao", "Pos."], ["entrou", "Entrou"],
@@ -812,7 +816,7 @@
           ? `<a class="jogador" data-jogador="${e.jogador_id}">${e.jogador}</a>`
           : e.jogador || "";
       const detalhe = e.detalhe ? ` <small>(${e.detalhe})</small>` : "";
-      return `<li><strong>${e.minuto}'</strong> ${icone} ${quem} <small class="vazio">${e.clube || ""}</small>${detalhe}</li>`;
+      return `<li><strong>${minutoFmt(e.minuto)}&#39;</strong> ${icone} ${quem} <small class="vazio">${e.clube || ""}</small>${detalhe}</li>`;
     }
 
     function prepararEscalacao(lista) {
@@ -820,8 +824,8 @@
         id: a.jogador_id,
         nome: a.jogador,
         posicao: a.posicao,
-        entrou: a.titular ? "Titular" : `${a.entrou_min}'`,
-        saiu: a.saiu_min != null ? `${a.saiu_min}'` : "—",
+        entrou: a.titular ? "Titular" : `${minutoFmt(a.entrou_min)}'`,
+        saiu: a.saiu_min != null ? `${minutoFmt(a.saiu_min)}'` : "—",
         gols: a.gols,
         assistencias: a.assistencias,
         nota: a.nota,
@@ -900,7 +904,7 @@
         mando: g.mando === "casa" ? "Casa" : "Fora",
         placar: `${g.gols_pro} x ${g.gols_contra}`,
         resultado: g.resultado,
-        atuacao: g.titular ? "Titular" : `entrou ${g.entrou_min}'`,
+        atuacao: g.titular ? "Titular" : `entrou ${minutoFmt(g.entrou_min)}'`,
         gols: g.gols,
         assistencias: g.assistencias,
         nota: g.nota,

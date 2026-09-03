@@ -26,7 +26,9 @@ class Partida:
         self.substituicoes_log = []
         # XI inicial de cada lado (capturado em criar_estatisticas)
         self.titulares_iniciais = set()
-        
+        # minutos de acréscimo (definidos em executar_simulacao)
+        self.acrescimos = 0
+
     #Orquestração
         
     def preparar_partida(self):
@@ -58,7 +60,9 @@ class Partida:
         self,
     ):
 
-        for minuto in range(1,91):
+        self.acrescimos = random.randint(1, 5)
+
+        for minuto in range(1, 91 + self.acrescimos):
 
             self.simular_minuto(
                 minuto,
@@ -320,13 +324,7 @@ class Partida:
         clube
     ):
 
-        goleiro = next(
-            (
-                j for j in clube.titulares
-                if j.posicao == "Goleiro"
-            ),
-            None
-        )
+        goleiro = self._goleiro(clube)
 
         if goleiro is None:
             return False
@@ -398,27 +396,28 @@ class Partida:
         if cobrador is None:
             return
 
-        if random.random() < 0.80:
+        resultado = random.random()
 
+        if resultado < 0.76:                    # convertido
             cobrador.gols += 1
             cobrador.penaltis += 1
-
             self.estatisticas[cobrador]["gols"] += 1
+            self.adicionar_evento(minuto, "penalti", cobrador)
+            return
 
-            self.adicionar_evento(
-                minuto,
-                "penalti",
-                cobrador
-            )
-        else:
+        cobrador.penaltis_perdidos += 1
 
-            cobrador.penaltis_perdidos += 1
+        goleiro = self._goleiro(self.adversario(clube))
+        if resultado < 0.90 and goleiro is not None:   # o goleiro pegou
+            goleiro.defesas_partida += 1
+            self.adicionar_evento(minuto, "penalti_defendido", goleiro)
+        else:                                          # jogou fora
+            self.adicionar_evento(minuto, "penalti_perdido", cobrador)
 
-            self.adicionar_evento(
-                minuto,
-                "penalti_perdido",
-                cobrador
-            )
+    def _goleiro(self, clube):
+        return next(
+            (j for j in clube.titulares if j.posicao == "Goleiro"), None
+        )
     
     #Estatisticas Reais
     
@@ -971,6 +970,7 @@ class Partida:
             "cartao_amarelo": "🟨",
             "expulsao": "🟥",
             "defesa_goleiro": "🧤",
+            "penalti_defendido": "🧤 (P)",
             "substituicao": "🔄",
             "lesao": "🚑",
         }

@@ -61,6 +61,8 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 * ✅ Cartões amarelos
 * ✅ Cartões vermelhos
 * ✅ Segundo amarelo
+* ✅ Suspensões automáticas (vermelho + acúmulo de amarelos)
+* ✅ Lesões (jogador fora por N rodadas)
 * ✅ Eventos cronológicos
 * ✅ Ordenação por minuto
 
@@ -131,7 +133,7 @@ Este projeto tem como objetivo estudar:
 O projeto passou do script único para **backend + frontend**:
 
 * **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
-  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 144 testes.
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 149 testes.
 * **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
 
 Já dá pra:
@@ -160,6 +162,11 @@ Já dá pra:
   jogador do jogo seguinte; a cada 5 amarelos no campeonato, mais um jogo
   de gancho. No modo rodada a rodada os suspensos aparecem fora da
   escalação.
+* **Lesões** — durante a partida um titular pode se machucar (evento 🚑 na
+  linha do tempo) e ficar de 1 a 12 rodadas fora. No modo rodada a rodada
+  aparecem em "Fora desta rodada".
+* **Rankings de disciplina e pênaltis** — abas novas: 🟥/🟨/faltas por
+  jogador e aproveitamento de pênalti.
 
 ![Gráfico de pontos acumulados por rodada dos 20 clubes](screenshots/evolucao.png)
 
@@ -232,7 +239,7 @@ jogador da temporada.
 * [x] Defesas difíceis (`goleiro_defendeu`)
 * [x] Suspensão automática por vermelho (perde o jogo seguinte)
 * [x] Suspensão por acúmulo de amarelos (a cada 5 no campeonato)
-* [ ] Lesões
+* [x] Lesões (evento na partida + jogador fora por 1–12 rodadas)
 * [ ] Pênaltis defendidos
 * [ ] Acréscimos
 
@@ -321,7 +328,7 @@ TaldoManager/
 │   │   └── main.py         # app FastAPI
 │   ├── data/               # seed JSON + banco local (gerado)
 │   ├── scripts/            # data_loader
-│   └── tests/              # 144 testes (domain, db, repositories, services, api)
+│   └── tests/              # 149 testes (domain, db, repositories, services, api)
 │
 ├── frontend/
 │   └── index.html          # SPA em JS puro, consome a API

@@ -142,7 +142,7 @@ class Clube:
 
         disponiveis = [
             j for j in self.jogadores
-            if not j.expulso and not j.suspenso
+            if j.disponivel
         ]
 
         n_def, n_mei, n_ata = self.FORMACOES.get(self.formacao, (4, 3, 3))

@@ -126,6 +126,7 @@ def test_expulsao_nao_bane_o_jogador_das_proximas_partidas():
 
     apareceu = 0
     for _ in range(10):
+        zagueiro.rodadas_lesao = 0   # isola o teste do sorteio de lesão
         Partida(casa, fora).simular_partida()
         if zagueiro in casa.titulares or zagueiro in casa.reservas:
             apareceu += 1
@@ -448,9 +449,9 @@ def test_xi_preferido_joga_muito_mas_o_rodizio_sobrevive():
         Partida(fora, casa).simular_partida()
 
     de_linha = [j for j in xi if j.posicao != "Goleiro"]
-    # os preferidos são presença constante...
-    assert all(j.partidas >= 55 for j in de_linha)   # de 76 jogos
-    # ...mas ninguém de linha joga tudo — a fadiga ainda força rodízio
+    # os preferidos são o núcleo do time (jogam a grande maioria dos 76)...
+    assert all(j.partidas >= 45 for j in de_linha)
+    # ...mas ninguém de linha joga tudo — fadiga, suspensão e lesão rodam o time
     assert any(j.partidas < 76 for j in de_linha)
     # e algum reserva foi acionado
     reservas = [j for j in casa.jogadores if j not in xi]

@@ -607,8 +607,10 @@
         .join("");
       $("r-tatica").value = info.tatica || "equilibrado";
 
-      // suspensos não entram na escalação
-      const disponiveis = info.elenco.filter((j) => !j.suspenso);
+      // suspensos e lesionados não entram na escalação
+      const disponiveis = info.elenco.filter(
+        (j) => !j.suspenso && !j.lesionado
+      );
 
       // preseleção: distribui o XI preferido salvo pelos slots de cada posição
       let preselecao = null;
@@ -626,25 +628,27 @@
         $("r-slots"), $("r-formacao").value, disponiveis, $("r-aviso"), preselecao
       );
 
-      const suspensos = info.elenco.filter((j) => j.suspenso);
-      $("r-suspensos").innerHTML = suspensos.length
-        ? "🚫 Fora por suspensão: " +
-          suspensos
-            .map((j) => `${j.nome} (${j.jogos_suspensao}j)`)
-            .join(", ")
+      const fora = [];
+      info.elenco
+        .filter((j) => j.suspenso)
+        .forEach((j) => fora.push(`🚫 ${j.nome} (susp. ${j.jogos_suspensao}j)`));
+      info.elenco
+        .filter((j) => j.lesionado)
+        .forEach((j) => fora.push(`🚑 ${j.nome} (lesão ${j.rodadas_lesao}r)`));
+      $("r-suspensos").innerHTML = fora.length
+        ? "Fora desta rodada: " + fora.join(", ")
         : "";
-      $("r-suspensos").hidden = suspensos.length === 0;
+      $("r-suspensos").hidden = fora.length === 0;
 
+      const situacao = (j) => {
+        if (j.lesionado) return `🚑 Lesionado (${j.rodadas_lesao}r)`;
+        if (j.suspenso) return `🚫 Suspenso (${j.jogos_suspensao}j)`;
+        if (j.amarelos_ciclo === 4) return "⚠️ pendurado";
+        return j.condicao;
+      };
       const elenco = [...info.elenco]
         .sort((a, b) => b.overall - a.overall)
-        .map((j) => ({
-          ...j,
-          situacao: j.suspenso
-            ? `🚫 Suspenso (${j.jogos_suspensao}j)`
-            : j.amarelos_ciclo === 4
-              ? "⚠️ pendurado"
-              : j.condicao,
-        }));
+        .map((j) => ({ ...j, situacao: situacao(j) }));
       $("r-elenco").innerHTML = tabela(elenco, COLS_ELENCO_RODADA);
 
       const marcarEu = (c) =>
@@ -745,7 +749,7 @@
       renderSlots(
         $("r-slots"),
         $("r-formacao").value,
-        rodadaInfo.elenco.filter((j) => !j.suspenso),
+        rodadaInfo.elenco.filter((j) => !j.suspenso && !j.lesionado),
         $("r-aviso")
       )
     );
@@ -793,7 +797,7 @@
 
     const ICONE_EVENTO = {
       gol: "⚽", penalti: "⚽ (P)", penalti_perdido: "❌ (P)", chute_fora: "💨",
-      cartao_amarelo: "🟨", expulsao: "🟥", substituicao: "🔄",
+      cartao_amarelo: "🟨", expulsao: "🟥", substituicao: "🔄", lesao: "🚑",
     };
 
     const COLS_ESCALACAO = [

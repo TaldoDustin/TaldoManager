@@ -124,12 +124,12 @@ Este projeto tem como objetivo estudar:
 
 # 🗺️ Roadmap
 
-## 📌 Status atual (2026-09-01)
+## 📌 Status atual (2026-09-02)
 
 O projeto passou do script único para **backend + frontend**:
 
 * **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
-  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 115 testes.
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 134 testes.
 * **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
 
 Já dá pra:
@@ -150,6 +150,10 @@ Já dá pra:
 * **Montar a escalação** — formação (4-4-2, 3-5-2, ...) e o XI titular por
   posição. É a preferência: jogadores muito cansados dão lugar a reservas
   ao longo das 38 rodadas.
+* **Simular rodada a rodada** — o save nasce "em andamento" e você joga
+  uma rodada de cada vez, mexendo na escalação e na tática entre os jogos
+  e vendo a tabela evoluir. Sem mudar nada, reproduz a temporada contínua
+  com o mesmo seed.
 
 ![Gráfico de pontos acumulados por rodada dos 20 clubes](screenshots/evolucao.png)
 
@@ -288,7 +292,7 @@ jogador da temporada.
 * [x] Gráfico de pontos por rodada (aba Evolução)
 * [x] Interação: escolher clube + tática antes de simular
 * [x] Interação: montar a escalação (formação + XI titular)
-* [ ] Interação: simular rodada a rodada
+* [x] Interação: simular rodada a rodada
 * [ ] Dashboard financeiro
 * [ ] Mercado de transferências
 * [ ] Estatísticas avançadas (chutes no gol, escanteios, faltas)
@@ -311,7 +315,7 @@ TaldoManager/
 │   │   └── main.py         # app FastAPI
 │   ├── data/               # seed JSON + banco local (gerado)
 │   ├── scripts/            # data_loader
-│   └── tests/              # 84 testes (domain, db, repositories, services, api)
+│   └── tests/              # 134 testes (domain, db, repositories, services, api)
 │
 ├── frontend/
 │   └── index.html          # SPA em JS puro, consome a API

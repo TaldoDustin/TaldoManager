@@ -10,12 +10,16 @@ from app.api.schemas import (
     JogadorDetalhe,
     NovaSimulacao,
     PartidaDetalhe,
+    ProximaRodada,
+    RodadaDecisao,
+    RodadaJogada,
     SimulacaoCriada,
     SimulacaoResponse,
     SimulacaoResumo,
     Tatica,
 )
-from app.services import simulacao_service
+from app.services import simulacao_service, temporada_service
+from app.services.temporada_service import TemporadaConcluida
 
 router = APIRouter()
 
@@ -87,19 +91,74 @@ def criar_simulacao(cfg: NovaSimulacao | None = None):
 
     Corpo JSON opcional: `seed`, `clube`, `tatica`, `formacao`, `xi`
     (nomes do XI titular preferido). Sem corpo, roda uma temporada neutra.
+
+    `modo="rodada_a_rodada"` cria um save em andamento (parado antes da
+    rodada 1, exige `clube`) — avance com `POST /simulacoes/{id}/rodadas`.
     """
     cfg = cfg or NovaSimulacao()
     try:
-        sim_id = simulacao_service.salvar_temporada(
-            seed=cfg.seed,
-            clube_usuario=cfg.clube,
-            tatica=cfg.tatica,
-            formacao=cfg.formacao,
-            xi_preferido=cfg.xi,
-        )
+        if cfg.modo == "rodada_a_rodada":
+            sim_id = temporada_service.iniciar(
+                seed=cfg.seed,
+                clube_usuario=cfg.clube,
+                tatica=cfg.tatica,
+                formacao=cfg.formacao,
+                xi_preferido=cfg.xi,
+            )
+        else:
+            sim_id = simulacao_service.salvar_temporada(
+                seed=cfg.seed,
+                clube_usuario=cfg.clube,
+                tatica=cfg.tatica,
+                formacao=cfg.formacao,
+                xi_preferido=cfg.xi,
+            )
     except ValueError as e:
         raise _erro_de_valor(e) from e
     return {"id": sim_id}
+
+
+@router.get(
+    "/simulacoes/{simulacao_id}/rodadas/proxima",
+    response_model=ProximaRodada,
+    tags=["simulacoes"],
+)
+def obter_proxima_rodada(simulacao_id: int):
+    """Confrontos da próxima rodada e a situação do elenco dirigido."""
+    dados = temporada_service.proxima_rodada(simulacao_id)
+    if dados is None:
+        raise HTTPException(status_code=404, detail="Simulação não encontrada")
+    return dados
+
+
+@router.post(
+    "/simulacoes/{simulacao_id}/rodadas",
+    response_model=RodadaJogada,
+    tags=["simulacoes"],
+)
+def jogar_proxima_rodada(
+    simulacao_id: int, decisao: RodadaDecisao | None = None
+):
+    """Joga a próxima rodada de uma temporada em andamento.
+
+    Corpo JSON opcional (`tatica`, `formacao`, `xi`): o que o técnico muda
+    antes da rodada; o que não vier fica como está.
+    """
+    decisao = decisao or RodadaDecisao()
+    try:
+        resultado = temporada_service.avancar(
+            simulacao_id,
+            tatica=decisao.tatica,
+            formacao=decisao.formacao,
+            xi_preferido=decisao.xi,
+        )
+    except TemporadaConcluida as e:
+        raise HTTPException(status_code=409, detail=str(e)) from e
+    except ValueError as e:
+        raise _erro_de_valor(e) from e
+    if resultado is None:
+        raise HTTPException(status_code=404, detail="Simulação não encontrada")
+    return resultado
 
 
 @router.get(

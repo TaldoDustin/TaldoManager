@@ -46,6 +46,9 @@ _COLUNAS_NOVAS = {
         ("tatica", "TEXT"),
         ("formacao", "TEXT"),
         ("xi_preferido", "TEXT"),
+        ("estado", "TEXT NOT NULL DEFAULT 'concluida'"),
+        ("rodada_atual", "INTEGER"),
+        ("estado_json", "TEXT"),
     ),
 }
 

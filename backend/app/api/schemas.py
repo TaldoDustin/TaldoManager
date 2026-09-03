@@ -69,6 +69,8 @@ class SimulacaoResponse(BaseModel):
     seed: int | None
     rodadas: int
     campeao: str | None
+    estado: str = "concluida"           # 'em_andamento' | 'concluida'
+    rodada_atual: int | None = None     # próxima rodada (só em andamento)
     clube_usuario: str | None = None    # clube dirigido pelo usuário
     tatica: Tatica | None = None
     formacao: str | None = None
@@ -100,6 +102,8 @@ class SimulacaoResumo(BaseModel):
     clube_usuario: str | None = None
     tatica: Tatica | None = None
     formacao: str | None = None
+    estado: str = "concluida"           # 'em_andamento' | 'concluida'
+    rodada_atual: int | None = None
 
 
 class SimulacaoCriada(BaseModel):
@@ -108,12 +112,63 @@ class SimulacaoCriada(BaseModel):
 
 class NovaSimulacao(BaseModel):
     """Corpo do POST /simulacoes. Tudo opcional — sem `clube`, roda uma
-    temporada neutra."""
+    temporada neutra. `modo="rodada_a_rodada"` cria um save em andamento
+    (exige `clube`); avança com POST /simulacoes/{id}/rodadas."""
     seed: int | None = None
     clube: str | None = None
     tatica: Tatica = "equilibrado"
     formacao: str | None = None
     xi: list[str] | None = None        # nomes do XI titular preferido
+    modo: Literal["completa", "rodada_a_rodada"] = "completa"
+
+
+class RodadaDecisao(BaseModel):
+    """Corpo do POST /simulacoes/{id}/rodadas — o que o técnico muda antes da
+    próxima rodada. Tudo opcional: o que não vier fica como está."""
+    tatica: Tatica | None = None
+    formacao: str | None = None
+    xi: list[str] | None = None
+
+
+class ConfrontoRodada(BaseModel):
+    mandante: str
+    visitante: str
+
+
+class ElencoSituacao(BaseModel):
+    nome: str
+    posicao: str
+    overall: int
+    energia: int
+    condicao: str
+
+
+class ProximaRodada(BaseModel):
+    concluida: bool
+    rodada: int | None
+    total_rodadas: int
+    clube_usuario: str | None
+    adversario: str | None
+    mando: str | None
+    tatica: Tatica | None
+    formacao: str | None
+    xi_preferido: list[str] | None
+    formacoes: list[str]
+    confrontos: list[ConfrontoRodada]
+    elenco: list[ElencoSituacao]
+
+
+class ResultadoRodada(BaseModel):
+    mandante: str
+    visitante: str
+    gols_mandante: int
+    gols_visitante: int
+
+
+class RodadaJogada(SimulacaoResponse):
+    rodada_jogada: int
+    concluida: bool
+    resultados: list[ResultadoRodada]
 
 
 class ClubeSeed(BaseModel):

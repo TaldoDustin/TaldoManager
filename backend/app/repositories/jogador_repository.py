@@ -26,6 +26,36 @@ def inserir(conn, simulacao_id, mapa_clubes, jogadores):
     return mapa
 
 
+def atualizar(conn, simulacao_id, mapa_clubes, jogadores):
+    """Regrava as stats acumuladas dos jogadores de uma temporada em andamento.
+    UPDATE por (clube_id, nome). Devolve o mesmo mapa {(clube, nome): id} que
+    `inserir`, para ligar lances e atuações da rodada recém-jogada."""
+
+    mapa = {}
+    for j in jogadores:
+        clube_id = mapa_clubes[j["clube"]]
+        conn.execute(
+            f"""
+            UPDATE jogador
+               SET {", ".join(f"{c} = ?" for c in CAMPOS if c != "nome")}
+             WHERE clube_id = ? AND nome = ?
+            """,
+            (*(j[c] for c in CAMPOS if c != "nome"), clube_id, j["nome"]),
+        )
+
+    for r in conn.execute(
+        """
+        SELECT j.id, j.nome, c.nome AS clube
+        FROM jogador j JOIN clube c ON c.id = j.clube_id
+        WHERE j.simulacao_id = ?
+        """,
+        (simulacao_id,),
+    ):
+        mapa[(r["clube"], r["nome"])] = r["id"]
+
+    return mapa
+
+
 # traz o nome do clube junto (a visão e o frontend usam "clube")
 _SELECT = """
     SELECT j.*, c.nome AS clube

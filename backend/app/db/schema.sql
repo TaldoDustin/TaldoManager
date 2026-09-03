@@ -6,12 +6,15 @@ CREATE TABLE IF NOT EXISTS simulacao (
     id             INTEGER PRIMARY KEY,
     seed           INTEGER,           -- NULL quando a temporada foi aleatória
     criada_em      TEXT NOT NULL,     -- ISO 8601 (UTC)
-    campeao        TEXT NOT NULL,
+    campeao        TEXT NOT NULL,     -- '' enquanto a temporada está em andamento
     rodadas        INTEGER NOT NULL,
     clube_usuario  TEXT,              -- clube "dirigido" pelo usuário (ou NULL)
     tatica         TEXT,              -- tática desse clube (ou NULL)
     formacao       TEXT,              -- formação desse clube (ou NULL)
-    xi_preferido   TEXT               -- JSON com os nomes do XI titular (ou NULL)
+    xi_preferido   TEXT,              -- JSON com os nomes do XI titular (ou NULL)
+    estado         TEXT NOT NULL DEFAULT 'concluida',  -- 'em_andamento' | 'concluida'
+    rodada_atual   INTEGER,           -- próxima rodada a jogar (só em andamento)
+    estado_json    TEXT               -- snapshot do estado vivo (só em andamento)
 );
 
 CREATE TABLE IF NOT EXISTS clube (

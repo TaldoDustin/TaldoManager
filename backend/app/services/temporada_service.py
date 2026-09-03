@@ -165,6 +165,9 @@ def proxima_rodada(simulacao_id):
                     "overall": j.overall,
                     "energia": j.energia,
                     "condicao": j.condicao,
+                    "suspenso": j.suspenso,
+                    "jogos_suspensao": j.jogos_suspensao,
+                    "amarelos_ciclo": j.amarelos_ciclo,
                 }
                 for j in alvo.jogadores
             ],

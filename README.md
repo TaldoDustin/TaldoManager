@@ -129,7 +129,7 @@ Este projeto tem como objetivo estudar:
 O projeto passou do script único para **backend + frontend**:
 
 * **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
-  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 134 testes.
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 141 testes.
 * **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
 
 Já dá pra:
@@ -154,6 +154,10 @@ Já dá pra:
   uma rodada de cada vez, mexendo na escalação e na tática entre os jogos
   e vendo a tabela evoluir. Sem mudar nada, reproduz a temporada contínua
   com o mesmo seed.
+* **Suspensões automáticas** — vermelho (direto ou 2º amarelo) tira o
+  jogador do jogo seguinte; a cada 5 amarelos no campeonato, mais um jogo
+  de gancho. No modo rodada a rodada os suspensos aparecem fora da
+  escalação.
 
 ![Gráfico de pontos acumulados por rodada dos 20 clubes](screenshots/evolucao.png)
 
@@ -224,8 +228,8 @@ jogador da temporada.
 * [x] Expulsão afetando força do time (`penalidade_expulsao`)
 * [x] Substituições (banco de reservas + rodízio por fadiga)
 * [x] Defesas difíceis (`goleiro_defendeu`)
-* [ ] Suspensão automática por vermelho
-* [ ] Suspensão por acúmulo de amarelos
+* [x] Suspensão automática por vermelho (perde o jogo seguinte)
+* [x] Suspensão por acúmulo de amarelos (a cada 5 no campeonato)
 * [ ] Lesões
 * [ ] Pênaltis defendidos
 * [ ] Acréscimos
@@ -315,7 +319,7 @@ TaldoManager/
 │   │   └── main.py         # app FastAPI
 │   ├── data/               # seed JSON + banco local (gerado)
 │   ├── scripts/            # data_loader
-│   └── tests/              # 134 testes (domain, db, repositories, services, api)
+│   └── tests/              # 141 testes (domain, db, repositories, services, api)
 │
 ├── frontend/
 │   └── index.html          # SPA em JS puro, consome a API

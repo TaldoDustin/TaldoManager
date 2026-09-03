@@ -363,22 +363,24 @@ def test_time_mais_forte_vence_a_maioria_dos_confrontos():
 
 
 def test_mando_de_campo_melhora_o_aproveitamento_em_casa():
-    random.seed(21)
-    a = _clube_completo("A", overall=80)
-    b = _clube_completo("B", overall=80)
-
+    # dois times idênticos: só o mando separa. O efeito é pequeno num jogo
+    # só (e ruído como suspensão pode virar um seed), então agrega vários.
     pontos_casa = pontos_fora = 0
-    for i in range(80):
-        casa, visitante = (a, b) if i % 2 == 0 else (b, a)
-        p = Partida(casa, visitante)
-        p.simular_partida()
-        if p.gols_c1 > p.gols_c2:
-            pontos_casa += 3
-        elif p.gols_c1 < p.gols_c2:
-            pontos_fora += 3
-        else:
-            pontos_casa += 1
-            pontos_fora += 1
+    for seed in range(4):
+        random.seed(seed)
+        a = _clube_completo("A", overall=80)
+        b = _clube_completo("B", overall=80)
+        for i in range(40):
+            casa, visitante = (a, b) if i % 2 == 0 else (b, a)
+            p = Partida(casa, visitante)
+            p.simular_partida()
+            if p.gols_c1 > p.gols_c2:
+                pontos_casa += 3
+            elif p.gols_c1 < p.gols_c2:
+                pontos_fora += 3
+            else:
+                pontos_casa += 1
+                pontos_fora += 1
 
     assert pontos_casa > pontos_fora
 

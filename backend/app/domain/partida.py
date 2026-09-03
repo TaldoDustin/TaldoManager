@@ -104,15 +104,17 @@ class Partida:
     
     def simular_partida(self):
 
-        # o cartão vermelho tira o jogador só do resto DESTA partida; ainda
-        # não há suspensão automática, então todo mundo volta a ficar
-        # disponível antes da próxima escalação (senão `escalar_time` filtra
-        # o expulso para sempre e o elenco vai encolhendo a cada vermelho)
+        # o cartão vermelho tira o jogador só do resto DESTA partida; a
+        # suspensão (jogos_suspensao) é o que o mantém fora das próximas
         for jogador in self.clube1.jogadores + self.clube2.jogadores:
             jogador.expulso = False
 
         self.clube1.escalar_time()
         self.clube2.escalar_time()
+
+        # o suspenso fica fora desta partida (escalar_time já o filtrou) e
+        # cumpre um jogo da pena por ela ter acontecido
+        self._cumprir_suspensoes()
         
         print("\n=== ESCALAÇÃO ===")
         print(self.clube1.nome)
@@ -810,6 +812,14 @@ class Partida:
     
     #Cartões
     
+    def _cumprir_suspensoes(self):
+        """Cada partida que o clube joga desconta um jogo da suspensão dos
+        seus jogadores suspensos (que já ficaram de fora em `escalar_time`)."""
+        for clube in (self.clube1, self.clube2):
+            for jogador in clube.jogadores:
+                if jogador.jogos_suspensao > 0:
+                    jogador.jogos_suspensao -= 1
+
     def simular_cartao(
         self,
         minuto
@@ -864,6 +874,7 @@ class Partida:
 
             jogador.vermelhos += 1
             jogador.expulso = True
+            jogador.jogos_suspensao += 1
 
             clube.penalidade_expulsao += 5
 
@@ -885,7 +896,8 @@ class Partida:
             jogador
         )
 
-        # segundo amarelo
+        # segundo amarelo -> vermelho (a suspensão vem do vermelho, não do
+        # acúmulo: os dois amarelos "somem" com a expulsão)
         if (
             jogador.amarelos_partida >= 2
             and random.random() < 0.30
@@ -893,6 +905,7 @@ class Partida:
 
             jogador.vermelhos += 1
             jogador.expulso = True
+            jogador.jogos_suspensao += 1
 
             clube.penalidade_expulsao += 5
 
@@ -901,6 +914,11 @@ class Partida:
                 "expulsao",
                 jogador
             )
+
+            return
+
+        # amarelo "limpo" conta para o acúmulo do campeonato
+        jogador.registrar_amarelo()
     
     #Eventos
     

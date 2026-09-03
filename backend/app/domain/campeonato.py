@@ -39,7 +39,7 @@ class Campeonato:
                 clube2,
                 partida
             )
-            
+
             self.atualizar_recordes(partida)
 
         self.rodada += 1

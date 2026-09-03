@@ -4,6 +4,10 @@ import random
 
 
 class Jogador:
+
+    # amarelos acumulados no campeonato que disparam uma suspensão automática
+    AMARELOS_PARA_SUSPENSAO = 5
+
     def __init__(self, nome, idade, posicao, overall):
         self.nome = nome
         self.idade = idade
@@ -44,6 +48,23 @@ class Jogador:
         self.expulso = False
         self.energia = 100
         self.condicao = "Normal"
+        # suspensão (persiste entre partidas, ao contrário de `expulso`)
+        self.jogos_suspensao = 0   # jogos que ainda vai cumprir de fora
+        self.amarelos_ciclo = 0    # amarelos rumo à próxima suspensão
+
+    @property
+    def suspenso(self):
+        return self.jogos_suspensao > 0
+
+    def registrar_amarelo(self):
+        """Amarelo 'limpo' (não virou vermelho): conta para o acúmulo do
+        campeonato. Devolve True quando fecha um ciclo e gera suspensão."""
+        self.amarelos_ciclo += 1
+        if self.amarelos_ciclo >= self.AMARELOS_PARA_SUSPENSAO:
+            self.amarelos_ciclo = 0
+            self.jogos_suspensao += 1
+            return True
+        return False
         
         
     def resetar_estatisticas_partida(self):

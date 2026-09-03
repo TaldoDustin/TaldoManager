@@ -128,6 +128,41 @@ def test_avancar_persiste_partidas_para_as_paginas_de_navegacao():
     assert simulacao_service.detalhe_partida(sid, pid) is not None
 
 
+def test_proxima_rodada_expoe_situacao_de_suspensao():
+    sid = temporada_service.iniciar(seed=2, clube_usuario=_um_clube())
+    pr = temporada_service.proxima_rodada(sid)
+    assert {"suspenso", "jogos_suspensao", "amarelos_ciclo"} <= set(
+        pr["elenco"][0]
+    )
+    assert all(j["suspenso"] is False for j in pr["elenco"])   # rodada 1
+
+
+def test_suspensao_sobrevive_ao_snapshot():
+    import json
+
+    from app.db.conexao import conectar
+    from app.repositories import simulacao_repository as simulacao_repo
+
+    sid = temporada_service.iniciar(seed=7, clube_usuario=_um_clube())
+    for _ in range(6):
+        temporada_service.avancar(sid)
+
+    conn = conectar()
+    try:
+        blob = json.loads(simulacao_repo.buscar(conn, sid)["estado_json"])
+    finally:
+        conn.close()
+
+    jogadores = [
+        j
+        for clube in blob["clubes"].values()
+        for j in clube["jogadores"].values()
+    ]
+    assert any("jogos_suspensao" in j for j in jogadores)
+    # avançar de novo não explode (restaura os contadores)
+    temporada_service.avancar(sid)
+
+
 def test_proxima_rodada_none_quando_simulacao_nao_existe():
     assert temporada_service.proxima_rodada(9999) is None
 

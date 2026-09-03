@@ -84,6 +84,10 @@ class Campeonato:
             "posse_mandante": partida.posse_c1,
             "finalizacoes_mandante": partida.finalizacoes_c1,
             "finalizacoes_visitante": partida.finalizacoes_c2,
+            "finalizacoes_gol_mandante": partida.finalizacoes_gol_c1,
+            "finalizacoes_gol_visitante": partida.finalizacoes_gol_c2,
+            "escanteios_mandante": partida.escanteios_c1,
+            "escanteios_visitante": partida.escanteios_c2,
             "eventos": partida.resumo_eventos(),
             "atuacoes": partida.resumo_escalacao(),
         })

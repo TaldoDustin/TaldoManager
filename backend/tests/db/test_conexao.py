@@ -110,3 +110,45 @@ def test_migracao_adiciona_colunas_de_disciplina_ao_jogador(tmp_path, monkeypatc
         assert linha["penaltis"] == 0
     finally:
         conn.close()
+
+
+def test_migracao_adiciona_stats_avancadas_a_partida(tmp_path, monkeypatch):
+    import sqlite3
+
+    caminho = tmp_path / "antiga_partida.db"
+    monkeypatch.setenv("TALDO_DB", str(caminho))
+
+    velho = sqlite3.connect(caminho)
+    velho.executescript(
+        """
+        CREATE TABLE simulacao (id INTEGER PRIMARY KEY, seed INTEGER,
+            criada_em TEXT NOT NULL, campeao TEXT NOT NULL, rodadas INTEGER NOT NULL);
+        CREATE TABLE clube (id INTEGER PRIMARY KEY, simulacao_id INTEGER,
+            nome TEXT, pais TEXT, posicao_final INTEGER, pontos INTEGER, jogos INTEGER,
+            vitorias INTEGER, empates INTEGER, derrotas INTEGER,
+            gols_marcados INTEGER, gols_sofridos INTEGER);
+        CREATE TABLE partida (id INTEGER PRIMARY KEY, simulacao_id INTEGER,
+            rodada INTEGER, mandante_id INTEGER, visitante_id INTEGER,
+            gols_mandante INTEGER, gols_visitante INTEGER, posse_mandante INTEGER,
+            finalizacoes_mandante INTEGER, finalizacoes_visitante INTEGER);
+        INSERT INTO partida (rodada, finalizacoes_mandante, finalizacoes_visitante)
+            VALUES (1, 10, 8);
+        """
+    )
+    velho.commit()
+    velho.close()
+
+    init_db()
+
+    conn = conectar()
+    try:
+        colunas = {r["name"] for r in conn.execute("PRAGMA table_info(partida)")}
+        assert {
+            "finalizacoes_gol_mandante", "finalizacoes_gol_visitante",
+            "escanteios_mandante", "escanteios_visitante",
+        } <= colunas
+        linha = conn.execute("SELECT * FROM partida WHERE id = 1").fetchone()
+        assert linha["escanteios_mandante"] == 0
+        assert linha["finalizacoes_gol_visitante"] == 0
+    finally:
+        conn.close()

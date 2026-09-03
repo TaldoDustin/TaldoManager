@@ -270,6 +270,10 @@ class PartidaInfo(BaseModel):
     posse_visitante: int
     finalizacoes_mandante: int
     finalizacoes_visitante: int
+    finalizacoes_gol_mandante: int = 0
+    finalizacoes_gol_visitante: int = 0
+    escanteios_mandante: int = 0
+    escanteios_visitante: int = 0
 
 
 class PartidaDetalhe(BaseModel):

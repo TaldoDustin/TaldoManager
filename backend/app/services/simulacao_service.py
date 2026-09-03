@@ -105,6 +105,9 @@ def _serializar_jogador(jogador, clube_nome):
         "clean_sheets": jogador.clean_sheets,
         "amarelos": jogador.amarelos,
         "vermelhos": jogador.vermelhos,
+        "penaltis": jogador.penaltis,
+        "penaltis_perdidos": jogador.penaltis_perdidos,
+        "faltas": jogador.faltas,
     }
 
 
@@ -300,6 +303,23 @@ def _montar_visao(cru):
         "hat_tricks": ranking(
             lambda j: j["hat_tricks"],
             filtro=lambda j: j["hat_tricks"] > 0,
+            limite=20,
+        ),
+        "disciplina": ranking(
+            lambda j: (
+                j.get("vermelhos", 0),
+                j.get("amarelos", 0),
+                j.get("faltas", 0),
+            ),
+            filtro=lambda j: j.get("vermelhos", 0) or j.get("amarelos", 0),
+            limite=20,
+        ),
+        "penaltis": ranking(
+            lambda j: (
+                j.get("penaltis", 0) + j.get("penaltis_perdidos", 0),
+                j.get("penaltis", 0),
+            ),
+            filtro=lambda j: j.get("penaltis", 0) or j.get("penaltis_perdidos", 0),
             limite=20,
         ),
         "mvp": mvp_lista[0] if mvp_lista else None,
@@ -625,6 +645,11 @@ def game_log_jogador(simulacao_id, jogador_id):
             "melhor_nota": j["melhor_nota"],
             "pior_nota": j["pior_nota"],
             "melhor_em_campo": j["melhor_em_campo"],
+            "amarelos": j["amarelos"],
+            "vermelhos": j["vermelhos"],
+            "penaltis": j["penaltis"],
+            "penaltis_perdidos": j["penaltis_perdidos"],
+            "faltas": j["faltas"],
         }
 
         return {"jogador": jogador, "jogos": jogos}

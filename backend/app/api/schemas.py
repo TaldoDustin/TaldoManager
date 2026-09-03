@@ -46,6 +46,9 @@ class JogadorStats(BaseModel):
     clean_sheets: int
     amarelos: int
     vermelhos: int
+    penaltis: int = 0
+    penaltis_perdidos: int = 0
+    faltas: int = 0
 
 
 class Recorde(BaseModel):
@@ -81,6 +84,8 @@ class SimulacaoResponse(BaseModel):
     melhores_notas: list[JogadorStats]
     clean_sheets: list[JogadorStats]
     hat_tricks: list[JogadorStats]
+    disciplina: list[JogadorStats] = []
+    penaltis: list[JogadorStats] = []
     mvp: JogadorStats | None
     historico: list[str]
     recordes: dict[str, Recorde]
@@ -305,6 +310,11 @@ class JogadorInfo(BaseModel):
     melhor_nota: float
     pior_nota: float
     melhor_em_campo: int
+    amarelos: int = 0
+    vermelhos: int = 0
+    penaltis: int = 0
+    penaltis_perdidos: int = 0
+    faltas: int = 0
 
 
 class JogadorDetalhe(BaseModel):

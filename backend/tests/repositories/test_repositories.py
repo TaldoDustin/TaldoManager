@@ -31,6 +31,7 @@ def _jogador(nome, clube):
         "nota_media": 7.4, "melhor_nota": 9.1, "pior_nota": 5.2,
         "melhor_em_campo": 8, "clean_sheets": 0, "hat_tricks": 1,
         "amarelos": 3, "vermelhos": 0,
+        "penaltis": 2, "penaltis_perdidos": 1, "faltas": 12,
     }
 
 

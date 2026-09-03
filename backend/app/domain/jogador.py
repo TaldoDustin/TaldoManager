@@ -24,6 +24,7 @@ class Jogador:
         self.hat_tricks = 0
         self.penaltis = 0
         self.penaltis_perdidos = 0
+        self.faltas = 0
         self.amarelos = 0
         self.vermelhos = 0
         # Estatisticas ofensivas 

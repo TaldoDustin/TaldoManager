@@ -381,13 +381,22 @@
         ["nome", "Jogador"], ["clube", "Clube"], ["hat_tricks", "Hat-tricks"],
         ["gols", "Gols"],
       ],
+      disciplina: [
+        ["nome", "Jogador"], ["clube", "Clube"], ["vermelhos", "🟥"],
+        ["amarelos", "🟨"], ["faltas", "Faltas"], ["partidas", "Jogos"],
+      ],
+      penaltis: [
+        ["nome", "Jogador"], ["clube", "Clube"], ["penaltis", "Convertidos"],
+        ["penaltis_perdidos", "Perdidos"], ["gols", "Gols"],
+      ],
     };
 
     const ABAS = [
       ["classificacao", "Classificação"], ["evolucao", "Evolução"],
       ["artilharia", "Artilharia"], ["assistencias", "Assistências"],
       ["melhores_notas", "Notas"], ["clean_sheets", "Clean Sheets"],
-      ["hat_tricks", "Hat-tricks"], ["historico", "Histórico"],
+      ["hat_tricks", "Hat-tricks"], ["disciplina", "Disciplina"],
+      ["penaltis", "Pênaltis"], ["historico", "Histórico"],
       ["recordes", "Recordes"],
     ];
 
@@ -871,10 +880,14 @@
 
       const j = d.jogador;
       $("jogador-nome").textContent = j.nome;
+      const penas = j.penaltis + j.penaltis_perdidos
+        ? ` · pênaltis ${j.penaltis}/${j.penaltis + j.penaltis_perdidos}`
+        : "";
       $("jogador-info").textContent =
         `${j.clube} · ${j.posicao} · OVR ${j.overall} · ${j.idade} anos · ` +
         `${j.partidas}J ${j.gols}G ${j.assistencias}A · nota média ${j.nota_media} · ` +
-        `melhor ${j.melhor_nota} · ${j.melhor_em_campo}x melhor em campo`;
+        `melhor ${j.melhor_nota} · ${j.melhor_em_campo}x melhor em campo · ` +
+        `🟨 ${j.amarelos} 🟥 ${j.vermelhos} · ${j.faltas} faltas${penas}`;
 
       const linhas = d.jogos.map((g) => ({
         partida_id: g.partida_id,

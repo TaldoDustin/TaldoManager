@@ -549,6 +549,7 @@ class Partida:
         if random.random() < 0.20:
 
             jogador.faltas_partida += 1
+            jogador.faltas += 1
     
     #Fadiga
     

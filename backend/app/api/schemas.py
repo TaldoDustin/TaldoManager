@@ -141,6 +141,9 @@ class ElencoSituacao(BaseModel):
     overall: int
     energia: int
     condicao: str
+    suspenso: bool = False
+    jogos_suspensao: int = 0
+    amarelos_ciclo: int = 0
 
 
 class ProximaRodada(BaseModel):

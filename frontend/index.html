@@ -169,6 +169,7 @@
             </label>
             <span id="r-aviso" class="vazio"></span>
           </div>
+          <p id="r-suspensos" hidden style="color:#e53935"></p>
           <div id="r-slots" class="slots"></div>
           <p class="vazio" style="margin-top: .5rem">
             Slot em <em>automático</em> = o motor escolhe. Fique de olho na
@@ -553,7 +554,7 @@
 
     const COLS_ELENCO_RODADA = [
       ["nome", "Jogador"], ["posicao", "Posição"], ["overall", "OVR"],
-      ["energia", "Energia"], ["condicao", "Condição"],
+      ["energia", "Energia"], ["situacao", "Situação"],
     ];
 
     async function carregarProximaRodada() {
@@ -597,23 +598,44 @@
         .join("");
       $("r-tatica").value = info.tatica || "equilibrado";
 
+      // suspensos não entram na escalação
+      const disponiveis = info.elenco.filter((j) => !j.suspenso);
+
       // preseleção: distribui o XI preferido salvo pelos slots de cada posição
       let preselecao = null;
       if (info.xi_preferido && info.xi_preferido.length) {
         const pref = new Set(info.xi_preferido);
         preselecao = {};
         ["Goleiro", "Defesa", "Meio-Campo", "Atacante"].forEach((pos) => {
-          preselecao[pos] = info.elenco
+          preselecao[pos] = disponiveis
             .filter((j) => j.posicao === pos && pref.has(j.nome))
             .map((j) => j.nome);
         });
       }
 
       renderSlots(
-        $("r-slots"), $("r-formacao").value, info.elenco, $("r-aviso"), preselecao
+        $("r-slots"), $("r-formacao").value, disponiveis, $("r-aviso"), preselecao
       );
 
-      const elenco = [...info.elenco].sort((a, b) => b.overall - a.overall);
+      const suspensos = info.elenco.filter((j) => j.suspenso);
+      $("r-suspensos").innerHTML = suspensos.length
+        ? "🚫 Fora por suspensão: " +
+          suspensos
+            .map((j) => `${j.nome} (${j.jogos_suspensao}j)`)
+            .join(", ")
+        : "";
+      $("r-suspensos").hidden = suspensos.length === 0;
+
+      const elenco = [...info.elenco]
+        .sort((a, b) => b.overall - a.overall)
+        .map((j) => ({
+          ...j,
+          situacao: j.suspenso
+            ? `🚫 Suspenso (${j.jogos_suspensao}j)`
+            : j.amarelos_ciclo === 4
+              ? "⚠️ pendurado"
+              : j.condicao,
+        }));
       $("r-elenco").innerHTML = tabela(elenco, COLS_ELENCO_RODADA);
 
       const marcarEu = (c) =>
@@ -711,7 +733,12 @@
     $("r-proxima").addEventListener("click", avancarAposResultado);
     $("r-ver-tabela").addEventListener("click", () => navegarPara(mostrarTemporada));
     $("r-formacao").addEventListener("change", () =>
-      renderSlots($("r-slots"), $("r-formacao").value, rodadaInfo.elenco, $("r-aviso"))
+      renderSlots(
+        $("r-slots"),
+        $("r-formacao").value,
+        rodadaInfo.elenco.filter((j) => !j.suspenso),
+        $("r-aviso")
+      )
     );
     $("temporada-voltar").addEventListener("click", voltarUm);
 

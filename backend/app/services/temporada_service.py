@@ -267,12 +267,13 @@ def avancar(simulacao_id, tatica=None, formacao=None, xi_preferido=None):
             "concluida": concluida,
             "resultados": [
                 {
+                    "partida_id": pid,
                     "mandante": p["mandante"],
                     "visitante": p["visitante"],
                     "gols_mandante": p["gols_mandante"],
                     "gols_visitante": p["gols_visitante"],
                 }
-                for p in novas
+                for pid, p in zip(partida_ids, novas)
             ],
             **visao,
         }

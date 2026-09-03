@@ -159,6 +159,7 @@ class ProximaRodada(BaseModel):
 
 
 class ResultadoRodada(BaseModel):
+    partida_id: int
     mandante: str
     visitante: str
     gols_mandante: int

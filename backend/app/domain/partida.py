@@ -19,6 +19,8 @@ class Partida:
         self.finalizacoes_c2 = 0
         self.finalizacoes_gol_c1 = 0
         self.finalizacoes_gol_c2 = 0
+        self.escanteios_c1 = 0
+        self.escanteios_c2 = 0
         self.substituicoes_c1 = 0
         self.substituicoes_c2 = 0
         self.max_substituicoes = 5
@@ -41,6 +43,9 @@ class Partida:
 
         self.finalizacoes_gol_c1 = 0
         self.finalizacoes_gol_c2 = 0
+
+        self.escanteios_c1 = 0
+        self.escanteios_c2 = 0
 
         self.eventos = []
         self.substituicoes_log = []
@@ -248,6 +253,7 @@ class Partida:
             clube_atacando,
             artilheiro
         ):
+            self._talvez_escanteio(clube_atacando, 0.20)   # ataque cortado
             return
 
         # foi no gol?
@@ -262,12 +268,14 @@ class Partida:
                 artilheiro
             )
 
+            self._talvez_escanteio(clube_atacando, 0.30)   # desviou pra linha
             return
 
         # goleiro defendeu?
         if self.goleiro_defendeu(
             clube_defendendo
         ):
+            self._talvez_escanteio(clube_atacando, 0.45)   # espalmou
             return
 
         # gol
@@ -277,6 +285,13 @@ class Partida:
             artilheiro
         )
     
+    def _talvez_escanteio(self, clube_atacando, chance):
+        if random.random() < chance:
+            if clube_atacando == self.clube1:
+                self.escanteios_c1 += 1
+            else:
+                self.escanteios_c2 += 1
+
     def gerar_finalizacao(
         self,
         clube_atacando,

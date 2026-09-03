@@ -301,6 +301,11 @@ def test_detalhe_partida_traz_timeline_e_escalacoes():
     assert p["gols_mandante"] + p["gols_visitante"] >= 0
     assert p["posse_mandante"] + p["posse_visitante"] == 100
 
+    # chutes no gol e escanteios persistem e são coerentes
+    assert p["finalizacoes_gol_mandante"] <= p["finalizacoes_mandante"]
+    assert p["finalizacoes_gol_visitante"] <= p["finalizacoes_visitante"]
+    assert p["escanteios_mandante"] >= 0 and p["escanteios_visitante"] >= 0
+
     # 11 titulares por lado, mais eventuais substitutos
     for lado in ("escalacao_mandante", "escalacao_visitante"):
         assert sum(1 for a in det[lado] if a["titular"]) == 11

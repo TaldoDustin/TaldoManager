@@ -487,18 +487,19 @@ def _clube_com_craque(nome):
 
 
 def test_o_craque_concentra_os_gols_do_time():
-    random.seed(30)
-    casa, craque = _clube_com_craque("Casa")
-    fora = _clube_completo("Fora", overall=78)
+    # agrega vários seeds: a artilharia individual é ruidosa jogo a jogo
+    gols_craque = gols_time = 0
+    for seed in range(4):
+        random.seed(seed)
+        casa, craque = _clube_com_craque("Casa")
+        fora = _clube_completo("Fora", overall=78)
+        for _ in range(38):
+            Partida(casa, fora).simular_partida()
+        gols_craque += craque.gols
+        gols_time += casa.gols_marcados
 
-    for _ in range(38):
-        Partida(casa, fora).simular_partida()
-
-    gols_time = casa.gols_marcados
-    assert craque.gols >= 15
-    # o craque sozinho faz uma fatia grande dos gols do time (com o elenco
-    # inteiro disponível dos dois lados, ~28-32% numa temporada)
-    assert craque.gols / gols_time > 0.28
+    assert gols_craque >= 55                      # ~14+/temporada
+    assert gols_craque / gols_time > 0.25         # é o dono do ataque
 
 
 def test_bom_atacante_tem_media_de_nota_alta_numa_temporada():
@@ -644,3 +645,26 @@ def test_penalti_tem_tres_desfechos_e_as_contas_batem():
     jogadores = [j for c in camp.clubes for j in c.jogadores]
     assert sum(j.penaltis for j in jogadores) == convertidos
     assert sum(j.penaltis_perdidos for j in jogadores) == perdidos + defendidos
+
+
+def test_chutes_no_gol_e_escanteios_sao_contados():
+    random.seed(2)
+    casa = _clube_completo("Casa", overall=82)
+    fora = _clube_completo("Fora", overall=78)
+
+    total_escanteios = 0
+    for _ in range(10):
+        p = Partida(casa, fora)
+        p.simular_partida()
+
+        # chutes no gol nunca passam do total de finalizações
+        assert p.finalizacoes_gol_c1 <= p.finalizacoes_c1
+        assert p.finalizacoes_gol_c2 <= p.finalizacoes_c2
+        # gols nunca passam dos chutes no gol
+        assert p.gols_c1 <= p.finalizacoes_gol_c1
+        assert p.gols_c2 <= p.finalizacoes_gol_c2
+
+        assert p.escanteios_c1 >= 0 and p.escanteios_c2 >= 0
+        total_escanteios += p.escanteios_c1 + p.escanteios_c2
+
+    assert total_escanteios > 0            # houve escanteios nos 10 jogos

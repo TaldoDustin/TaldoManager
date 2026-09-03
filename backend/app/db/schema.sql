@@ -66,7 +66,11 @@ CREATE TABLE IF NOT EXISTS partida (
     gols_visitante         INTEGER NOT NULL,
     posse_mandante         INTEGER NOT NULL,
     finalizacoes_mandante  INTEGER NOT NULL,
-    finalizacoes_visitante INTEGER NOT NULL
+    finalizacoes_visitante INTEGER NOT NULL,
+    finalizacoes_gol_mandante  INTEGER NOT NULL DEFAULT 0,
+    finalizacoes_gol_visitante INTEGER NOT NULL DEFAULT 0,
+    escanteios_mandante        INTEGER NOT NULL DEFAULT 0,
+    escanteios_visitante       INTEGER NOT NULL DEFAULT 0
 );
 
 -- Timeline da partida: um registro por evento (gol, cartão, substituição, ...).

@@ -52,6 +52,8 @@ O projeto está sendo construído do zero para estudar lógica de programação,
 * ✅ Sistema de notas
 * ✅ Melhor jogador da partida
 * ✅ Clean Sheets
+* ✅ Chutes no gol
+* ✅ Escanteios
 * ✅ Resultado automático
 * ✅ Empates
 * ✅ Placar completo
@@ -135,7 +137,7 @@ Este projeto tem como objetivo estudar:
 O projeto passou do script único para **backend + frontend**:
 
 * **Backend** (`backend/`) — API FastAPI + engine de simulação + SQLite puro
-  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 151 testes.
+  (sem ORM). `uvicorn app.main:app --reload`, docs em `/docs`. 153 testes.
 * **Frontend** (`frontend/`) — `index.html` único, JS puro, consome a API.
 
 Já dá pra:
@@ -171,6 +173,11 @@ Já dá pra:
   jogador e aproveitamento de pênalti.
 * **Pênaltis defendidos e acréscimos** — o goleiro pode pegar o pênalti
   (🧤), e cada jogo tem 1–5 min de acréscimo (eventos "90+N'").
+* **Estatísticas da partida** — chutes no gol e escanteios, no card da
+  página da partida.
+
+**v0.6 concluída** (eventos avançados, suspensões, lesões, rankings de
+disciplina/pênaltis, estatísticas da partida).
 
 ![Gráfico de pontos acumulados por rodada dos 20 clubes](screenshots/evolucao.png)
 
@@ -234,7 +241,7 @@ jogador da temporada.
 
 ---
 
-# 🚧 Próxima Sprint (v0.6)
+# ✅ v0.6 — Concluída
 
 ## Eventos Avançados
 
@@ -251,8 +258,8 @@ jogador da temporada.
 
 * [x] Posse de bola
 * [x] Finalizações
-* [ ] Chutes no gol (rastreado no engine, falta persistir/exibir)
-* [ ] Escanteios
+* [x] Chutes no gol (persistido + card na página da partida)
+* [x] Escanteios (persistido + card na página da partida)
 * [x] Faltas (total por jogador — coluna no ranking de disciplina)
 
 ## Estatísticas Gerais
@@ -332,7 +339,7 @@ TaldoManager/
 │   │   └── main.py         # app FastAPI
 │   ├── data/               # seed JSON + banco local (gerado)
 │   ├── scripts/            # data_loader
-│   └── tests/              # 151 testes (domain, db, repositories, services, api)
+│   └── tests/              # 153 testes (domain, db, repositories, services, api)
 │
 ├── frontend/
 │   └── index.html          # SPA em JS puro, consome a API

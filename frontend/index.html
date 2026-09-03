@@ -846,11 +846,13 @@
         `${p.mandante.nome} ${p.gols_mandante} x ${p.gols_visitante} ${p.visitante.nome}`;
       $("partida-info").textContent = `Rodada ${p.rodada}`;
 
-      $("partida-stats").innerHTML = `
-        <article><header><strong>Posse de bola</strong></header>
-          ${p.posse_mandante}% &nbsp;—&nbsp; ${p.posse_visitante}%</article>
-        <article><header><strong>Finalizações</strong></header>
-          ${p.finalizacoes_mandante} &nbsp;—&nbsp; ${p.finalizacoes_visitante}</article>`;
+      const stat = (rot, a, b) =>
+        `<article><header><strong>${rot}</strong></header>${a} &nbsp;—&nbsp; ${b}</article>`;
+      $("partida-stats").innerHTML =
+        stat("Posse de bola", `${p.posse_mandante}%`, `${p.posse_visitante}%`) +
+        stat("Finalizações", p.finalizacoes_mandante, p.finalizacoes_visitante) +
+        stat("Chutes no gol", p.finalizacoes_gol_mandante, p.finalizacoes_gol_visitante) +
+        stat("Escanteios", p.escanteios_mandante, p.escanteios_visitante);
 
       // chute pra fora conta nas finalizações, mas polui a timeline
       const lances = d.eventos.filter((e) => e.tipo !== "chute_fora");

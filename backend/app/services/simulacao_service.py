@@ -587,6 +587,10 @@ def detalhe_partida(simulacao_id, partida_id):
             "posse_visitante": 100 - p["posse_mandante"],
             "finalizacoes_mandante": p["finalizacoes_mandante"],
             "finalizacoes_visitante": p["finalizacoes_visitante"],
+            "finalizacoes_gol_mandante": p["finalizacoes_gol_mandante"],
+            "finalizacoes_gol_visitante": p["finalizacoes_gol_visitante"],
+            "escanteios_mandante": p["escanteios_mandante"],
+            "escanteios_visitante": p["escanteios_visitante"],
         }
 
         return {

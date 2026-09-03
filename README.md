@@ -267,7 +267,7 @@ jogador da temporada.
 * [x] Histórico individual dos jogadores (game log por jogador)
 * [x] Estatísticas por temporada (cada simulação salva é um snapshot)
 * [x] Ranking de melhores em campo (MVP do campeonato)
-* [x] Ranking de cartões (aba Disciplina: 🟥, 🟨, faltas)
+* [x] Ranking de cartões (aba Disciplina: 🟥, 🟨, faltas — cartões saem de faltas)
 * [x] Ranking de pênaltis (convertidos / perdidos)
 
 ---

@@ -82,7 +82,7 @@ class Partida:
             minuto,
         )
 
-        self.simular_cartao(
+        self.simular_falta_avulsa(
             minuto
         )
 
@@ -229,7 +229,8 @@ class Partida:
         )
         
         self.simular_acao_defensiva(
-            clube_defendendo
+            clube_defendendo,
+            minuto
         )
 
         # quem finalizou?
@@ -470,7 +471,8 @@ class Partida:
     
     def simular_acao_defensiva(
         self,
-        clube_defendendo
+        clube_defendendo,
+        minuto
     ):
 
         defensores = [
@@ -504,7 +506,9 @@ class Partida:
         )
 
         self.gerar_falta(
-            defensor
+            defensor,
+            clube_defendendo,
+            minuto
         )
     
     def gerar_desarme(
@@ -557,15 +561,59 @@ class Partida:
                 3
             )
     
-    def gerar_falta(
-        self,
-        jogador
-    ):
+    # falta: chance por ação defensiva; a "avulsa" cobre as faltas de meio
+    # de campo que não vêm de um ataque (briga pela bola, etc.)
+    CHANCE_FALTA = 0.50
+    CHANCE_FALTA_AVULSA = 0.055
+    # cartão POR FALTA: a maioria das faltas não dá nada
+    CHANCE_AMARELO = 0.17
+    CHANCE_VERMELHO_DIRETO = 0.004
 
-        if random.random() < 0.20:
+    def gerar_falta(self, jogador, clube, minuto):
+        if random.random() >= self.CHANCE_FALTA:
+            return
+        self._registrar_falta(jogador, clube, minuto)
 
-            jogador.faltas_partida += 1
-            jogador.faltas += 1
+    def simular_falta_avulsa(self, minuto):
+        if random.random() >= self.CHANCE_FALTA_AVULSA:
+            return
+        clube = random.choice([self.clube1, self.clube2])
+        candidatos = [
+            j for j in clube.titulares
+            if j.posicao in ("Defesa", "Meio-Campo") and not j.expulso
+        ]
+        if not candidatos:
+            return
+        self._registrar_falta(random.choice(candidatos), clube, minuto)
+
+    def _registrar_falta(self, jogador, clube, minuto):
+        jogador.faltas += 1
+        jogador.faltas_partida += 1
+
+        r = random.random()
+        if r < self.CHANCE_VERMELHO_DIRETO:          # falta violenta
+            self._expulsar(jogador, clube, minuto)
+            return
+        if r >= self.CHANCE_VERMELHO_DIRETO + self.CHANCE_AMARELO:
+            return                                    # falta comum, sem cartão
+
+        jogador.amarelos += 1
+        jogador.amarelos_partida += 1
+        self.adicionar_evento(minuto, "cartao_amarelo", jogador)
+
+        # 2º amarelo: quase sempre vermelho, mas o juiz às vezes releva
+        if jogador.amarelos_partida >= 2 and random.random() < 0.6:
+            self._expulsar(jogador, clube, minuto)
+            return
+
+        jogador.registrar_amarelo()
+
+    def _expulsar(self, jogador, clube, minuto):
+        jogador.vermelhos += 1
+        jogador.expulso = True
+        jogador.jogos_suspensao += 1
+        clube.penalidade_expulsao += 5
+        self.adicionar_evento(minuto, "expulsao", jogador)
     
     #Fadiga
     
@@ -867,106 +915,6 @@ class Partida:
                 random.randint(10, 90), "lesao", vitima
             )
 
-    def simular_cartao(
-        self,
-        minuto
-    ):
-
-        # aproximadamente 3 cartões por jogo
-        if random.random() > 0.03:
-            return
-
-        clube = random.choice([
-            self.clube1,
-            self.clube2
-        ])
-
-        self.distribuir_cartao(
-            clube,
-            minuto
-        )
-    
-    def distribuir_cartao(
-        self,
-        clube,
-        minuto
-    ):
-
-        jogadores_validos = [
-            j for j in clube.titulares
-            if not j.expulso
-        ]
-
-        if not jogadores_validos:
-            return
-
-        jogador = random.choice(
-            jogadores_validos
-        )
-        
-        self.gerar_desarme(
-            jogador
-        )
-
-        self.gerar_interceptacao(
-            jogador
-        )
-
-        self.gerar_corte(
-            jogador
-        )
-
-        # vermelho direto
-        if random.random() < 0.01:
-
-            jogador.vermelhos += 1
-            jogador.expulso = True
-            jogador.jogos_suspensao += 1
-
-            clube.penalidade_expulsao += 5
-
-            self.adicionar_evento(
-                minuto,
-                "expulsao",
-                jogador
-            )
-
-            return
-
-        # amarelo
-        jogador.amarelos += 1
-        jogador.amarelos_partida += 1
-
-        self.adicionar_evento(
-            minuto,
-            "cartao_amarelo",
-            jogador
-        )
-
-        # segundo amarelo -> vermelho (a suspensão vem do vermelho, não do
-        # acúmulo: os dois amarelos "somem" com a expulsão)
-        if (
-            jogador.amarelos_partida >= 2
-            and random.random() < 0.30
-        ):
-
-            jogador.vermelhos += 1
-            jogador.expulso = True
-            jogador.jogos_suspensao += 1
-
-            clube.penalidade_expulsao += 5
-
-            self.adicionar_evento(
-                minuto,
-                "expulsao",
-                jogador
-            )
-
-            return
-
-        # amarelo "limpo" conta para o acúmulo do campeonato
-        jogador.registrar_amarelo()
-    
     #Eventos
     
     def adicionar_evento(
